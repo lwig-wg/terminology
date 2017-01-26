@@ -750,6 +750,4 @@ A wider view of security in constrained-node networks is provided in {{-IOT-SECU
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
 
-Ari Keranen and Mehmet Ersue were co-authors of the {{RFC7228}}, from
-which this bis document is derived.  Ari has already started
-contributing to this document as well.
+TBD
