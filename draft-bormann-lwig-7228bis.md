@@ -441,10 +441,10 @@ terminology for different classes of constrained devices.  In this
 document, the class designations in {{devclasstbl}} may be used as rough
 indications of device capabilities:
 
-| Name | data size (e.g., RAM) | code size (e.g., Flash) |
-| Class 0, C0 | \<\< 10 KiB | \<\< 100 KiB |
-| Class 1, C1 | ~ 10 KiB | ~ 100 KiB |
-| Class 2, C2 | ~ 50 KiB | ~ 250 KiB |
+| Name        | data size (e.g., RAM) | code size (e.g., Flash) |
+| Class 0, C0 | \<\< 10 KiB           | \<\< 100 KiB            |
+| Class 1, C1 | ~ 10 KiB              | ~ 100 KiB               |
+| Class 2, C2 | ~ 50 KiB              | ~ 250 KiB               |
 {: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)'}
 
 As of the writing of this document, these characteristics correspond
@@ -544,9 +544,9 @@ the International System of Units (SI units), an approximate value for one
 or both of the quantities
 listed in {{scaletbl}}:
 
-| Name | Definition | SI Unit |
-| Ps | Sustainable average power available for the device over the time it is functioning | W (Watt) |
-| Et | Total electrical energy available before the energy source is exhausted | J (Joule) |
+| Name | Definition                                                                         | SI Unit   |
+| Ps   | Sustainable average power available for the device over the time it is functioning | W (Watt)  |
+| Et   | Total electrical energy available before the energy source is exhausted            | J (Joule) |
 {: #scaletbl title='Quantities Relevant to Power and Energy'}
 
 The value of Et may need to be interpreted in conjunction with an
@@ -585,11 +585,11 @@ battery has a limited number of useful recharging cycles.
 {{enclasstbl}} provides a summary of the classifications
 described above.
 
-| Name | Type of energy limitation | Example Power Source |
-| E0 | Event energy-limited | Event-based harvesting |
-| E1 | Period energy-limited | Battery that is periodically recharged or replaced |
-| E2 | Lifetime energy-limited | Non-replaceable primary battery |
-| E9 | No direct quantitative limitations to available energy | Mains-powered |
+| Name | Type of energy limitation                              | Example Power Source                               |
+| E0   | Event energy-limited                                   | Event-based harvesting                             |
+| E1   | Period energy-limited                                  | Battery that is periodically recharged or replaced |
+| E2   | Lifetime energy-limited                                | Non-replaceable primary battery                    |
+| E9   | No direct quantitative limitations to available energy | Mains-powered                                      |
 {: #enclasstbl title='Classes of Energy Limitation'}
 
 
@@ -648,10 +648,10 @@ Low-power:
 {{powclasstbl}} provides a summary of the strategies
 described above.
 
-| Name | Strategy | Ability to communicate |
-| P0 | Normally-off | Reattach when required |
-| P1 | Low-power | Appears connected, perhaps with high latency |
-| P9 | Always-on | Always connected |
+| Name | Strategy     | Ability to communicate                       |
+| P0   | Normally-off | Reattach when required                       |
+| P1   | Low-power    | Appears connected, perhaps with high latency |
+| P9   | Always-on    | Always connected                             |
 {: #powclasstbl title='Strategies of Using Power for Communication'}
 
 Note that the discussion above is at the device level; similar
