@@ -472,7 +472,7 @@ used as rough indications of device capabilities:
 | M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            |                 |
 | M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               |                 |
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               |                 |
-| J     | Class 10, C10 | 4-8 GiB               | (?)                     | OpenWRT routers |
+| J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
 | J     |               | fill in useful        | J-group classes         |                 |
 | J     | Class 13, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
 | J     | Class 15, C15 | 1..2 GiB              | (lots)                  | Smartphones     |
