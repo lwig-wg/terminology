@@ -463,7 +463,7 @@ Internet-Draft               CNN Terminology                  April 2017
    | M     | Class 2,  | ~ 50 KiB      | ~ 250 KiB       |             |
    |       | C2        |               |                 |             |
    |       |           |               |                 |             |
-   | J     | Class 10, | 4-8 GiB       | (?)             | OpenWRT     |
+   | J     | Class 10, | 4-8 MiB       | (?)             | OpenWRT     |
    |       | C10       |               |                 | routers     |
    |       |           |               |                 |             |
    | J     |           | fill in       | J-group classes |             |
