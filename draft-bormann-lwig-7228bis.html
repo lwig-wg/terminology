@@ -305,7 +305,7 @@ address {
 
   <meta name="dct.creator" content="Bormann, C., Ersue, M., Keranen, A., and C. Gomez" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-bormann-lwig-7228bis-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2016-10-30" />
+  <meta name="dct.issued" scheme="ISO8601" content="2017-4-24" />
   <meta name="dct.abstract" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks." />
   <meta name="description" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks." />
 
@@ -329,7 +329,7 @@ address {
   <td class="right">M. Ersue</td>
 </tr>
 <tr>
-  <td class="left">Expires: May 3, 2017</td>
+  <td class="left">Expires: October 26, 2017</td>
   <td class="right">Nokia Solutions and Networks</td>
 </tr>
 <tr>
@@ -350,7 +350,7 @@ address {
 </tr>
 <tr>
   <td class="left"></td>
-  <td class="right">October 30, 2016</td>
+  <td class="right">April 24, 2017</td>
 </tr>
 
     	
@@ -370,11 +370,11 @@ address {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at http://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on May 3, 2017.</p>
+<p>This Internet-Draft will expire on October 26, 2017.</p>
 <h1 id="rfc.copyrightnotice">
   <a href="#rfc.copyrightnotice">Copyright Notice</a>
 </h1>
-<p>Copyright (c) 2016 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>Copyright (c) 2017 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (http://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
 
   
@@ -505,42 +505,101 @@ address {
 <h1 id="rfc.section.2.3.2"><a href="#rfc.section.2.3.2">2.3.2.</a> <a href="#lowpan-6lowpan" id="lowpan-6lowpan">LoWPAN, 6LoWPAN</a></h1>
 <p id="rfc.section.2.3.2.p.1">One interesting class of a constrained network often used as a constrained-node network is &#8220;LoWPAN&#8221; <a href="#RFC4919">[RFC4919]</a>, a term inspired from the name of an IEEE 802.15.4 working group (low-rate wireless personal area networks (LR-WPANs)).  The expansion of the LoWPAN acronym, &#8220;Low-Power Wireless Personal Area Network&#8221;, contains a hard-to-justify &#8220;Personal&#8221; that is due to the history of task group naming in IEEE 802 more than due to an orientation of LoWPANs around a single person.  Actually, LoWPANs have been suggested for urban monitoring, control of large buildings, and industrial control applications, so the &#8220;Personal&#8221; can only be considered a vestige.  Occasionally, the term is read as &#8220;Low-Power Wireless Area Networks&#8221; <a href="#WEI">[WEI]</a>.  Originally focused on IEEE 802.15.4, &#8220;LoWPAN&#8221; (or when used for IPv6, &#8220;6LoWPAN&#8221;) also refers to networks built from similarly constrained link-layer technologies <a href="#RFC7668">[RFC7668]</a> <a href="#I-D.ietf-6lo-dect-ule">[I-D.ietf-6lo-dect-ule]</a> <a href="#RFC7428">[RFC7428]</a>.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#devclass" id="devclass">Classes of Constrained Devices</a></h1>
-<p id="rfc.section.3.p.1">Despite the overwhelming variety of Internet-connected devices that can be envisioned, it may be worthwhile to have some succinct terminology for different classes of constrained devices.  In this document, the class designations in <a href="#devclasstbl">Table 1</a> may be used as rough indications of device capabilities:</p>
+<p id="rfc.section.3.p.1">Despite the overwhelming variety of Internet-connected devices that can be envisioned, it may be worthwhile to have some succinct terminology for different classes of constrained devices.</p>
+<p id="rfc.section.3.p.2">Before we get to that, let&#8217;s first distinguish two big rough groups of devices based on their CPU capabilities:</p>
+<p/>
+
+<ul>
+  <li>Microcontroller-class devices (ARM term: &#8220;M-class&#8221; [need ref]).  These often (but not always) include RAM and code storage on chip and limit their support for general-purpose operating systems, e.g., they do not have an MMU (memory management unit).  They use most of their pins for interfaces to application hardware such as digital in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where this hardware is specialized for an application, we may talk about &#8220;Systems on a Chip&#8221; (SOC).  These devices often implement elaborate sleep modes to achieve microwatt- or at least milliwatt-level sustained power usage (Ps, see below).</li>
+  <li>General-purpose-class devices (ARM term: &#8220;A-class&#8221;).  These usually have RAM and Flash storage on separate chips (not always separate packages), and offer support for general-purpose operating systems such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are dedidated to interfacing with RAM and other memory.  Some general-purpose-class devices integrate some application hardware such as video controllers, these are often called &#8220;Systems on a Chip&#8221; (SOC).  While these chips also include sleep modes, they are usually more on the watt side of sustained power usage (Ps).</li>
+</ul>
+<p id="rfc.section.3.p.4">If the distinction between these groups needs to be made in this document, we distinguish group &#8220;M&#8221; (microcontroller) from group &#8220;J&#8221; (general purpose).</p>
+<p id="rfc.section.3.p.5">In this document, the class designations in <a href="#devclasstbl">Table 1</a> may be used as rough indications of device capabilities:</p>
 <div id="rfc.table.1"/>
 <div id="devclasstbl"/>
 <table cellpadding="3" cellspacing="0" class="tt full center">
   <caption>Classes of Constrained Devices (KiB = 1024 bytes)</caption>
   <thead>
     <tr>
+      <th class="left">Group</th>
       <th class="left">Name</th>
       <th class="left">data size (e.g., RAM)</th>
       <th class="left">code size (e.g., Flash)</th>
+      <th class="left">Examples</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td class="left">M</td>
       <td class="left">Class 0, C0</td>
       <td class="left">&lt;&lt; 10 KiB</td>
       <td class="left">&lt;&lt; 100 KiB</td>
+      <td class="left"/>
     </tr>
     <tr>
+      <td class="left">M</td>
       <td class="left">Class 1, C1</td>
       <td class="left">~ 10 KiB</td>
       <td class="left">~ 100 KiB</td>
+      <td class="left"/>
     </tr>
     <tr>
+      <td class="left">M</td>
       <td class="left">Class 2, C2</td>
       <td class="left">~ 50 KiB</td>
       <td class="left">~ 250 KiB</td>
+      <td class="left"/>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left">Class 10, C10</td>
+      <td class="left">4-8 GiB</td>
+      <td class="left">(?)</td>
+      <td class="left">OpenWRT routers</td>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left"/>
+      <td class="left">fill in useful</td>
+      <td class="left">J-group classes</td>
+      <td class="left"/>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left">Class 13, C13</td>
+      <td class="left">0.5..1 GiB</td>
+      <td class="left">(lots)</td>
+      <td class="left">Raspberry PI</td>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left">Class 15, C15</td>
+      <td class="left">1..2 GiB</td>
+      <td class="left">(lots)</td>
+      <td class="left">Smartphones</td>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left">Class 16, C16</td>
+      <td class="left">4..32 GiB</td>
+      <td class="left">(lots)</td>
+      <td class="left">Laptops</td>
+    </tr>
+    <tr>
+      <td class="left">J</td>
+      <td class="left">Class 19, C19</td>
+      <td class="left">(lots)</td>
+      <td class="left">(lots)</td>
+      <td class="left">Servers</td>
     </tr>
   </tbody>
 </table>
-<p id="rfc.section.3.p.2">As of the writing of this document, these characteristics correspond to distinguishable clusters of commercially available chips and design cores for constrained devices.  While it is expected that the boundaries of these classes will move over time, Moore&#8217;s law tends to be less effective in the embedded space than in personal computing devices: gains made available by increases in transistor count and density are more likely to be invested in reductions of cost and power requirements than into continual increases in computing power.</p>
-<p id="rfc.section.3.p.3">Class 0 devices are very constrained sensor-like motes.  They are so severely constrained in memory and processing capabilities that most likely they will not have the resources required to communicate directly with the Internet in a secure manner (rare heroic, narrowly targeted implementation efforts notwithstanding).  Class 0 devices will participate in Internet communications with the help of larger devices acting as proxies, gateways, or servers.  Class 0 devices generally cannot be secured or managed comprehensively in the traditional sense.  They will most likely be preconfigured (and will be reconfigured rarely, if at all) with a very small data set.  For management purposes, they could answer keepalive signals and send on/off or basic health indications.</p>
-<p id="rfc.section.3.p.4">Class 1 devices are quite constrained in code space and processing capabilities, such that they cannot easily talk to other Internet nodes employing a full protocol stack such as using HTTP, Transport Layer Security (TLS), and related security protocols and XML-based data representations.  However, they are capable enough to use a protocol stack specifically designed for constrained nodes (such as the Constrained Application Protocol (CoAP) over UDP <a href="#RFC7252">[RFC7252]</a>) and participate in meaningful conversations without the help of a gateway node.  In particular, they can provide support for the security functions required on a large network.  Therefore, they can be integrated as fully developed peers into an IP network, but they need to be parsimonious with state memory, code space, and often power expenditure for protocol and application usage.</p>
-<p id="rfc.section.3.p.5">Class 2 devices are less constrained and fundamentally capable of supporting most of the same protocol stacks as used on notebooks or servers.  However, even these devices can benefit from lightweight and energy-efficient protocols and from consuming less bandwidth.  Furthermore, using fewer resources for networking leaves more resources available to applications.  Thus, using the protocol stacks defined for more constrained devices on Class 2 devices might reduce development costs and increase the interoperability.</p>
-<p id="rfc.section.3.p.6">Constrained devices with capabilities significantly beyond Class 2 devices exist.  They are less demanding from a standards development point of view as they can largely use existing protocols unchanged.  The present document therefore does not make any attempt to define classes beyond Class 2.  These devices can still be constrained by a limited energy supply.</p>
-<p id="rfc.section.3.p.7">With respect to examining the capabilities of constrained nodes, particularly for Class 1 devices, it is important to understand what type of applications they are able to run and which protocol mechanisms would be most suitable.  Because of memory and other limitations, each specific Class 1 device might be able to support only a few selected functions needed for its intended operation.  In other words, the set of functions that can actually be supported is not static per device type: devices with similar constraints might choose to support different functions.  Even though Class 2 devices have some more functionality available and may be able to provide a more complete set of functions, they still need to be assessed for the type of applications they will be running and the protocol functions they would need.  To be able to derive any requirements, the use cases and the involvement of the devices in the application and the operational scenario need to be analyzed.  Use cases may combine constrained devices of multiple classes as well as more traditional Internet nodes.</p>
+<p id="rfc.section.3.p.6">As of the writing of this document, these characteristics correspond to distinguishable clusters of commercially available chips and design cores for constrained devices.  While it is expected that the boundaries of these classes will move over time, Moore&#8217;s law tends to be less effective in the embedded space than in personal computing devices: gains made available by increases in transistor count and density are more likely to be invested in reductions of cost and power requirements than into continual increases in computing power.</p>
+<p id="rfc.section.3.p.7">Class 0 devices are very constrained sensor-like motes.  They are so severely constrained in memory and processing capabilities that most likely they will not have the resources required to communicate directly with the Internet in a secure manner (rare heroic, narrowly targeted implementation efforts notwithstanding).  Class 0 devices will participate in Internet communications with the help of larger devices acting as proxies, gateways, or servers.  Class 0 devices generally cannot be secured or managed comprehensively in the traditional sense.  They will most likely be preconfigured (and will be reconfigured rarely, if at all) with a very small data set.  For management purposes, they could answer keepalive signals and send on/off or basic health indications.</p>
+<p id="rfc.section.3.p.8">Class 1 devices are quite constrained in code space and processing capabilities, such that they cannot easily talk to other Internet nodes employing a full protocol stack such as using HTTP, Transport Layer Security (TLS), and related security protocols and XML-based data representations.  However, they are capable enough to use a protocol stack specifically designed for constrained nodes (such as the Constrained Application Protocol (CoAP) over UDP <a href="#RFC7252">[RFC7252]</a>) and participate in meaningful conversations without the help of a gateway node.  In particular, they can provide support for the security functions required on a large network.  Therefore, they can be integrated as fully developed peers into an IP network, but they need to be parsimonious with state memory, code space, and often power expenditure for protocol and application usage.</p>
+<p id="rfc.section.3.p.9">Class 2 devices are less constrained and fundamentally capable of supporting most of the same protocol stacks as used on notebooks or servers.  However, even these devices can benefit from lightweight and energy-efficient protocols and from consuming less bandwidth.  Furthermore, using fewer resources for networking leaves more resources available to applications.  Thus, using the protocol stacks defined for more constrained devices on Class 2 devices might reduce development costs and increase the interoperability.</p>
+<p id="rfc.section.3.p.10">Constrained devices with capabilities significantly beyond Class 2 devices exist.  They are less demanding from a standards development point of view as they can largely use existing protocols unchanged.  The present document therefore does not make any attempt to define classes beyond Class 2.  These devices can still be constrained by a limited energy supply.</p>
+<p id="rfc.section.3.p.11">With respect to examining the capabilities of constrained nodes, particularly for Class 1 devices, it is important to understand what type of applications they are able to run and which protocol mechanisms would be most suitable.  Because of memory and other limitations, each specific Class 1 device might be able to support only a few selected functions needed for its intended operation.  In other words, the set of functions that can actually be supported is not static per device type: devices with similar constraints might choose to support different functions.  Even though Class 2 devices have some more functionality available and may be able to provide a more complete set of functions, they still need to be assessed for the type of applications they will be running and the protocol functions they would need.  To be able to derive any requirements, the use cases and the involvement of the devices in the application and the operational scenario need to be analyzed.  Use cases may combine constrained devices of multiple classes as well as more traditional Internet nodes.</p>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#power" id="power">Power Terminology</a></h1>
 <p id="rfc.section.4.p.1">Devices not only differ in their computing capabilities but also in available power and/or energy.  While it is harder to find recognizable clusters in this space, it is still useful to introduce some common terminology.</p>
 <h1 id="rfc.section.4.1"><a href="#rfc.section.4.1">4.1.</a> <a href="#scaling-properties" id="scaling-properties">Scaling Properties</a></h1>
@@ -767,7 +826,7 @@ address {
       <td class="reference">
         <b id="I-D.irtf-t2trg-iot-seccons">[I-D.irtf-t2trg-iot-seccons]</b>
       </td>
-      <td class="top"><a>Garcia-Morchon, O.</a>, <a>Kumar, S.</a> and <a>M. Sethi</a>, "<a href="http://tools.ietf.org/html/draft-irtf-t2trg-iot-seccons-00">Security Considerations in the IP-based Internet of Things</a>", Internet-Draft draft-irtf-t2trg-iot-seccons-00, October 2016.</td>
+      <td class="top"><a>Garcia-Morchon, O.</a>, <a>Kumar, S.</a> and <a>M. Sethi</a>, "<a href="http://tools.ietf.org/html/draft-irtf-t2trg-iot-seccons-02">State of the Art and Challenges for the Internet of Things</a>", Internet-Draft draft-irtf-t2trg-iot-seccons-02, March 2017.</td>
     </tr>
     <tr>
       <td class="reference">
