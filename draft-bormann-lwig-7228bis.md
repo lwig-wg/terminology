@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2016-10-30
+date: 2017-04-24
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -433,18 +433,51 @@ technologies {{RFC7668}} {{-V6-DECT-ULE}} {{RFC7428}}.
 
 # Classes of Constrained Devices {#devclass}
 
-<!-- TO DO: Add A-Class vs. M-Class -->
-
 Despite the overwhelming variety of Internet-connected devices that
 can be envisioned, it may be worthwhile to have some succinct
-terminology for different classes of constrained devices.  In this
-document, the class designations in {{devclasstbl}} may be used as rough
-indications of device capabilities:
+terminology for different classes of constrained devices.
 
-| Name        | data size (e.g., RAM) | code size (e.g., Flash) |
-| Class 0, C0 | \<\< 10 KiB           | \<\< 100 KiB            |
-| Class 1, C1 | ~ 10 KiB              | ~ 100 KiB               |
-| Class 2, C2 | ~ 50 KiB              | ~ 250 KiB               |
+Before we get to that, let's first distinguish two big rough groups of
+devices based on their CPU capabilities:
+
+* Microcontroller-class devices (ARM term: "M-class" [need ref]).
+  These often (but not always) include RAM and code storage on chip
+  and limit their support for general-purpose operating systems, e.g.,
+  they do not have an MMU (memory management unit).  They use most of
+  their pins for interfaces to application hardware such as digital
+  in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where
+  this hardware is specialized for an application, we may talk about
+  "Systems on a Chip" (SOC).  These devices often implement elaborate
+  sleep modes to achieve microwatt- or at least milliwatt-level
+  sustained power usage (Ps, see below).
+
+* General-purpose-class devices (ARM term: "A-class").  These usually
+  have RAM and Flash storage on separate chips (not always separate
+  packages), and offer support for general-purpose operating systems
+  such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are
+  dedidated to interfacing with RAM and other memory.  Some
+  general-purpose-class devices integrate some application hardware
+  such as video controllers, these are often called "Systems on a
+  Chip" (SOC).  While these chips also include sleep modes, they are
+  usually more on the watt side of sustained power usage (Ps).
+
+If the distinction between these groups needs to be made in this
+document, we distinguish group "M" (microcontroller) from group "J"
+(general purpose).
+
+In this document, the class designations in {{devclasstbl}} may be
+used as rough indications of device capabilities:
+
+| Group | Name          | data size (e.g., RAM) | code size (e.g., Flash) | Examples        |
+| M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            |                 |
+| M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               |                 |
+| M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               |                 |
+| J     | Class 10, C10 | 4-8 GiB               | (?)                     | OpenWRT routers |
+| J     |               | fill in useful        | J-group classes         |                 |
+| J     | Class 13, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
+| J     | Class 15, C15 | 1..2 GiB              | (lots)                  | Smartphones     |
+| J     | Class 16, C16 | 4..32 GiB             | (lots)                  | Laptops         |
+| J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
 {: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)'}
 
 As of the writing of this document, these characteristics correspond
