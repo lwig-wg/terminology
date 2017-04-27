@@ -82,11 +82,12 @@ Table of Contents
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  14
      5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  14
      5.2.  Class of Internet Integration . . . . . . . . . . . . . .  15
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  16
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  16
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  16
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  20
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  20
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  16
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  17
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  17
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  17
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  21
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  21
 
 1.  Introduction
 
@@ -105,7 +106,6 @@ Table of Contents
    work under severe resource constraints such as limited battery and
    computing power, little memory, and insufficient wireless bandwidth
    and ability to communicate; these constraints often exacerbate each
-   other.  Other entities on the network, e.g., a base station or
 
 
 
@@ -114,6 +114,7 @@ Bormann, et al.         Expires October 26, 2017                [Page 2]
 Internet-Draft               CNN Terminology                  April 2017
 
 
+   other.  Other entities on the network, e.g., a base station or
    controlling server, might have more computational and communication
    resources and could support the interaction between the constrained
    devices and applications in more traditional networks.
@@ -160,7 +161,6 @@ Internet-Draft               CNN Terminology                  April 2017
 
    The need for scaling down the characteristics of nodes leads to
    "constrained nodes".
-
 
 
 
@@ -436,10 +436,10 @@ Internet-Draft               CNN Terminology                  April 2017
    (general purpose).
 
    In this document, the class designations in Table 1 may be used as
-   rough indications of device capabilities:
-
-
-
+   rough indications of device capabilities.  Note that the classes from
+   10 upwards are not really constrained devices in the sense of the
+   previous section; they may still be useful to discuss constraints in
+   larger devices:
 
 
 
@@ -541,8 +541,9 @@ Internet-Draft               CNN Terminology                  April 2017
    devices exist.  They are less demanding from a standards development
    point of view as they can largely use existing protocols unchanged.
    The present document therefore does not make any attempt to define
-   classes beyond Class 2.  These devices can still be constrained by a
-   limited energy supply.
+   constrained classes beyond Class 2.  These devices, and to a certain
+   extent even J-group devices, can still be constrained by a limited
+   energy supply.
 
    With respect to examining the capabilities of constrained nodes,
    particularly for Class 1 devices, it is important to understand what
@@ -553,7 +554,6 @@ Internet-Draft               CNN Terminology                  April 2017
    other words, the set of functions that can actually be supported is
    not static per device type: devices with similar constraints might
    choose to support different functions.  Even though Class 2 devices
-   have some more functionality available and may be able to provide a
 
 
 
@@ -562,6 +562,7 @@ Bormann, et al.         Expires October 26, 2017               [Page 10]
 Internet-Draft               CNN Terminology                  April 2017
 
 
+   have some more functionality available and may be able to provide a
    more complete set of functions, they still need to be assessed for
    the type of applications they will be running and the protocol
    functions they would need.  To be able to derive any requirements,
@@ -607,7 +608,6 @@ Internet-Draft               CNN Terminology                  April 2017
    a period is exhausted or even have multiple such steps on the way to
    exhaustion.  For these devices, Ps would need to be given for each of
    the modes/steps.
-
 
 
 
@@ -807,7 +807,7 @@ Internet-Draft               CNN Terminology                  April 2017
    6LoWPAN fragmentation [RFC4944] cannot be used for these
    technologies, given the extremely reduced link layer MTU.  In this
    case, lightweight fragmentation formats must be used (e.g.
-   [I-D.gomez-lpwan-fragmentation-header]).
+   [I-D.ietf-lpwan-ipv6-static-context-hc]).
 
    S1 and S2 technologies require fragmentation at the subnetwork level
    to support the IPv6 MTU requirement.  If link layer fragmentation is
@@ -852,6 +852,75 @@ Internet-Draft               CNN Terminology                  April 2017
               | I9   | full Internet connectivity supported |
               +------+--------------------------------------+
 
+5.3.  Classes of physical layer bit rate
+
+   [This section is a trial balloon.  We could also talk about burst
+   rate, sustained rate; bits/s, messages/s, ...]
+
+   Physical layer technologies used by constrained devices can be
+   categorized on the basis of physical layer (PHY) bit rate.  The PHY
+   bit rate class of a technology has important implications with regard
+   to compatibility with existing protocols and mechanisms on the
+   Internet, responsiveness to frame transmissions and need for header
+   compression techniques.
+
+   We define the following classes of PHY bit rate:
+
+   +------+------------+-----------------------------------------------+
+   | Name | PHY bit    | Comment                                       |
+   |      | rate       |                                               |
+   |      | (bit/s)    |                                               |
+   +------+------------+-----------------------------------------------+
+   | B0   | < 10       | Tx time of 150-byte frame > MSL               |
+   |      |            |                                               |
+   | B1   | 10 - 10^3  | Unresponsiveness if human expects reaction to |
+   |      |            | sent frame (frame size > 62.5 byte)           |
+   |      |            |                                               |
+   | B2   | 10^3 -     | Responsiveness if human expects reaction to   |
+   |      | 10^6       | sent frame, but header compression still      |
+   |      |            | needed                                        |
+   |      |            |                                               |
+   | B3   | > 10^6     | Header compression yields relatively low      |
+   |      |            | performance benefits                          |
+   +------+------------+-----------------------------------------------+
+
+   (note: 'Bx' stands for 'Bit rate x')
+
+   B0 technologies lead to very high transmission times, which may be
+   close to or even greater than the Maximum Segment Lifetime (MSL)
+   assumed on the Internet [RFC0793].  Many Internet protocols and
+   mechanisms will fail when transmit times are greater than the MSL.
+
+
+
+Bormann, et al.         Expires October 26, 2017               [Page 16]
+
+Internet-Draft               CNN Terminology                  April 2017
+
+
+   B0 technologies lead to a frame transmission time greater than the
+   MSL for a frame size greater than 150 bytes.
+
+   B1 technologies offer transmission times which are lower than the MSL
+   (for a frame size greater than 150 bytes).  However, transmission
+   times for B1 technologies are still significant if a human expects a
+   reaction to the transmission of a frame.  With B1 technologies, the
+   transmission time of a frame greater than 62.5 bytes exceeds 0.5
+   seconds, i.e. a threshold time beyond which any response or reaction
+   to a frame transmission will appear not to be immediate [RFC5826].
+
+   B2 technologies do not incur responsiveness problems, but still
+   benefit from using header compression techniques (e.g.  [RFC6282]) to
+   achieve performance improvements.
+
+   Over B3 technologies, the relative performance benefits of header
+   compression are low.  For example, in a duty-cycled technology
+   offering B3 PHY bit rates, energy consumption decrease due to header
+   compression may be comparable with the energy consumed while in a
+   sleep interval.  On the other hand, for B3 PHY bit rates, a human
+   user will not be able to perceive whether header compression has been
+   used or not in a frame transmission.
+
 6.  IANA Considerations
 
    This document makes no requests of IANA.
@@ -877,26 +946,19 @@ Internet-Draft               CNN Terminology                  April 2017
               Challenged Internets", SIGCOMM 2003,
               DOI 10.1145/863955.863960, 2003.
 
+
+
+
+Bormann, et al.         Expires October 26, 2017               [Page 17]
+
+Internet-Draft               CNN Terminology                  April 2017
+
+
    [FIFTY-BILLION]
               Ericsson, "More Than 50 Billion Connected Devices",
               Ericsson White Paper 284 23-3149 Uen, February 2011,
               <http://www.ericsson.com/res/docs/whitepapers/
               wp-50-billions.pdf>.
-
-   [I-D.gomez-lpwan-fragmentation-header]
-              Gomez, C., Paradells, J., and J. Crowcroft, "LPWAN
-              Fragmentation Header", draft-gomez-lpwan-fragmentation-
-              header-03 (work in progress), October 2016.
-
-
-
-
-
-
-Bormann, et al.         Expires October 26, 2017               [Page 16]
-
-Internet-Draft               CNN Terminology                  April 2017
-
 
    [I-D.hui-vasseur-roll-rpl-deployment]
               Vasseur, J., Hui, J., Dasgupta, S., and G. Yoon, "RPL
@@ -909,6 +971,12 @@ Internet-Draft               CNN Terminology                  April 2017
               Barthel, "Transmission of IPv6 Packets over DECT Ultra Low
               Energy", draft-ietf-6lo-dect-ule-09 (work in progress),
               December 2016.
+
+   [I-D.ietf-lpwan-ipv6-static-context-hc]
+              Minaburo, A., Toutain, L., and C. Gomez, "LPWAN Static
+              Context Header Compression (SCHC) and fragmentation for
+              IPv6 and UDP", draft-ietf-lpwan-ipv6-static-context-hc-02
+              (work in progress), March 2017.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S., and H. Tschofenig, "A Hitchhiker's
@@ -934,6 +1002,14 @@ Internet-Draft               CNN Terminology                  April 2017
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <http://www.rfc-editor.org/info/rfc4838>.
 
+
+
+
+Bormann, et al.         Expires October 26, 2017               [Page 18]
+
+Internet-Draft               CNN Terminology                  April 2017
+
+
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
               Overview, Assumptions, Problem Statement, and Goals",
@@ -945,14 +1021,15 @@ Internet-Draft               CNN Terminology                  April 2017
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
               <http://www.rfc-editor.org/info/rfc4944>.
 
+   [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
+              Routing Requirements in Low-Power and Lossy Networks",
+              RFC 5826, DOI 10.17487/RFC5826, April 2010,
+              <http://www.rfc-editor.org/info/rfc5826>.
 
-
-
-
-Bormann, et al.         Expires October 26, 2017               [Page 17]
-
-Internet-Draft               CNN Terminology                  April 2017
-
+   [RFC6282]  Hui, J., Ed. and P. Thubert, "Compression Format for IPv6
+              Datagrams over IEEE 802.15.4-Based Networks", RFC 6282,
+              DOI 10.17487/RFC6282, September 2011,
+              <http://www.rfc-editor.org/info/rfc6282>.
 
    [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
               Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
@@ -982,6 +1059,13 @@ Internet-Draft               CNN Terminology                  April 2017
               DOI 10.17487/RFC7228, May 2014,
               <http://www.rfc-editor.org/info/rfc7228>.
 
+
+
+Bormann, et al.         Expires October 26, 2017               [Page 19]
+
+Internet-Draft               CNN Terminology                  April 2017
+
+
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
               DOI 10.17487/RFC7252, June 2014,
@@ -1002,13 +1086,6 @@ Internet-Draft               CNN Terminology                  April 2017
               "Architectural Considerations in Smart Object Networking",
               RFC 7452, DOI 10.17487/RFC7452, March 2015,
               <http://www.rfc-editor.org/info/rfc7452>.
-
-
-
-Bormann, et al.         Expires October 26, 2017               [Page 18]
-
-Internet-Draft               CNN Terminology                  April 2017
-
 
    [RFC7668]  Nieminen, J., Savolainen, T., Isomaki, M., Patil, B.,
               Shelby, Z., and C. Gomez, "IPv6 over BLUETOOTH(R) Low
@@ -1040,28 +1117,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires October 26, 2017               [Page 19]
+Bormann, et al.         Expires October 26, 2017               [Page 20]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -1117,4 +1173,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 20]
+Bormann, et al.         Expires October 26, 2017               [Page 21]
