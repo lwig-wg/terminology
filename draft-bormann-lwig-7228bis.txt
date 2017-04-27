@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: October 26, 2017                   Nokia Solutions and Networks
+Expires: October 29, 2017                   Nokia Solutions and Networks
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                          April 24, 2017
+                                                          April 27, 2017
 
 
                Terminology for Constrained-Node Networks
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 26, 2017.
+   This Internet-Draft will expire on October 29, 2017.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 1]
+Bormann, et al.         Expires October 29, 2017                [Page 1]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 2]
+Bormann, et al.         Expires October 29, 2017                [Page 2]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -165,7 +165,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 3]
+Bormann, et al.         Expires October 29, 2017                [Page 3]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -221,7 +221,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 4]
+Bormann, et al.         Expires October 29, 2017                [Page 4]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -277,7 +277,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 5]
+Bormann, et al.         Expires October 29, 2017                [Page 5]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -333,7 +333,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 6]
+Bormann, et al.         Expires October 29, 2017                [Page 6]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -389,7 +389,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 7]
+Bormann, et al.         Expires October 29, 2017                [Page 7]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -445,7 +445,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 8]
+Bormann, et al.         Expires October 29, 2017                [Page 8]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -501,7 +501,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017                [Page 9]
+Bormann, et al.         Expires October 29, 2017                [Page 9]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -557,7 +557,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 10]
+Bormann, et al.         Expires October 29, 2017               [Page 10]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -613,7 +613,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 11]
+Bormann, et al.         Expires October 29, 2017               [Page 11]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -669,7 +669,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 12]
+Bormann, et al.         Expires October 29, 2017               [Page 12]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -725,7 +725,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 13]
+Bormann, et al.         Expires October 29, 2017               [Page 13]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -781,7 +781,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 14]
+Bormann, et al.         Expires October 29, 2017               [Page 14]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -837,7 +837,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 15]
+Bormann, et al.         Expires October 29, 2017               [Page 15]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -893,7 +893,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 16]
+Bormann, et al.         Expires October 29, 2017               [Page 16]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -949,7 +949,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 17]
+Bormann, et al.         Expires October 29, 2017               [Page 17]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -1005,7 +1005,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 18]
+Bormann, et al.         Expires October 29, 2017               [Page 18]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -1061,7 +1061,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 19]
+Bormann, et al.         Expires October 29, 2017               [Page 19]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -1117,7 +1117,7 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 20]
+Bormann, et al.         Expires October 29, 2017               [Page 20]
 
 Internet-Draft               CNN Terminology                  April 2017
 
@@ -1173,4 +1173,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.         Expires October 26, 2017               [Page 21]
+Bormann, et al.         Expires October 29, 2017               [Page 21]
