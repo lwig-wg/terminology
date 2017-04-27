@@ -783,8 +783,8 @@ We define the following classes of PHY bit rate:
 | Name | PHY bit rate (bit/s) | Comment                                                                                     |
 |------+----------------------+---------------------------------------------------------------------------------------------|
 | B0   | < 10                 | Tx time of 150-byte frame > MSL                                                             |
-| B1   | 10 - 10^3            | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
-| B2   | 10^3 - 10^6          | Responsiveness if human expects reaction to sent frame, but header compression still needed |
+| B1   | 10 -- 10^3           | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
+| B2   | 10^3 -- 10^6         | Responsiveness if human expects reaction to sent frame, but header compression still needed |
 | B3   | > 10^6               | Header compression yields relatively low performance benefits                               |
 
 (note: 'Bx' stands for 'Bit rate x')
