@@ -61,7 +61,8 @@ author:
 informative:
   RFC7228:
   RFC4944:
-  I-D.gomez-lpwan-fragmentation-header:
+  RFC6282:
+  I-D.ietf-lpwan-ipv6-static-context-hc: frag-new
   RFC7452:
   RFC6606:
   RFC0793:
@@ -120,6 +121,7 @@ informative:
   I-D.ietf-lwig-tls-minimal: TLS-MINIMAL
   I-D.irtf-t2trg-iot-seccons: IOT-SECURITY
 #  I-D.ietf-lwig-cellular: COAP-CELLULAR
+  RFC5826: home-aut-reqs
 
 --- abstract
 
@@ -466,7 +468,10 @@ document, we distinguish group "M" (microcontroller) from group "J"
 (general purpose).
 
 In this document, the class designations in {{devclasstbl}} may be
-used as rough indications of device capabilities:
+used as rough indications of device capabilities.  Note that the
+classes from 10 upwards are not really constrained devices in the
+sense of the previous section; they may still be useful to discuss
+constraints in larger devices:
 
 | Group | Name          | data size (e.g., RAM) | code size (e.g., Flash) | Examples        |
 | M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            |                 |
@@ -532,8 +537,9 @@ Constrained devices with capabilities significantly beyond Class 2
 devices exist.  They are less demanding from a standards development
 point of view as they can largely use existing protocols unchanged.
 The present document therefore does not make any attempt to define
-classes beyond Class 2.  These devices can still be constrained by a
-limited energy supply.
+constrained classes beyond Class 2.  These devices, and to a certain
+extent even J-group devices, can still be constrained by a limited
+energy supply.
 
 With respect to examining the capabilities of constrained nodes,
 particularly for Class 1 devices, it is important to understand what
@@ -730,7 +736,7 @@ If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation {{RFC4944}}
 cannot be used for these technologies, given the extremely reduced link
 layer MTU. In this case, lightweight fragmentation formats must be used
-(e.g. {{I-D.gomez-lpwan-fragmentation-header}}).
+(e.g. {{-frag-new}}).
 
 S1 and S2 technologies require fragmentation at the subnetwork level to
 support the IPv6 MTU requirement.
@@ -759,7 +765,59 @@ We define the following classes of Internet technology level:
 | I1   | device-to-cloud only                 |
 | I9   | full Internet connectivity supported |
 
-<!-- burst rate, sustained rate; bits/s, messages/s -->
+
+## Classes of physical layer bit rate
+
+[This section is a trial balloon.  We could also talk about
+burst rate, sustained rate; bits/s, messages/s, ...]
+
+Physical layer technologies used by constrained devices can be
+categorized on the basis of physical layer (PHY) bit rate. The PHY bit
+rate class of a technology has important implications with regard to
+compatibility with existing protocols and mechanisms on the Internet,
+responsiveness to frame transmissions and need for header compression
+techniques.
+
+We define the following classes of PHY bit rate:
+
+| Name | PHY bit rate (bit/s) | Comment                                                                                     |
+|------+----------------------+---------------------------------------------------------------------------------------------|
+| B0   | < 10                 | Tx time of 150-byte frame > MSL                                                             |
+| B1   | 10 - 10^3            | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
+| B2   | 10^3 - 10^6          | Responsiveness if human expects reaction to sent frame, but header compression still needed |
+| B3   | > 10^6               | Header compression yields relatively low performance benefits                               |
+
+(note: 'Bx' stands for 'Bit rate x')
+
+B0 technologies lead to very high transmission times, which may be close
+to or even greater than the Maximum Segment Lifetime (MSL) assumed on
+the Internet {{RFC0793}}.  Many Internet protocols and mechanisms will fail
+when transmit times are greater than the MSL.  B0 technologies lead to a
+frame transmission time greater than the MSL for a frame size greater
+than 150 bytes.
+
+B1 technologies offer transmission times which are lower than the MSL
+(for a frame size greater than 150 bytes).  However, transmission times
+for B1 technologies are still significant if a human expects a reaction
+to the transmission of a frame.  With B1 technologies, the transmission
+time of a frame greater than 62.5 bytes exceeds 0.5 seconds, i.e. a
+threshold time beyond which any response or reaction to a frame
+transmission will appear not to be immediate {{-home-aut-reqs}}.
+
+B2 technologies do not incur responsiveness problems, but still benefit
+from using header compression techniques (e.g. {{RFC6282}}) to achieve
+performance improvements.
+
+Over B3 technologies, the relative performance benefits of header
+compression are low. For example, in a duty-cycled technology offering
+B3 PHY bit rates, energy consumption decrease due to header compression
+may be comparable with the energy consumed while in a sleep interval. On
+the other hand, for B3 PHY bit rates, a human user will not be able to
+perceive whether header compression has been used or not in a frame
+transmission.
+
+
+
 
 # IANA Considerations
 
