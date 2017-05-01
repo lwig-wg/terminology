@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2017-04-27
+date: 2017-05-01
 author:
 - ins: C. Bormann
   name: Carsten Bormann
