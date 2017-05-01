@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: October 29, 2017                   Nokia Solutions and Networks
+Expires: November 2, 2017                   Nokia Solutions and Networks
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                          April 27, 2017
+                                                            May 01, 2017
 
 
                Terminology for Constrained-Node Networks
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 29, 2017.
+   This Internet-Draft will expire on November 2, 2017.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 1]
+Bormann, et al.         Expires November 2, 2017                [Page 1]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 2]
+Bormann, et al.         Expires November 2, 2017                [Page 2]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    other.  Other entities on the network, e.g., a base station or
@@ -165,9 +165,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 3]
+Bormann, et al.         Expires November 2, 2017                [Page 3]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
 2.1.  Constrained Nodes
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 4]
+Bormann, et al.         Expires November 2, 2017                [Page 4]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    their power from primary batteries or by using energy harvesting;
@@ -277,9 +277,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 5]
+Bormann, et al.         Expires November 2, 2017                [Page 5]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    o  physical constraints (e.g., power constraints, environmental
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 6]
+Bormann, et al.         Expires November 2, 2017                [Page 6]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    The rest of this subsection introduces two additional terms that are
@@ -389,9 +389,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 7]
+Bormann, et al.         Expires November 2, 2017                [Page 7]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    Occasionally, the term is read as "Low-Power Wireless Area Networks"
@@ -445,9 +445,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 8]
+Bormann, et al.         Expires November 2, 2017                [Page 8]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    +-------+-----------+---------------+-----------------+-------------+
@@ -501,9 +501,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017                [Page 9]
+Bormann, et al.         Expires November 2, 2017                [Page 9]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    will participate in Internet communications with the help of larger
@@ -557,9 +557,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 10]
+Bormann, et al.         Expires November 2, 2017               [Page 10]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    have some more functionality available and may be able to provide a
@@ -613,9 +613,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 11]
+Bormann, et al.         Expires November 2, 2017               [Page 11]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
 4.2.  Classes of Energy Limitation
@@ -669,9 +669,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 12]
+Bormann, et al.         Expires November 2, 2017               [Page 12]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    reception (including potential reception) influence the total energy
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 13]
+Bormann, et al.         Expires November 2, 2017               [Page 13]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    +------+--------------+---------------------------------------------+
@@ -781,9 +781,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 14]
+Bormann, et al.         Expires November 2, 2017               [Page 14]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
     +------+---------------------+------------------------------------+
@@ -837,9 +837,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 15]
+Bormann, et al.         Expires November 2, 2017               [Page 15]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
               +------+--------------------------------------+
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 16]
+Bormann, et al.         Expires November 2, 2017               [Page 16]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    B0 technologies lead to a frame transmission time greater than the
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 17]
+Bormann, et al.         Expires November 2, 2017               [Page 17]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    [FIFTY-BILLION]
@@ -1005,9 +1005,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 18]
+Bormann, et al.         Expires November 2, 2017               [Page 18]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
@@ -1061,9 +1061,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 19]
+Bormann, et al.         Expires November 2, 2017               [Page 19]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
@@ -1117,9 +1117,9 @@ Internet-Draft               CNN Terminology                  April 2017
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 20]
+Bormann, et al.         Expires November 2, 2017               [Page 20]
 
-Internet-Draft               CNN Terminology                  April 2017
+Internet-Draft               CNN Terminology                    May 2017
 
 
 Acknowledgements
@@ -1173,4 +1173,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.         Expires October 29, 2017               [Page 21]
+Bormann, et al.         Expires November 2, 2017               [Page 21]
