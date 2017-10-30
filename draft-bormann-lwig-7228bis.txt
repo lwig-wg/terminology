@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: November 2, 2017                   Nokia Solutions and Networks
+Expires: May 3, 2018                        Nokia Solutions and Networks
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                            May 01, 2017
+                                                        October 30, 2017
 
 
                Terminology for Constrained-Node Networks
@@ -32,14 +32,14 @@ Status of This Memo
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
    working documents as Internet-Drafts.  The list of current Internet-
-   Drafts is at http://datatracker.ietf.org/drafts/current/.
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
 
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 2, 2017.
+   This Internet-Draft will expire on May 3, 2018.
 
 Copyright Notice
 
@@ -48,14 +48,14 @@ Copyright Notice
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
-   (http://trustee.ietf.org/license-info) in effect on the date of
+   (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 1]
+Bormann, et al.            Expires May 3, 2018                  [Page 1]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 2]
+Bormann, et al.            Expires May 3, 2018                  [Page 2]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    other.  Other entities on the network, e.g., a base station or
@@ -136,6 +136,8 @@ Internet-Draft               CNN Terminology                    May 2017
    few core terms are used consistently between different groups
    cooperating in this space.
 
+   The present document is an update of [RFC7228].
+
    In this document, the term "byte" is used in its now customary sense
    as a synonym for "octet".  Where sizes of semiconductor memory are
    given, the prefix "kibi" (1024) is combined with "byte" to
@@ -159,16 +161,17 @@ Internet-Draft               CNN Terminology                    May 2017
       networks being built out of them, to make this scaling up
       economically and physically viable.
 
+
+
+
+
+Bormann, et al.            Expires May 3, 2018                  [Page 3]
+
+Internet-Draft               CNN Terminology                October 2017
+
+
    The need for scaling down the characteristics of nodes leads to
    "constrained nodes".
-
-
-
-
-Bormann, et al.         Expires November 2, 2017                [Page 3]
-
-Internet-Draft               CNN Terminology                    May 2017
-
 
 2.1.  Constrained Nodes
 
@@ -215,17 +218,16 @@ Internet-Draft               CNN Terminology                    May 2017
    Section 3 defines a small number of interesting classes ("class-N"
    for N = 0, 1, 2) of constrained nodes focusing on relevant
    combinations of the first two constraints.  With respect to available
+
+
+
+Bormann, et al.            Expires May 3, 2018                  [Page 4]
+
+Internet-Draft               CNN Terminology                October 2017
+
+
    power, [RFC6606] distinguishes "power-affluent" nodes (mains-powered
    or regularly recharged) from "power-constrained nodes" that draw
-
-
-
-
-Bormann, et al.         Expires November 2, 2017                [Page 4]
-
-Internet-Draft               CNN Terminology                    May 2017
-
-
    their power from primary batteries or by using energy harvesting;
    more detailed power terminology is given in Section 4.
 
@@ -275,11 +277,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-
-
-Bormann, et al.         Expires November 2, 2017                [Page 5]
+Bormann, et al.            Expires May 3, 2018                  [Page 5]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    o  physical constraints (e.g., power constraints, environmental
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 6]
+Bormann, et al.            Expires May 3, 2018                  [Page 6]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    The rest of this subsection introduces two additional terms that are
@@ -389,16 +389,15 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 7]
+Bormann, et al.            Expires May 3, 2018                  [Page 7]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    Occasionally, the term is read as "Low-Power Wireless Area Networks"
    [WEI].  Originally focused on IEEE 802.15.4, "LoWPAN" (or when used
    for IPv6, "6LoWPAN") also refers to networks built from similarly
-   constrained link-layer technologies [RFC7668] [I-D.ietf-6lo-dect-ule]
-   [RFC7428].
+   constrained link-layer technologies [RFC7668] [RFC8105] [RFC7428].
 
 3.  Classes of Constrained Devices
 
@@ -445,9 +444,10 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 8]
+
+Bormann, et al.            Expires May 3, 2018                  [Page 8]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    +-------+-----------+---------------+-----------------+-------------+
@@ -501,9 +501,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017                [Page 9]
+Bormann, et al.            Expires May 3, 2018                  [Page 9]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    will participate in Internet communications with the help of larger
@@ -557,9 +557,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 10]
+Bormann, et al.            Expires May 3, 2018                 [Page 10]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    have some more functionality available and may be able to provide a
@@ -613,9 +613,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 11]
+Bormann, et al.            Expires May 3, 2018                 [Page 11]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
 4.2.  Classes of Energy Limitation
@@ -669,9 +669,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 12]
+Bormann, et al.            Expires May 3, 2018                 [Page 12]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    reception (including potential reception) influence the total energy
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 13]
+Bormann, et al.            Expires May 3, 2018                 [Page 13]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    +------+--------------+---------------------------------------------+
@@ -781,9 +781,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 14]
+Bormann, et al.            Expires May 3, 2018                 [Page 14]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
     +------+---------------------+------------------------------------+
@@ -837,9 +837,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 15]
+Bormann, et al.            Expires May 3, 2018                 [Page 15]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
               +------+--------------------------------------+
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 16]
+Bormann, et al.            Expires May 3, 2018                 [Page 16]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    B0 technologies lead to a frame transmission time greater than the
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 17]
+Bormann, et al.            Expires May 3, 2018                 [Page 17]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
    [FIFTY-BILLION]
@@ -966,17 +966,11 @@ Internet-Draft               CNN Terminology                    May 2017
               vasseur-roll-rpl-deployment-01 (work in progress), July
               2012.
 
-   [I-D.ietf-6lo-dect-ule]
-              Mariager, P., Petersen, J., Shelby, Z., Logt, M., and D.
-              Barthel, "Transmission of IPv6 Packets over DECT Ultra Low
-              Energy", draft-ietf-6lo-dect-ule-09 (work in progress),
-              December 2016.
-
    [I-D.ietf-lpwan-ipv6-static-context-hc]
               Minaburo, A., Toutain, L., and C. Gomez, "LPWAN Static
               Context Header Compression (SCHC) and fragmentation for
-              IPv6 and UDP", draft-ietf-lpwan-ipv6-static-context-hc-02
-              (work in progress), March 2017.
+              IPv6 and UDP", draft-ietf-lpwan-ipv6-static-context-hc-07
+              (work in progress), October 2017.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S., and H. Tschofenig, "A Hitchhiker's
@@ -985,9 +979,10 @@ Internet-Draft               CNN Terminology                    May 2017
               ietf-lwig-tls-minimal-01 (work in progress), March 2014.
 
    [I-D.irtf-t2trg-iot-seccons]
-              Garcia-Morchon, O., Kumar, S., and M. Sethi, "State of the
-              Art and Challenges for the Internet of Things", draft-
-              irtf-t2trg-iot-seccons-02 (work in progress), March 2017.
+              Garcia-Morchon, O., Kumar, S., and M. Sethi, "State-of-
+              the-Art and Challenges for the Internet of Things
+              Security", draft-irtf-t2trg-iot-seccons-08 (work in
+              progress), October 2017.
 
    [ISQ-13]   International Electrotechnical Commission, "International
               Standard -- Quantities and units -- Part 13: Information
@@ -995,107 +990,113 @@ Internet-Draft               CNN Terminology                    May 2017
 
    [RFC0793]  Postel, J., "Transmission Control Protocol", STD 7,
               RFC 793, DOI 10.17487/RFC0793, September 1981,
-              <http://www.rfc-editor.org/info/rfc793>.
+              <https://www.rfc-editor.org/info/rfc793>.
 
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
-              April 2007, <http://www.rfc-editor.org/info/rfc4838>.
-
-
-
-
-Bormann, et al.         Expires November 2, 2017               [Page 18]
-
-Internet-Draft               CNN Terminology                    May 2017
-
+              April 2007, <https://www.rfc-editor.org/info/rfc4838>.
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
               Overview, Assumptions, Problem Statement, and Goals",
               RFC 4919, DOI 10.17487/RFC4919, August 2007,
-              <http://www.rfc-editor.org/info/rfc4919>.
+              <https://www.rfc-editor.org/info/rfc4919>.
+
+
+
+Bormann, et al.            Expires May 3, 2018                 [Page 18]
+
+Internet-Draft               CNN Terminology                October 2017
+
 
    [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
               "Transmission of IPv6 Packets over IEEE 802.15.4
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
-              <http://www.rfc-editor.org/info/rfc4944>.
+              <https://www.rfc-editor.org/info/rfc4944>.
 
    [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
               Routing Requirements in Low-Power and Lossy Networks",
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
-              <http://www.rfc-editor.org/info/rfc5826>.
+              <https://www.rfc-editor.org/info/rfc5826>.
 
    [RFC6282]  Hui, J., Ed. and P. Thubert, "Compression Format for IPv6
               Datagrams over IEEE 802.15.4-Based Networks", RFC 6282,
               DOI 10.17487/RFC6282, September 2011,
-              <http://www.rfc-editor.org/info/rfc6282>.
+              <https://www.rfc-editor.org/info/rfc6282>.
 
    [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
               Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
               JP., and R. Alexander, "RPL: IPv6 Routing Protocol for
               Low-Power and Lossy Networks", RFC 6550,
               DOI 10.17487/RFC6550, March 2012,
-              <http://www.rfc-editor.org/info/rfc6550>.
+              <https://www.rfc-editor.org/info/rfc6550>.
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
               in Low-Power and Lossy Networks", RFC 6551,
               DOI 10.17487/RFC6551, March 2012,
-              <http://www.rfc-editor.org/info/rfc6551>.
+              <https://www.rfc-editor.org/info/rfc6551>.
 
    [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
               Statement and Requirements for IPv6 over Low-Power
               Wireless Personal Area Network (6LoWPAN) Routing",
               RFC 6606, DOI 10.17487/RFC6606, May 2012,
-              <http://www.rfc-editor.org/info/rfc6606>.
+              <https://www.rfc-editor.org/info/rfc6606>.
 
    [RFC7102]  Vasseur, JP., "Terms Used in Routing for Low-Power and
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
-              2014, <http://www.rfc-editor.org/info/rfc7102>.
+              2014, <https://www.rfc-editor.org/info/rfc7102>.
 
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
               DOI 10.17487/RFC7228, May 2014,
-              <http://www.rfc-editor.org/info/rfc7228>.
-
-
-
-Bormann, et al.         Expires November 2, 2017               [Page 19]
-
-Internet-Draft               CNN Terminology                    May 2017
-
+              <https://www.rfc-editor.org/info/rfc7228>.
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
               DOI 10.17487/RFC7252, June 2014,
-              <http://www.rfc-editor.org/info/rfc7252>.
+              <https://www.rfc-editor.org/info/rfc7252>.
+
+
+
+
+Bormann, et al.            Expires May 3, 2018                 [Page 19]
+
+Internet-Draft               CNN Terminology                October 2017
+
 
    [RFC7416]  Tsao, T., Alexander, R., Dohler, M., Daza, V., Lozano, A.,
               and M. Richardson, Ed., "A Security Threat Analysis for
               the Routing Protocol for Low-Power and Lossy Networks
               (RPLs)", RFC 7416, DOI 10.17487/RFC7416, January 2015,
-              <http://www.rfc-editor.org/info/rfc7416>.
+              <https://www.rfc-editor.org/info/rfc7416>.
 
    [RFC7428]  Brandt, A. and J. Buron, "Transmission of IPv6 Packets
               over ITU-T G.9959 Networks", RFC 7428,
               DOI 10.17487/RFC7428, February 2015,
-              <http://www.rfc-editor.org/info/rfc7428>.
+              <https://www.rfc-editor.org/info/rfc7428>.
 
    [RFC7452]  Tschofenig, H., Arkko, J., Thaler, D., and D. McPherson,
               "Architectural Considerations in Smart Object Networking",
               RFC 7452, DOI 10.17487/RFC7452, March 2015,
-              <http://www.rfc-editor.org/info/rfc7452>.
+              <https://www.rfc-editor.org/info/rfc7452>.
 
    [RFC7668]  Nieminen, J., Savolainen, T., Isomaki, M., Patil, B.,
               Shelby, Z., and C. Gomez, "IPv6 over BLUETOOTH(R) Low
               Energy", RFC 7668, DOI 10.17487/RFC7668, October 2015,
-              <http://www.rfc-editor.org/info/rfc7668>.
+              <https://www.rfc-editor.org/info/rfc7668>.
 
    [RFC7815]  Kivinen, T., "Minimal Internet Key Exchange Version 2
               (IKEv2) Initiator Implementation", RFC 7815,
               DOI 10.17487/RFC7815, March 2016,
-              <http://www.rfc-editor.org/info/rfc7815>.
+              <https://www.rfc-editor.org/info/rfc7815>.
+
+   [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
+              M., and D. Barthel, "Transmission of IPv6 Packets over
+              Digital Enhanced Cordless Telecommunications (DECT) Ultra
+              Low Energy (ULE)", RFC 8105, DOI 10.17487/RFC8105, May
+              2017, <https://www.rfc-editor.org/info/rfc8105>.
 
    [WEI]      Shelby, Z. and C. Bormann, "6LoWPAN: the Wireless Embedded
               Internet", Wiley-Blackwell monograph,
@@ -1116,10 +1117,9 @@ Internet-Draft               CNN Terminology                    May 2017
 
 
 
-
-Bormann, et al.         Expires November 2, 2017               [Page 20]
+Bormann, et al.            Expires May 3, 2018                 [Page 20]
 
-Internet-Draft               CNN Terminology                    May 2017
+Internet-Draft               CNN Terminology                October 2017
 
 
 Acknowledgements
@@ -1173,4 +1173,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.         Expires November 2, 2017               [Page 21]
+Bormann, et al.            Expires May 3, 2018                 [Page 21]
