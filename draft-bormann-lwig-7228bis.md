@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2017-05-01
+#date: 2017-05-01
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -73,7 +73,7 @@ informative:
   RFC4919:
   RFC7252:
   RFC7668:
-  I-D.ietf-6lo-dect-ule: V6-DECT-ULE
+  RFC8105: dectule
   RFC7428:
   FIFTY-BILLION:
     target: http://www.ericsson.com/res/docs/whitepapers/wp-50-billions.pdf
@@ -172,6 +172,8 @@ been useful in the standardization work for constrained
 environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.
+
+The present document is an update of {{RFC7228}}.
 
 In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
@@ -428,7 +430,7 @@ considered a vestige.  Occasionally, the term is read as "Low-Power
 Wireless Area Networks" {{WEI}}.  Originally focused on IEEE
 802.15.4, "LoWPAN" (or when used for IPv6, "6LoWPAN") also refers to
 networks built from similarly constrained link-layer
-technologies {{RFC7668}} {{-V6-DECT-ULE}} {{RFC7428}}.
+technologies {{RFC7668}} {{-dectule}} {{RFC7428}}.
 
 
 
