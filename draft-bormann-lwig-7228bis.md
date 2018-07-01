@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-#date: 2017-05-01
+#date: 2018-07-01
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -479,6 +479,8 @@ constraints in larger devices:
 | M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            |                 |
 | M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               |                 |
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               |                 |
+| M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F2, F3     |
+| M     | Class 4, C4   | ~ 300..500..1000 KiB  | ~ 1000...2000 KiB       | "Luxury"        |
 | J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
 | J     |               | fill in useful        | J-group classes         |                 |
 | J     | Class 13, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
@@ -538,10 +540,17 @@ might reduce development costs and increase the interoperability.
 Constrained devices with capabilities significantly beyond Class 2
 devices exist.  They are less demanding from a standards development
 point of view as they can largely use existing protocols unchanged.
-The present document therefore does not make any attempt to define
-constrained classes beyond Class 2.  These devices, and to a certain
-extent even J-group devices, can still be constrained by a limited
-energy supply.
+The previous version of the present document therefore did not make
+any attempt to define constrained classes beyond Class 2.  These
+devices, and to a certain extent even J-group devices, can still be
+constrained by a limited energy supply.  Class 3 and 4 devices are
+less clearly defined than the lower classes; they are even less
+constrained.  In particular Class 4 devices are powerful enough to
+run, e.g., JavaScript interpreters.  Additional classes may need to be
+defined based on protection capabilities, e.g., an MPU (memory
+protection unit; true MMUs are typically only found in J-group
+devices).
+
 
 With respect to examining the capabilities of constrained nodes,
 particularly for Class 1 devices, it is important to understand what
