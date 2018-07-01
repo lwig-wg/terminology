@@ -546,9 +546,9 @@ devices, and to a certain extent even J-group devices, can still be
 constrained by a limited energy supply.  Class 3 and 4 devices are
 less clearly defined than the lower classes; they are even less
 constrained.  In particular Class 4 devices are powerful enough to
-run, e.g., JavaScript interpreters.  Additional classes may need to be
-defined based on protection capabilities, e.g., an MPU (memory
-protection unit; true MMUs are typically only found in J-group
+comfortably run, e.g., JavaScript interpreters.  Additional classes
+may need to be defined based on protection capabilities, e.g., an MPU
+(memory protection unit; true MMUs are typically only found in J-group
 devices).
 
 
