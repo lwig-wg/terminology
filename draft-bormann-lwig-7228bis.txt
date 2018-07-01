@@ -562,10 +562,10 @@ Bormann, et al.          Expires January 2, 2019               [Page 10]
 Internet-Draft               CNN Terminology                   July 2018
 
 
-   run, e.g., JavaScript interpreters.  Additional classes may need to
-   be defined based on protection capabilities, e.g., an MPU (memory
-   protection unit; true MMUs are typically only found in J-group
-   devices).
+   comfortably run, e.g., JavaScript interpreters.  Additional classes
+   may need to be defined based on protection capabilities, e.g., an MPU
+   (memory protection unit; true MMUs are typically only found in
+   J-group devices).
 
    With respect to examining the capabilities of constrained nodes,
    particularly for Class 1 devices, it is important to understand what
