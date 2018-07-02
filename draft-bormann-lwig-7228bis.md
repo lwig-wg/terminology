@@ -476,10 +476,10 @@ sense of the previous section; they may still be useful to discuss
 constraints in larger devices:
 
 | Group | Name          | data size (e.g., RAM) | code size (e.g., Flash) | Examples        |
-| M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            |                 |
-| M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               |                 |
-| M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               |                 |
-| M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F2, F3     |
+| M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            | ATtiny          |
+| M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               | STM32F103CB     |
+| M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               | STM32F103RC     |
+| M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
 | M     | Class 4, C4   | ~ 300..500..1000 KiB  | ~ 1000...2000 KiB       | "Luxury"        |
 | J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
 | J     |               | fill in useful        | J-group classes         |                 |
@@ -487,7 +487,7 @@ constraints in larger devices:
 | J     | Class 15, C15 | 1..2 GiB              | (lots)                  | Smartphones     |
 | J     | Class 16, C16 | 4..32 GiB             | (lots)                  | Laptops         |
 | J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
-{: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)'}
+{: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)' cols="l 20l l l l"}
 
 As of the writing of this document, these characteristics correspond
 to distinguishable clusters of commercially available chips and design
@@ -546,7 +546,8 @@ devices, and to a certain extent even J-group devices, can still be
 constrained by a limited energy supply.  Class 3 and 4 devices are
 less clearly defined than the lower classes; they are even less
 constrained.  In particular Class 4 devices are powerful enough to
-comfortably run, e.g., JavaScript interpreters.  Additional classes
+quite comfortably run, e.g., JavaScript interpreters, together with
+elaborate network stacks.  Additional classes
 may need to be defined based on protection capabilities, e.g., an MPU
 (memory protection unit; true MMUs are typically only found in J-group
 devices).
