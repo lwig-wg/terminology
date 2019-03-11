@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: January 2, 2019                    Nokia Solutions and Networks
+Expires: September 12, 2019                 Nokia Solutions and Networks
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                           July 01, 2018
+                                                          March 11, 2019
 
 
                Terminology for Constrained-Node Networks
@@ -39,11 +39,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 2, 2019.
+   This Internet-Draft will expire on September 12, 2019.
 
 Copyright Notice
 
-   Copyright (c) 2018 IETF Trust and the persons identified as the
+   Copyright (c) 2019 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann, et al.          Expires January 2, 2019                [Page 1]
+Bormann, et al.        Expires September 12, 2019               [Page 1]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -75,19 +75,22 @@ Table of Contents
        2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   7
        2.3.2.  LoWPAN, 6LoWPAN . . . . . . . . . . . . . . . . . . .   7
    3.  Classes of Constrained Devices  . . . . . . . . . . . . . . .   8
-   4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  11
-     4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  11
-     4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  12
-     4.3.  Strategies for Using Power for Communication  . . . . . .  13
-   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  15
-     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  15
-     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  16
-     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  16
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  18
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  18
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  18
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  22
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  22
+     3.1.  Firmware/Software upgradeability  . . . . . . . . . . . .  11
+     3.2.  Isolation functionality . . . . . . . . . . . . . . . . .  11
+     3.3.  Shielded secrets  . . . . . . . . . . . . . . . . . . . .  12
+   4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  12
+     4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  12
+     4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  13
+     4.3.  Strategies for Using Power for Communication  . . . . . .  14
+   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  16
+     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  16
+     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  17
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  17
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  19
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  19
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  19
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  23
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  23
 
 1.  Introduction
 
@@ -103,17 +106,17 @@ Table of Contents
    factories, and sending the information to one or more server
    stations.  They might also act on information, by performing some
    physical action, including displaying it.  Constrained devices may
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 2]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    work under severe resource constraints such as limited battery and
    computing power, little memory, and insufficient wireless bandwidth
    and ability to communicate; these constraints often exacerbate each
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 2]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    other.  Other entities on the network, e.g., a base station or
    controlling server, might have more computational and communication
    resources and could support the interaction between the constrained
@@ -157,18 +160,19 @@ Internet-Draft               CNN Terminology                   July 2018
    o  scaling up Internet technologies to a large number [FIFTY-BILLION]
       of inexpensive nodes, while
 
+
+
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 3]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    o  scaling down the characteristics of each of these nodes and of the
       networks being built out of them, to make this scaling up
       economically and physically viable.
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 3]
-
-Internet-Draft               CNN Terminology                   July 2018
-
 
    The need for scaling down the characteristics of nodes leads to
    "constrained nodes".
@@ -215,17 +219,16 @@ Internet-Draft               CNN Terminology                   July 2018
    o  constraints on user interface and accessibility in deployment
       (ability to set keys, update software, etc.).
 
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 4]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    Section 3 defines a small number of interesting classes ("class-N"
    for N = 0, 1, 2) of constrained nodes focusing on relevant
    combinations of the first two constraints.  With respect to available
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 4]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    power, [RFC6606] distinguishes "power-affluent" nodes (mains-powered
    or regularly recharged) from "power-constrained nodes" that draw
    their power from primary batteries or by using energy harvesting;
@@ -271,16 +274,17 @@ Internet-Draft               CNN Terminology                   July 2018
 
    Again, there may be several reasons for this:
 
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 5]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    o  cost constraints on the network,
 
    o  constraints posed by the nodes (for constrained-node networks),
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 5]
-
-Internet-Draft               CNN Terminology                   July 2018
-
 
    o  physical constraints (e.g., power constraints, environmental
       constraints, media constraints such as underwater operation,
@@ -326,17 +330,16 @@ Internet-Draft               CNN Terminology                   July 2018
 
    A constrained-node network always is a constrained network because of
    the network constraints stemming from the node constraints, but it
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 6]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    may also have other constraints that already make it a constrained
    network.
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 6]
-
-Internet-Draft               CNN Terminology                   July 2018
-
 
    The rest of this subsection introduces two additional terms that are
    in active use in the area of constrained-node networks, without an
@@ -383,17 +386,17 @@ Internet-Draft               CNN Terminology                   July 2018
    acronym, "Low-Power Wireless Personal Area Network", contains a hard-
    to-justify "Personal" that is due to the history of task group naming
    in IEEE 802 more than due to an orientation of LoWPANs around a
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 7]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    single person.  Actually, LoWPANs have been suggested for urban
    monitoring, control of large buildings, and industrial control
    applications, so the "Personal" can only be considered a vestige.
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 7]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    Occasionally, the term is read as "Low-Power Wireless Area Networks"
    [WEI].  Originally focused on IEEE 802.15.4, "LoWPAN" (or when used
    for IPv6, "6LoWPAN") also refers to networks built from similarly
@@ -442,52 +445,47 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 8]
+Bormann, et al.        Expires September 12, 2019               [Page 8]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
-   +-------+----------+-----------------+----------------+-------------+
-   | Group | Name     | data size       | code size      | Examples    |
-   |       |          | (e.g., RAM)     | (e.g., Flash)  |             |
-   +-------+----------+-----------------+----------------+-------------+
-   | M     | Class 0, | << 10 KiB       | << 100 KiB     |             |
-   |       | C0       |                 |                |             |
-   |       |          |                 |                |             |
-   | M     | Class 1, | ~ 10 KiB        | ~ 100 KiB      |             |
-   |       | C1       |                 |                |             |
-   |       |          |                 |                |             |
-   | M     | Class 2, | ~ 50 KiB        | ~ 250 KiB      |             |
-   |       | C2       |                 |                |             |
-   |       |          |                 |                |             |
-   | M     | Class 3, | ~ 100 KiB       | ~ 500..1000    | STM32F2, F3 |
-   |       | C3       |                 | KiB            |             |
-   |       |          |                 |                |             |
-   | M     | Class 4, | ~               | ~ 1000...2000  | "Luxury"    |
-   |       | C4       | 300..500..1000  | KiB            |             |
-   |       |          | KiB             |                |             |
-   |       |          |                 |                |             |
-   | J     | Class    | 4-8 MiB         | (?)            | OpenWRT     |
-   |       | 10, C10  |                 |                | routers     |
-   |       |          |                 |                |             |
-   | J     |          | fill in useful  | J-group        |             |
-   |       |          |                 | classes        |             |
-   |       |          |                 |                |             |
-   | J     | Class    | 0.5..1 GiB      | (lots)         | Raspberry   |
-   |       | 13, C13  |                 |                | PI          |
-   |       |          |                 |                |             |
-   | J     | Class    | 1..2 GiB        | (lots)         | Smartphones |
-   |       | 15, C15  |                 |                |             |
-   |       |          |                 |                |             |
-   | J     | Class    | 4..32 GiB       | (lots)         | Laptops     |
-   |       | 16, C16  |                 |                |             |
-   |       |          |                 |                |             |
-   | J     | Class    | (lots)          | (lots)         | Servers     |
-   |       | 19, C19  |                 |                |             |
-   +-------+----------+-----------------+----------------+-------------+
+   +-------+--------------+----------------+-------------+-------------+
+   | Group | Name         | data size      | code size   | Examples    |
+   |       |              | (e.g., RAM)    | (e.g.,      |             |
+   |       |              |                | Flash)      |             |
+   +-------+--------------+----------------+-------------+-------------+
+   | M     | Class 0, C0  | << 10 KiB      | << 100 KiB  | ATtiny      |
+   |       |              |                |             |             |
+   | M     | Class 1, C1  | ~ 10 KiB       | ~ 100 KiB   | STM32F103CB |
+   |       |              |                |             |             |
+   | M     | Class 2, C2  | ~ 50 KiB       | ~ 250 KiB   | STM32F103RC |
+   |       |              |                |             |             |
+   | M     | Class 3, C3  | ~ 100 KiB      | ~ 500..1000 | STM32F103RG |
+   |       |              |                | KiB         |             |
+   |       |              |                |             |             |
+   | M     | Class 4, C4  | ~              | ~           | "Luxury"    |
+   |       |              | 300..500..1000 | 1000...2000 |             |
+   |       |              | KiB            | KiB         |             |
+   |       |              |                |             |             |
+   | J     | Class 10,    | 4-8 MiB        | (?)         | OpenWRT     |
+   |       | C10          |                |             | routers     |
+   |       |              |                |             |             |
+   | J     |              | fill in        | ...J-group  |             |
+   |       |              | useful...      | classes     |             |
+   |       |              |                |             |             |
+   | J     | Class 15,    | 0.5..1 GiB     | (lots)      | Raspberry   |
+   |       | C13          |                |             | PI          |
+   |       |              |                |             |             |
+   | J     | Class 16,    | 1..4 GiB       | (lots)      | Smartphones |
+   |       | C15          |                |             |             |
+   |       |              |                |             |             |
+   | J     | Class 17,    | 4..32 GiB      | (lots)      | Laptops     |
+   |       | C16          |                |             |             |
+   |       |              |                |             |             |
+   | J     | Class 19,    | (lots)         | (lots)      | Servers     |
+   |       | C19          |                |             |             |
+   +-------+--------------+----------------+-------------+-------------+
 
         Table 1: Classes of Constrained Devices (KiB = 1024 bytes)
 
@@ -497,17 +495,16 @@ Internet-Draft               CNN Terminology                   July 2018
    boundaries of these classes will move over time, Moore's law tends to
    be less effective in the embedded space than in personal computing
    devices: gains made available by increases in transistor count and
-
-
-
-
-Bormann, et al.          Expires January 2, 2019                [Page 9]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    density are more likely to be invested in reductions of cost and
    power requirements than into continual increases in computing power.
+
+
+
+
+Bormann, et al.        Expires September 12, 2019               [Page 9]
+
+Internet-Draft               CNN Terminology                  March 2019
+
 
    Class 0 devices are very constrained sensor-like motes.  They are so
    severely constrained in memory and processing capabilities that most
@@ -554,18 +551,19 @@ Internet-Draft               CNN Terminology                   July 2018
    constrained by a limited energy supply.  Class 3 and 4 devices are
    less clearly defined than the lower classes; they are even less
    constrained.  In particular Class 4 devices are powerful enough to
+   quite comfortably run, e.g., JavaScript interpreters, together with
+   elaborate network stacks.  Additional classes may need to be defined
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 10]
+
+Bormann, et al.        Expires September 12, 2019              [Page 10]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
-   comfortably run, e.g., JavaScript interpreters.  Additional classes
-   may need to be defined based on protection capabilities, e.g., an MPU
-   (memory protection unit; true MMUs are typically only found in
-   J-group devices).
+   based on protection capabilities, e.g., an MPU (memory protection
+   unit; true MMUs are typically only found in J-group devices).
 
    With respect to examining the capabilities of constrained nodes,
    particularly for Class 1 devices, it is important to understand what
@@ -585,6 +583,60 @@ Internet-Draft               CNN Terminology                   July 2018
    combine constrained devices of multiple classes as well as more
    traditional Internet nodes.
 
+3.1.  Firmware/Software upgradeability
+
+   Platforms may differ in their firmware or software upgradeability.
+   The below is a first attempt at classifying this.
+
+   +------+------------------------------------------------------------+
+   | Name | Firmware/Software upgradeability                           |
+   +------+------------------------------------------------------------+
+   | F0   | no (discard for upgrade)                                   |
+   |      |                                                            |
+   | F1   | replaceable, out of service during replacement, reboot     |
+   |      |                                                            |
+   | F2   | patchable during operation, reboot required                |
+   |      |                                                            |
+   | F3   | patchable during operation, restart not visible externally |
+   |      |                                                            |
+   | F9   | app-level upgradeability, no reboot required ("hitless")   |
+   +------+------------------------------------------------------------+
+
+3.2.  Isolation functionality
+
+   TBD.  This section could discuss the ability of the platform to
+   isolate different components.  The categories below are not mutually
+   exclusive; we need to build relevant clusters.
+
+
+
+
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 11]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
+   +------+-----------------------------------------------------------+
+   | Name | Isolation functionality                                   |
+   +------+-----------------------------------------------------------+
+   | Is0  | no isolation                                              |
+   |      |                                                           |
+   | Is2  | MPU (memory protection unit), at least boundary registers |
+   |      |                                                           |
+   | Is5  | MMU with Linux-style kernel/user                          |
+   |      |                                                           |
+   | Is7  | Virtualization-style isolation                            |
+   |      |                                                           |
+   | Is8  | Secure enclave isolation                                  |
+   +------+-----------------------------------------------------------+
+
+3.3.  Shielded secrets
+
+   Some platforms can keep shielded secrets (usually in conjuction with
+   secure enclave functionality).
+
 4.  Power Terminology
 
    Devices not only differ in their computing capabilities but also in
@@ -602,22 +654,6 @@ Internet-Draft               CNN Terminology                   July 2018
    International System of Units (SI units), an approximate value for
    one or both of the quantities listed in Table 2:
 
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019               [Page 11]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    +------+--------------------------------------------------+---------+
    | Name | Definition                                       | SI Unit |
    +------+--------------------------------------------------+---------+
@@ -629,6 +665,14 @@ Internet-Draft               CNN Terminology                   July 2018
    +------+--------------------------------------------------+---------+
 
              Table 2: Quantities Relevant to Power and Energy
+
+
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 12]
+
+Internet-Draft               CNN Terminology                  March 2019
+
 
    The value of Et may need to be interpreted in conjunction with an
    indication over which period of time the value is given; see
@@ -669,9 +713,21 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 12]
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 13]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
    +------+------------------------------+-----------------------------+
@@ -725,9 +781,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 13]
+Bormann, et al.        Expires September 12, 2019              [Page 14]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
       reattachment process and any resulting application communications.
@@ -781,9 +837,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 14]
+Bormann, et al.        Expires September 12, 2019              [Page 15]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
    low-power state to conserve power) and temporarily suspend protocol
@@ -837,9 +893,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 15]
+Bormann, et al.        Expires September 12, 2019              [Page 16]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
 5.2.  Class of Internet Integration
@@ -893,9 +949,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 16]
+Bormann, et al.        Expires September 12, 2019              [Page 17]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
    +------+------------+-----------------------------------------------+
@@ -949,9 +1005,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 17]
+Bormann, et al.        Expires September 12, 2019              [Page 18]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
 6.  IANA Considerations
@@ -992,10 +1048,23 @@ Internet-Draft               CNN Terminology                   July 2018
               2012.
 
    [I-D.ietf-lpwan-ipv6-static-context-hc]
-              Minaburo, A., Toutain, L., Gomez, C., and D. Barthel,
-              "LPWAN Static Context Header Compression (SCHC) and
-              fragmentation for IPv6 and UDP", draft-ietf-lpwan-ipv6-
-              static-context-hc-16 (work in progress), June 2018.
+              Minaburo, A., Toutain, L., Gomez, C., Barthel, D., and J.
+              Zuniga, "LPWAN Static Context Header Compression (SCHC)
+              and fragmentation for IPv6 and UDP", draft-ietf-lpwan-
+              ipv6-static-context-hc-18 (work in progress), December
+              2018.
+
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 19]
+
+Internet-Draft               CNN Terminology                  March 2019
+
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S., and H. Tschofenig, "A Hitchhiker's
@@ -1003,18 +1072,11 @@ Internet-Draft               CNN Terminology                   July 2018
               for Smart Objects and Constrained Node Networks", draft-
               ietf-lwig-tls-minimal-01 (work in progress), March 2014.
 
-
-
-Bormann, et al.          Expires January 2, 2019               [Page 18]
-
-Internet-Draft               CNN Terminology                   July 2018
-
-
    [I-D.irtf-t2trg-iot-seccons]
               Garcia-Morchon, O., Kumar, S., and M. Sethi, "State-of-
               the-Art and Challenges for the Internet of Things
-              Security", draft-irtf-t2trg-iot-seccons-15 (work in
-              progress), May 2018.
+              Security", draft-irtf-t2trg-iot-seccons-16 (work in
+              progress), December 2018.
 
    [ISQ-13]   International Electrotechnical Commission, "International
               Standard -- Quantities and units -- Part 13: Information
@@ -1050,21 +1112,22 @@ Internet-Draft               CNN Terminology                   July 2018
               DOI 10.17487/RFC6282, September 2011,
               <https://www.rfc-editor.org/info/rfc6282>.
 
+
+
+
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 20]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
               Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
               JP., and R. Alexander, "RPL: IPv6 Routing Protocol for
               Low-Power and Lossy Networks", RFC 6550,
               DOI 10.17487/RFC6550, March 2012,
               <https://www.rfc-editor.org/info/rfc6550>.
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019               [Page 19]
-
-Internet-Draft               CNN Terminology                   July 2018
-
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
@@ -1108,19 +1171,17 @@ Internet-Draft               CNN Terminology                   July 2018
               RFC 7452, DOI 10.17487/RFC7452, March 2015,
               <https://www.rfc-editor.org/info/rfc7452>.
 
+
+
+Bormann, et al.        Expires September 12, 2019              [Page 21]
+
+Internet-Draft               CNN Terminology                  March 2019
+
+
    [RFC7668]  Nieminen, J., Savolainen, T., Isomaki, M., Patil, B.,
               Shelby, Z., and C. Gomez, "IPv6 over BLUETOOTH(R) Low
               Energy", RFC 7668, DOI 10.17487/RFC7668, October 2015,
               <https://www.rfc-editor.org/info/rfc7668>.
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019               [Page 20]
-
-Internet-Draft               CNN Terminology                   July 2018
-
 
    [RFC7815]  Kivinen, T., "Minimal Internet Key Exchange Version 2
               (IKEv2) Initiator Implementation", RFC 7815,
@@ -1168,14 +1229,9 @@ Internet-Draft               CNN Terminology                   July 2018
 
 
 
-
-
-
-
-
-Bormann, et al.          Expires January 2, 2019               [Page 21]
+Bormann, et al.        Expires September 12, 2019              [Page 22]
 
-Internet-Draft               CNN Terminology                   July 2018
+Internet-Draft               CNN Terminology                  March 2019
 
 
 Acknowledgements
@@ -1229,4 +1285,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.          Expires January 2, 2019               [Page 22]
+Bormann, et al.        Expires September 12, 2019              [Page 23]
