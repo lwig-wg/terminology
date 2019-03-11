@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-#date: 2018-07-01
+date: 2019-03-11
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -482,10 +482,10 @@ constraints in larger devices:
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
 | M     | Class 4, C4   | ~ 300..500..1000 KiB  | ~ 1000...2000 KiB       | "Luxury"        |
 | J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
-| J     |               | fill in useful        | J-group classes         |                 |
-| J     | Class 13, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
-| J     | Class 15, C15 | 1..2 GiB              | (lots)                  | Smartphones     |
-| J     | Class 16, C16 | 4..32 GiB             | (lots)                  | Laptops         |
+| J     |               | fill in useful...     | ...J-group classes      |                 |
+| J     | Class 15, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
+| J     | Class 16, C15 | 1..4 GiB              | (lots)                  | Smartphones     |
+| J     | Class 17, C16 | 4..32 GiB             | (lots)                  | Laptops         |
 | J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
 {: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)' cols="l 20l l l l"}
 
@@ -571,11 +571,35 @@ operational scenario need to be analyzed.  Use cases may combine
 constrained devices of multiple classes as well as more traditional
 Internet nodes.
 
-<!-- Firmware/Software upgradeability -->
-<!-- F0: no -->
-<!-- F1: replaceable, out of service during replacement, reboot -->
-<!-- F2: patchable -->
-<!-- F9: app-level upgradeability -->
+## Firmware/Software upgradeability
+
+Platforms may differ in their firmware or software upgradeability.
+The below is a first attempt at classifying this.
+
+| Name | Firmware/Software upgradeability                           |
+| F0   | no (discard for upgrade)                                   |
+| F1   | replaceable, out of service during replacement, reboot     |
+| F2   | patchable during operation, reboot required                |
+| F3   | patchable during operation, restart not visible externally |
+| F9   | app-level upgradeability, no reboot required ("hitless")   |
+
+## Isolation functionality
+
+TBD.  This section could discuss the ability of the platform to
+isolate different components.  The categories below are not mutually
+exclusive; we need to build relevant clusters.
+
+| Name | Isolation functionality                                   |
+| Is0  | no isolation                                              |
+| Is2  | MPU (memory protection unit), at least boundary registers |
+| Is5  | MMU with Linux-style kernel/user                          |
+| Is7  | Virtualization-style isolation                            |
+| Is8  | Secure enclave isolation                                  |
+
+## Shielded secrets
+
+Some platforms can keep shielded secrets (usually in conjuction with
+secure enclave functionality).
 
 # Power Terminology {#power}
 
