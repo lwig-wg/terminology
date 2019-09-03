@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2019-03-11
+date: 2019-09-02
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -60,6 +60,7 @@ author:
   email: carlesgo@entel.upc.edu
 informative:
   RFC7228:
+  RFC5905: ntp
   RFC4944:
   RFC6282:
   I-D.ietf-lpwan-ipv6-static-context-hc: frag-new
@@ -119,7 +120,7 @@ informative:
   RFC7416: ROLL-SEC-THREATS
   RFC7815: IKEV2-MINIMAL
   I-D.ietf-lwig-tls-minimal: TLS-MINIMAL
-  I-D.irtf-t2trg-iot-seccons: IOT-SECURITY
+  RFC8576: IOT-SECURITY
 #  I-D.ietf-lwig-cellular: COAP-CELLULAR
   RFC5826: home-aut-reqs
 
@@ -745,6 +746,89 @@ communication (P9) and a Sleepy Node as a node that may sometimes go
 into a sleep mode (a low-power state to conserve power) and
 temporarily suspend protocol communication (P0); there is no explicit
 mention of P1.
+
+## Strategies of Keeping Time over Power Events
+
+\[This subsection is very drafty.]
+
+Many applications for a device require it to keep some concept of time.
+
+Time-keeping can be relative to a previous event (last packet received),
+absolute on a device-specific scale (e.g., last reboot), or absolute
+on a world-wide scale ("wall-clock time").
+
+Some devices lose the concept of time when going to sleep: after
+wakeup, they don't know how long they slept.  Some others do keep some
+concept of time during sleep, but not precise enough to use as a basis
+for keeping absolute time.  Some devices have a continuously running
+source of a reasonably accurate time (often a 32,768 Hz watch crystal).
+Finally, some devices can keep their concept of time even during a
+battery change, e.g., by using a backup battery or a supercapacitor to
+power the real-time clock (RTC).
+
+The actual accuracy of time may vary, with errors ranging from tens of
+percent from on-chip RC oscillators (not useful for keeping absolute
+time, but still useful for, e.g., timing out some state) to
+approximately 1e-4 to 1e-5 ("watch crystal") of error.  More precise
+timing is available with temperature compensated crystal oscillators
+(TCXO).  Further improvement requires significantly higher power
+usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
+oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can
+reach 1e-11 over the short term and 1e-9 over the long term.
+
+A device may need to fire up a more accurate frequency source during
+wireless communication, this may also allow it to keep more precise
+time during the period.
+
+The various time sources available on the device can be assisted by
+external time input, e.g. via the network using the NTP protocol
+{{-ntp}}.  Information from measuring the deviation between external
+input and local time source can be used to increase the accuracy of
+maintaining time even during periods of no network use.
+
+Errors of the frequency source can be compensated if known (calibrated
+against a known better source, or even predicted, e.g., in a software
+TCXO).  Even with errors partially compensated, an uncertainty
+remains, which is the more fundamental characteristic to discuss.
+
+Battery solutions may allow the device to keep a wall-clock time
+during its entire life, or the wall-clock time may need to be reset
+after a battery change.  Even devices that have a battery lasting for
+their lifetime may not be set to wall-clock time at manufacture time,
+possibly because the battery is only activated at installation time
+where time sources may be questionable or because setting the clock
+during manufacture is deemed too much effort.
+
+Devices that keep a good approximation of wall-clock time during their
+life may be in a better position to securely validate external time
+inputs than devices that need to be reset episodically, which can
+possibly be tricked by their environment into accepting a long-past
+time, for instance with the intent of exploiting expired security
+assertions such as certificates.
+
+From a practical point of view, devices can be divided at least on the
+two dimensions proposed in {{timeclasstbl}} and
+{{timepermanencytbl}}.  Corrections to the local time of a device
+performed over the network can be used to improve the uncertainty
+exhibited by these basic device classes.
+
+
+| Name | Type                                        | Uncertainty (roughly)       |
+| T0   | relative time while awake                   | (usually high)              |
+| T1   | relative time                               | (usually high during sleep) |
+| T2   | relative time                               | 1e-4 or better              |
+| T5   | absolute time (e.g., since boot)            | 1e-4 or better              |
+| T7   | wall-clock time                             | 1e-4 or better              |
+| T8   | wall-clock time                             | 1e-5 or better              |
+| T9   | wall-clock time                             | 1e-6 or better (TCXO)       |
+| T10  | wall-clock time                             | 1e-7 or better (OCXO or Rb) |
+{: #timeclasstbl title="Strategies of Keeping Time over Power Events"}
+
+| Name | Permanency (from type T5 upwards):           | Uncertainty                 |
+| TP0  | time needs to be reset on certain occasions |                             |
+| TP1  | time needs to be set during installation    | (possibly reduced...        |
+| TP9  | reliable time is maintained during lifetime | ...by using external input) |
+{: #timepermanencytbl title="Permanency of Keeping Time"}
 
 # Classes of Networks
 
