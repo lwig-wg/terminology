@@ -30,13 +30,8 @@ author:
   email: cabo@tzi.org
 - ins: M. Ersue
   name: Mehmet Ersue
-  org: Nokia Solutions and Networks
-  street: St.-Martinstrasse 76
-  city: Munich
-  code: '81541'
-  country: Germany
-  phone: "+49 172 8432301"
-  email: mehmet.ersue@nsn.com
+#  country: Germany
+  email: mersue@gmail.com
 - ins: A. Keranen
   name: Ari Keranen
   org: Ericsson
@@ -76,14 +71,14 @@ informative:
   RFC7668:
   RFC8105: dectule
   RFC7428:
-  FIFTY-BILLION:
-    target: http://www.ericsson.com/res/docs/whitepapers/wp-50-billions.pdf
-    title: More Than 50 Billion Connected Devices
+  IoT-2025:
+    target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
+    title: Driving the Digital Agenda Requires Strategic Architecture
     author:
-    - org: Ericsson
-    date: 2011-02
-    seriesinfo:
-      Ericsson White Paper: 284 23-3149 Uen
+    - name: Mike Rosen
+    - org: IDC
+    date: 2016-11-16
+    annotation: Slide 11
   WEI:
     title: '6LoWPAN: the Wireless Embedded Internet'
     author:
@@ -165,8 +160,10 @@ devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
 becomes a reality, built up out of uniquely identifiable and
 addressable objects (things).  Over the next decade, this could
-grow to large numbers {{FIFTY-BILLION}} of Internet-connected constrained
-devices, greatly increasing the Internet's size and scope.
+grow to large numbers of Internet-connected constrained
+devices ({{IoT-2025}} predicts that by, 2025, more than
+2500 devices will be connected to the Internet per second), greatly
+increasing the Internet's size and scope.
 
 The present document provides a number of basic terms that have
 been useful in the standardization work for constrained
@@ -197,7 +194,7 @@ There are two important aspects to *scaling* within the Internet of Things:
 
 
 
-* scaling up Internet technologies to a large number {{FIFTY-BILLION}}   of
+* scaling up Internet technologies to a large number {{IoT-2025}} of
   inexpensive nodes, while
 
 * scaling down the characteristics of each of these nodes and of the
