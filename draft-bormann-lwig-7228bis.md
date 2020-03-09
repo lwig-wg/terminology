@@ -442,7 +442,7 @@ terminology for different classes of constrained devices.
 Before we get to that, let's first distinguish two big rough groups of
 devices based on their CPU capabilities:
 
-* Microcontroller-class devices (ARM term: "M-class" [need ref]).
+* Microcontroller-class devices (ARM term: "M-class").
   These often (but not always) include RAM and code storage on chip
   and limit their support for general-purpose operating systems, e.g.,
   they do not have an MMU (memory management unit).  They use most of
@@ -457,7 +457,7 @@ devices based on their CPU capabilities:
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
   such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are
-  dedidated to interfacing with RAM and other memory.  Some
+  dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
   such as video controllers, these are often called "Systems on a
   Chip" (SOC).  While these chips also include sleep modes, they are
@@ -579,6 +579,7 @@ The below is a first attempt at classifying this.
 | F2   | patchable during operation, reboot required                |
 | F3   | patchable during operation, restart not visible externally |
 | F9   | app-level upgradeability, no reboot required ("hitless")   |
+{: #upgtbl title='Levels of software update capabilities'}
 
 ## Isolation functionality
 
@@ -592,11 +593,20 @@ exclusive; we need to build relevant clusters.
 | Is5  | MMU with Linux-style kernel/user                          |
 | Is7  | Virtualization-style isolation                            |
 | Is8  | Secure enclave isolation                                  |
+{: #isoltbl title='Levels of isolation capabilities'}
 
 ## Shielded secrets
 
-Some platforms can keep shielded secrets (usually in conjuction with
+\[Need to identify clusters]
+
+Some platforms can keep shielded secrets (usually in conjunction with
 secure enclave functionality).
+
+| Name | Secret shielding functionality |
+| Sh0  | no secret shielding            |
+| Sh1  | some secret shielding          |
+| Sh9  | perfect secret shielding       |
+{: #shieldtbl title='Levels of secret shielding capabilities'}
 
 # Power Terminology {#power}
 
@@ -884,7 +894,7 @@ We define the following classes of Internet technology level:
 
 ## Classes of physical layer bit rate
 
-[This section is a trial balloon.  We could also talk about
+\[This section is a trial balloon.  We could also talk about
 burst rate, sustained rate; bits/s, messages/s, ...]
 
 Physical layer technologies used by constrained devices can be
