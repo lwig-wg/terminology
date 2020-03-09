@@ -293,6 +293,7 @@ address {
 <link href="#rfc.section.4.1" rel="Chapter" title="4.1 Scaling Properties">
 <link href="#rfc.section.4.2" rel="Chapter" title="4.2 Classes of Energy Limitation">
 <link href="#rfc.section.4.3" rel="Chapter" title="4.3 Strategies for Using Power for Communication">
+<link href="#rfc.section.4.4" rel="Chapter" title="4.4 Strategies of Keeping Time over Power Events">
 <link href="#rfc.section.5" rel="Chapter" title="5 Classes of Networks">
 <link href="#rfc.section.5.1" rel="Chapter" title="5.1 Classes of link layer MTU size">
 <link href="#rfc.section.5.2" rel="Chapter" title="5.2 Class of Internet Integration">
@@ -304,14 +305,14 @@ address {
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.21.1 - https://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.40.1 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Bormann, C., Ersue, M., Keranen, A., and C. Gomez" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-bormann-lwig-7228bis-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-03-11" />
-  <meta name="dct.abstract" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks." />
-  <meta name="description" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks." />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-09-02" />
+  <meta name="dct.abstract" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks. " />
+  <meta name="description" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks. " />
 
 </head>
 
@@ -333,8 +334,8 @@ address {
 <td class="right">M. Ersue</td>
 </tr>
 <tr>
-<td class="left">Expires: September 12, 2019</td>
-<td class="right">Nokia Solutions and Networks</td>
+<td class="left">Expires: March 5, 2020</td>
+<td class="right"></td>
 </tr>
 <tr>
 <td class="left"></td>
@@ -354,7 +355,7 @@ address {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">March 11, 2019</td>
+<td class="right">September 02, 2019</td>
 </tr>
 
     	
@@ -370,7 +371,7 @@ address {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 12, 2019.</p>
+<p>This Internet-Draft will expire on March 5, 2020.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -412,6 +413,8 @@ address {
 </li>
 <li>4.3.   <a href="#rfc.section.4.3">Strategies for Using Power for Communication</a>
 </li>
+<li>4.4.   <a href="#rfc.section.4.4">Strategies of Keeping Time over Power Events</a>
+</li>
 </ul><li>5.   <a href="#rfc.section.5">Classes of Networks</a>
 </li>
 <ul><li>5.1.   <a href="#rfc.section.5.1">Classes of link layer MTU size</a>
@@ -439,9 +442,9 @@ address {
 </h1>
 <p id="rfc.section.1.p.1">Small devices with limited CPU, memory, and power resources, so-called &#8220;constrained devices&#8221; (often used as sensors/actuators, smart objects, or smart devices) can form a network, becoming &#8220;constrained nodes&#8221; in that network.  Such a network may itself exhibit constraints, e.g., with unreliable or lossy channels, limited and unpredictable bandwidth, and a highly dynamic topology.</p>
 <p id="rfc.section.1.p.2">Constrained devices might be in charge of gathering information in diverse settings, including natural ecosystems, buildings, and factories, and sending the information to one or more server stations.  They might also act on information, by performing some physical action, including displaying it.  Constrained devices may work under severe resource constraints such as limited battery and computing power, little memory, and insufficient wireless bandwidth and ability to communicate; these constraints often exacerbate each other.  Other entities on the network, e.g., a base station or controlling server, might have more computational and communication resources and could support the interaction between the constrained devices and applications in more traditional networks.</p>
-<p id="rfc.section.1.p.3">Today, diverse sizes of constrained devices with different resources and capabilities are becoming connected.  Mobile personal gadgets, building-automation devices, cellular phones, machine-to-machine (M2M) devices, and other devices benefit from interacting with other &#8220;things&#8221; nearby or somewhere in the Internet.  With this, the Internet of Things (IoT) becomes a reality, built up out of uniquely identifiable and addressable objects (things).  Over the next decade, this could grow to large numbers <a href="#FIFTY-BILLION" class="xref">[FIFTY-BILLION]</a> of Internet-connected constrained devices, greatly increasing the Internet&#8217;s size and scope.</p>
+<p id="rfc.section.1.p.3">Today, diverse sizes of constrained devices with different resources and capabilities are becoming connected.  Mobile personal gadgets, building-automation devices, cellular phones, machine-to-machine (M2M) devices, and other devices benefit from interacting with other &#8220;things&#8221; nearby or somewhere in the Internet.  With this, the Internet of Things (IoT) becomes a reality, built up out of uniquely identifiable and addressable objects (things).  Over the next decade, this could grow to large numbers of Internet-connected constrained devices (<a href="#IoT-2025" class="xref">[IoT-2025]</a> predicts that by, 2025, more than 2500 devices will be connected to the Internet per second), greatly increasing the Internet&#8217;s size and scope.</p>
 <p id="rfc.section.1.p.4">The present document provides a number of basic terms that have been useful in the standardization work for constrained environments.  The intention is not to exhaustively cover the field but to make sure a few core terms are used consistently between different groups cooperating in this space.</p>
-<p id="rfc.section.1.p.5">The present document is an update of <a href="#RFC7228" class="xref">[RFC7228]</a>.</p>
+<p id="rfc.section.1.p.5">The present document is a revision of <a href="#RFC7228" class="xref">[RFC7228]</a>.</p>
 <p id="rfc.section.1.p.6">In this document, the term &#8220;byte&#8221; is used in its now customary sense as a synonym for &#8220;octet&#8221;.  Where sizes of semiconductor memory are given, the prefix &#8220;kibi&#8221; (1024) is combined with &#8220;byte&#8221; to &#8220;kibibyte&#8221;, abbreviated &#8220;KiB&#8221;, for 1024 bytes <a href="#ISQ-13" class="xref">[ISQ-13]</a>.</p>
 <p id="rfc.section.1.p.7">In computing, the term &#8220;power&#8221; is often used for the concept of &#8220;computing power&#8221; or &#8220;processing power&#8221;, as in CPU performance.  In this document, the term stands for electrical power unless explicitly stated otherwise.  &#8220;Mains-powered&#8221; is used as a shorthand for being permanently connected to a stable electrical power grid.</p>
 <h1 id="rfc.section.2">
@@ -451,7 +454,7 @@ address {
 <p></p>
 
 <ul>
-<li>scaling up Internet technologies to a large number <a href="#FIFTY-BILLION" class="xref">[FIFTY-BILLION]</a>   of inexpensive nodes, while</li>
+<li>scaling up Internet technologies to a large number <a href="#IoT-2025" class="xref">[IoT-2025]</a> of inexpensive nodes, while</li>
 <li>scaling down the characteristics of each of these nodes and of the networks being built out of them, to make this scaling up economically and physically viable.</li>
 </ul>
 <p id="rfc.section.2.p.3">The need for scaling down the characteristics of nodes leads to &#8220;constrained nodes&#8221;.</p>
@@ -608,8 +611,8 @@ address {
 <tr>
 <td class="left">M</td>
 <td class="left">Class 4, C4</td>
-<td class="left">~ 300..500..1000 KiB</td>
-<td class="left">~ 1000&#8230;2000 KiB</td>
+<td class="left">~ 300..1000 KiB</td>
+<td class="left">~ 1000..2000 KiB</td>
 <td class="left">&#8220;Luxury&#8221;</td>
 </tr>
 <tr>
@@ -618,13 +621,6 @@ address {
 <td class="left">4-8 MiB</td>
 <td class="left">(?)</td>
 <td class="left">OpenWRT routers</td>
-</tr>
-<tr>
-<td class="left">J</td>
-<td class="left"></td>
-<td class="left">fill in useful&#8230;</td>
-<td class="left">&#8230;J-group classes</td>
-<td class="left"></td>
 </tr>
 <tr>
 <td class="left">J</td>
@@ -847,6 +843,99 @@ address {
 <p id="rfc.section.4.3.p.6">Note that the discussion above is at the device level; similar considerations can apply at the communications-interface level.  This document does not define terminology for the latter.</p>
 <p id="rfc.section.4.3.p.7">A term often used to describe power-saving approaches is &#8220;duty-cycling&#8221;.  This describes all forms of periodically switching off some function, leaving it on only for a certain percentage of time (the &#8220;duty cycle&#8221;).</p>
 <p><a href="#RFC7102" class="xref">[RFC7102]</a> only distinguishes two levels, defining a Non-Sleepy Node as a node that always remains in a fully powered-on state (always awake) where it has the capability to perform communication (P9) and a Sleepy Node as a node that may sometimes go into a sleep mode (a low-power state to conserve power) and temporarily suspend protocol communication (P0); there is no explicit mention of P1.</p>
+<h1 id="rfc.section.4.4">
+<a href="#rfc.section.4.4">4.4.</a> <a href="#strategies-of-keeping-time-over-power-events" id="strategies-of-keeping-time-over-power-events">Strategies of Keeping Time over Power Events</a>
+</h1>
+<p id="rfc.section.4.4.p.1">[This subsection is very drafty.]</p>
+<p id="rfc.section.4.4.p.2">Many applications for a device require it to keep some concept of time.</p>
+<p id="rfc.section.4.4.p.3">Time-keeping can be relative to a previous event (last packet received), absolute on a device-specific scale (e.g., last reboot), or absolute on a world-wide scale (&#8220;wall-clock time&#8221;).</p>
+<p id="rfc.section.4.4.p.4">Some devices lose the concept of time when going to sleep: after wakeup, they don&#8217;t know how long they slept.  Some others do keep some concept of time during sleep, but not precise enough to use as a basis for keeping absolute time.  Some devices have a continuously running source of a reasonably accurate time (often a 32,768 Hz watch crystal).  Finally, some devices can keep their concept of time even during a battery change, e.g., by using a backup battery or a supercapacitor to power the real-time clock (RTC).</p>
+<p id="rfc.section.4.4.p.5">The actual accuracy of time may vary, with errors ranging from tens of percent from on-chip RC oscillators (not useful for keeping absolute time, but still useful for, e.g., timing out some state) to approximately 1e-4 to 1e-5 (&#8220;watch crystal&#8221;) of error.  More precise timing is available with temperature compensated crystal oscillators (TCXO).  Further improvement requires significantly higher power usage, bulk, fragility, and device cost, e.g. oven-controlled crystal oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can reach 1e-11 over the short term and 1e-9 over the long term.</p>
+<p id="rfc.section.4.4.p.6">A device may need to fire up a more accurate frequency source during wireless communication, this may also allow it to keep more precise time during the period.</p>
+<p id="rfc.section.4.4.p.7">The various time sources available on the device can be assisted by external time input, e.g. via the network using the NTP protocol <a href="#RFC5905" class="xref">[RFC5905]</a>.  Information from measuring the deviation between external input and local time source can be used to increase the accuracy of maintaining time even during periods of no network use.</p>
+<p id="rfc.section.4.4.p.8">Errors of the frequency source can be compensated if known (calibrated against a known better source, or even predicted, e.g., in a software TCXO).  Even with errors partially compensated, an uncertainty remains, which is the more fundamental characteristic to discuss.</p>
+<p id="rfc.section.4.4.p.9">Battery solutions may allow the device to keep a wall-clock time during its entire life, or the wall-clock time may need to be reset after a battery change.  Even devices that have a battery lasting for their lifetime may not be set to wall-clock time at manufacture time, possibly because the battery is only activated at installation time where time sources may be questionable or because setting the clock during manufacture is deemed too much effort.</p>
+<p id="rfc.section.4.4.p.10">Devices that keep a good approximation of wall-clock time during their life may be in a better position to securely validate external time inputs than devices that need to be reset episodically, which can possibly be tricked by their environment into accepting a long-past time, for instance with the intent of exploiting expired security assertions such as certificates.</p>
+<p id="rfc.section.4.4.p.11">From a practical point of view, devices can be divided at least on the two dimensions proposed in <a href="#timeclasstbl" class="xref">Table 5</a> and <a href="#timepermanencytbl" class="xref">Table 6</a>.  Corrections to the local time of a device performed over the network can be used to improve the uncertainty exhibited by these basic device classes.</p>
+<div id="rfc.table.5"></div>
+<div id="timeclasstbl"></div>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Strategies of Keeping Time over Power Events</caption>
+<thead><tr>
+<th class="left">Name</th>
+<th class="left">Type</th>
+<th class="left">Uncertainty (roughly)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">T0</td>
+<td class="left">relative time while awake</td>
+<td class="left">(usually high)</td>
+</tr>
+<tr>
+<td class="left">T1</td>
+<td class="left">relative time</td>
+<td class="left">(usually high during sleep)</td>
+</tr>
+<tr>
+<td class="left">T2</td>
+<td class="left">relative time</td>
+<td class="left">1e-4 or better</td>
+</tr>
+<tr>
+<td class="left">T5</td>
+<td class="left">absolute time (e.g., since boot)</td>
+<td class="left">1e-4 or better</td>
+</tr>
+<tr>
+<td class="left">T7</td>
+<td class="left">wall-clock time</td>
+<td class="left">1e-4 or better</td>
+</tr>
+<tr>
+<td class="left">T8</td>
+<td class="left">wall-clock time</td>
+<td class="left">1e-5 or better</td>
+</tr>
+<tr>
+<td class="left">T9</td>
+<td class="left">wall-clock time</td>
+<td class="left">1e-6 or better (TCXO)</td>
+</tr>
+<tr>
+<td class="left">T10</td>
+<td class="left">wall-clock time</td>
+<td class="left">1e-7 or better (OCXO or Rb)</td>
+</tr>
+</tbody>
+</table>
+<div id="rfc.table.6"></div>
+<div id="timepermanencytbl"></div>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Permanency of Keeping Time</caption>
+<thead><tr>
+<th class="left">Name</th>
+<th class="left">Permanency (from type T5 upwards):</th>
+<th class="left">Uncertainty</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">TP0</td>
+<td class="left">time needs to be reset on certain occasions</td>
+<td class="left"></td>
+</tr>
+<tr>
+<td class="left">TP1</td>
+<td class="left">time needs to be set during installation</td>
+<td class="left">(possibly reduced&#8230;</td>
+</tr>
+<tr>
+<td class="left">TP9</td>
+<td class="left">reliable time is maintained during lifetime</td>
+<td class="left">&#8230;by using external input)</td>
+</tr>
+</tbody>
+</table>
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#classes-of-networks" id="classes-of-networks">Classes of Networks</a>
 </h1>
@@ -960,7 +1049,7 @@ address {
 <h1 id="rfc.section.7">
 <a href="#rfc.section.7">7.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a>
 </h1>
-<p id="rfc.section.7.p.1">This document introduces common terminology that does not raise any new security issues.  Security considerations arising from the constraints discussed in this document need to be discussed in the context of specific protocols.  For instance, Section 11.6 of <a href="#RFC7252" class="xref">[RFC7252]</a>, &#8220;Constrained node considerations&#8221;, discusses implications of specific constraints on the security mechanisms employed. <a href="#RFC7416" class="xref">[RFC7416]</a> provides a security threat analysis for the RPL routing protocol.  Implementation considerations for security protocols on constrained nodes are discussed in <a href="#RFC7815" class="xref">[RFC7815]</a> and <a href="#I-D.ietf-lwig-tls-minimal" class="xref">[I-D.ietf-lwig-tls-minimal]</a>.  A wider view of security in constrained-node networks is provided in <a href="#I-D.irtf-t2trg-iot-seccons" class="xref">[I-D.irtf-t2trg-iot-seccons]</a>.</p>
+<p id="rfc.section.7.p.1">This document introduces common terminology that does not raise any new security issues.  Security considerations arising from the constraints discussed in this document need to be discussed in the context of specific protocols.  For instance, Section 11.6 of <a href="#RFC7252" class="xref">[RFC7252]</a>, &#8220;Constrained node considerations&#8221;, discusses implications of specific constraints on the security mechanisms employed. <a href="#RFC7416" class="xref">[RFC7416]</a> provides a security threat analysis for the RPL routing protocol.  Implementation considerations for security protocols on constrained nodes are discussed in <a href="#RFC7815" class="xref">[RFC7815]</a> and <a href="#I-D.ietf-lwig-tls-minimal" class="xref">[I-D.ietf-lwig-tls-minimal]</a>.  A wider view of security in constrained-node networks is provided in <a href="#RFC8576" class="xref">[RFC8576]</a>.</p>
 <h1 id="rfc.references">
 <a href="#rfc.references">8.</a> Informative References</h1>
 <table><tbody>
@@ -970,11 +1059,6 @@ address {
 <a>Fall, K.</a>, "<a>A Delay-Tolerant Network Architecture for Challenged Internets</a>", SIGCOMM 2003, DOI 10.1145/863955.863960, 2003.</td>
 </tr>
 <tr>
-<td class="reference"><b id="FIFTY-BILLION">[FIFTY-BILLION]</b></td>
-<td class="top">
-<a>Ericsson</a>, "<a href="http://www.ericsson.com/res/docs/whitepapers/wp-50-billions.pdf">More Than 50 Billion Connected Devices</a>", Ericsson White Paper 284 23-3149 Uen, February 2011.</td>
-</tr>
-<tr>
 <td class="reference"><b id="I-D.hui-vasseur-roll-rpl-deployment">[I-D.hui-vasseur-roll-rpl-deployment]</b></td>
 <td class="top">
 <a>Vasseur, J.</a>, <a>Hui, J.</a>, <a>Dasgupta, S.</a> and <a>G. Yoon</a>, "<a href="https://tools.ietf.org/html/draft-hui-vasseur-roll-rpl-deployment-01">RPL deployment experience in large scale networks</a>", Internet-Draft draft-hui-vasseur-roll-rpl-deployment-01, July 2012.</td>
@@ -982,7 +1066,7 @@ address {
 <tr>
 <td class="reference"><b id="I-D.ietf-lpwan-ipv6-static-context-hc">[I-D.ietf-lpwan-ipv6-static-context-hc]</b></td>
 <td class="top">
-<a>Minaburo, A.</a>, <a>Toutain, L.</a>, <a>Gomez, C.</a>, <a>Barthel, D.</a> and <a>J. Zuniga</a>, "<a href="https://tools.ietf.org/html/draft-ietf-lpwan-ipv6-static-context-hc-18">LPWAN Static Context Header Compression (SCHC) and fragmentation for IPv6 and UDP</a>", Internet-Draft draft-ietf-lpwan-ipv6-static-context-hc-18, December 2018.</td>
+<a>Minaburo, A.</a>, <a>Toutain, L.</a>, <a>Gomez, C.</a>, <a>Barthel, D.</a> and <a>J. Zuniga</a>, "<a href="https://tools.ietf.org/html/draft-ietf-lpwan-ipv6-static-context-hc-24">Static Context Header Compression (SCHC) and fragmentation for LPWAN, application to UDP/IPv6</a>", Internet-Draft draft-ietf-lpwan-ipv6-static-context-hc-24, December 2019.</td>
 </tr>
 <tr>
 <td class="reference"><b id="I-D.ietf-lwig-tls-minimal">[I-D.ietf-lwig-tls-minimal]</b></td>
@@ -990,9 +1074,10 @@ address {
 <a>Kumar, S.</a>, <a>Keoh, S.</a> and <a>H. Tschofenig</a>, "<a href="https://tools.ietf.org/html/draft-ietf-lwig-tls-minimal-01">A Hitchhiker's Guide to the (Datagram) Transport Layer Security Protocol for Smart Objects and Constrained Node Networks</a>", Internet-Draft draft-ietf-lwig-tls-minimal-01, March 2014.</td>
 </tr>
 <tr>
-<td class="reference"><b id="I-D.irtf-t2trg-iot-seccons">[I-D.irtf-t2trg-iot-seccons]</b></td>
+<td class="reference"><b id="IoT-2025">[IoT-2025]</b></td>
 <td class="top">
-<a>Garcia-Morchon, O.</a>, <a>Kumar, S.</a> and <a>M. Sethi</a>, "<a href="https://tools.ietf.org/html/draft-irtf-t2trg-iot-seccons-16">State-of-the-Art and Challenges for the Internet of Things Security</a>", Internet-Draft draft-irtf-t2trg-iot-seccons-16, December 2018.</td>
+<a>Rosen, M.</a> and <a>IDC</a>, "<a href="https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf">Driving the Digital Agenda Requires Strategic Architecture</a>", November 2016.<p>Slide 11</p>
+</td>
 </tr>
 <tr>
 <td class="reference"><b id="ISQ-13">[ISQ-13]</b></td>
@@ -1023,6 +1108,11 @@ address {
 <td class="reference"><b id="RFC5826">[RFC5826]</b></td>
 <td class="top">
 <a>Brandt, A.</a>, <a>Buron, J.</a> and <a>G. Porcu</a>, "<a href="https://tools.ietf.org/html/rfc5826">Home Automation Routing Requirements in Low-Power and Lossy Networks</a>", RFC 5826, DOI 10.17487/RFC5826, April 2010.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC5905">[RFC5905]</b></td>
+<td class="top">
+<a>Mills, D.</a>, <a>Martin, J.</a>, <a>Burbank, J.</a> and <a>W. Kasch</a>, "<a href="https://tools.ietf.org/html/rfc5905">Network Time Protocol Version 4: Protocol and Algorithms Specification</a>", RFC 5905, DOI 10.17487/RFC5905, June 2010.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RFC6282">[RFC6282]</b></td>
@@ -1090,6 +1180,11 @@ address {
 <a>Mariager, P.</a>, <a>Petersen, J.</a>, <a>Shelby, Z.</a>, <a>Van de Logt, M.</a> and <a>D. Barthel</a>, "<a href="https://tools.ietf.org/html/rfc8105">Transmission of IPv6 Packets over Digital Enhanced Cordless Telecommunications (DECT) Ultra Low Energy (ULE)</a>", RFC 8105, DOI 10.17487/RFC8105, May 2017.</td>
 </tr>
 <tr>
+<td class="reference"><b id="RFC8576">[RFC8576]</b></td>
+<td class="top">
+<a>Garcia-Morchon, O.</a>, <a>Kumar, S.</a> and <a>M. Sethi</a>, "<a href="https://tools.ietf.org/html/rfc8576">Internet of Things (IoT) Security: State of the Art and Challenges</a>", RFC 8576, DOI 10.17487/RFC8576, April 2019.</td>
+</tr>
+<tr>
 <td class="reference"><b id="WEI">[WEI]</b></td>
 <td class="top">
 <a>Shelby, Z.</a> and <a>C. Bormann</a>, "<a>6LoWPAN: the Wireless Embedded Internet</a>", Wiley-Blackwell monograph, DOI 10.1002/9780470686218, ISBN 9780470747995, 2009.</td>
@@ -1130,20 +1225,17 @@ address {
 		<span class="family-name">Ersue</span>
 	  </span>
 	</span>
-	<span class="org vcardline">Nokia Solutions and Networks</span>
+	<span class="org vcardline"></span>
 	<span class="adr">
-	  <span class="vcardline">St.-Martinstrasse 76</span>
-
+	  
 	  <span class="vcardline">
-		<span class="locality">Munich</span>,  
+		<span class="locality"></span> 
 		<span class="region"></span>
-		<span class="code">81541</span>
+		<span class="code"></span>
 	  </span>
-	  <span class="country-name vcardline">Germany</span>
+	  <span class="country-name vcardline"></span>
 	</span>
-	<span class="vcardline">Phone: +49 172 8432301</span>
-
-<span class="vcardline">EMail: <a href="mailto:mehmet.ersue@nsn.com">mehmet.ersue@nsn.com</a></span>
+	<span class="vcardline">EMail: <a href="mailto:mersue@gmail.com">mersue@gmail.com</a></span>
 
   </address>
 </div><div class="avoidbreak">

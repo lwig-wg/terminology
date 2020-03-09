@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: September 12, 2019                 Nokia Solutions and Networks
+Expires: March 5, 2020
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                          March 11, 2019
+                                                      September 02, 2019
 
 
                Terminology for Constrained-Node Networks
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 12, 2019.
+   This Internet-Draft will expire on March 5, 2020.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 1]
+Bormann, et al.           Expires March 5, 2020                 [Page 1]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -82,15 +82,16 @@ Table of Contents
      4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  12
      4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  13
      4.3.  Strategies for Using Power for Communication  . . . . . .  14
-   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  16
-     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  16
-     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  17
-     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  17
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  19
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  19
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  19
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  23
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  23
+     4.4.  Strategies of Keeping Time over Power Events  . . . . . .  16
+   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  18
+     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  18
+     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  19
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  19
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  21
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  21
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  21
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  25
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  25
 
 1.  Introduction
 
@@ -105,15 +106,15 @@ Table of Contents
    diverse settings, including natural ecosystems, buildings, and
    factories, and sending the information to one or more server
    stations.  They might also act on information, by performing some
-   physical action, including displaying it.  Constrained devices may
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 2]
+Bormann, et al.           Expires March 5, 2020                 [Page 2]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
+   physical action, including displaying it.  Constrained devices may
    work under severe resource constraints such as limited battery and
    computing power, little memory, and insufficient wireless bandwidth
    and ability to communicate; these constraints often exacerbate each
@@ -129,9 +130,10 @@ Internet-Draft               CNN Terminology                  March 2019
    "things" nearby or somewhere in the Internet.  With this, the
    Internet of Things (IoT) becomes a reality, built up out of uniquely
    identifiable and addressable objects (things).  Over the next decade,
-   this could grow to large numbers [FIFTY-BILLION] of Internet-
-   connected constrained devices, greatly increasing the Internet's size
-   and scope.
+   this could grow to large numbers of Internet-connected constrained
+   devices ([IoT-2025] predicts that by, 2025, more than 2500 devices
+   will be connected to the Internet per second), greatly increasing the
+   Internet's size and scope.
 
    The present document provides a number of basic terms that have been
    useful in the standardization work for constrained environments.  The
@@ -139,7 +141,7 @@ Internet-Draft               CNN Terminology                  March 2019
    few core terms are used consistently between different groups
    cooperating in this space.
 
-   The present document is an update of [RFC7228].
+   The present document is a revision of [RFC7228].
 
    In this document, the term "byte" is used in its now customary sense
    as a synonym for "octet".  Where sizes of semiconductor memory are
@@ -157,17 +159,15 @@ Internet-Draft               CNN Terminology                  March 2019
    There are two important aspects to _scaling_ within the Internet of
    Things:
 
-   o  scaling up Internet technologies to a large number [FIFTY-BILLION]
-      of inexpensive nodes, while
+   o  scaling up Internet technologies to a large number [IoT-2025] of
+      inexpensive nodes, while
 
 
 
 
-
-
-Bormann, et al.        Expires September 12, 2019               [Page 3]
+Bormann, et al.           Expires March 5, 2020                 [Page 3]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    o  scaling down the characteristics of each of these nodes and of the
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 4]
+Bormann, et al.           Expires March 5, 2020                 [Page 4]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    Section 3 defines a small number of interesting classes ("class-N"
@@ -277,9 +277,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 5]
+Bormann, et al.           Expires March 5, 2020                 [Page 5]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    o  cost constraints on the network,
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 6]
+Bormann, et al.           Expires March 5, 2020                 [Page 6]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    may also have other constraints that already make it a constrained
@@ -389,9 +389,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 7]
+Bormann, et al.           Expires March 5, 2020                 [Page 7]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    single person.  Actually, LoWPANs have been suggested for urban
@@ -445,47 +445,42 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019               [Page 8]
+Bormann, et al.           Expires March 5, 2020                 [Page 8]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
-   +-------+--------------+----------------+-------------+-------------+
-   | Group | Name         | data size      | code size   | Examples    |
-   |       |              | (e.g., RAM)    | (e.g.,      |             |
-   |       |              |                | Flash)      |             |
-   +-------+--------------+----------------+-------------+-------------+
-   | M     | Class 0, C0  | << 10 KiB      | << 100 KiB  | ATtiny      |
-   |       |              |                |             |             |
-   | M     | Class 1, C1  | ~ 10 KiB       | ~ 100 KiB   | STM32F103CB |
-   |       |              |                |             |             |
-   | M     | Class 2, C2  | ~ 50 KiB       | ~ 250 KiB   | STM32F103RC |
-   |       |              |                |             |             |
-   | M     | Class 3, C3  | ~ 100 KiB      | ~ 500..1000 | STM32F103RG |
-   |       |              |                | KiB         |             |
-   |       |              |                |             |             |
-   | M     | Class 4, C4  | ~              | ~           | "Luxury"    |
-   |       |              | 300..500..1000 | 1000...2000 |             |
-   |       |              | KiB            | KiB         |             |
-   |       |              |                |             |             |
-   | J     | Class 10,    | 4-8 MiB        | (?)         | OpenWRT     |
-   |       | C10          |                |             | routers     |
-   |       |              |                |             |             |
-   | J     |              | fill in        | ...J-group  |             |
-   |       |              | useful...      | classes     |             |
-   |       |              |                |             |             |
-   | J     | Class 15,    | 0.5..1 GiB     | (lots)      | Raspberry   |
-   |       | C13          |                |             | PI          |
-   |       |              |                |             |             |
-   | J     | Class 16,    | 1..4 GiB       | (lots)      | Smartphones |
-   |       | C15          |                |             |             |
-   |       |              |                |             |             |
-   | J     | Class 17,    | 4..32 GiB      | (lots)      | Laptops     |
-   |       | C16          |                |             |             |
-   |       |              |                |             |             |
-   | J     | Class 19,    | (lots)         | (lots)      | Servers     |
-   |       | C19          |                |             |             |
-   +-------+--------------+----------------+-------------+-------------+
+   +-------+--------------------+-----------+------------+-------------+
+   | Group | Name               | data size | code size  | Examples    |
+   |       |                    | (e.g.,    | (e.g.,     |             |
+   |       |                    | RAM)      | Flash)     |             |
+   +-------+--------------------+-----------+------------+-------------+
+   | M     | Class 0, C0        | << 10 KiB | << 100 KiB | ATtiny      |
+   |       |                    |           |            |             |
+   | M     | Class 1, C1        | ~ 10 KiB  | ~ 100 KiB  | STM32F103CB |
+   |       |                    |           |            |             |
+   | M     | Class 2, C2        | ~ 50 KiB  | ~ 250 KiB  | STM32F103RC |
+   |       |                    |           |            |             |
+   | M     | Class 3, C3        | ~ 100 KiB | ~          | STM32F103RG |
+   |       |                    |           | 500..1000  |             |
+   |       |                    |           | KiB        |             |
+   |       |                    |           |            |             |
+   | M     | Class 4, C4        | ~         | ~          | "Luxury"    |
+   |       |                    | 300..1000 | 1000..2000 |             |
+   |       |                    | KiB       | KiB        |             |
+   |       |                    |           |            |             |
+   | J     | Class 10, C10      | 4-8 MiB   | (?)        | OpenWRT     |
+   |       |                    |           |            | routers     |
+   |       |                    |           |            |             |
+   | J     | Class 15, C13      | 0.5..1    | (lots)     | Raspberry   |
+   |       |                    | GiB       |            | PI          |
+   |       |                    |           |            |             |
+   | J     | Class 16, C15      | 1..4 GiB  | (lots)     | Smartphones |
+   |       |                    |           |            |             |
+   | J     | Class 17, C16      | 4..32 GiB | (lots)     | Laptops     |
+   |       |                    |           |            |             |
+   | J     | Class 19, C19      | (lots)    | (lots)     | Servers     |
+   +-------+--------------------+-----------+------------+-------------+
 
         Table 1: Classes of Constrained Devices (KiB = 1024 bytes)
 
@@ -498,19 +493,19 @@ Internet-Draft               CNN Terminology                  March 2019
    density are more likely to be invested in reductions of cost and
    power requirements than into continual increases in computing power.
 
-
-
-
-Bormann, et al.        Expires September 12, 2019               [Page 9]
-
-Internet-Draft               CNN Terminology                  March 2019
-
-
    Class 0 devices are very constrained sensor-like motes.  They are so
    severely constrained in memory and processing capabilities that most
    likely they will not have the resources required to communicate
    directly with the Internet in a secure manner (rare heroic, narrowly
    targeted implementation efforts notwithstanding).  Class 0 devices
+
+
+
+Bormann, et al.           Expires March 5, 2020                 [Page 9]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
    will participate in Internet communications with the help of larger
    devices acting as proxies, gateways, or servers.  Class 0 devices
    generally cannot be secured or managed comprehensively in the
@@ -553,21 +548,20 @@ Internet-Draft               CNN Terminology                  March 2019
    constrained.  In particular Class 4 devices are powerful enough to
    quite comfortably run, e.g., JavaScript interpreters, together with
    elaborate network stacks.  Additional classes may need to be defined
-
-
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 10]
-
-Internet-Draft               CNN Terminology                  March 2019
-
-
    based on protection capabilities, e.g., an MPU (memory protection
    unit; true MMUs are typically only found in J-group devices).
 
    With respect to examining the capabilities of constrained nodes,
    particularly for Class 1 devices, it is important to understand what
    type of applications they are able to run and which protocol
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 10]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
    mechanisms would be most suitable.  Because of memory and other
    limitations, each specific Class 1 device might be able to support
    only a few selected functions needed for its intended operation.  In
@@ -613,9 +607,15 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 11]
+
+
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 11]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    +------+-----------------------------------------------------------+
@@ -669,9 +669,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 12]
+Bormann, et al.           Expires March 5, 2020                [Page 12]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    The value of Et may need to be interpreted in conjunction with an
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 13]
+Bormann, et al.           Expires March 5, 2020                [Page 13]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    +------+------------------------------+-----------------------------+
@@ -781,9 +781,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 14]
+Bormann, et al.           Expires March 5, 2020                [Page 14]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
       reattachment process and any resulting application communications.
@@ -837,13 +837,138 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 15]
+Bormann, et al.           Expires March 5, 2020                [Page 15]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    low-power state to conserve power) and temporarily suspend protocol
    communication (P0); there is no explicit mention of P1.
+
+4.4.  Strategies of Keeping Time over Power Events
+
+   [This subsection is very drafty.]
+
+   Many applications for a device require it to keep some concept of
+   time.
+
+   Time-keeping can be relative to a previous event (last packet
+   received), absolute on a device-specific scale (e.g., last reboot),
+   or absolute on a world-wide scale ("wall-clock time").
+
+   Some devices lose the concept of time when going to sleep: after
+   wakeup, they don't know how long they slept.  Some others do keep
+   some concept of time during sleep, but not precise enough to use as a
+   basis for keeping absolute time.  Some devices have a continuously
+   running source of a reasonably accurate time (often a 32,768 Hz watch
+   crystal).  Finally, some devices can keep their concept of time even
+   during a battery change, e.g., by using a backup battery or a
+   supercapacitor to power the real-time clock (RTC).
+
+   The actual accuracy of time may vary, with errors ranging from tens
+   of percent from on-chip RC oscillators (not useful for keeping
+   absolute time, but still useful for, e.g., timing out some state) to
+   approximately 1e-4 to 1e-5 ("watch crystal") of error.  More precise
+   timing is available with temperature compensated crystal oscillators
+   (TCXO).  Further improvement requires significantly higher power
+   usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
+   oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can
+   reach 1e-11 over the short term and 1e-9 over the long term.
+
+   A device may need to fire up a more accurate frequency source during
+   wireless communication, this may also allow it to keep more precise
+   time during the period.
+
+   The various time sources available on the device can be assisted by
+   external time input, e.g. via the network using the NTP protocol
+   [RFC5905].  Information from measuring the deviation between external
+   input and local time source can be used to increase the accuracy of
+   maintaining time even during periods of no network use.
+
+   Errors of the frequency source can be compensated if known
+   (calibrated against a known better source, or even predicted, e.g.,
+   in a software TCXO).  Even with errors partially compensated, an
+   uncertainty remains, which is the more fundamental characteristic to
+   discuss.
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 16]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
+   Battery solutions may allow the device to keep a wall-clock time
+   during its entire life, or the wall-clock time may need to be reset
+   after a battery change.  Even devices that have a battery lasting for
+   their lifetime may not be set to wall-clock time at manufacture time,
+   possibly because the battery is only activated at installation time
+   where time sources may be questionable or because setting the clock
+   during manufacture is deemed too much effort.
+
+   Devices that keep a good approximation of wall-clock time during
+   their life may be in a better position to securely validate external
+   time inputs than devices that need to be reset episodically, which
+   can possibly be tricked by their environment into accepting a long-
+   past time, for instance with the intent of exploiting expired
+   security assertions such as certificates.
+
+   From a practical point of view, devices can be divided at least on
+   the two dimensions proposed in Table 5 and Table 6.  Corrections to
+   the local time of a device performed over the network can be used to
+   improve the uncertainty exhibited by these basic device classes.
+
+   +------+-------------------------------+----------------------------+
+   | Name | Type                          | Uncertainty (roughly)      |
+   +------+-------------------------------+----------------------------+
+   | T0   | relative time while awake     | (usually high)             |
+   |      |                               |                            |
+   | T1   | relative time                 | (usually high during       |
+   |      |                               | sleep)                     |
+   |      |                               |                            |
+   | T2   | relative time                 | 1e-4 or better             |
+   |      |                               |                            |
+   | T5   | absolute time (e.g., since    | 1e-4 or better             |
+   |      | boot)                         |                            |
+   |      |                               |                            |
+   | T7   | wall-clock time               | 1e-4 or better             |
+   |      |                               |                            |
+   | T8   | wall-clock time               | 1e-5 or better             |
+   |      |                               |                            |
+   | T9   | wall-clock time               | 1e-6 or better (TCXO)      |
+   |      |                               |                            |
+   | T10  | wall-clock time               | 1e-7 or better (OCXO or    |
+   |      |                               | Rb)                        |
+   +------+-------------------------------+----------------------------+
+
+           Table 5: Strategies of Keeping Time over Power Events
+
+
+
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 17]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
+   +------+-----------------------------------+------------------------+
+   | Name | Permanency (from type T5          | Uncertainty            |
+   |      | upwards):                         |                        |
+   +------+-----------------------------------+------------------------+
+   | TP0  | time needs to be reset on certain |                        |
+   |      | occasions                         |                        |
+   |      |                                   |                        |
+   | TP1  | time needs to be set during       | (possibly reduced...   |
+   |      | installation                      |                        |
+   |      |                                   |                        |
+   | TP9  | reliable time is maintained       | ...by using external   |
+   |      | during lifetime                   | input)                 |
+   +------+-----------------------------------+------------------------+
+
+                    Table 6: Permanency of Keeping Time
 
 5.  Classes of Networks
 
@@ -876,6 +1001,15 @@ Internet-Draft               CNN Terminology                  March 2019
    fragmentation is needed at the adaptation layer below IPv6.  However,
    6LoWPAN fragmentation [RFC4944] cannot be used for these
    technologies, given the extremely reduced link layer MTU.  In this
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 18]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
    case, lightweight fragmentation formats must be used (e.g.
    [I-D.ietf-lpwan-ipv6-static-context-hc]).
 
@@ -887,16 +1021,6 @@ Internet-Draft               CNN Terminology                  March 2019
 
    S3 technologies do not require fragmentation to support the IPv6 MTU
    requirement.
-
-
-
-
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 16]
-
-Internet-Draft               CNN Terminology                  March 2019
-
 
 5.2.  Class of Internet Integration
 
@@ -937,21 +1061,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 17]
+Bormann, et al.           Expires March 5, 2020                [Page 19]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
    +------+------------+-----------------------------------------------+
@@ -1005,9 +1117,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 18]
+Bormann, et al.           Expires March 5, 2020                [Page 20]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
 6.  IANA Considerations
@@ -1026,20 +1138,13 @@ Internet-Draft               CNN Terminology                  March 2019
    protocol.  Implementation considerations for security protocols on
    constrained nodes are discussed in [RFC7815] and
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
-   constrained-node networks is provided in
-   [I-D.irtf-t2trg-iot-seccons].
+   constrained-node networks is provided in [RFC8576].
 
 8.  Informative References
 
    [FALL]     Fall, K., "A Delay-Tolerant Network Architecture for
               Challenged Internets", SIGCOMM 2003,
               DOI 10.1145/863955.863960, 2003.
-
-   [FIFTY-BILLION]
-              Ericsson, "More Than 50 Billion Connected Devices",
-              Ericsson White Paper 284 23-3149 Uen, February 2011,
-              <http://www.ericsson.com/res/docs/whitepapers/
-              wp-50-billions.pdf>.
 
    [I-D.hui-vasseur-roll-rpl-deployment]
               Vasseur, J., Hui, J., Dasgupta, S., and G. Yoon, "RPL
@@ -1049,22 +1154,10 @@ Internet-Draft               CNN Terminology                  March 2019
 
    [I-D.ietf-lpwan-ipv6-static-context-hc]
               Minaburo, A., Toutain, L., Gomez, C., Barthel, D., and J.
-              Zuniga, "LPWAN Static Context Header Compression (SCHC)
-              and fragmentation for IPv6 and UDP", draft-ietf-lpwan-
-              ipv6-static-context-hc-18 (work in progress), December
-              2018.
-
-
-
-
-
-
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 19]
-
-Internet-Draft               CNN Terminology                  March 2019
-
+              Zuniga, "Static Context Header Compression (SCHC) and
+              fragmentation for LPWAN, application to UDP/IPv6", draft-
+              ietf-lpwan-ipv6-static-context-hc-24 (work in progress),
+              December 2019.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S., and H. Tschofenig, "A Hitchhiker's
@@ -1072,11 +1165,20 @@ Internet-Draft               CNN Terminology                  March 2019
               for Smart Objects and Constrained Node Networks", draft-
               ietf-lwig-tls-minimal-01 (work in progress), March 2014.
 
-   [I-D.irtf-t2trg-iot-seccons]
-              Garcia-Morchon, O., Kumar, S., and M. Sethi, "State-of-
-              the-Art and Challenges for the Internet of Things
-              Security", draft-irtf-t2trg-iot-seccons-16 (work in
-              progress), December 2018.
+   [IoT-2025]
+              Rosen, M. and IDC, "Driving the Digital Agenda Requires
+              Strategic Architecture", November 2016, <https://idc-
+              cema.com/dwn/SF_177701/driving_the_digital_agenda_requires
+              _strategic_architecture_rosen_idc.pdf>.
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 21]
+
+Internet-Draft               CNN Terminology              September 2019
+
+
+              Slide 11
 
    [ISQ-13]   International Electrotechnical Commission, "International
               Standard -- Quantities and units -- Part 13: Information
@@ -1107,20 +1209,15 @@ Internet-Draft               CNN Terminology                  March 2019
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
               <https://www.rfc-editor.org/info/rfc5826>.
 
+   [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
+              "Network Time Protocol Version 4: Protocol and Algorithms
+              Specification", RFC 5905, DOI 10.17487/RFC5905, June 2010,
+              <https://www.rfc-editor.org/info/rfc5905>.
+
    [RFC6282]  Hui, J., Ed. and P. Thubert, "Compression Format for IPv6
               Datagrams over IEEE 802.15.4-Based Networks", RFC 6282,
               DOI 10.17487/RFC6282, September 2011,
               <https://www.rfc-editor.org/info/rfc6282>.
-
-
-
-
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 20]
-
-Internet-Draft               CNN Terminology                  March 2019
-
 
    [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
               Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
@@ -1128,6 +1225,14 @@ Internet-Draft               CNN Terminology                  March 2019
               Low-Power and Lossy Networks", RFC 6550,
               DOI 10.17487/RFC6550, March 2012,
               <https://www.rfc-editor.org/info/rfc6550>.
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 22]
+
+Internet-Draft               CNN Terminology              September 2019
+
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
@@ -1171,17 +1276,19 @@ Internet-Draft               CNN Terminology                  March 2019
               RFC 7452, DOI 10.17487/RFC7452, March 2015,
               <https://www.rfc-editor.org/info/rfc7452>.
 
-
-
-Bormann, et al.        Expires September 12, 2019              [Page 21]
-
-Internet-Draft               CNN Terminology                  March 2019
-
-
    [RFC7668]  Nieminen, J., Savolainen, T., Isomaki, M., Patil, B.,
               Shelby, Z., and C. Gomez, "IPv6 over BLUETOOTH(R) Low
               Energy", RFC 7668, DOI 10.17487/RFC7668, October 2015,
               <https://www.rfc-editor.org/info/rfc7668>.
+
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 23]
+
+Internet-Draft               CNN Terminology              September 2019
+
 
    [RFC7815]  Kivinen, T., "Minimal Internet Key Exchange Version 2
               (IKEv2) Initiator Implementation", RFC 7815,
@@ -1193,6 +1300,11 @@ Internet-Draft               CNN Terminology                  March 2019
               Digital Enhanced Cordless Telecommunications (DECT) Ultra
               Low Energy (ULE)", RFC 8105, DOI 10.17487/RFC8105, May
               2017, <https://www.rfc-editor.org/info/rfc8105>.
+
+   [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
+              Things (IoT) Security: State of the Art and Challenges",
+              RFC 8576, DOI 10.17487/RFC8576, April 2019,
+              <https://www.rfc-editor.org/info/rfc8576>.
 
    [WEI]      Shelby, Z. and C. Bormann, "6LoWPAN: the Wireless Embedded
               Internet", Wiley-Blackwell monograph,
@@ -1229,9 +1341,9 @@ Internet-Draft               CNN Terminology                  March 2019
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 22]
+Bormann, et al.           Expires March 5, 2020                [Page 24]
 
-Internet-Draft               CNN Terminology                  March 2019
+Internet-Draft               CNN Terminology              September 2019
 
 
 Acknowledgements
@@ -1251,13 +1363,8 @@ Authors' Addresses
 
 
    Mehmet Ersue
-   Nokia Solutions and Networks
-   St.-Martinstrasse 76
-   Munich  81541
-   Germany
 
-   Phone: +49 172 8432301
-   EMail: mehmet.ersue@nsn.com
+   EMail: mersue@gmail.com
 
 
    Ari Keranen
@@ -1285,4 +1392,9 @@ Authors' Addresses
 
 
 
-Bormann, et al.        Expires September 12, 2019              [Page 23]
+
+
+
+
+
+Bormann, et al.           Expires March 5, 2020                [Page 25]
