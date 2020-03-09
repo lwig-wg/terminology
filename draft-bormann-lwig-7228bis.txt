@@ -5,12 +5,12 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: March 5, 2020
+Expires: September 10, 2020
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                                                UPC/i2CAT
-                                                      September 02, 2019
+                                                          March 09, 2020
 
 
                Terminology for Constrained-Node Networks
@@ -39,11 +39,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 5, 2020.
+   This Internet-Draft will expire on September 10, 2020.
 
 Copyright Notice
 
-   Copyright (c) 2019 IETF Trust and the persons identified as the
+   Copyright (c) 2020 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 1]
+Bormann, et al.        Expires September 10, 2020               [Page 1]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 2]
+Bormann, et al.        Expires September 10, 2020               [Page 2]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    physical action, including displaying it.  Constrained devices may
@@ -165,9 +165,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 3]
+Bormann, et al.        Expires September 10, 2020               [Page 3]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    o  scaling down the characteristics of each of these nodes and of the
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 4]
+Bormann, et al.        Expires September 10, 2020               [Page 4]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    Section 3 defines a small number of interesting classes ("class-N"
@@ -277,9 +277,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 5]
+Bormann, et al.        Expires September 10, 2020               [Page 5]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    o  cost constraints on the network,
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 6]
+Bormann, et al.        Expires September 10, 2020               [Page 6]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    may also have other constraints that already make it a constrained
@@ -389,9 +389,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 7]
+Bormann, et al.        Expires September 10, 2020               [Page 7]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    single person.  Actually, LoWPANs have been suggested for urban
@@ -411,14 +411,14 @@ Internet-Draft               CNN Terminology              September 2019
    Before we get to that, let's first distinguish two big rough groups
    of devices based on their CPU capabilities:
 
-   o  Microcontroller-class devices (ARM term: "M-class" [need ref]).
-      These often (but not always) include RAM and code storage on chip
-      and limit their support for general-purpose operating systems,
-      e.g., they do not have an MMU (memory management unit).  They use
-      most of their pins for interfaces to application hardware such as
-      digital in/out (the latter often PWM-controllable), ADC/DACs, etc.
-      Where this hardware is specialized for an application, we may talk
-      about "Systems on a Chip" (SOC).  These devices often implement
+   o  Microcontroller-class devices (ARM term: "M-class").  These often
+      (but not always) include RAM and code storage on chip and limit
+      their support for general-purpose operating systems, e.g., they do
+      not have an MMU (memory management unit).  They use most of their
+      pins for interfaces to application hardware such as digital in/out
+      (the latter often PWM-controllable), ADC/DACs, etc.  Where this
+      hardware is specialized for an application, we may talk about
+      "Systems on a Chip" (SOC).  These devices often implement
       elaborate sleep modes to achieve microwatt- or at least milliwatt-
       level sustained power usage (Ps, see below).
 
@@ -426,7 +426,7 @@ Internet-Draft               CNN Terminology              September 2019
       usually have RAM and Flash storage on separate chips (not always
       separate packages), and offer support for general-purpose
       operating systems such as Linux, e.g. an MMU.  Many of the pins on
-      the CPU chip are dedidated to interfacing with RAM and other
+      the CPU chip are dedicated to interfacing with RAM and other
       memory.  Some general-purpose-class devices integrate some
       application hardware such as video controllers, these are often
       called "Systems on a Chip" (SOC).  While these chips also include
@@ -445,9 +445,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 8]
+Bormann, et al.        Expires September 10, 2020               [Page 8]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    +-------+--------------------+-----------+------------+-------------+
@@ -501,9 +501,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                 [Page 9]
+Bormann, et al.        Expires September 10, 2020               [Page 9]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    will participate in Internet communications with the help of larger
@@ -557,9 +557,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 10]
+Bormann, et al.        Expires September 10, 2020              [Page 10]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    mechanisms would be most suitable.  Because of memory and other
@@ -596,6 +596,8 @@ Internet-Draft               CNN Terminology              September 2019
    | F9   | app-level upgradeability, no reboot required ("hitless")   |
    +------+------------------------------------------------------------+
 
+              Table 2: Levels of software update capabilities
+
 3.2.  Isolation functionality
 
    TBD.  This section could discuss the ability of the platform to
@@ -611,11 +613,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-
-
-Bormann, et al.           Expires March 5, 2020                [Page 11]
+Bormann, et al.        Expires September 10, 2020              [Page 11]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    +------+-----------------------------------------------------------+
@@ -632,10 +632,26 @@ Internet-Draft               CNN Terminology              September 2019
    | Is8  | Secure enclave isolation                                  |
    +------+-----------------------------------------------------------+
 
+                 Table 3: Levels of isolation capabilities
+
 3.3.  Shielded secrets
 
-   Some platforms can keep shielded secrets (usually in conjuction with
+   [Need to identify clusters]
+
+   Some platforms can keep shielded secrets (usually in conjunction with
    secure enclave functionality).
+
+                 +------+--------------------------------+
+                 | Name | Secret shielding functionality |
+                 +------+--------------------------------+
+                 | Sh0  | no secret shielding            |
+                 |      |                                |
+                 | Sh1  | some secret shielding          |
+                 |      |                                |
+                 | Sh9  | perfect secret shielding       |
+                 +------+--------------------------------+
+
+             Table 4: Levels of secret shielding capabilities
 
 4.  Power Terminology
 
@@ -650,9 +666,17 @@ Internet-Draft               CNN Terminology              September 2019
    kilowatts to microwatts, from essentially unlimited to hundreds of
    microjoules.
 
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 12]
+
+Internet-Draft               CNN Terminology                  March 2020
+
+
    Instead of defining classes or clusters, we simply state, using the
    International System of Units (SI units), an approximate value for
-   one or both of the quantities listed in Table 2:
+   one or both of the quantities listed in Table 5:
 
    +------+--------------------------------------------------+---------+
    | Name | Definition                                       | SI Unit |
@@ -664,15 +688,7 @@ Internet-Draft               CNN Terminology              September 2019
    |      | energy source is exhausted                       | (Joule) |
    +------+--------------------------------------------------+---------+
 
-             Table 2: Quantities Relevant to Power and Energy
-
-
-
-
-Bormann, et al.           Expires March 5, 2020                [Page 12]
-
-Internet-Draft               CNN Terminology              September 2019
-
+             Table 5: Quantities Relevant to Power and Energy
 
    The value of Et may need to be interpreted in conjunction with an
    indication over which period of time the value is given; see
@@ -703,31 +719,15 @@ Internet-Draft               CNN Terminology              September 2019
    E2, as the rechargeable battery has a limited number of useful
    recharging cycles.
 
-   Table 3 provides a summary of the classifications described above.
+   Table 6 provides a summary of the classifications described above.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.           Expires March 5, 2020                [Page 13]
+Bormann, et al.        Expires September 10, 2020              [Page 13]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    +------+------------------------------+-----------------------------+
@@ -747,7 +747,7 @@ Internet-Draft               CNN Terminology              September 2019
    |      | energy                       |                             |
    +------+------------------------------+-----------------------------+
 
-                   Table 3: Classes of Energy Limitation
+                   Table 6: Classes of Energy Limitation
 
 4.3.  Strategies for Using Power for Communication
 
@@ -781,9 +781,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 14]
+Bormann, et al.        Expires September 10, 2020              [Page 14]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
       reattachment process and any resulting application communications.
@@ -805,7 +805,7 @@ Internet-Draft               CNN Terminology              September 2019
       components are switched on and off in a regular cycle) and other
       parameters appropriately.
 
-   Table 4 provides a summary of the strategies described above.
+   Table 7 provides a summary of the strategies described above.
 
    +------+--------------+---------------------------------------------+
    | Name | Strategy     | Ability to communicate                      |
@@ -818,7 +818,7 @@ Internet-Draft               CNN Terminology              September 2019
    | P9   | Always-on    | Always connected                            |
    +------+--------------+---------------------------------------------+
 
-           Table 4: Strategies of Using Power for Communication
+           Table 7: Strategies of Using Power for Communication
 
    Note that the discussion above is at the device level; similar
    considerations can apply at the communications-interface level.  This
@@ -837,9 +837,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 15]
+Bormann, et al.        Expires September 10, 2020              [Page 15]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    low-power state to conserve power) and temporarily suspend protocol
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 16]
+Bormann, et al.        Expires September 10, 2020              [Page 16]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    Battery solutions may allow the device to keep a wall-clock time
@@ -914,7 +914,7 @@ Internet-Draft               CNN Terminology              September 2019
    security assertions such as certificates.
 
    From a practical point of view, devices can be divided at least on
-   the two dimensions proposed in Table 5 and Table 6.  Corrections to
+   the two dimensions proposed in Table 8 and Table 9.  Corrections to
    the local time of a device performed over the network can be used to
    improve the uncertainty exhibited by these basic device classes.
 
@@ -941,7 +941,7 @@ Internet-Draft               CNN Terminology              September 2019
    |      |                               | Rb)                        |
    +------+-------------------------------+----------------------------+
 
-           Table 5: Strategies of Keeping Time over Power Events
+           Table 8: Strategies of Keeping Time over Power Events
 
 
 
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 17]
+Bormann, et al.        Expires September 10, 2020              [Page 17]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    +------+-----------------------------------+------------------------+
@@ -968,7 +968,7 @@ Internet-Draft               CNN Terminology              September 2019
    |      | during lifetime                   | input)                 |
    +------+-----------------------------------+------------------------+
 
-                    Table 6: Permanency of Keeping Time
+                    Table 9: Permanency of Keeping Time
 
 5.  Classes of Networks
 
@@ -993,8 +993,8 @@ Internet-Draft               CNN Terminology              September 2019
     | S2   | >= 1280             | no fragmentation needed            |
     +------+---------------------+------------------------------------+
 
-   *if no link layer fragmentation is available
-   (note: 'Sx' stands for 'Size x')
+   * if no link layer fragmentation is available (note: 'Sx' stands for
+   'Size x')
 
    S0 technologies require fragmentation to support the IPv6 MTU
    requirement.  If no link layer fragmentation is available,
@@ -1005,9 +1005,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 18]
+Bormann, et al.        Expires September 10, 2020              [Page 18]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    case, lightweight fragmentation formats must be used (e.g.
@@ -1061,9 +1061,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 19]
+Bormann, et al.        Expires September 10, 2020              [Page 19]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    +------+------------+-----------------------------------------------+
@@ -1117,9 +1117,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 20]
+Bormann, et al.        Expires September 10, 2020              [Page 20]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
 6.  IANA Considerations
@@ -1173,9 +1173,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 21]
+Bormann, et al.        Expires September 10, 2020              [Page 21]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
               Slide 11
@@ -1229,9 +1229,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 22]
+Bormann, et al.        Expires September 10, 2020              [Page 22]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
@@ -1285,9 +1285,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 23]
+Bormann, et al.        Expires September 10, 2020              [Page 23]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
    [RFC7815]  Kivinen, T., "Minimal Internet Key Exchange Version 2
@@ -1341,9 +1341,9 @@ Internet-Draft               CNN Terminology              September 2019
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 24]
+Bormann, et al.        Expires September 10, 2020              [Page 24]
 
-Internet-Draft               CNN Terminology              September 2019
+Internet-Draft               CNN Terminology                  March 2020
 
 
 Acknowledgements
@@ -1397,4 +1397,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.           Expires March 5, 2020                [Page 25]
+Bormann, et al.        Expires September 10, 2020              [Page 25]

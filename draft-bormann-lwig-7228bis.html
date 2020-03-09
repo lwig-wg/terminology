@@ -310,7 +310,7 @@ address {
 
   <meta name="dct.creator" content="Bormann, C., Ersue, M., Keranen, A., and C. Gomez" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-bormann-lwig-7228bis-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-09-02" />
+  <meta name="dct.issued" scheme="ISO8601" content="2020-03-09" />
   <meta name="dct.abstract" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks. " />
   <meta name="description" content="The Internet Protocol Suite is increasingly used on small devices with severe constraints on power, memory, and processing resources, creating constrained-node networks.  This document provides a number of basic terms that have been useful in the standardization work for constrained-node networks. " />
 
@@ -334,7 +334,7 @@ address {
 <td class="right">M. Ersue</td>
 </tr>
 <tr>
-<td class="left">Expires: March 5, 2020</td>
+<td class="left">Expires: September 10, 2020</td>
 <td class="right"></td>
 </tr>
 <tr>
@@ -355,7 +355,7 @@ address {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">September 02, 2019</td>
+<td class="right">March 09, 2020</td>
 </tr>
 
     	
@@ -371,9 +371,9 @@ address {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on March 5, 2020.</p>
+<p>This Internet-Draft will expire on September 10, 2020.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
-<p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>Copyright (c) 2020 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
 
   
@@ -563,8 +563,8 @@ address {
 <p></p>
 
 <ul>
-<li>Microcontroller-class devices (ARM term: &#8220;M-class&#8221; [need ref]).  These often (but not always) include RAM and code storage on chip and limit their support for general-purpose operating systems, e.g., they do not have an MMU (memory management unit).  They use most of their pins for interfaces to application hardware such as digital in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where this hardware is specialized for an application, we may talk about &#8220;Systems on a Chip&#8221; (SOC).  These devices often implement elaborate sleep modes to achieve microwatt- or at least milliwatt-level sustained power usage (Ps, see below).</li>
-<li>General-purpose-class devices (ARM term: &#8220;A-class&#8221;).  These usually have RAM and Flash storage on separate chips (not always separate packages), and offer support for general-purpose operating systems such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are dedidated to interfacing with RAM and other memory.  Some general-purpose-class devices integrate some application hardware such as video controllers, these are often called &#8220;Systems on a Chip&#8221; (SOC).  While these chips also include sleep modes, they are usually more on the watt side of sustained power usage (Ps).</li>
+<li>Microcontroller-class devices (ARM term: &#8220;M-class&#8221;).  These often (but not always) include RAM and code storage on chip and limit their support for general-purpose operating systems, e.g., they do not have an MMU (memory management unit).  They use most of their pins for interfaces to application hardware such as digital in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where this hardware is specialized for an application, we may talk about &#8220;Systems on a Chip&#8221; (SOC).  These devices often implement elaborate sleep modes to achieve microwatt- or at least milliwatt-level sustained power usage (Ps, see below).</li>
+<li>General-purpose-class devices (ARM term: &#8220;A-class&#8221;).  These usually have RAM and Flash storage on separate chips (not always separate packages), and offer support for general-purpose operating systems such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are dedicated to interfacing with RAM and other memory.  Some general-purpose-class devices integrate some application hardware such as video controllers, these are often called &#8220;Systems on a Chip&#8221; (SOC).  While these chips also include sleep modes, they are usually more on the watt side of sustained power usage (Ps).</li>
 </ul>
 <p id="rfc.section.3.p.4">If the distinction between these groups needs to be made in this document, we distinguish group &#8220;M&#8221; (microcontroller) from group &#8220;J&#8221; (general purpose).</p>
 <p id="rfc.section.3.p.5">In this document, the class designations in <a href="#devclasstbl" class="xref">Table 1</a> may be used as rough indications of device capabilities.  Note that the classes from 10 upwards are not really constrained devices in the sense of the previous section; they may still be useful to discuss constraints in larger devices:</p>
@@ -662,7 +662,10 @@ address {
 <a href="#rfc.section.3.1">3.1.</a> <a href="#firmwaresoftware-upgradeability" id="firmwaresoftware-upgradeability">Firmware/Software upgradeability</a>
 </h1>
 <p id="rfc.section.3.1.p.1">Platforms may differ in their firmware or software upgradeability.  The below is a first attempt at classifying this.</p>
+<div id="rfc.table.2"></div>
+<div id="upgtbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Levels of software update capabilities</caption>
 <thead><tr>
 <th class="left">Name</th>
 <th class="left">Firmware/Software upgradeability</th>
@@ -694,7 +697,10 @@ address {
 <a href="#rfc.section.3.2">3.2.</a> <a href="#isolation-functionality" id="isolation-functionality">Isolation functionality</a>
 </h1>
 <p id="rfc.section.3.2.p.1">TBD.  This section could discuss the ability of the platform to isolate different components.  The categories below are not mutually exclusive; we need to build relevant clusters.</p>
+<div id="rfc.table.3"></div>
+<div id="isoltbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Levels of isolation capabilities</caption>
 <thead><tr>
 <th class="left">Name</th>
 <th class="left">Isolation functionality</th>
@@ -725,7 +731,31 @@ address {
 <h1 id="rfc.section.3.3">
 <a href="#rfc.section.3.3">3.3.</a> <a href="#shielded-secrets" id="shielded-secrets">Shielded secrets</a>
 </h1>
-<p id="rfc.section.3.3.p.1">Some platforms can keep shielded secrets (usually in conjuction with secure enclave functionality).</p>
+<p id="rfc.section.3.3.p.1">[Need to identify clusters]</p>
+<p id="rfc.section.3.3.p.2">Some platforms can keep shielded secrets (usually in conjunction with secure enclave functionality).</p>
+<div id="rfc.table.4"></div>
+<div id="shieldtbl"></div>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Levels of secret shielding capabilities</caption>
+<thead><tr>
+<th class="left">Name</th>
+<th class="left">Secret shielding functionality</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">Sh0</td>
+<td class="left">no secret shielding</td>
+</tr>
+<tr>
+<td class="left">Sh1</td>
+<td class="left">some secret shielding</td>
+</tr>
+<tr>
+<td class="left">Sh9</td>
+<td class="left">perfect secret shielding</td>
+</tr>
+</tbody>
+</table>
 <h1 id="rfc.section.4">
 <a href="#rfc.section.4">4.</a> <a href="#power" id="power">Power Terminology</a>
 </h1>
@@ -734,8 +764,8 @@ address {
 <a href="#rfc.section.4.1">4.1.</a> <a href="#scaling-properties" id="scaling-properties">Scaling Properties</a>
 </h1>
 <p id="rfc.section.4.1.p.1">The power and/or energy available to a device may vastly differ, from kilowatts to microwatts, from essentially unlimited to hundreds of microjoules.</p>
-<p id="rfc.section.4.1.p.2">Instead of defining classes or clusters, we simply state, using the International System of Units (SI units), an approximate value for one or both of the quantities listed in <a href="#scaletbl" class="xref">Table 2</a>:</p>
-<div id="rfc.table.2"></div>
+<p id="rfc.section.4.1.p.2">Instead of defining classes or clusters, we simply state, using the International System of Units (SI units), an approximate value for one or both of the quantities listed in <a href="#scaletbl" class="xref">Table 5</a>:</p>
+<div id="rfc.table.5"></div>
 <div id="scaletbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <caption>Quantities Relevant to Power and Energy</caption>
@@ -763,8 +793,8 @@ address {
 <a href="#rfc.section.4.2">4.2.</a> <a href="#classes-of-energy-limitation" id="classes-of-energy-limitation">Classes of Energy Limitation</a>
 </h1>
 <p id="rfc.section.4.2.p.1">As discussed above, some devices are limited in available energy as opposed to (or in addition to) being limited in available power.  Where no relevant limitations exist with respect to energy, the device is classified as E9.  The energy limitation may be in total energy available in the usable lifetime of the device (e.g., a device that is discarded when its non-replaceable primary battery is exhausted), classified as E2.  Where the relevant limitation is for a specific period, the device is classified as E1, e.g., a solar-powered device with a limited amount of energy available for the night, a device that is manually connected to a charger and has a period of time between recharges, or a device with a periodic (primary) battery replacement interval.  Finally, there may be a limited amount of energy available for a specific event, e.g., for a button press in an energy-harvesting light switch; such devices are classified as E0.  Note that, in a sense, many E1 devices are also E2, as the rechargeable battery has a limited number of useful recharging cycles.</p>
-<p><a href="#enclasstbl" class="xref">Table 3</a> provides a summary of the classifications described above.</p>
-<div id="rfc.table.3"></div>
+<p><a href="#enclasstbl" class="xref">Table 6</a> provides a summary of the classifications described above.</p>
+<div id="rfc.table.6"></div>
 <div id="enclasstbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <caption>Classes of Energy Limitation</caption>
@@ -812,8 +842,8 @@ address {
 <dt>Low-power:</dt>
 <dd style="margin-left: 8">This strategy is most applicable to devices that need to operate on a very small amount of power but still need to be able to communicate on a relatively frequent basis. This implies that extremely low-power solutions need to be used for the hardware, chosen link-layer mechanisms, and so on.  Typically, given the small amount of time between transmissions, despite their sleep state, these devices retain some form of attachment to the network.  Techniques used for minimizing power usage for the network communications include minimizing any work from re-establishing communications after waking up and tuning the frequency of communications (including &#8220;duty cycling&#8221;, where components are switched on and off in a regular cycle) and other parameters appropriately.</dd>
 </dl>
-<p><a href="#powclasstbl" class="xref">Table 4</a> provides a summary of the strategies described above.</p>
-<div id="rfc.table.4"></div>
+<p><a href="#powclasstbl" class="xref">Table 7</a> provides a summary of the strategies described above.</p>
+<div id="rfc.table.7"></div>
 <div id="powclasstbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <caption>Strategies of Using Power for Communication</caption>
@@ -856,8 +886,8 @@ address {
 <p id="rfc.section.4.4.p.8">Errors of the frequency source can be compensated if known (calibrated against a known better source, or even predicted, e.g., in a software TCXO).  Even with errors partially compensated, an uncertainty remains, which is the more fundamental characteristic to discuss.</p>
 <p id="rfc.section.4.4.p.9">Battery solutions may allow the device to keep a wall-clock time during its entire life, or the wall-clock time may need to be reset after a battery change.  Even devices that have a battery lasting for their lifetime may not be set to wall-clock time at manufacture time, possibly because the battery is only activated at installation time where time sources may be questionable or because setting the clock during manufacture is deemed too much effort.</p>
 <p id="rfc.section.4.4.p.10">Devices that keep a good approximation of wall-clock time during their life may be in a better position to securely validate external time inputs than devices that need to be reset episodically, which can possibly be tricked by their environment into accepting a long-past time, for instance with the intent of exploiting expired security assertions such as certificates.</p>
-<p id="rfc.section.4.4.p.11">From a practical point of view, devices can be divided at least on the two dimensions proposed in <a href="#timeclasstbl" class="xref">Table 5</a> and <a href="#timepermanencytbl" class="xref">Table 6</a>.  Corrections to the local time of a device performed over the network can be used to improve the uncertainty exhibited by these basic device classes.</p>
-<div id="rfc.table.5"></div>
+<p id="rfc.section.4.4.p.11">From a practical point of view, devices can be divided at least on the two dimensions proposed in <a href="#timeclasstbl" class="xref">Table 8</a> and <a href="#timepermanencytbl" class="xref">Table 9</a>.  Corrections to the local time of a device performed over the network can be used to improve the uncertainty exhibited by these basic device classes.</p>
+<div id="rfc.table.8"></div>
 <div id="timeclasstbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <caption>Strategies of Keeping Time over Power Events</caption>
@@ -909,7 +939,7 @@ address {
 </tr>
 </tbody>
 </table>
-<div id="rfc.table.6"></div>
+<div id="rfc.table.9"></div>
 <div id="timepermanencytbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <caption>Permanency of Keeping Time</caption>
@@ -973,7 +1003,7 @@ address {
 </tr>
 </tbody>
 </table>
-<p id="rfc.section.5.1.p.3">*if no link layer fragmentation is available<br> (note: &#8216;Sx&#8217; stands for &#8216;Size x&#8217;)</p>
+<p id="rfc.section.5.1.p.3">* if no link layer fragmentation is available (note: &#8216;Sx&#8217; stands for &#8216;Size x&#8217;)</p>
 <p id="rfc.section.5.1.p.4">S0 technologies require fragmentation to support the IPv6 MTU requirement.  If no link layer fragmentation is available, fragmentation is needed at the adaptation layer below IPv6. However, 6LoWPAN fragmentation <a href="#RFC4944" class="xref">[RFC4944]</a> cannot be used for these technologies, given the extremely reduced link layer MTU. In this case, lightweight fragmentation formats must be used (e.g. <a href="#I-D.ietf-lpwan-ipv6-static-context-hc" class="xref">[I-D.ietf-lpwan-ipv6-static-context-hc]</a>).</p>
 <p id="rfc.section.5.1.p.5">S1 and S2 technologies require fragmentation at the subnetwork level to support the IPv6 MTU requirement.  If link layer fragmentation is unavailable or insufficient, fragmentation is needed at the adaptation layer below IPv6.  6LoWPAN fragmentation <a href="#RFC4944" class="xref">[RFC4944]</a> can be used to carry 1280-byte IPv6 packets over these technologies.</p>
 <p id="rfc.section.5.1.p.6">S3 technologies do not require fragmentation to support the IPv6 MTU requirement.</p>
