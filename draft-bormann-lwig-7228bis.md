@@ -255,8 +255,8 @@ in combination, for example:
   (ability to set keys, update software, etc.).
 
 
-{{devclass}} defines a small number of interesting classes ("class-N"
-for N = 0, 1, 2) of constrained nodes focusing on relevant combinations of
+{{devclass}} defines a number of interesting classes ("class-N") of
+constrained nodes focusing on relevant combinations of
 the first two constraints.
 With respect to available power, {{RFC6606}} distinguishes
 "power-affluent" nodes (mains-powered or regularly recharged) from
@@ -431,7 +431,10 @@ networks built from similarly constrained link-layer
 technologies {{RFC7668}} {{-dectule}} {{RFC7428}}.
 
 
+### LPWAN
 
+An overview over Low-Power Wide Area Network (LPWAN) technologies is
+provided by {{?RFC8376}}.
 
 # Classes of Constrained Devices {#devclass}
 
@@ -442,24 +445,25 @@ terminology for different classes of constrained devices.
 Before we get to that, let's first distinguish two big rough groups of
 devices based on their CPU capabilities:
 
-* Microcontroller-class devices (ARM term: "M-class").
+* Microcontroller-class devices (sometimes called "M-class").
   These often (but not always) include RAM and code storage on chip
-  and limit their support for general-purpose operating systems, e.g.,
+  and would struggle to support more powerful general-purpose operating systems, e.g.,
   they do not have an MMU (memory management unit).  They use most of
   their pins for interfaces to application hardware such as digital
-  in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where
-  this hardware is specialized for an application, we may talk about
-  "Systems on a Chip" (SOC).  These devices often implement elaborate
-  sleep modes to achieve microwatt- or at least milliwatt-level
-  sustained power usage (Ps, see below).
+  in/out (the latter often Pulse Width Modulation (PWM)-controllable),
+  ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
+  Where this hardware is specialized for an application, we may talk
+  about "Systems on a Chip" (SOC).  These devices often implement
+  elaborate sleep modes to achieve microwatt- or at least
+  milliwatt-level sustained power usage (Ps, see below).
 
-* General-purpose-class devices (ARM term: "A-class").  These usually
+* General-purpose-class devices (sometimes called "A-class").  These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
   such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
-  such as video controllers, these are often called "Systems on a
+  such as video controllers, these are often also called "Systems on a
   Chip" (SOC).  While these chips also include sleep modes, they are
   usually more on the watt side of sustained power usage (Ps).
 
@@ -853,7 +857,7 @@ We define the following classes of link layer MTU size:
 | S0   | 3 - 12              | need new kind of fragmentation     |
 | S1   | 13 - 127            | yes                                |
 | S2   | 128 - 1279          | yes                                |
-| S2   | >= 1280             | no fragmentation needed            |
+| S3   | >= 1280             | no fragmentation needed            |
 
 \* if no link layer fragmentation is available
 (note: 'Sx' stands for 'Size x')
@@ -909,7 +913,7 @@ We define the following classes of PHY bit rate:
 
 | Name | PHY bit rate (bit/s) | Comment                                                                                     |
 |------+----------------------+---------------------------------------------------------------------------------------------|
-| B0   | < 10                 | Tx time of 150-byte frame > MSL                                                             |
+| B0   | < 10                 | Transmission time of 150-byte frame > MSL                                                |
 | B1   | 10 -- 10^3           | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
 | B2   | 10^3 -- 10^6         | Responsiveness if human expects reaction to sent frame, but header compression still needed |
 | B3   | > 10^6               | Header compression yields relatively low performance benefits                               |
@@ -948,7 +952,7 @@ transmission.
 
 # IANA Considerations
 
-This document makes no requests of IANA.
+This document makes no requests to IANA.
 
 # Security Considerations {#security-considerations}
 
