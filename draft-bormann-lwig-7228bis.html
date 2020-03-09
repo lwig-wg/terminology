@@ -285,6 +285,7 @@ address {
 <link href="#rfc.section.2.3" rel="Chapter" title="2.3 Constrained-Node Networks">
 <link href="#rfc.section.2.3.1" rel="Chapter" title="2.3.1 LLN">
 <link href="#rfc.section.2.3.2" rel="Chapter" title="2.3.2 LoWPAN, 6LoWPAN">
+<link href="#rfc.section.2.3.3" rel="Chapter" title="2.3.3 LPWAN">
 <link href="#rfc.section.3" rel="Chapter" title="3 Classes of Constrained Devices">
 <link href="#rfc.section.3.1" rel="Chapter" title="3.1 Firmware/Software upgradeability">
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Isolation functionality">
@@ -397,6 +398,8 @@ address {
 </li>
 <li>2.3.2.   <a href="#rfc.section.2.3.2">LoWPAN, 6LoWPAN</a>
 </li>
+<li>2.3.3.   <a href="#rfc.section.2.3.3">LPWAN</a>
+</li>
 </ul></ul><li>3.   <a href="#rfc.section.3">Classes of Constrained Devices</a>
 </li>
 <ul><li>3.1.   <a href="#rfc.section.3.1">Firmware/Software upgradeability</a>
@@ -480,7 +483,7 @@ address {
 <li>constraints on the available power, and</li>
 <li>constraints on user interface and accessibility in deployment (ability to set keys, update software, etc.).</li>
 </ul>
-<p><a href="#devclass" class="xref">Section 3</a> defines a small number of interesting classes (&#8220;class-N&#8221; for N = 0, 1, 2) of constrained nodes focusing on relevant combinations of the first two constraints.  With respect to available power, <a href="#RFC6606" class="xref">[RFC6606]</a> distinguishes &#8220;power-affluent&#8221; nodes (mains-powered or regularly recharged) from &#8220;power-constrained nodes&#8221; that draw their power from primary batteries or by using energy harvesting; more detailed power terminology is given in <a href="#power" class="xref">Section 4</a>.</p>
+<p><a href="#devclass" class="xref">Section 3</a> defines a number of interesting classes (&#8220;class-N&#8221;) of constrained nodes focusing on relevant combinations of the first two constraints.  With respect to available power, <a href="#RFC6606" class="xref">[RFC6606]</a> distinguishes &#8220;power-affluent&#8221; nodes (mains-powered or regularly recharged) from &#8220;power-constrained nodes&#8221; that draw their power from primary batteries or by using energy harvesting; more detailed power terminology is given in <a href="#power" class="xref">Section 4</a>.</p>
 <p id="rfc.section.2.1.p.8">The use of constrained nodes in networks often also leads to constraints on the networks themselves.  However, there may also be constraints on networks that are largely independent from those of the nodes.  We therefore distinguish &#8220;constrained networks&#8221; from &#8220;constrained-node networks&#8221;.</p>
 <h1 id="rfc.section.2.2">
 <a href="#rfc.section.2.2">2.2.</a> <a href="#constrained-networks" id="constrained-networks">Constrained Networks</a>
@@ -555,6 +558,10 @@ address {
 <a href="#rfc.section.2.3.2">2.3.2.</a> <a href="#lowpan-6lowpan" id="lowpan-6lowpan">LoWPAN, 6LoWPAN</a>
 </h1>
 <p id="rfc.section.2.3.2.p.1">One interesting class of a constrained network often used as a constrained-node network is &#8220;LoWPAN&#8221; <a href="#RFC4919" class="xref">[RFC4919]</a>, a term inspired from the name of an IEEE 802.15.4 working group (low-rate wireless personal area networks (LR-WPANs)).  The expansion of the LoWPAN acronym, &#8220;Low-Power Wireless Personal Area Network&#8221;, contains a hard-to-justify &#8220;Personal&#8221; that is due to the history of task group naming in IEEE 802 more than due to an orientation of LoWPANs around a single person.  Actually, LoWPANs have been suggested for urban monitoring, control of large buildings, and industrial control applications, so the &#8220;Personal&#8221; can only be considered a vestige.  Occasionally, the term is read as &#8220;Low-Power Wireless Area Networks&#8221; <a href="#WEI" class="xref">[WEI]</a>.  Originally focused on IEEE 802.15.4, &#8220;LoWPAN&#8221; (or when used for IPv6, &#8220;6LoWPAN&#8221;) also refers to networks built from similarly constrained link-layer technologies <a href="#RFC7668" class="xref">[RFC7668]</a> <a href="#RFC8105" class="xref">[RFC8105]</a> <a href="#RFC7428" class="xref">[RFC7428]</a>.</p>
+<h1 id="rfc.section.2.3.3">
+<a href="#rfc.section.2.3.3">2.3.3.</a> <a href="#lpwan" id="lpwan">LPWAN</a>
+</h1>
+<p id="rfc.section.2.3.3.p.1">An overview over Low-Power Wide Area Network (LPWAN) technologies is provided by <a href="#RFC8376" class="xref">[RFC8376]</a>.</p>
 <h1 id="rfc.section.3">
 <a href="#rfc.section.3">3.</a> <a href="#devclass" id="devclass">Classes of Constrained Devices</a>
 </h1>
@@ -563,8 +570,8 @@ address {
 <p></p>
 
 <ul>
-<li>Microcontroller-class devices (ARM term: &#8220;M-class&#8221;).  These often (but not always) include RAM and code storage on chip and limit their support for general-purpose operating systems, e.g., they do not have an MMU (memory management unit).  They use most of their pins for interfaces to application hardware such as digital in/out (the latter often PWM-controllable), ADC/DACs, etc.  Where this hardware is specialized for an application, we may talk about &#8220;Systems on a Chip&#8221; (SOC).  These devices often implement elaborate sleep modes to achieve microwatt- or at least milliwatt-level sustained power usage (Ps, see below).</li>
-<li>General-purpose-class devices (ARM term: &#8220;A-class&#8221;).  These usually have RAM and Flash storage on separate chips (not always separate packages), and offer support for general-purpose operating systems such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are dedicated to interfacing with RAM and other memory.  Some general-purpose-class devices integrate some application hardware such as video controllers, these are often called &#8220;Systems on a Chip&#8221; (SOC).  While these chips also include sleep modes, they are usually more on the watt side of sustained power usage (Ps).</li>
+<li>Microcontroller-class devices (sometimes called &#8220;M-class&#8221;).  These often (but not always) include RAM and code storage on chip and would struggle to support more powerful general-purpose operating systems, e.g., they do not have an MMU (memory management unit).  They use most of their pins for interfaces to application hardware such as digital in/out (the latter often Pulse Width Modulation (PWM)-controllable), ADC/DACs (analog-to-digital and digital-to-analog converters), etc.  Where this hardware is specialized for an application, we may talk about &#8220;Systems on a Chip&#8221; (SOC).  These devices often implement elaborate sleep modes to achieve microwatt- or at least milliwatt-level sustained power usage (Ps, see below).</li>
+<li>General-purpose-class devices (sometimes called &#8220;A-class&#8221;).  These usually have RAM and Flash storage on separate chips (not always separate packages), and offer support for general-purpose operating systems such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are dedicated to interfacing with RAM and other memory.  Some general-purpose-class devices integrate some application hardware such as video controllers, these are often also called &#8220;Systems on a Chip&#8221; (SOC).  While these chips also include sleep modes, they are usually more on the watt side of sustained power usage (Ps).</li>
 </ul>
 <p id="rfc.section.3.p.4">If the distinction between these groups needs to be made in this document, we distinguish group &#8220;M&#8221; (microcontroller) from group &#8220;J&#8221; (general purpose).</p>
 <p id="rfc.section.3.p.5">In this document, the class designations in <a href="#devclasstbl" class="xref">Table 1</a> may be used as rough indications of device capabilities.  Note that the classes from 10 upwards are not really constrained devices in the sense of the previous section; they may still be useful to discuss constraints in larger devices:</p>
@@ -1002,7 +1009,7 @@ address {
 <td class="left">yes</td>
 </tr>
 <tr>
-<td class="left">S2</td>
+<td class="left">S3</td>
 <td class="left">&gt;= 1280</td>
 <td class="left">no fragmentation needed</td>
 </tr>
@@ -1053,7 +1060,7 @@ address {
 <tr>
 <td class="left">B0</td>
 <td class="left">&lt; 10</td>
-<td class="left">Tx time of 150-byte frame &gt; MSL</td>
+<td class="left">Transmission time of 150-byte frame &gt; MSL</td>
 </tr>
 <tr>
 <td class="left">B1</td>
@@ -1080,7 +1087,7 @@ address {
 <h1 id="rfc.section.6">
 <a href="#rfc.section.6">6.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a>
 </h1>
-<p id="rfc.section.6.p.1">This document makes no requests of IANA.</p>
+<p id="rfc.section.6.p.1">This document makes no requests to IANA.</p>
 <h1 id="rfc.section.7">
 <a href="#rfc.section.7">7.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a>
 </h1>
@@ -1213,6 +1220,11 @@ address {
 <td class="reference"><b id="RFC8105">[RFC8105]</b></td>
 <td class="top">
 <a>Mariager, P.</a>, <a>Petersen, J.</a>, <a>Shelby, Z.</a>, <a>Van de Logt, M.</a> and <a>D. Barthel</a>, "<a href="https://tools.ietf.org/html/rfc8105">Transmission of IPv6 Packets over Digital Enhanced Cordless Telecommunications (DECT) Ultra Low Energy (ULE)</a>", RFC 8105, DOI 10.17487/RFC8105, May 2017.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC8376">[RFC8376]</b></td>
+<td class="top">
+<a>Farrell, S.</a>, "<a href="https://tools.ietf.org/html/rfc8376">Low-Power Wide Area Network (LPWAN) Overview</a>", RFC 8376, DOI 10.17487/RFC8376, May 2018.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RFC8576">[RFC8576]</b></td>
