@@ -779,7 +779,7 @@ approximately 1e-4 to 1e-5 ("watch crystal") of error.  More precise
 timing is available with temperature compensated crystal oscillators
 (TCXO).  Further improvement requires significantly higher power
 usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
-oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can
+oscillators (OCXO) can reach 1e-8 accuracy, and Rubidium frequency sources can
 reach 1e-11 over the short term and 1e-9 over the long term.
 
 A device may need to fire up a more accurate frequency source during
@@ -819,18 +819,19 @@ performed over the network can be used to improve the uncertainty
 exhibited by these basic device classes.
 
 
-| Name | Type                                        | Uncertainty (roughly)       |
-| T0   | relative time while awake                   | (usually high)              |
-| T1   | relative time                               | (usually high during sleep) |
-| T2   | relative time                               | 1e-4 or better              |
-| T5   | absolute time (e.g., since boot)            | 1e-4 or better              |
-| T7   | wall-clock time                             | 1e-4 or better              |
-| T8   | wall-clock time                             | 1e-5 or better              |
-| T9   | wall-clock time                             | 1e-6 or better (TCXO)       |
-| T10  | wall-clock time                             | 1e-7 or better (OCXO or Rb) |
+| Name | Type                             | Uncertainty (roughly)       |
+| T0   | no concept of time               | infinite                    |
+| T1   | relative time while awake        | (usually high)              |
+| T2   | relative time                    | (usually high during sleep) |
+| T3   | relative time                    | 1e-4 or better              |
+| T5   | absolute time (e.g., since boot) | 1e-4 or better              |
+| T7   | wall-clock time                  | 1e-4 or better              |
+| T8   | wall-clock time                  | 1e-5 or better              |
+| T9   | wall-clock time                  | 1e-6 or better (TCXO)       |
+| T10  | wall-clock time                  | 1e-7 or better (OCXO or Rb) |
 {: #timeclasstbl title="Strategies of Keeping Time over Power Events"}
 
-| Name | Permanency (from type T5 upwards):           | Uncertainty                 |
+| Name | Permanency (from type T5 upwards):          | Uncertainty                 |
 | TP0  | time needs to be reset on certain occasions |                             |
 | TP1  | time needs to be set during installation    | (possibly reduced...        |
 | TP9  | reliable time is maintained during lifetime | ...by using external input) |
