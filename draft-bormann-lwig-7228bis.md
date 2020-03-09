@@ -171,7 +171,7 @@ environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.
 
-The present document is an update of {{RFC7228}}.
+The present document is a revision of {{RFC7228}}.
 
 In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
@@ -478,9 +478,8 @@ constraints in larger devices:
 | M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               | STM32F103CB     |
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               | STM32F103RC     |
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
-| M     | Class 4, C4   | ~ 300..500..1000 KiB  | ~ 1000...2000 KiB       | "Luxury"        |
+| M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | "Luxury"        |
 | J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
-| J     |               | fill in useful...     | ...J-group classes      |                 |
 | J     | Class 15, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
 | J     | Class 16, C15 | 1..4 GiB              | (lots)                  | Smartphones     |
 | J     | Class 17, C16 | 4..32 GiB             | (lots)                  | Laptops         |
