@@ -84,14 +84,14 @@ Table of Contents
      4.3.  Strategies for Using Power for Communication  . . . . . .  14
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  16
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  18
-     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  18
+     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  19
      5.2.  Class of Internet Integration . . . . . . . . . . . . . .  19
-     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  19
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  20
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  21
    7.  Security Considerations . . . . . . . . . . . . . . . . . . .  21
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  21
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  25
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  25
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  22
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  26
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  26
 
 1.  Introduction
 
@@ -872,8 +872,9 @@ Internet-Draft               CNN Terminology                  March 2020
    timing is available with temperature compensated crystal oscillators
    (TCXO).  Further improvement requires significantly higher power
    usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
-   oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can
-   reach 1e-11 over the short term and 1e-9 over the long term.
+   oscillators (OCXO) can reach 1e-8 accuracy, and Rubidium frequency
+   sources can reach 1e-11 over the short term and 1e-9 over the long
+   term.
 
    A device may need to fire up a more accurate frequency source during
    wireless communication, this may also allow it to keep more precise
@@ -888,8 +889,7 @@ Internet-Draft               CNN Terminology                  March 2020
    Errors of the frequency source can be compensated if known
    (calibrated against a known better source, or even predicted, e.g.,
    in a software TCXO).  Even with errors partially compensated, an
-   uncertainty remains, which is the more fundamental characteristic to
-   discuss.
+
 
 
 
@@ -897,6 +897,9 @@ Bormann, et al.        Expires September 10, 2020              [Page 16]
 
 Internet-Draft               CNN Terminology                  March 2020
 
+
+   uncertainty remains, which is the more fundamental characteristic to
+   discuss.
 
    Battery solutions may allow the device to keep a wall-clock time
    during its entire life, or the wall-clock time may need to be reset
@@ -918,15 +921,50 @@ Internet-Draft               CNN Terminology                  March 2020
    the local time of a device performed over the network can be used to
    improve the uncertainty exhibited by these basic device classes.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 17]
+
+Internet-Draft               CNN Terminology                  March 2020
+
+
    +------+-------------------------------+----------------------------+
    | Name | Type                          | Uncertainty (roughly)      |
    +------+-------------------------------+----------------------------+
-   | T0   | relative time while awake     | (usually high)             |
+   | T0   | no concept of time            | infinite                   |
    |      |                               |                            |
-   | T1   | relative time                 | (usually high during       |
+   | T1   | relative time while awake     | (usually high)             |
+   |      |                               |                            |
+   | T2   | relative time                 | (usually high during       |
    |      |                               | sleep)                     |
    |      |                               |                            |
-   | T2   | relative time                 | 1e-4 or better             |
+   | T3   | relative time                 | 1e-4 or better             |
    |      |                               |                            |
    | T5   | absolute time (e.g., since    | 1e-4 or better             |
    |      | boot)                         |                            |
@@ -942,17 +980,6 @@ Internet-Draft               CNN Terminology                  March 2020
    +------+-------------------------------+----------------------------+
 
            Table 8: Strategies of Keeping Time over Power Events
-
-
-
-
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 17]
-
-Internet-Draft               CNN Terminology                  March 2020
-
 
    +------+-----------------------------------+------------------------+
    | Name | Permanency (from type T5          | Uncertainty            |
@@ -971,6 +998,17 @@ Internet-Draft               CNN Terminology                  March 2020
                     Table 9: Permanency of Keeping Time
 
 5.  Classes of Networks
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 18]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
 5.1.  Classes of link layer MTU size
 
@@ -1001,15 +1039,6 @@ Internet-Draft               CNN Terminology                  March 2020
    fragmentation is needed at the adaptation layer below IPv6.  However,
    6LoWPAN fragmentation [RFC4944] cannot be used for these
    technologies, given the extremely reduced link layer MTU.  In this
-
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 18]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
    case, lightweight fragmentation formats must be used (e.g.
    [I-D.ietf-lpwan-ipv6-static-context-hc]).
 
@@ -1028,6 +1057,15 @@ Internet-Draft               CNN Terminology                  March 2020
    connected devices that are not actually employing Internet
    technology.  Some devices do use Internet technology, but only use it
    to exchange packets with a fixed communication partner ("device-to-
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 19]
+
+Internet-Draft               CNN Terminology                  March 2020
+
+
    cloud" scenarios, [RFC7452]).  More general devices are prepared to
    communicate with other nodes in the Internet as well.
 
@@ -1057,15 +1095,6 @@ Internet-Draft               CNN Terminology                  March 2020
 
    We define the following classes of PHY bit rate:
 
-
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 19]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
    +------+------------+-----------------------------------------------+
    | Name | PHY bit    | Comment                                       |
    |      | rate       |                                               |
@@ -1085,6 +1114,13 @@ Internet-Draft               CNN Terminology                  March 2020
    +------+------------+-----------------------------------------------+
 
    (note: 'Bx' stands for 'Bit rate x')
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 20]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
    B0 technologies lead to very high transmission times, which may be
    close to or even greater than the Maximum Segment Lifetime (MSL)
@@ -1113,15 +1149,6 @@ Internet-Draft               CNN Terminology                  March 2020
    user will not be able to perceive whether header compression has been
    used or not in a frame transmission.
 
-
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 20]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
 6.  IANA Considerations
 
    This document makes no requests of IANA.
@@ -1139,6 +1166,17 @@ Internet-Draft               CNN Terminology                  March 2020
    constrained nodes are discussed in [RFC7815] and
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
    constrained-node networks is provided in [RFC8576].
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 21]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
 8.  Informative References
 
@@ -1171,13 +1209,6 @@ Internet-Draft               CNN Terminology                  March 2020
               cema.com/dwn/SF_177701/driving_the_digital_agenda_requires
               _strategic_architecture_rosen_idc.pdf>.
 
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 21]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
               Slide 11
 
    [ISQ-13]   International Electrotechnical Commission, "International
@@ -1192,6 +1223,16 @@ Internet-Draft               CNN Terminology                  March 2020
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/info/rfc4838>.
+
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 22]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
@@ -1226,14 +1267,6 @@ Internet-Draft               CNN Terminology                  March 2020
               DOI 10.17487/RFC6550, March 2012,
               <https://www.rfc-editor.org/info/rfc6550>.
 
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 22]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
               in Low-Power and Lossy Networks", RFC 6551,
@@ -1249,6 +1282,13 @@ Internet-Draft               CNN Terminology                  March 2020
    [RFC7102]  Vasseur, JP., "Terms Used in Routing for Low-Power and
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/info/rfc7102>.
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 23]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
@@ -1281,15 +1321,6 @@ Internet-Draft               CNN Terminology                  March 2020
               Energy", RFC 7668, DOI 10.17487/RFC7668, October 2015,
               <https://www.rfc-editor.org/info/rfc7668>.
 
-
-
-
-
-Bormann, et al.        Expires September 10, 2020              [Page 23]
-
-Internet-Draft               CNN Terminology                  March 2020
-
-
    [RFC7815]  Kivinen, T., "Minimal Internet Key Exchange Version 2
               (IKEv2) Initiator Implementation", RFC 7815,
               DOI 10.17487/RFC7815, March 2016,
@@ -1305,6 +1336,15 @@ Internet-Draft               CNN Terminology                  March 2020
               Things (IoT) Security: State of the Art and Challenges",
               RFC 8576, DOI 10.17487/RFC8576, April 2019,
               <https://www.rfc-editor.org/info/rfc8576>.
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 24]
+
+Internet-Draft               CNN Terminology                  March 2020
+
 
    [WEI]      Shelby, Z. and C. Bormann, "6LoWPAN: the Wireless Embedded
               Internet", Wiley-Blackwell monograph,
@@ -1341,7 +1381,23 @@ Internet-Draft               CNN Terminology                  March 2020
 
 
 
-Bormann, et al.        Expires September 10, 2020              [Page 24]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.        Expires September 10, 2020              [Page 25]
 
 Internet-Draft               CNN Terminology                  March 2020
 
@@ -1397,4 +1453,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.        Expires September 10, 2020              [Page 25]
+Bormann, et al.        Expires September 10, 2020              [Page 26]

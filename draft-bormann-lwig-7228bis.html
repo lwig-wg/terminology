@@ -880,7 +880,7 @@ address {
 <p id="rfc.section.4.4.p.2">Many applications for a device require it to keep some concept of time.</p>
 <p id="rfc.section.4.4.p.3">Time-keeping can be relative to a previous event (last packet received), absolute on a device-specific scale (e.g., last reboot), or absolute on a world-wide scale (&#8220;wall-clock time&#8221;).</p>
 <p id="rfc.section.4.4.p.4">Some devices lose the concept of time when going to sleep: after wakeup, they don&#8217;t know how long they slept.  Some others do keep some concept of time during sleep, but not precise enough to use as a basis for keeping absolute time.  Some devices have a continuously running source of a reasonably accurate time (often a 32,768 Hz watch crystal).  Finally, some devices can keep their concept of time even during a battery change, e.g., by using a backup battery or a supercapacitor to power the real-time clock (RTC).</p>
-<p id="rfc.section.4.4.p.5">The actual accuracy of time may vary, with errors ranging from tens of percent from on-chip RC oscillators (not useful for keeping absolute time, but still useful for, e.g., timing out some state) to approximately 1e-4 to 1e-5 (&#8220;watch crystal&#8221;) of error.  More precise timing is available with temperature compensated crystal oscillators (TCXO).  Further improvement requires significantly higher power usage, bulk, fragility, and device cost, e.g. oven-controlled crystal oscillators (OCXO) can reach 1e-8, and Rubidium frequency sources can reach 1e-11 over the short term and 1e-9 over the long term.</p>
+<p id="rfc.section.4.4.p.5">The actual accuracy of time may vary, with errors ranging from tens of percent from on-chip RC oscillators (not useful for keeping absolute time, but still useful for, e.g., timing out some state) to approximately 1e-4 to 1e-5 (&#8220;watch crystal&#8221;) of error.  More precise timing is available with temperature compensated crystal oscillators (TCXO).  Further improvement requires significantly higher power usage, bulk, fragility, and device cost, e.g. oven-controlled crystal oscillators (OCXO) can reach 1e-8 accuracy, and Rubidium frequency sources can reach 1e-11 over the short term and 1e-9 over the long term.</p>
 <p id="rfc.section.4.4.p.6">A device may need to fire up a more accurate frequency source during wireless communication, this may also allow it to keep more precise time during the period.</p>
 <p id="rfc.section.4.4.p.7">The various time sources available on the device can be assisted by external time input, e.g. via the network using the NTP protocol <a href="#RFC5905" class="xref">[RFC5905]</a>.  Information from measuring the deviation between external input and local time source can be used to increase the accuracy of maintaining time even during periods of no network use.</p>
 <p id="rfc.section.4.4.p.8">Errors of the frequency source can be compensated if known (calibrated against a known better source, or even predicted, e.g., in a software TCXO).  Even with errors partially compensated, an uncertainty remains, which is the more fundamental characteristic to discuss.</p>
@@ -899,16 +899,21 @@ address {
 <tbody>
 <tr>
 <td class="left">T0</td>
+<td class="left">no concept of time</td>
+<td class="left">infinite</td>
+</tr>
+<tr>
+<td class="left">T1</td>
 <td class="left">relative time while awake</td>
 <td class="left">(usually high)</td>
 </tr>
 <tr>
-<td class="left">T1</td>
+<td class="left">T2</td>
 <td class="left">relative time</td>
 <td class="left">(usually high during sleep)</td>
 </tr>
 <tr>
-<td class="left">T2</td>
+<td class="left">T3</td>
 <td class="left">relative time</td>
 <td class="left">1e-4 or better</td>
 </tr>
