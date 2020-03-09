@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2019-09-02
+date: 2020-03-09
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -844,7 +844,7 @@ We define the following classes of link layer MTU size:
 | S2   | 128 - 1279          | yes                                |
 | S2   | >= 1280             | no fragmentation needed            |
 
-*if no link layer fragmentation is available  
+\* if no link layer fragmentation is available
 (note: 'Sx' stands for 'Size x')
 
 S0 technologies require fragmentation to support the IPv6 MTU requirement.
