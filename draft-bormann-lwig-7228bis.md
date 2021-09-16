@@ -484,9 +484,9 @@ constraints in larger devices:
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
 | M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | "Luxury"        |
 | J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
-| J     | Class 15, C13 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
-| J     | Class 16, C15 | 1..4 GiB              | (lots)                  | Smartphones     |
-| J     | Class 17, C16 | 4..32 GiB             | (lots)                  | Laptops         |
+| J     | Class 15, C15 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
+| J     | Class 16, C16 | 1..4 GiB              | (lots)                  | Smartphones     |
+| J     | Class 17, C17 | 4..32 GiB             | (lots)                  | Laptops         |
 | J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
 {: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)' cols="l 20l l l l"}
 
