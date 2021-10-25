@@ -21,7 +21,7 @@ date: 2021-10-25
 author:
 - ins: C. Bormann
   name: Carsten Bormann
-  org: Universitaet Bremen TZI
+  org: Universität Bremen TZI
   street: Postfach 330440
   city: Bremen
   code: D-28359
