@@ -17,7 +17,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2020-03-09
+date: 2021-10-25
 author:
 - ins: C. Bormann
   name: Carsten Bormann
@@ -58,7 +58,7 @@ informative:
   RFC5905: ntp
   RFC4944:
   RFC6282:
-  I-D.ietf-lpwan-ipv6-static-context-hc: frag-new
+  RFC8724: frag-new
   RFC7452:
   RFC6606:
   RFC0793:
@@ -177,6 +177,7 @@ In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
 abbreviated "KiB", for 1024 bytes {{ISQ-13}}.
+Powers of 10 are given as 10<sup>100</sup> where 100 is the exponent.
 
 In computing, the term "power" is often used for the concept of
 "computing power" or "processing power", as in CPU performance.
@@ -779,12 +780,12 @@ power the real-time clock (RTC).
 The actual accuracy of time may vary, with errors ranging from tens of
 percent from on-chip RC oscillators (not useful for keeping absolute
 time, but still useful for, e.g., timing out some state) to
-approximately 1e-4 to 1e-5 ("watch crystal") of error.  More precise
+approximately 10<sup>-4</sup> to 10<sup>-5</sup> ("watch crystal") of error.  More precise
 timing is available with temperature compensated crystal oscillators
 (TCXO).  Further improvement requires significantly higher power
 usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
-oscillators (OCXO) can reach 1e-8 accuracy, and Rubidium frequency sources can
-reach 1e-11 over the short term and 1e-9 over the long term.
+oscillators (OCXO) can reach 10<sup>-8</sup> accuracy, and Rubidium frequency sources can
+reach 10<sup>-11</sup> over the short term and 10<sup>-9</sup> over the long term.
 
 A device may need to fire up a more accurate frequency source during
 wireless communication, this may also allow it to keep more precise
@@ -827,12 +828,12 @@ exhibited by these basic device classes.
 | T0   | no concept of time               | infinite                    |
 | T1   | relative time while awake        | (usually high)              |
 | T2   | relative time                    | (usually high during sleep) |
-| T3   | relative time                    | 1e-4 or better              |
-| T5   | absolute time (e.g., since boot) | 1e-4 or better              |
-| T7   | wall-clock time                  | 1e-4 or better              |
-| T8   | wall-clock time                  | 1e-5 or better              |
-| T9   | wall-clock time                  | 1e-6 or better (TCXO)       |
-| T10  | wall-clock time                  | 1e-7 or better (OCXO or Rb) |
+| T3   | relative time                    | 10<sup>-4</sup> or better              |
+| T5   | absolute time (e.g., since boot) | 10<sup>-4</sup> or better              |
+| T7   | wall-clock time                  | 10<sup>-4</sup> or better              |
+| T8   | wall-clock time                  | 10<sup>-5</sup> or better              |
+| T9   | wall-clock time                  | 10<sup>-6</sup> or better (TCXO)       |
+| T10  | wall-clock time                  | 10<sup>-7</sup> or better (OCXO or Rb) |
 {: #timeclasstbl title="Strategies of Keeping Time over Power Events"}
 
 | Name | Permanency (from type T5 upwards):          | Uncertainty                 |
@@ -959,7 +960,7 @@ This document makes no requests to IANA.
 This document introduces common terminology that does not raise any
 new security issues.  Security considerations arising from the
 constraints discussed in this document need to be discussed in the
-context of specific protocols.  For instance, Section 11.6 of {{RFC7252}},
+context of specific protocols.  For instance, {{Section 11.6 of RFC7252}},
 "Constrained node considerations", discusses implications of specific
 constraints on the security mechanisms employed. {{-ROLL-SEC-THREATS}} provides a security
 threat analysis for the RPL routing protocol.
