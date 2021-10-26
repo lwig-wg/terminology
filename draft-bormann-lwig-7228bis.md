@@ -19,8 +19,7 @@ area: Internet
 wg: LWIG Working Group
 date: 2021-10-25
 author:
-- ins: C. Bormann
-  name: Carsten Bormann
+- name: Carsten Bormann
   org: Universität Bremen TZI
   street: Postfach 330440
   city: Bremen
@@ -28,9 +27,9 @@ author:
   country: Germany
   phone: "+49-421-218-63921"
   email: cabo@tzi.org
-- ins: M. Ersue
-  name: Mehmet Ersue
-#  country: Germany
+- name: Mehmet Ersue
+  city: Munich
+  country: Germany
   email: mersue@gmail.com
 - ins: A. Keranen
   name: Ari Keranen
@@ -40,19 +39,18 @@ author:
   code: '02420'
   country: Finland
   email: ari.keranen@ericsson.com
-- ins: C. Gomez
-  name: Carles Gomez
+- name: Carles Gomez
 #  org: Universitat Politecnica de Catalunya/Fundacio i2CAT
-  org: UPC/i2CAT
+#  org: UPC/i2CAT
+  org: Universitat Politecnica de Catalunya
   street:
-    - Escola d'Enginyeria de Telecomunicacio i Aeroespacial
-    - "    de Castelldefels"
     - C/Esteve Terradas, 7
   city: Castelldefels
   code: 08860
   country: Spain
   phone: +34-93-413-7206
   email: carlesgo@entel.upc.edu
+
 informative:
   RFC7228:
   RFC5905: ntp
