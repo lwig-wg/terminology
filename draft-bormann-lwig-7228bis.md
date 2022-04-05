@@ -762,8 +762,6 @@ mention of P1.
 
 ## Strategies of Keeping Time over Power Events
 
-\[This subsection is very drafty.]
-
 Many applications for a device require it to keep some concept of time.
 
 Time-keeping can be relative to a previous event (last packet received),
@@ -843,6 +841,9 @@ exhibited by these basic device classes.
 | TP1  | time needs to be set during installation    | (possibly reduced...        |
 | TP9  | reliable time is maintained during lifetime | ...by using external input) |
 {: #timepermanencytbl title="Permanency of Keeping Time"}
+
+Further parameters that can be used to discuss clock quality can be
+found in {{Section 3.5 of -time-tag}}.
 
 # Classes of Networks
 
