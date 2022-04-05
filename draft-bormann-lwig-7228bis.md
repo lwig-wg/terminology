@@ -111,6 +111,11 @@ informative:
   RFC8576: IOT-SECURITY
 #  I-D.ietf-lwig-cellular: COAP-CELLULAR
   RFC5826: home-aut-reqs
+  W432:
+    target: https://openwrt.org/supported_devices/432_warning
+    title: Warning about 4/32 devices
+    date: false
+    rc: OpenWRT wiki, last accessed 2021-12-01
 
 --- abstract
 
@@ -477,7 +482,7 @@ constraints in larger devices:
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               | STM32F103RC     |
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
 | M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | "Luxury"        |
-| J     | Class 10, C10 | 4-8 MiB               | (?)                     | OpenWRT routers |
+| J     | Class 10, C10 | (16..)32..64..128 MiB | 4..8..16 MiB            | OpenWRT routers |
 | J     | Class 15, C15 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
 | J     | Class 16, C16 | 1..4 GiB              | (lots)                  | Smartphones     |
 | J     | Class 17, C17 | 4..32 GiB             | (lots)                  | Laptops         |
@@ -492,6 +497,10 @@ be less effective in the embedded space than in personal computing
 devices: gains made available by increases in transistor count and
 density are more likely to be invested in reductions of cost and power
 requirements than into continual increases in computing power.
+(This effect is less pronounced in the multi-chip J-group
+architectures; e.g., class 10 usage for OpenWRT has started at 4/16
+MiB Flash/RAM, with an early lasting minimum at 4/32, to now requiring
+8/64 and preferring 16/128 for modern software releases {{W432}}.)
 
 Class 0 devices are very constrained sensor-like motes.  They are so
 severely constrained in memory and processing capabilities that most
