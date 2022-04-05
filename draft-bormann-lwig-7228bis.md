@@ -265,7 +265,7 @@ given in {{power}}.
 
 The use of constrained nodes in networks often also leads to
 constraints on the networks themselves.  However, there may also be
-constraints on networks that are largely independent from those of the
+constraints on networks that are largely independent of those of the
 nodes.  We therefore distinguish "constrained networks" from
 "constrained-node networks".
 
@@ -397,8 +397,8 @@ Lossy) terminology document {{RFC7102}} defines LLNs as follows:
 Beyond that, LLNs often exhibit considerable loss at the
 physical layer, with significant variability of the delivery rate,
 and some short-term unreliability, coupled with some medium-term
-stability that makes it worthwhile to both construct directed acyclic graphs
-that are medium-term stable for routing and do measurements on the edges
+stability that makes it worthwhile to both (1) construct directed acyclic graphs
+that are medium-term stable for routing and (2) do measurements on the edges
 such as Expected Transmission Count (ETX) {{RFC6551}}.  Not all LLNs comprise low-power nodes {{-RPL-DEPLOYMENT}}.
 
 LLNs typically are composed
@@ -550,7 +550,7 @@ devices, and to a certain extent even J-group devices, can still be
 constrained by a limited energy supply.  Class 3 and 4 devices are
 less clearly defined than the lower classes; they are even less
 constrained.  In particular Class 4 devices are powerful enough to
-quite comfortably run, e.g., JavaScript interpreters, together with
+quite comfortably run, say, JavaScript interpreters, together with
 elaborate network stacks.  Additional classes
 may need to be defined based on protection capabilities, e.g., an MPU
 (memory protection unit; true MMUs are typically only found in J-group
@@ -575,17 +575,17 @@ operational scenario need to be analyzed.  Use cases may combine
 constrained devices of multiple classes as well as more traditional
 Internet nodes.
 
-## Firmware/Software upgradeability
+## Firmware/Software upgradability
 
-Platforms may differ in their firmware or software upgradeability.
+Platforms may differ in their firmware or software upgradability.
 The below is a first attempt at classifying this.
 
-| Name | Firmware/Software upgradeability                           |
+| Name | Firmware/Software upgradability                            |
 | F0   | no (discard for upgrade)                                   |
 | F1   | replaceable, out of service during replacement, reboot     |
 | F2   | patchable during operation, reboot required                |
 | F3   | patchable during operation, restart not visible externally |
-| F9   | app-level upgradeability, no reboot required ("hitless")   |
+| F9   | app-level upgradability, no reboot required ("hitless")    |
 {: #upgtbl title='Levels of software update capabilities'}
 
 ## Isolation functionality
