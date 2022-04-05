@@ -62,6 +62,8 @@ informative:
   RFC7668:
   RFC8105: dectule
   RFC7428:
+  RFC9159: blemesh
+  I-D.ietf-cbor-time-tag: time-tag
   IoT-2025:
     target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
     title: Driving the Digital Agenda Requires Strategic Architecture
@@ -420,7 +422,7 @@ considered a vestige.  Occasionally, the term is read as "Low-Power
 Wireless Area Networks" {{WEI}}.  Originally focused on IEEE
 802.15.4, "LoWPAN" (or when used for IPv6, "6LoWPAN") also refers to
 networks built from similarly constrained link-layer
-technologies {{RFC7668}} {{-dectule}} {{RFC7428}}.
+technologies {{RFC7668}} {{-dectule}} {{RFC7428}} {{RFC9159}}.
 
 
 ### LPWAN
