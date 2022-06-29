@@ -44,6 +44,11 @@ author:
   phone: +34-93-413-7206
   email: carlesgo@entel.upc.edu
 
+venue:
+  group: Light-Weight Implementation Guidance (lwig)
+  mail: lwip@ietf.org
+  github: lwig-wg/terminology
+
 informative:
   RFC7228:
   RFC5905: ntp
