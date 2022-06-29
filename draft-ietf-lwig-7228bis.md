@@ -5,12 +5,12 @@ submissiontype: IETF
 cat: info
 consensus: yes
 #number: '7228'
-docname: draft-bormann-lwig-7228bis-latest
+docname: draft-ietf-lwig-7228bis-latest
 title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: LWIG Working Group
-date: 2022-04-05
+date: 2022-06-29
 author:
 - name: Carsten Bormann
   org: Universität Bremen TZI
