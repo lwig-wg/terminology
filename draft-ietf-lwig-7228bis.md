@@ -240,10 +240,18 @@ weight, and other scaling factors.
 (An alternative term, when the properties as a network node are not in
 focus, is "constrained device".)
 
-There are multiple facets to the constraints on nodes, often applying
+As an antonym, we cannot use "unconstrained node", as engineering is
+unable to produce nodes that are literally without constraints.
+To mark the other end of the constrainedness spectrum, the term
+Capable (as in "capable nodes") has recently become popular.
+
+Capable Node:
+: A node that is not subject to the constraints that would make it a
+  "Constrained Node" for the purposes of the discussion this term is
+  used in.
+
+There are multiple facets to the constraints on nodes, which often apply
 in combination, for example:
-
-
 
 * constraints on the maximum code complexity (ROM/Flash),
 
