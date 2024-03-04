@@ -591,7 +591,7 @@ The below is a first attempt at classifying this.
 | F2   | patchable during operation, reboot required                |
 | F3   | patchable during operation, restart not visible externally |
 | F9   | app-level upgradability, no reboot required ("hitless")    |
-{: #upgtbl title='Levels of software update capabilities'}
+{: #upgtbl title='Levels of Software Update Capabilities'}
 
 ## Isolation functionality
 
@@ -605,7 +605,7 @@ exclusive; we need to build relevant clusters.
 | Is5  | MMU with Linux-style kernel/user                          |
 | Is7  | Virtualization-style isolation                            |
 | Is8  | Secure enclave isolation                                  |
-{: #isoltbl title='Levels of isolation capabilities'}
+{: #isoltbl title='Levels of Isolation Capabilities'}
 
 ## Shielded secrets
 
@@ -618,7 +618,7 @@ secure enclave functionality).
 | Sh0  | no secret shielding            |
 | Sh1  | some secret shielding          |
 | Sh9  | perfect secret shielding       |
-{: #shieldtbl title='Levels of secret shielding capabilities'}
+{: #shieldtbl title='Levels of Secret Shielding Capabilities'}
 
 # Power Terminology {#power}
 
@@ -867,6 +867,7 @@ We define the following classes of link layer MTU size:
 | S1   | 13 - 127            | yes                                |
 | S2   | 128 - 1279          | yes                                |
 | S3   | >= 1280             | no fragmentation needed            |
+{: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
 (note: 'Sx' stands for 'Size x')
@@ -905,6 +906,7 @@ We define the following classes of Internet technology level:
 | I0   | none (local interconnect only)       |
 | I1   | device-to-cloud only                 |
 | I9   | full Internet connectivity supported |
+{: #internettbl title='Classes of Internet Technology Level'}
 
 
 ## Classes of physical layer bit rate
@@ -927,6 +929,7 @@ We define the following classes of PHY bit rate:
 | B1   | 10 -- 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
 | B2   | 10<sup>3</sup> -- 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame, but header compression still needed |
 | B3   | > 10<sup>6</sup>                 | Header compression yields relatively low performance benefits                               |
+{: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
 (note: 'Bx' stands for 'Bit rate x')
 
