@@ -57,7 +57,7 @@ informative:
   RFC8724: frag-new
   RFC7452:
   RFC6606:
-  RFC0793:
+  STD7: tcp #  RFC9293:
   RFC4838:
   RFC7102:
   RFC6551:
@@ -68,6 +68,8 @@ informative:
   RFC8105: dectule
   RFC7428:
   RFC9159: blemesh
+  I-D.amsuess-t2trg-raytime: raytime
+  I-D.gomez-core-coap-space: coap-in-space
   I-D.ietf-cbor-time-tag: time-tag
   IoT-2025:
     target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
@@ -102,7 +104,7 @@ informative:
       SIGCOMM: '2003'
       DOI: 10.1145/863955.863960
   ISQ-13:
-    title: 'International Standard -- Quantities and units -- Part 13: Information
+    title: 'International Standard — Quantities and units — Part 13: Information
       science and technology'
     author:
     - org: International Electrotechnical Commission
@@ -348,7 +350,7 @@ Challenged Network:
   * exhibiting serious interruptions in end-to-end IP connectivity, or
 
   * exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-    defined by TCP {{RFC0793}}.
+    assumed by TCP ({{Section 3.4.2 of RFC9293@STD7}}).
 
 
 
@@ -505,7 +507,7 @@ requirements than into continual increases in computing power.
 (This effect is less pronounced in the multi-chip J-group
 architectures; e.g., class 10 usage for OpenWRT has started at 4/16
 MiB Flash/RAM, with an early lasting minimum at 4/32, to now requiring
-8/64 and preferring 16/128 for modern software releases {{W432}}.)
+8/64 and recommending 16/128 for modern software releases {{W432}}.)
 
 Class 0 devices are very constrained sensor-like motes.  They are so
 severely constrained in memory and processing capabilities that most
@@ -821,6 +823,7 @@ inputs than devices that need to be reset episodically, which can
 possibly be tricked by their environment into accepting a long-past
 time, for instance with the intent of exploiting expired security
 assertions such as certificates.
+See {{-raytime}} for additional discussion and a strategy for mitigating this.
 
 From a practical point of view, devices can be divided at least on the
 two dimensions proposed in {{timeclasstbl}} and
@@ -935,8 +938,11 @@ We define the following classes of PHY bit rate:
 
 B0 technologies lead to very high transmission times, which may be close
 to or even greater than the Maximum Segment Lifetime (MSL) assumed on
-the Internet {{RFC0793}}.  Many Internet protocols and mechanisms will fail
-when transmit times are greater than the MSL.  B0 technologies lead to a
+the Internet ({{Section 3.4.2 of RFC9293@STD7}}).
+Many Internet protocols and mechanisms will fail
+when transmission times, and thus latencies, are greater than the MSL
+{{-coap-in-space}}.
+B0 technologies lead to a
 frame transmission time greater than the MSL for a frame size greater
 than 150 bytes.
 
