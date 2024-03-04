@@ -1,6 +1,7 @@
 *.html
 *.pdf
 *.redxml
+*.xml
 *.swp
 *.txt
 *.upload
