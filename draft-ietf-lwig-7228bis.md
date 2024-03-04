@@ -217,8 +217,6 @@ The term "constrained node" is best defined by contrasting the
 characteristics of a constrained node with certain widely held
 expectations on more familiar Internet nodes:
 
-
-
 Constrained Node:
 : A node where some of the characteristics that are otherwise pretty
   much taken for granted for Internet nodes at the time of writing are not
@@ -231,7 +229,6 @@ Constrained Node:
   consideration in all design
   requirements.  Also, some layer-2 services such as full connectivity
   and broadcast/multicast may be lacking.
-
 
 While this is not a rigorous definition, it is
 grounded in the state of the art and clearly sets apart constrained
@@ -255,7 +252,7 @@ in combination, for example:
 * constraints on the amount of computation feasible in a period of
   time ("processing power"),
 
-* constraints on the available power, and
+* constraints on the available power and/or total energy, and
 
 * constraints on user interface and accessibility in deployment
   (ability to set keys, update software, etc.).
@@ -296,7 +293,8 @@ Constraints may include:
 
 * low achievable bitrate/throughput (including limits on duty cycle),
 
-* high packet loss and high variability of packet loss (delivery rate),
+* high packet loss and high variability of packet loss (or,
+  conversely, delivery rate),
 
 * highly asymmetric link characteristics,
 
@@ -597,9 +595,11 @@ The below is a first attempt at classifying this.
 
 ## Isolation functionality
 
-TBD.  This section could discuss the ability of the platform to
-isolate different components.  The categories below are not mutually
-exclusive; we need to build relevant clusters.
+This section discusses the ability of the platform to
+isolate different software components.
+The categories below are not mutually
+exclusive.
+<!-- are there relevant clusters? -->
 
 | Name | Isolation functionality                                   |
 | Is0  | no isolation                                              |
@@ -611,9 +611,9 @@ exclusive; we need to build relevant clusters.
 
 ## Shielded secrets
 
-\[Need to identify clusters]
+<!-- are there relevant clusters? -->
 
-Some platforms can keep shielded secrets (usually in conjunction with
+Some platforms can keep secrets shielded (usually in conjunction with
 secure enclave functionality).
 
 | Name | Secret shielding functionality |
@@ -782,7 +782,7 @@ for keeping absolute time.  Some devices have a continuously running
 source of a reasonably accurate time (often a 32,768 Hz watch crystal).
 Finally, some devices can keep their concept of time even during a
 battery change, e.g., by using a backup battery or a supercapacitor to
-power the real-time clock (RTC).
+keep powering the real-time clock (RTC).
 
 The actual accuracy of time may vary, with errors ranging from tens of
 percent from on-chip RC oscillators (not useful for keeping absolute
@@ -819,7 +819,7 @@ during manufacture is deemed too much effort.
 
 Devices that keep a good approximation of wall-clock time during their
 life may be in a better position to securely validate external time
-inputs than devices that need to be reset episodically, which can
+inputs than devices that need to be reset episodically: the latter can
 possibly be tricked by their environment into accepting a long-past
 time, for instance with the intent of exploiting expired security
 assertions such as certificates.
@@ -866,9 +866,9 @@ We define the following classes of link layer MTU size:
 
 | Name | L2 MTU size (bytes) | 6LoWPAN Fragmentation applicable*? |
 |------+---------------------+------------------------------------|
-| S0   | 3 - 12              | need new kind of fragmentation     |
-| S1   | 13 - 127            | yes                                |
-| S2   | 128 - 1279          | yes                                |
+| S0   | 3 – 12              | need new kind of fragmentation     |
+| S1   | 13 – 127            | yes                                |
+| S2   | 128 – 1279          | yes                                |
 | S3   | >= 1280             | no fragmentation needed            |
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
@@ -879,7 +879,7 @@ S0 technologies require fragmentation to support the IPv6 MTU requirement.
 If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation {{RFC4944}}
 cannot be used for these technologies, given the extremely reduced link
-layer MTU. In this case, lightweight fragmentation formats must be used
+layer MTU. In this case, lightweight fragmentation formats need to be used
 (e.g. {{-frag-new}}).
 
 S1 and S2 technologies require fragmentation at the subnetwork level to
@@ -914,8 +914,8 @@ We define the following classes of Internet technology level:
 
 ## Classes of physical layer bit rate
 
-\[This section is a trial balloon.  We could also talk about
-burst rate, sustained rate; bits/s, messages/s, ...]
+\[This section could be expanded to also talk about
+burst rate vs. sustained rate; bits/s vs. messages/s, ...]
 
 Physical layer technologies used by constrained devices can be
 categorized on the basis of physical layer (PHY) bit rate. The PHY bit
@@ -929,8 +929,8 @@ We define the following classes of PHY bit rate:
 | Name | PHY bit rate (bit/s)             | Comment                                                                                     |
 |------+----------------------------------+---------------------------------------------------------------------------------------------|
 | B0   | < 10                             | Transmission time of 150-byte frame > MSL                                                   |
-| B1   | 10 -- 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
-| B2   | 10<sup>3</sup> -- 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame, but header compression still needed |
+| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
+| B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame, but header compression still needed |
 | B3   | > 10<sup>6</sup>                 | Header compression yields relatively low performance benefits                               |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
