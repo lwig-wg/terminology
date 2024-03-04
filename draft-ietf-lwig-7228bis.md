@@ -5,7 +5,7 @@ submissiontype: IETF
 cat: info
 consensus: yes
 #number: '7228'
-docname: draft-ietf-lwig-7228bis-latest
+docname: draft-bormann-iotops-ietf-lwig-7228bis-latest
 title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
