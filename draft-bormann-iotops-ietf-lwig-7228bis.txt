@@ -5,16 +5,16 @@
 LWIG Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: 31 December 2022                                               
+Expires: 5 September 2024                                               
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                            29 June 2022
+                                                            4 March 2024
 
 
                Terminology for Constrained-Node Networks
-                     draft-ietf-lwig-7228bis-latest
+             draft-bormann-iotops-ietf-lwig-7228bis-latest
 
 Abstract
 
@@ -29,12 +29,14 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-ietf-lwig-7228bis/.
+   https://datatracker.ietf.org/doc/draft-bormann-iotops-ietf-lwig-
+   7228bis/.
 
    Discussion of this document takes place on the Light-Weight
    Implementation Guidance (lwig) Working Group mailing list
    (mailto:lwip@ietf.org), which is archived at
-   https://mailarchive.ietf.org/arch/browse/lwip/.
+   https://mailarchive.ietf.org/arch/browse/lwip/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/lwip/.
 
    Source for this draft and an issue tracker can be found at
    https://github.com/lwig-wg/terminology.
@@ -49,16 +51,23 @@ Status of This Memo
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
 
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 1]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 December 2022.
+   This Internet-Draft will expire on 5 September 2024.
 
 Copyright Notice
 
-   Copyright (c) 2022 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -72,33 +81,41 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction
-   2.  Core Terminology
-     2.1.  Constrained Nodes
-     2.2.  Constrained Networks
-       2.2.1.  Challenged Networks
-     2.3.  Constrained-Node Networks
-       2.3.1.  LLN
-       2.3.2.  LoWPAN, 6LoWPAN
-       2.3.3.  LPWAN
-   3.  Classes of Constrained Devices
-     3.1.  Firmware/Software upgradability
-     3.2.  Isolation functionality
-     3.3.  Shielded secrets
-   4.  Power Terminology
-     4.1.  Scaling Properties
-     4.2.  Classes of Energy Limitation
-     4.3.  Strategies for Using Power for Communication
-     4.4.  Strategies of Keeping Time over Power Events
-   5.  Classes of Networks
-     5.1.  Classes of link layer MTU size
-     5.2.  Class of Internet Integration
-     5.3.  Classes of physical layer bit rate
-   6.  IANA Considerations
-   7.  Security Considerations
-   8.  Informative References
-   Acknowledgements
-   Authors' Addresses
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   2.  Core Terminology  . . . . . . . . . . . . . . . . . . . . . .   4
+     2.1.  Constrained Nodes . . . . . . . . . . . . . . . . . . . .   4
+     2.2.  Constrained Networks  . . . . . . . . . . . . . . . . . .   6
+       2.2.1.  Challenged Networks . . . . . . . . . . . . . . . . .   7
+     2.3.  Constrained-Node Networks . . . . . . . . . . . . . . . .   7
+       2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   7
+       2.3.2.  LoWPAN, 6LoWPAN . . . . . . . . . . . . . . . . . . .   8
+       2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   8
+   3.  Classes of Constrained Devices  . . . . . . . . . . . . . . .   9
+     3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  12
+     3.2.  Isolation functionality . . . . . . . . . . . . . . . . .  13
+     3.3.  Shielded secrets  . . . . . . . . . . . . . . . . . . . .  13
+   4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  14
+     4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  14
+     4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  15
+     4.3.  Strategies for Using Power for Communication  . . . . . .  16
+     4.4.  Strategies of Keeping Time over Power Events  . . . . . .  17
+   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  20
+     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  20
+     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  21
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  21
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  23
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  23
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  23
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 2]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  27
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  27
 
 1.  Introduction
 
@@ -141,6 +158,17 @@ Table of Contents
    cooperating in this space.
 
    The present document is a revision of [RFC7228].
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 3]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    In this document, the term "byte" is used in its now customary sense
    as a synonym for "octet".  Where sizes of semiconductor memory are
@@ -186,6 +214,18 @@ Table of Contents
       in all design requirements.  Also, some layer-2 services such as
       full connectivity and broadcast/multicast may be lacking.
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 4]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    While this is not a rigorous definition, it is grounded in the state
    of the art and clearly sets apart constrained nodes from server
    systems, desktop or laptop computers, powerful mobile devices such as
@@ -196,8 +236,17 @@ Table of Contents
    (An alternative term, when the properties as a network node are not
    in focus, is "constrained device".)
 
-   There are multiple facets to the constraints on nodes, often applying
-   in combination, for example:
+   As an antonym, we cannot use "unconstrained node", as engineering is
+   unable to produce nodes that are literally without constraints.  To
+   mark the other end of the constrainedness spectrum, the term Capable
+   (as in "capable nodes") has recently become popular.
+
+   Capable Node:  A node that is not subject to the constraints that
+      would make it a "Constrained Node" for the purposes of the
+      discussion this term is used in.
+
+   There are multiple facets to the constraints on nodes, which often
+   apply in combination, for example:
 
    *  constraints on the maximum code complexity (ROM/Flash),
 
@@ -206,7 +255,7 @@ Table of Contents
    *  constraints on the amount of computation feasible in a period of
       time ("processing power"),
 
-   *  constraints on the available power, and
+   *  constraints on the available power and/or total energy, and
 
    *  constraints on user interface and accessibility in deployment
       (ability to set keys, update software, etc.).
@@ -225,6 +274,14 @@ Table of Contents
    nodes.  We therefore distinguish "constrained networks" from
    "constrained-node networks".
 
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 5]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
 2.2.  Constrained Networks
 
    We define "constrained network" in a similar way:
@@ -238,8 +295,8 @@ Table of Contents
    *  low achievable bitrate/throughput (including limits on duty
       cycle),
 
-   *  high packet loss and high variability of packet loss (delivery
-      rate),
+   *  high packet loss and high variability of packet loss (or,
+      conversely, delivery rate),
 
    *  highly asymmetric link characteristics,
 
@@ -272,6 +329,15 @@ Table of Contents
       (including limits on effective radiated power and duty cycle) or
       explosion safety, and
 
+
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 6]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    *  technology constraints, such as older and lower-speed technologies
       that are still operational and may need to stay in use for some
       more time.
@@ -291,7 +357,7 @@ Table of Contents
          or
 
       *  exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-         defined by TCP [RFC0793].
+         assumed by TCP (Section 3.4.2 of RFC 9293 [STD7]).
 
    All challenged networks are constrained networks in some sense, but
    not all constrained networks are challenged networks.  There is no
@@ -320,6 +386,13 @@ Table of Contents
    ROLL working group is "Low-Power and Lossy Network (LLN)".  The ROLL
    (Routing Over Low-Power and Lossy) terminology document [RFC7102]
    defines LLNs as follows:
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 7]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
       LLN: Low-Power and Lossy Network.  Typically composed of many
       embedded devices with limited power, memory, and processing
@@ -370,6 +443,13 @@ Table of Contents
    An overview over Low-Power Wide Area Network (LPWAN) technologies is
    provided by [RFC8376].
 
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 8]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
 3.  Classes of Constrained Devices
 
    Despite the overwhelming variety of Internet-connected devices that
@@ -412,6 +492,19 @@ Table of Contents
    10 upwards are not really constrained devices in the sense of the
    previous section; they may still be useful to discuss constraints in
    larger devices:
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024                [Page 9]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    +=======+=========+===================+===============+=============+
    | Group | Name    | data size (e.g.,  | code size     | Examples    |
@@ -461,12 +554,20 @@ Table of Contents
    boundaries of these classes will move over time, Moore's law tends to
    be less effective in the embedded space than in personal computing
    devices: gains made available by increases in transistor count and
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 10]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    density are more likely to be invested in reductions of cost and
    power requirements than into continual increases in computing power.
    (This effect is less pronounced in the multi-chip J-group
    architectures; e.g., class 10 usage for OpenWRT has started at 4/16
    MiB Flash/RAM, with an early lasting minimum at 4/32, to now
-   requiring 8/64 and preferring 16/128 for modern software releases
+   requiring 8/64 and recommending 16/128 for modern software releases
    [W432].)
 
    Class 0 devices are very constrained sensor-like motes.  They are so
@@ -509,6 +610,14 @@ Table of Contents
    devices exist.  They are less demanding from a standards development
    point of view as they can largely use existing protocols unchanged.
    The previous version of the present document therefore did not make
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 11]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    any attempt to define constrained classes beyond Class 2.  These
    devices, and to a certain extent even J-group devices, can still be
    constrained by a limited energy supply.  Class 3 and 4 devices are
@@ -542,6 +651,29 @@ Table of Contents
    Platforms may differ in their firmware or software upgradability.
    The below is a first attempt at classifying this.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 12]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    +======+============================================================+
    | Name | Firmware/Software upgradability                            |
    +======+============================================================+
@@ -558,13 +690,13 @@ Table of Contents
    |      | ("hitless")                                                |
    +------+------------------------------------------------------------+
 
-              Table 2: Levels of software update capabilities
+              Table 2: Levels of Software Update Capabilities
 
 3.2.  Isolation functionality
 
-   TBD.  This section could discuss the ability of the platform to
-   isolate different components.  The categories below are not mutually
-   exclusive; we need to build relevant clusters.
+   This section discusses the ability of the platform to isolate
+   different software components.  The categories below are not mutually
+   exclusive.
 
    +======+===========================================================+
    | Name | Isolation functionality                                   |
@@ -580,14 +712,23 @@ Table of Contents
    | Is8  | Secure enclave isolation                                  |
    +------+-----------------------------------------------------------+
 
-                Table 3: Levels of isolation capabilities
+                Table 3: Levels of Isolation Capabilities
 
 3.3.  Shielded secrets
 
-   [Need to identify clusters]
-
-   Some platforms can keep shielded secrets (usually in conjunction with
+   Some platforms can keep secrets shielded (usually in conjunction with
    secure enclave functionality).
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 13]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
                  +======+================================+
                  | Name | Secret shielding functionality |
@@ -599,8 +740,8 @@ Table of Contents
                  | Sh9  | perfect secret shielding       |
                  +------+--------------------------------+
 
-                    Table 4: Levels of secret shielding
-                                capabilities
+                    Table 4: Levels of Secret Shielding
+                                Capabilities
 
 4.  Power Terminology
 
@@ -634,6 +775,16 @@ Table of Contents
    The value of Et may need to be interpreted in conjunction with an
    indication over which period of time the value is given; see
    Section 4.2.
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 14]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    Some devices enter a "low-power" mode before the energy available in
    a period is exhausted or even have multiple such steps on the way to
@@ -680,6 +831,16 @@ Table of Contents
      +------+------------------------+------------------------------+
 
                   Table 6: Classes of Energy Limitation
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 15]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
 4.3.  Strategies for Using Power for Communication
 
@@ -730,6 +891,13 @@ Table of Contents
       components are switched on and off in a regular cycle) and other
       parameters appropriately.
 
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 16]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    Table 7 provides a summary of the strategies described above.
 
             +======+==============+===========================+
@@ -771,6 +939,21 @@ Table of Contents
    received), absolute on a device-specific scale (e.g., last reboot),
    or absolute on a world-wide scale ("wall-clock time").
 
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 17]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    Some devices lose the concept of time when going to sleep: after
    wakeup, they don't know how long they slept.  Some others do keep
    some concept of time during sleep, but not precise enough to use as a
@@ -778,7 +961,7 @@ Table of Contents
    running source of a reasonably accurate time (often a 32,768 Hz watch
    crystal).  Finally, some devices can keep their concept of time even
    during a battery change, e.g., by using a backup battery or a
-   supercapacitor to power the real-time clock (RTC).
+   supercapacitor to keep powering the real-time clock (RTC).
 
    The actual accuracy of time may vary, with errors ranging from tens
    of percent from on-chip RC oscillators (not useful for keeping
@@ -817,10 +1000,20 @@ Table of Contents
 
    Devices that keep a good approximation of wall-clock time during
    their life may be in a better position to securely validate external
-   time inputs than devices that need to be reset episodically, which
-   can possibly be tricked by their environment into accepting a long-
-   past time, for instance with the intent of exploiting expired
-   security assertions such as certificates.
+   time inputs than devices that need to be reset episodically: the
+   latter can possibly be tricked by their environment into accepting a
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 18]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
+   long-past time, for instance with the intent of exploiting expired
+   security assertions such as certificates.  See
+   [I-D.amsuess-t2trg-raytime] for additional discussion and a strategy
+   for mitigating this.
 
    From a practical point of view, devices can be divided at least on
    the two dimensions proposed in Table 8 and Table 9.  Corrections to
@@ -852,6 +1045,26 @@ Table of Contents
     +------+---------------------------+-----------------------------+
 
           Table 8: Strategies of Keeping Time over Power Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 19]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
       +======+====================================+=================+
       | Name | Permanency (from type T5 upwards): | Uncertainty     |
@@ -885,26 +1098,36 @@ Table of Contents
     +======+=====================+====================================+
     | Name | L2 MTU size (bytes) | 6LoWPAN Fragmentation applicable*? |
     +======+=====================+====================================+
-    | S0   | 3 - 12              | need new kind of fragmentation     |
+    | S0   | 3 – 12              | need new kind of fragmentation     |
     +------+---------------------+------------------------------------+
-    | S1   | 13 - 127            | yes                                |
+    | S1   | 13 – 127            | yes                                |
     +------+---------------------+------------------------------------+
-    | S2   | 128 - 1279          | yes                                |
+    | S2   | 128 – 1279          | yes                                |
     +------+---------------------+------------------------------------+
     | S3   | >= 1280             | no fragmentation needed            |
     +------+---------------------+------------------------------------+
 
-                                  Table 10
+                  Table 10: Classes of Link Layer MTU Size
 
    * if no link layer fragmentation is available (note: 'Sx' stands for
    'Size x')
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 20]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    S0 technologies require fragmentation to support the IPv6 MTU
    requirement.  If no link layer fragmentation is available,
    fragmentation is needed at the adaptation layer below IPv6.  However,
    6LoWPAN fragmentation [RFC4944] cannot be used for these
    technologies, given the extremely reduced link layer MTU.  In this
-   case, lightweight fragmentation formats must be used (e.g.
+   case, lightweight fragmentation formats need to be used (e.g.
    [RFC8724]).
 
    S1 and S2 technologies require fragmentation at the subnetwork level
@@ -938,12 +1161,22 @@ Table of Contents
               | I9   | full Internet connectivity supported |
               +------+--------------------------------------+
 
-                                  Table 11
+               Table 11: Classes of Internet Technology Level
 
 5.3.  Classes of physical layer bit rate
 
-   [This section is a trial balloon.  We could also talk about burst
-   rate, sustained rate; bits/s, messages/s, ...]
+   [This section could be expanded to also talk about burst rate vs.
+   sustained rate; bits/s vs. messages/s, ...]
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 21]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    Physical layer technologies used by constrained devices can be
    categorized on the basis of physical layer (PHY) bit rate.  The PHY
@@ -960,10 +1193,10 @@ Table of Contents
    +======+==============+============================================+
    | B0   | < 10         | Transmission time of 150-byte frame > MSL  |
    +------+--------------+--------------------------------------------+
-   | B1   | 10 -- 10^3   | Unresponsiveness if human expects reaction |
+   | B1   | 10 – 10^3    | Unresponsiveness if human expects reaction |
    |      |              | to sent frame (frame size > 62.5 byte)     |
    +------+--------------+--------------------------------------------+
-   | B2   | 10^3 -- 10^6 | Responsiveness if human expects reaction   |
+   | B2   | 10^3 – 10^6  | Responsiveness if human expects reaction   |
    |      |              | to sent frame, but header compression      |
    |      |              | still needed                               |
    +------+--------------+--------------------------------------------+
@@ -971,16 +1204,18 @@ Table of Contents
    |      |              | performance benefits                       |
    +------+--------------+--------------------------------------------+
 
-                                 Table 12
+               Table 12: Classes of Physical Layer Bitrate
 
    (note: 'Bx' stands for 'Bit rate x')
 
    B0 technologies lead to very high transmission times, which may be
    close to or even greater than the Maximum Segment Lifetime (MSL)
-   assumed on the Internet [RFC0793].  Many Internet protocols and
-   mechanisms will fail when transmit times are greater than the MSL.
-   B0 technologies lead to a frame transmission time greater than the
-   MSL for a frame size greater than 150 bytes.
+   assumed on the Internet (Section 3.4.2 of RFC 9293 [STD7]).  Many
+   Internet protocols and mechanisms will fail when transmission times,
+   and thus latencies, are greater than the MSL
+   [I-D.gomez-core-coap-space].  B0 technologies lead to a frame
+   transmission time greater than the MSL for a frame size greater than
+   150 bytes.
 
    B1 technologies offer transmission times which are lower than the MSL
    (for a frame size greater than 150 bytes).  However, transmission
@@ -989,6 +1224,15 @@ Table of Contents
    transmission time of a frame greater than 62.5 bytes exceeds 0.5
    seconds, i.e. a threshold time beyond which any response or reaction
    to a frame transmission will appear not to be immediate [RFC5826].
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 22]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    B2 technologies do not incur responsiveness problems, but still
    benefit from using header compression techniques (e.g.  [RFC6282]) to
@@ -1027,8 +1271,33 @@ Table of Contents
               DOI 10.1145/863955.863960, 2003,
               <https://doi.org/10.1145/863955.863960>.
 
+   [I-D.amsuess-t2trg-raytime]
+              Amsüss, C., "Raytime: Validating token expiry on an
+              unbounded local time interval", Work in Progress,
+              Internet-Draft, draft-amsuess-t2trg-raytime-02, 11 January
+              2024, <https://datatracker.ietf.org/doc/html/draft-
+              amsuess-t2trg-raytime-02>.
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 23]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
+   [I-D.gomez-core-coap-space]
+              Gomez, C. and S. Aguilar, "CoAP in Space", Work in
+              Progress, Internet-Draft, draft-gomez-core-coap-space-00,
+              19 December 2023, <https://datatracker.ietf.org/doc/html/
+              draft-gomez-core-coap-space-00>.
+
    [I-D.hui-vasseur-roll-rpl-deployment]
-              Vasseur, J., Hui, J., Dasgupta, S., and G. Yoon, "RPL
+              Jp, V., Hui, J., Dasgupta, S., and G. Yoon, "RPL
               deployment experience in large scale networks", Work in
               Progress, Internet-Draft, draft-hui-vasseur-roll-rpl-
               deployment-01, 5 July 2012,
@@ -1039,18 +1308,17 @@ Table of Contents
               Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
               Object Representation (CBOR) Tags for Time, Duration, and
               Period", Work in Progress, Internet-Draft, draft-ietf-
-              cbor-time-tag-00, 19 May 2021,
+              cbor-time-tag-12, 30 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-cbor-
-              time-tag-00>.
+              time-tag-12>.
 
    [I-D.ietf-lwig-tls-minimal]
-              Kumar, S. S., Keoh, S. L., and H. Tschofenig, "A
-              Hitchhiker's Guide to the (Datagram) Transport Layer
-              Security Protocol for Smart Objects and Constrained Node
-              Networks", Work in Progress, Internet-Draft, draft-ietf-
-              lwig-tls-minimal-01, 7 March 2014,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-lwig-
-              tls-minimal-01>.
+              Kumar, S., Keoh, S. L., and H. Tschofenig, "A Hitchhiker's
+              Guide to the (Datagram) Transport Layer Security Protocol
+              for Smart Objects and Constrained Node Networks", Work in
+              Progress, Internet-Draft, draft-ietf-lwig-tls-minimal-01,
+              7 March 2014, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-lwig-tls-minimal-01>.
 
    [IoT-2025] Rosen, M. and IDC, "Driving the Digital Agenda Requires
               Strategic Architecture", 16 November 2016, <https://idc-
@@ -1058,17 +1326,25 @@ Table of Contents
               _strategic_architecture_rosen_idc.pdf>.  Slide 11
 
    [ISQ-13]   International Electrotechnical Commission, "International
-              Standard -- Quantities and units -- Part 13: Information
+              Standard — Quantities and units — Part 13: Information
               science and technology", IEC 80000-13, March 2008.
-
-   [RFC0793]  Postel, J., "Transmission Control Protocol", STD 7,
-              RFC 793, DOI 10.17487/RFC0793, September 1981,
-              <https://www.rfc-editor.org/rfc/rfc793>.
 
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/rfc/rfc4838>.
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 24]
+
+Internet-Draft               CNN Terminology                  March 2024
+
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
@@ -1119,6 +1395,13 @@ Table of Contents
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
 
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 25]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
               DOI 10.17487/RFC7228, May 2014,
@@ -1165,6 +1448,16 @@ Table of Contents
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/rfc/rfc8376>.
 
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 26]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
               Things (IoT) Security: State of the Art and Challenges",
               RFC 8576, DOI 10.17487/RFC8576, April 2019,
@@ -1181,6 +1474,14 @@ Table of Contents
               Protocol Support Profile (IPSP)", RFC 9159,
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
+
+   [STD7]     Internet Standard 7,
+              <https://www.rfc-editor.org/info/std7>.
+              At the time of writing, this STD comprises the following:
+
+              Eddy, W., Ed., "Transmission Control Protocol (TCP)",
+              STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
+              <https://www.rfc-editor.org/info/rfc9293>.
 
    [W432]     "Warning about 4/32 devices", OpenWRT wiki, last accessed
               2021-12-01,
@@ -1206,6 +1507,13 @@ Authors' Addresses
    Email: cabo@tzi.org
 
 
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 27]
+
+Internet-Draft               CNN Terminology                  March 2024
+
+
    Mehmet Ersue
    Munich
    Germany
@@ -1227,3 +1535,34 @@ Authors' Addresses
    Spain
    Phone: +34-93-413-7206
    Email: carlesgo@entel.upc.edu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 5 September 2024               [Page 28]
