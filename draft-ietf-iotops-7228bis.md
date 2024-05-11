@@ -5,12 +5,12 @@ submissiontype: IETF
 cat: info
 consensus: yes
 #number: '7228'
-docname: draft-bormann-iotops-ietf-lwig-7228bis-latest
+docname: draft-ietf-iotops-7228bis-latest
 title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
-wg: LWIG Working Group
-date: 2024-03-04
+wg: IOTOPS Working Group
+date: 2024-05-11
 author:
 - name: Carsten Bormann
   org: Universität Bremen TZI
@@ -45,8 +45,8 @@ author:
   email: carlesgo@entel.upc.edu
 
 venue:
-  group: Light-Weight Implementation Guidance (lwig)
-  mail: lwip@ietf.org
+  group: IOT Operations (iotops)
+  mail: iotops@ietf.org
   github: lwig-wg/terminology
 
 informative:
