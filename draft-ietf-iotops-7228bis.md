@@ -76,7 +76,7 @@ informative:
     title: Driving the Digital Agenda Requires Strategic Architecture
     author:
     - name: Mike Rosen
-    - org: IDC
+      org: IDC
     date: 2016-11-16
     annotation: Slide 11
   WEI:
