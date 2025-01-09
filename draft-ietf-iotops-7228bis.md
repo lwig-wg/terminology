@@ -150,7 +150,7 @@ factories, and sending the information to one or more server stations.
 They might also act on information, by performing some
 physical action, including displaying it.
 Constrained devices may work under severe resource constraints such
-as limited battery and computing power, little memory, and
+as limited electrical and computing power, little memory, and
 insufficient wireless bandwidth and ability to communicate; these
 constraints often exacerbate each other.
 Other entities on the network, e.g., a base station or controlling
@@ -260,7 +260,9 @@ in combination, for example:
 * constraints on the amount of computation feasible in a period of
   time ("processing power"),
 
-* constraints on the available power and/or total energy, and
+* constraints on the available power and/or total energy,
+
+* constraints on the security characteristics attainable, and
 
 * constraints on user interface and accessibility in deployment
   (ability to set keys, update software, etc.).
@@ -487,7 +489,9 @@ In this document, the class designations in {{devclasstbl}} may be
 used as rough indications of device capabilities.  Note that the
 classes from 10 upwards are not really constrained devices in the
 sense of the previous section; they may still be useful to discuss
-constraints in larger devices:
+constraints in larger devices (the designation "lots" in a column
+means that the characteristic of this column typically no longer poses
+a strong design constraint).
 
 | Group | Name          | data size (e.g., RAM) | code size (e.g., Flash) | Examples        |
 | M     | Class 0, C0   | \<\< 10 KiB           | \<\< 100 KiB            | ATtiny          |
@@ -524,7 +528,7 @@ notwithstanding).  Class 0 devices will participate in Internet
 communications with the help of larger devices acting as proxies,
 gateways, or servers.  Class 0 devices generally cannot be secured or managed
 comprehensively in the traditional sense.  They will most likely be
-preconfigured (and will be reconfigured rarely, if at all) with a very
+preconfigured (and will rarely be reconfigured, if at all) with a very
 small data set.  For management purposes, they could answer keepalive
 signals and send on/off or basic health indications.
 
@@ -684,7 +688,8 @@ Finally, there may be a limited amount of energy available for a specific
 event, e.g., for a button press in an energy-harvesting light switch;
 such devices are classified as E0.
 Note that, in a sense, many E1 devices are also E2, as the rechargeable
-battery has a limited number of useful recharging cycles.
+battery has a limited number of useful recharging cycles (usually less
+of a problem with supercapacitors for energy storage).
 
 {{enclasstbl}} provides a summary of the classifications
 described above.
