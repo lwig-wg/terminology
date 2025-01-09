@@ -10,7 +10,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: IOTOPS Working Group
-date: 2024-05-11
+date: 2024-07-08
 author:
 - name: Carsten Bormann
   org: Universität Bremen TZI
