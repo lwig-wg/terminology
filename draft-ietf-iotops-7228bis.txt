@@ -2,19 +2,19 @@
 
 
 
-LWIG Working Group                                            C. Bormann
+IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Intended status: Informational                                  M. Ersue
-Expires: 5 September 2024                                               
+Expires: 13 July 2025                                                   
                                                               A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                            4 March 2024
+                                                          9 January 2025
 
 
                Terminology for Constrained-Node Networks
-             draft-bormann-iotops-ietf-lwig-7228bis-latest
+                    draft-ietf-iotops-7228bis-latest
 
 Abstract
 
@@ -29,14 +29,12 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-bormann-iotops-ietf-lwig-
-   7228bis/.
+   https://datatracker.ietf.org/doc/draft-ietf-iotops-7228bis/.
 
-   Discussion of this document takes place on the Light-Weight
-   Implementation Guidance (lwig) Working Group mailing list
-   (mailto:lwip@ietf.org), which is archived at
-   https://mailarchive.ietf.org/arch/browse/lwip/.  Subscribe at
-   https://www.ietf.org/mailman/listinfo/lwip/.
+   Discussion of this document takes place on the IOT Operations
+   (iotops) Working Group mailing list (mailto:iotops@ietf.org), which
+   is archived at https://mailarchive.ietf.org/arch/browse/iotops/.
+   Subscribe at https://www.ietf.org/mailman/listinfo/iotops/.
 
    Source for this draft and an issue tracker can be found at
    https://github.com/lwig-wg/terminology.
@@ -53,9 +51,11 @@ Status of This Memo
 
 
 
-Bormann, et al.         Expires 5 September 2024                [Page 1]
+
+
+Bormann, et al.           Expires 13 July 2025                  [Page 1]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Internet-Drafts are draft documents valid for a maximum of six months
@@ -63,11 +63,11 @@ Internet-Draft               CNN Terminology                  March 2024
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 September 2024.
+   This Internet-Draft will expire on 13 July 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -87,9 +87,9 @@ Table of Contents
      2.2.  Constrained Networks  . . . . . . . . . . . . . . . . . .   6
        2.2.1.  Challenged Networks . . . . . . . . . . . . . . . . .   7
      2.3.  Constrained-Node Networks . . . . . . . . . . . . . . . .   7
-       2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   7
+       2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   8
        2.3.2.  LoWPAN, 6LoWPAN . . . . . . . . . . . . . . . . . . .   8
-       2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   8
+       2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   9
    3.  Classes of Constrained Devices  . . . . . . . . . . . . . . .   9
      3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  12
      3.2.  Isolation functionality . . . . . . . . . . . . . . . . .  13
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.         Expires 5 September 2024                [Page 2]
+Bormann, et al.           Expires 13 July 2025                  [Page 2]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  27
@@ -131,7 +131,7 @@ Internet-Draft               CNN Terminology                  March 2024
    factories, and sending the information to one or more server
    stations.  They might also act on information, by performing some
    physical action, including displaying it.  Constrained devices may
-   work under severe resource constraints such as limited battery and
+   work under severe resource constraints such as limited electrical and
    computing power, little memory, and insufficient wireless bandwidth
    and ability to communicate; these constraints often exacerbate each
    other.  Other entities on the network, e.g., a base station or
@@ -165,9 +165,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024                [Page 3]
+Bormann, et al.           Expires 13 July 2025                  [Page 3]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    In this document, the term "byte" is used in its now customary sense
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024                [Page 4]
+Bormann, et al.           Expires 13 July 2025                  [Page 4]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    While this is not a rigorous definition, it is grounded in the state
@@ -255,7 +255,9 @@ Internet-Draft               CNN Terminology                  March 2024
    *  constraints on the amount of computation feasible in a period of
       time ("processing power"),
 
-   *  constraints on the available power and/or total energy, and
+   *  constraints on the available power and/or total energy,
+
+   *  constraints on the security characteristics attainable, and
 
    *  constraints on user interface and accessibility in deployment
       (ability to set keys, update software, etc.).
@@ -268,19 +270,23 @@ Internet-Draft               CNN Terminology                  March 2024
    primary batteries or by using energy harvesting; more detailed power
    terminology is given in Section 4.
 
+
+
+
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                  [Page 5]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    The use of constrained nodes in networks often also leads to
    constraints on the networks themselves.  However, there may also be
    constraints on networks that are largely independent of those of the
    nodes.  We therefore distinguish "constrained networks" from
    "constrained-node networks".
-
-
-
-
-Bormann, et al.         Expires 5 September 2024                [Page 5]
-
-Internet-Draft               CNN Terminology                  March 2024
-
 
 2.2.  Constrained Networks
 
@@ -325,18 +331,16 @@ Internet-Draft               CNN Terminology                  March 2024
       limited spectrum for very high density, electromagnetic
       compatibility),
 
+
+
+Bormann, et al.           Expires 13 July 2025                  [Page 6]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    *  regulatory constraints, such as very limited spectrum availability
       (including limits on effective radiated power and duty cycle) or
       explosion safety, and
-
-
-
-
-
-Bormann, et al.         Expires 5 September 2024                [Page 6]
-
-Internet-Draft               CNN Terminology                  March 2024
-
 
    *  technology constraints, such as older and lower-speed technologies
       that are still operational and may need to stay in use for some
@@ -380,19 +384,22 @@ Internet-Draft               CNN Terminology                  March 2024
    in active use in the area of constrained-node networks, without an
    intent to define them: LLN and (6)LoWPAN.
 
+
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                  [Page 7]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
 2.3.1.  LLN
 
    A related term that has been used to describe the focus of the IETF
    ROLL working group is "Low-Power and Lossy Network (LLN)".  The ROLL
    (Routing Over Low-Power and Lossy) terminology document [RFC7102]
    defines LLNs as follows:
-
-
-
-Bormann, et al.         Expires 5 September 2024                [Page 7]
-
-Internet-Draft               CNN Terminology                  March 2024
-
 
       LLN: Low-Power and Lossy Network.  Typically composed of many
       embedded devices with limited power, memory, and processing
@@ -435,6 +442,14 @@ Internet-Draft               CNN Terminology                  March 2024
    Occasionally, the term is read as "Low-Power Wireless Area Networks"
    [WEI].  Originally focused on IEEE 802.15.4, "LoWPAN" (or when used
    for IPv6, "6LoWPAN") also refers to networks built from similarly
+
+
+
+Bormann, et al.           Expires 13 July 2025                  [Page 8]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    constrained link-layer technologies [RFC7668] [RFC8105] [RFC7428]
    [RFC9159].
 
@@ -442,13 +457,6 @@ Internet-Draft               CNN Terminology                  March 2024
 
    An overview over Low-Power Wide Area Network (LPWAN) technologies is
    provided by [RFC8376].
-
-
-
-Bormann, et al.         Expires 5 September 2024                [Page 8]
-
-Internet-Draft               CNN Terminology                  March 2024
-
 
 3.  Classes of Constrained Devices
 
@@ -490,21 +498,18 @@ Internet-Draft               CNN Terminology                  March 2024
    In this document, the class designations in Table 1 may be used as
    rough indications of device capabilities.  Note that the classes from
    10 upwards are not really constrained devices in the sense of the
-   previous section; they may still be useful to discuss constraints in
-   larger devices:
 
 
 
-
-
-
-
-
-
-Bormann, et al.         Expires 5 September 2024                [Page 9]
+Bormann, et al.           Expires 13 July 2025                  [Page 9]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
+
+   previous section; they may still be useful to discuss constraints in
+   larger devices (the designation "lots" in a column means that the
+   characteristic of this column typically no longer poses a strong
+   design constraint).
 
    +=======+=========+===================+===============+=============+
    | Group | Name    | data size (e.g.,  | code size     | Examples    |
@@ -548,20 +553,21 @@ Internet-Draft               CNN Terminology                  March 2024
 
          Table 1: Classes of Constrained Devices (KiB = 1024 bytes)
 
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 10]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    As of the writing of this document, these characteristics correspond
    to distinguishable clusters of commercially available chips and
    design cores for constrained devices.  While it is expected that the
    boundaries of these classes will move over time, Moore's law tends to
    be less effective in the embedded space than in personal computing
    devices: gains made available by increases in transistor count and
-
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 10]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    density are more likely to be invested in reductions of cost and
    power requirements than into continual increases in computing power.
    (This effect is less pronounced in the multi-chip J-group
@@ -579,7 +585,7 @@ Internet-Draft               CNN Terminology                  March 2024
    devices acting as proxies, gateways, or servers.  Class 0 devices
    generally cannot be secured or managed comprehensively in the
    traditional sense.  They will most likely be preconfigured (and will
-   be reconfigured rarely, if at all) with a very small data set.  For
+   rarely be reconfigured, if at all) with a very small data set.  For
    management purposes, they could answer keepalive signals and send on/
    off or basic health indications.
 
@@ -597,6 +603,21 @@ Internet-Draft               CNN Terminology                  March 2024
    to be parsimonious with state memory, code space, and often power
    expenditure for protocol and application usage.
 
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 11]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    Class 2 devices are less constrained and fundamentally capable of
    supporting most of the same protocol stacks as used on notebooks or
    servers.  However, even these devices can benefit from lightweight
@@ -610,14 +631,6 @@ Internet-Draft               CNN Terminology                  March 2024
    devices exist.  They are less demanding from a standards development
    point of view as they can largely use existing protocols unchanged.
    The previous version of the present document therefore did not make
-
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 11]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    any attempt to define constrained classes beyond Class 2.  These
    devices, and to a certain extent even J-group devices, can still be
    constrained by a limited energy supply.  Class 3 and 4 devices are
@@ -656,22 +669,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 12]
+Bormann, et al.           Expires 13 July 2025                 [Page 12]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    +======+============================================================+
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 13]
+Bormann, et al.           Expires 13 July 2025                 [Page 13]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
                  +======+================================+
@@ -781,9 +781,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 14]
+Bormann, et al.           Expires 13 July 2025                 [Page 14]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Some devices enter a "low-power" mode before the energy available in
@@ -809,7 +809,8 @@ Internet-Draft               CNN Terminology                  March 2024
    button press in an energy-harvesting light switch; such devices are
    classified as E0.  Note that, in a sense, many E1 devices are also
    E2, as the rechargeable battery has a limited number of useful
-   recharging cycles.
+   recharging cycles (usually less of a problem with supercapacitors for
+   energy storage).
 
    Table 6 provides a summary of the classifications described above.
 
@@ -836,10 +837,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-
-Bormann, et al.         Expires 5 September 2024               [Page 15]
+Bormann, et al.           Expires 13 July 2025                 [Page 15]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
 4.3.  Strategies for Using Power for Communication
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 16]
+Bormann, et al.           Expires 13 July 2025                 [Page 16]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Table 7 provides a summary of the strategies described above.
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 17]
+Bormann, et al.           Expires 13 July 2025                 [Page 17]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Some devices lose the concept of time when going to sleep: after
@@ -1005,9 +1005,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 18]
+Bormann, et al.           Expires 13 July 2025                 [Page 18]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    long-past time, for instance with the intent of exploiting expired
@@ -1061,9 +1061,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 19]
+Bormann, et al.           Expires 13 July 2025                 [Page 19]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
       +======+====================================+=================+
@@ -1082,7 +1082,7 @@ Internet-Draft               CNN Terminology                  March 2024
                     Table 9: Permanency of Keeping Time
 
    Further parameters that can be used to discuss clock quality can be
-   found in Section 3.5 of [I-D.ietf-cbor-time-tag].
+   found in Section 3.5 of [RFC9581].
 
 5.  Classes of Networks
 
@@ -1117,9 +1117,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 20]
+Bormann, et al.           Expires 13 July 2025                 [Page 20]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    S0 technologies require fragmentation to support the IPv6 MTU
@@ -1173,9 +1173,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 21]
+Bormann, et al.           Expires 13 July 2025                 [Page 21]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    Physical layer technologies used by constrained devices can be
@@ -1229,9 +1229,9 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 22]
+Bormann, et al.           Expires 13 July 2025                 [Page 22]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    B2 technologies do not incur responsiveness problems, but still
@@ -1274,9 +1274,9 @@ Internet-Draft               CNN Terminology                  March 2024
    [I-D.amsuess-t2trg-raytime]
               Amsüss, C., "Raytime: Validating token expiry on an
               unbounded local time interval", Work in Progress,
-              Internet-Draft, draft-amsuess-t2trg-raytime-02, 11 January
+              Internet-Draft, draft-amsuess-t2trg-raytime-03, 19 October
               2024, <https://datatracker.ietf.org/doc/html/draft-
-              amsuess-t2trg-raytime-02>.
+              amsuess-t2trg-raytime-03>.
 
 
 
@@ -1285,32 +1285,24 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 23]
+Bormann, et al.           Expires 13 July 2025                 [Page 23]
 
-Internet-Draft               CNN Terminology                  March 2024
+Internet-Draft               CNN Terminology                January 2025
 
 
    [I-D.gomez-core-coap-space]
               Gomez, C. and S. Aguilar, "CoAP in Space", Work in
-              Progress, Internet-Draft, draft-gomez-core-coap-space-00,
-              19 December 2023, <https://datatracker.ietf.org/doc/html/
-              draft-gomez-core-coap-space-00>.
+              Progress, Internet-Draft, draft-gomez-core-coap-space-02,
+              30 December 2024, <https://datatracker.ietf.org/doc/html/
+              draft-gomez-core-coap-space-02>.
 
    [I-D.hui-vasseur-roll-rpl-deployment]
-              Jp, V., Hui, J., Dasgupta, S., and G. Yoon, "RPL
+              Vasseur, J., Hui, J., Dasgupta, S., and G. Yoon, "RPL
               deployment experience in large scale networks", Work in
               Progress, Internet-Draft, draft-hui-vasseur-roll-rpl-
               deployment-01, 5 July 2012,
               <https://datatracker.ietf.org/doc/html/draft-hui-vasseur-
               roll-rpl-deployment-01>.
-
-   [I-D.ietf-cbor-time-tag]
-              Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
-              Object Representation (CBOR) Tags for Time, Duration, and
-              Period", Work in Progress, Internet-Draft, draft-ietf-
-              cbor-time-tag-12, 30 October 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-cbor-
-              time-tag-12>.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S. L., and H. Tschofenig, "A Hitchhiker's
@@ -1320,8 +1312,8 @@ Internet-Draft               CNN Terminology                  March 2024
               7 March 2014, <https://datatracker.ietf.org/doc/html/
               draft-ietf-lwig-tls-minimal-01>.
 
-   [IoT-2025] Rosen, M. and IDC, "Driving the Digital Agenda Requires
-              Strategic Architecture", 16 November 2016, <https://idc-
+   [IoT-2025] Rosen, M., "Driving the Digital Agenda Requires Strategic
+              Architecture", 16 November 2016, <https://idc-
               cema.com/dwn/SF_177701/driving_the_digital_agenda_requires
               _strategic_architecture_rosen_idc.pdf>.  Slide 11
 
@@ -1334,18 +1326,6 @@ Internet-Draft               CNN Terminology                  March 2024
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/rfc/rfc4838>.
 
-
-
-
-
-
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 24]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
               Overview, Assumptions, Problem Statement, and Goals",
@@ -1356,6 +1336,15 @@ Internet-Draft               CNN Terminology                  March 2024
               "Transmission of IPv6 Packets over IEEE 802.15.4
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
               <https://www.rfc-editor.org/rfc/rfc4944>.
+
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 24]
+
+Internet-Draft               CNN Terminology                January 2025
+
 
    [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
               Routing Requirements in Low-Power and Lossy Networks",
@@ -1395,13 +1384,6 @@ Internet-Draft               CNN Terminology                  March 2024
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
 
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 25]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
               DOI 10.17487/RFC7228, May 2014,
@@ -1411,6 +1393,14 @@ Internet-Draft               CNN Terminology                  March 2024
               Application Protocol (CoAP)", RFC 7252,
               DOI 10.17487/RFC7252, June 2014,
               <https://www.rfc-editor.org/rfc/rfc7252>.
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 25]
+
+Internet-Draft               CNN Terminology                January 2025
+
 
    [RFC7416]  Tsao, T., Alexander, R., Dohler, M., Daza, V., Lozano, A.,
               and M. Richardson, Ed., "A Security Threat Analysis for
@@ -1448,16 +1438,6 @@ Internet-Draft               CNN Terminology                  March 2024
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/rfc/rfc8376>.
 
-
-
-
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 26]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
               Things (IoT) Security: State of the Art and Challenges",
               RFC 8576, DOI 10.17487/RFC8576, April 2019,
@@ -1469,11 +1449,25 @@ Internet-Draft               CNN Terminology                  March 2024
               DOI 10.17487/RFC8724, April 2020,
               <https://www.rfc-editor.org/rfc/rfc8724>.
 
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 26]
+
+Internet-Draft               CNN Terminology                January 2025
+
+
    [RFC9159]  Gomez, C., Darroudi, S.M., Savolainen, T., and M. Spoerk,
               "IPv6 Mesh over BLUETOOTH(R) Low Energy Using the Internet
               Protocol Support Profile (IPSP)", RFC 9159,
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
+
+   [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
+              Object Representation (CBOR) Tags for Time, Duration, and
+              Period", RFC 9581, DOI 10.17487/RFC9581, August 2024,
+              <https://www.rfc-editor.org/rfc/rfc9581>.
 
    [STD7]     Internet Standard 7,
               <https://www.rfc-editor.org/info/std7>.
@@ -1507,17 +1501,17 @@ Authors' Addresses
    Email: cabo@tzi.org
 
 
-
-
-Bormann, et al.         Expires 5 September 2024               [Page 27]
-
-Internet-Draft               CNN Terminology                  March 2024
-
-
    Mehmet Ersue
    Munich
    Germany
    Email: mersue@gmail.com
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 27]
+
+Internet-Draft               CNN Terminology                January 2025
 
 
    Ari Keranen
@@ -1565,4 +1559,10 @@ Internet-Draft               CNN Terminology                  March 2024
 
 
 
-Bormann, et al.         Expires 5 September 2024               [Page 28]
+
+
+
+
+
+
+Bormann, et al.           Expires 13 July 2025                 [Page 28]
