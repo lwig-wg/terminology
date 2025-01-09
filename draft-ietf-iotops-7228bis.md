@@ -10,7 +10,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: IOTOPS Working Group
-date: 2024-07-08
+date: 2025-01-09
 author:
 - name: Carsten Bormann
   org: Universität Bremen TZI
@@ -70,7 +70,7 @@ informative:
   RFC9159: blemesh
   I-D.amsuess-t2trg-raytime: raytime
   I-D.gomez-core-coap-space: coap-in-space
-  I-D.ietf-cbor-time-tag: time-tag
+  RFC9581: time-tag
   IoT-2025:
     target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
     title: Driving the Digital Agenda Requires Strategic Architecture
