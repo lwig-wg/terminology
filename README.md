@@ -1,11 +1,11 @@
 # Terminology for Constrained-Node Networks
 
-This is the working area for the IETF [LWIG Working Group](https://datatracker.ietf.org/wg/lwig/documents/) Internet-Draft, "Terminology for Constrained-Node Networks".
+This is the working area for the IETF [IOTOPS Working Group](https://datatracker.ietf.org/wg/iotops/documents/) Internet-Draft, "Terminology for Constrained-Node Networks".
 
-* [Editor's Copy](https://lwig-wg.github.io/terminology/#go.draft-ietf-lwig-7228bis.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lwig-7228bis)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-lwig-7228bis)
-* [Compare Editor's Copy to Working Group Draft](https://lwig-wg.github.io/terminology/#go.draft-ietf-lwig-7228bis.diff)
+* [Editor's Copy](https://lwig-wg.github.io/terminology/#go.draft-ietf-iotops-7228bis.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-iotops-7228bis)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iotops-7228bis)
+* [Compare Editor's Copy to Working Group Draft](https://lwig-wg.github.io/terminology/#go.draft-ietf-iotops-7228bis.diff)
 
 
 ## Contributing
