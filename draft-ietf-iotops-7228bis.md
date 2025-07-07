@@ -10,7 +10,7 @@ title: Terminology for Constrained-Node Networks
 abbrev: CNN Terminology
 area: Internet
 wg: IOTOPS Working Group
-date: 2025-01-09
+date: 2025-07-07
 author:
 - name: Carsten Bormann
   org: Universität Bremen TZI
@@ -1000,6 +1000,8 @@ nodes are discussed in {{-IKEV2-MINIMAL}} and {{-TLS-MINIMAL}}.
 A wider view of security in constrained-node networks is provided in {{-IOT-SECURITY}}.
 
 --- back
+
+{::include-all lists.md}
 
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
