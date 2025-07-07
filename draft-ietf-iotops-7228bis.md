@@ -474,7 +474,7 @@ devices based on their CPU capabilities:
 * General-purpose-class devices (sometimes called "A-class").  These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
-  such as Linux, e.g. an MMU.  Many of the pins on the CPU chip are
+  such as Linux, such as an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
   such as video controllers, these are often also called "Systems on a
@@ -803,7 +803,8 @@ time, but still useful for, e.g., timing out some state) to
 approximately 10<sup>-4</sup> to 10<sup>-5</sup> ("watch crystal") of error.  More precise
 timing is available with temperature compensated crystal oscillators
 (TCXO).  Further improvement requires significantly higher power
-usage, bulk, fragility, and device cost, e.g. oven-controlled crystal
+usage, bulk, fragility, and device cost.
+For instance, oven-controlled crystal
 oscillators (OCXO) can reach 10<sup>-8</sup> accuracy, and Rubidium frequency sources can
 reach 10<sup>-11</sup> over the short term and 10<sup>-9</sup> over the long term.
 
@@ -812,7 +813,7 @@ wireless communication, this may also allow it to keep more precise
 time during the period.
 
 The various time sources available on the device can be assisted by
-external time input, e.g. via the network using the NTP protocol
+external time input, e.g., via the network using the NTP protocol
 {{-ntp}}.  Information from measuring the deviation between external
 input and local time source can be used to increase the accuracy of
 maintaining time even during periods of no network use.
@@ -893,7 +894,7 @@ If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation {{RFC4944}}
 cannot be used for these technologies, given the extremely reduced link
 layer MTU. In this case, lightweight fragmentation formats need to be used
-(e.g. {{-frag-new}}).
+(e.g., {{-frag-new}}).
 
 S1 and S2 technologies require fragmentation at the subnetwork level to
 support the IPv6 MTU requirement.
@@ -963,12 +964,12 @@ B1 technologies offer transmission times which are lower than the MSL
 (for a frame size greater than 150 bytes).  However, transmission times
 for B1 technologies are still significant if a human expects a reaction
 to the transmission of a frame.  With B1 technologies, the transmission
-time of a frame greater than 62.5 bytes exceeds 0.5 seconds, i.e. a
+time of a frame greater than 62.5 bytes exceeds 0.5 seconds, i.e., a
 threshold time beyond which any response or reaction to a frame
 transmission will appear not to be immediate {{-home-aut-reqs}}.
 
 B2 technologies do not incur responsiveness problems, but still benefit
-from using header compression techniques (e.g. {{RFC6282}}) to achieve
+from using header compression techniques (e.g., {{RFC6282}}) to achieve
 performance improvements.
 
 Over B3 technologies, the relative performance benefits of header
