@@ -1,0 +1,61 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-07-24T01:47:45.540033+00:00",
+  "repo": "lwig-wg/terminology",
+  "labels": [
+    {
+      "name": "bug",
+      "description": null,
+      "color": "ee0701"
+    },
+    {
+      "name": "duplicate",
+      "description": null,
+      "color": "cccccc"
+    },
+    {
+      "name": "enhancement",
+      "description": null,
+      "color": "84b6eb"
+    },
+    {
+      "name": "help wanted",
+      "description": null,
+      "color": "128A0C"
+    },
+    {
+      "name": "invalid",
+      "description": null,
+      "color": "e6e6e6"
+    },
+    {
+      "name": "question",
+      "description": null,
+      "color": "cc317c"
+    },
+    {
+      "name": "wontfix",
+      "description": null,
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOBMYTbM6DYrl5",
+      "title": "Secret shielding and isolation: Where do memory lockouts sit?",
+      "url": "https://github.com/lwig-wg/terminology/issues/1",
+      "state": "OPEN",
+      "author": "chrysn",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Looking at DICE style bootloaders and reading 7228bis, I find the terminology around isolation and secret shielding a bit lacking. A distinction I'm coming to find relevant is whether the device can support security after compromise of \"privileged\" software.\r\n\r\nI'm putting \"privileged\" in quotes here because every platform supports secure enclaves and isolation if it considers regards its bare-metal software as part of the secure zone (and, for example runs a virtual machine), but the implication of \"supports virtualization\" is that the virtualized software can run at bare metal speed without a complex runtime, and (given it is relevant to real time systems) that the virtualized software can define its own handlers for hardware interrupts.\r\n\r\nThe trouble with the current classification is that I wouldn't know where to put systems that don't have any trust zone or other protected hardware crypto tools, maybe not even a proper MPU, but do support lockout of certain flash pages until the next reboot. Using the DICE architecture (or any similar scheme, roughly where the bootloader accesses a secret, hashes it together with some properties of the firmware, locks the flash page and wipes all RAM except for the hash before chainloading), this can provide security after a compromise of even \"privileged\" code (as long as the flash lockout holds), and that would count as Sh>0 and maybe even Is8, but is probably not what is meant by those terms (in particular because the secure enclave can not be updated and only runs in a very very limited context) -- yet if it is not Sh>0/Is-much, it is not clear how the user of the classification can distinguish whether post-compromise security can be achieved.",
+      "createdAt": "2024-03-24T10:33:24Z",
+      "updatedAt": "2024-03-24T10:33:24Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": []
+}
