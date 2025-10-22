@@ -166,6 +166,8 @@ different groups cooperating in this space.
 
 The present document is a revision of {{RFC7228}}.
 
+## Conventions Used in this Document
+
 In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
