@@ -71,14 +71,6 @@ informative:
   I-D.amsuess-t2trg-raytime: raytime
   I-D.gomez-tiptop-coap: coap-in-space
   RFC9581: time-tag
-  IoT-2025:
-    target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
-    title: Driving the Digital Agenda Requires Strategic Architecture
-    author:
-    - name: Mike Rosen
-      org: IDC
-    date: 2016-11-16
-    annotation: Slide 11
   WEI:
     title: '6LoWPAN: the Wireless Embedded Internet'
     author:
@@ -163,12 +155,8 @@ and capabilities are becoming connected.  Mobile personal gadgets,
 building-automation devices, cellular phones, machine-to-machine (M2M)
 devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
-becomes a reality, built up out of uniquely identifiable and
-addressable objects (things).  Over the next decade, this could
-grow to large numbers of Internet-connected constrained
-devices ({{IoT-2025}} predicts that by, 2025, more than
-2500 devices will be connected to the Internet per second), greatly
-increasing the Internet's size and scope.
+became a reality, built up out of uniquely identifiable and
+addressable objects (things).
 
 The present document provides a number of basic terms that have
 been useful in research and standardization work for constrained
@@ -204,9 +192,7 @@ being permanently connected to a stable electrical power grid.
 
 There are two important aspects to *scaling* within the Internet of Things:
 
-
-
-* scaling up Internet technologies to a large number {{IoT-2025}} of
+* scaling up Internet technologies to a large number of
   inexpensive nodes, while
 
 * scaling down the characteristics of each of these nodes and of the
