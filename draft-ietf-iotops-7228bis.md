@@ -378,9 +378,9 @@ A constrained-node network always is a constrained network because of
 the network constraints stemming from the node constraints, but it may
 also have other constraints that already make it a constrained network.
 
-The rest of this subsection introduces two additional terms that are
+The rest of this subsection introduces additional terms that are
 in active use in the area of constrained-node networks, without an
-intent to define them: LLN and (6)LoWPAN.
+intent to define them: LLN, (6)LoWPAN, and LPWAN.
 
 ### LLN {#lln-low-power-lossy-network}
 
