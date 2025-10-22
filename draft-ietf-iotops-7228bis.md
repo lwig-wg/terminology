@@ -542,7 +542,7 @@ UDP {{RFC7252}}) and participate in meaningful
 conversations without the help of a gateway node.  In particular, they
 can provide support for the security functions required on a large
 network.  Therefore, they can be integrated as fully developed peers
-into an IP network, but they need to be parsimonious with state
+into an IP network, but they need to be frugal with state
 memory, code space, and often power expenditure for protocol and
 application usage.
 
