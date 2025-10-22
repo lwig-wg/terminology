@@ -130,7 +130,7 @@ The Internet Protocol Suite is increasingly used on small devices with
 severe constraints on power, memory, and processing resources, creating constrained-node
 networks.
 This document provides a number of basic terms that have
-been useful in the standardization work for constrained-node networks.
+been useful in research and standardization work for constrained-node networks.
 
 --- middle
 
@@ -171,7 +171,7 @@ devices ({{IoT-2025}} predicts that by, 2025, more than
 increasing the Internet's size and scope.
 
 The present document provides a number of basic terms that have
-been useful in the standardization work for constrained
+been useful in research and standardization work for constrained
 environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.
