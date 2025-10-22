@@ -779,7 +779,7 @@ mention of P1.
 
 ## Strategies of Keeping Time over Power Events
 
-Many applications for a device require it to keep some concept of time.
+Many applications require a device to keep some concept of time.
 
 Time-keeping can be relative to a previous event (last packet received),
 absolute on a device-specific scale (e.g., last reboot), or absolute
