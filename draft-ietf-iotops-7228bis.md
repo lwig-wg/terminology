@@ -259,6 +259,10 @@ in combination, for example:
 * constraints on user interface and accessibility in deployment
   (ability to set keys, update software, etc.).
 
+Some of these constraints apply to the hardware of the device, others
+to all or part of a combination of hardware, firmware, and essential
+infrastructure (the "platform", e.g., in {{class-Fx}}) and its
+anticipated usage (e.g., in {{class-Ix}}).
 
 {{devclass}} defines a number of interesting classes ("class-N") of
 constrained nodes focusing on relevant combinations of
@@ -584,7 +588,7 @@ operational scenario need to be analyzed.  Use cases may combine
 constrained devices of multiple classes as well as more traditional
 Internet nodes.
 
-## Firmware/Software upgradability
+## Firmware/Software upgradability {#class-Fx}
 
 Platforms may differ in their firmware or software upgradability.
 The below is a first attempt at classifying this.
@@ -898,7 +902,7 @@ packets over these technologies.
 S3 technologies do not require fragmentation to support the IPv6 MTU
 requirement.
 
-## Class of Internet Integration
+## Class of Internet Integration {#class-Ix}
 
 The term "Internet of Things" is sometimes confusingly used for
 connected devices that are not actually employing Internet technology.
