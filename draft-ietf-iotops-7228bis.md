@@ -455,7 +455,7 @@ terminology for different classes of constrained devices.
 Before we get to that, let's first distinguish two big rough groups of
 devices based on their CPU capabilities:
 
-* Microcontroller-class devices (sometimes called "M-class").
+* Microcontroller-class devices (e.g., called "M-Profile" by ARM).
   These often (but not always) include RAM and code storage on chip
   and would struggle to support more powerful general-purpose operating systems, e.g.,
   they do not have an MMU (memory management unit).  They use most of
@@ -467,7 +467,8 @@ devices based on their CPU capabilities:
   elaborate sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (Ps, see below).
 
-* General-purpose-class devices (sometimes called "A-class").  These usually
+* General-purpose-class devices (e.g., called "A-Profile" by ARM).
+  These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
   such as Linux, such as an MMU.  Many of the pins on the CPU chip are
