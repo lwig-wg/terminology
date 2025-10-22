@@ -954,8 +954,8 @@ Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than the MSL
 {{-coap-in-space}}.
 B0 technologies lead to a
-frame transmission time greater than the MSL for a frame size greater
-than 150 bytes.
+frame transmission time greater than the MSL for a frame size ≥ 150
+bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
 B1 technologies offer transmission times which are lower than the MSL
 (for a frame size greater than 150 bytes).  However, transmission times
