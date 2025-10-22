@@ -182,7 +182,13 @@ In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
 abbreviated "KiB", for 1024 bytes {{ISQ-13}}.
-Powers of 10 are given as 10<sup>100</sup> where 100 is the exponent.
+
+Superscript notation denotes exponentiation.
+For example, 10 raised to the 100th is notated: 10<sup>100</sup>,
+where 10 is the base and 100 is the exponent.
+In the plain-text rendition of this specification, superscript
+notation is not available and exponentiation therefore is rendered by
+the surrogate notation seen here in the plain-text rendition.
 
 In computing, the term "power" is often used for the concept of
 "computing power" or "processing power", as in CPU performance.
