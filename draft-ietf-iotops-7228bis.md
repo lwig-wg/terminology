@@ -3,6 +3,7 @@ v: 3
 
 submissiontype: IETF
 cat: info
+obsoletes: 7228
 consensus: yes
 #number: '7228'
 docname: draft-ietf-iotops-7228bis-latest
@@ -131,6 +132,8 @@ severe constraints on power, memory, and processing resources, creating constrai
 networks.
 This document provides a number of basic terms that have
 been useful in the standardization work for constrained-node networks.
+
+This document obsoletes RFC 7228.
 
 --- middle
 
