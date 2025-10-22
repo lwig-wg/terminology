@@ -479,8 +479,8 @@ devices based on their CPU capabilities:
   usually more on the watt side of sustained power usage (Ps).
 
 If the distinction between these groups needs to be made in this
-document, we distinguish group "M" (microcontroller) from group "J"
-(general purpose).
+document, we distinguish "M-group" (microcontroller) from "J-group"
+(general purpose) devices.
 
 In this document, the class designations in {{devclasstbl}} may be
 used as rough indications of device capabilities.  Note that the
