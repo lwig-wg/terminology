@@ -14,7 +14,7 @@
 severe constraints on power, memory, and processing resources, creating constrained-node
 networks.
 This document provides a number of basic terms that have
-been useful in the standardization work for constrained-node networks. 
+been useful in research and standardization work for constrained-node networks. 
     " name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="draft-ietf-iotops-7228bis-latest" name="ietf.draft">
@@ -1033,7 +1033,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann, et al.</td>
-<td class="center">Expires 25 April 2026</td>
+<td class="center">Expires 26 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1046,12 +1046,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-iotops-7228bis-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-22" class="published">22 October 2025</time>
+<time datetime="2025-10-23" class="published">23 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-25">25 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-26">26 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1079,7 +1079,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 severe constraints on power, memory, and processing resources, creating constrained-node
 networks.
 This document provides a number of basic terms that have
-been useful in the standardization work for constrained-node networks.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+been useful in research and standardization work for constrained-node networks.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1115,7 +1115,7 @@ been useful in the standardization work for constrained-node networks.<a href="#
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 26 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1146,6 +1146,11 @@ been useful in the standardization work for constrained-node networks.<a href="#
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-conventions-used-in-this-do" class="internal xref">Conventions Used in this Document</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
             <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-core-terminology" class="internal xref">Core Terminology</a></p>
@@ -1157,7 +1162,7 @@ been useful in the standardization work for constrained-node networks.<a href="#
                 <p id="section-toc.1-1.2.2.2.1"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-constrained-networks" class="internal xref">Constrained Networks</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.2.2.1">
-                    <p id="section-toc.1-1.2.2.2.2.1.1" class="keepWithNext"><a href="#section-2.2.1" class="auto internal xref">2.2.1</a>.  <a href="#name-challenged-networks" class="internal xref">Challenged Networks</a></p>
+                    <p id="section-toc.1-1.2.2.2.2.1.1"><a href="#section-2.2.1" class="auto internal xref">2.2.1</a>.  <a href="#name-challenged-networks" class="internal xref">Challenged Networks</a></p>
 </li>
                 </ul>
 </li>
@@ -1274,29 +1279,37 @@ and capabilities are becoming connected.  Mobile personal gadgets,
 building-automation devices, cellular phones, machine-to-machine (M2M)
 devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
-becomes a reality, built up out of uniquely identifiable and
-addressable objects (things).  Over the next decade, this could
-grow to large numbers of Internet-connected constrained
-devices (<span>[<a href="#IoT-2025" class="cite xref">IoT-2025</a>]</span> predicts that by, 2025, more than
-2500 devices will be connected to the Internet per second), greatly
-increasing the Internet's size and scope.<a href="#section-1-3" class="pilcrow">¶</a></p>
+became a reality, built up out of uniquely identifiable and
+addressable objects (things).<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">The present document provides a number of basic terms that have
-been useful in the standardization work for constrained
+been useful in research and standardization work for constrained
 environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <p id="section-1-5">The present document is a revision of <span>[<a href="#RFC7228" class="cite xref">RFC7228</a>]</span>.<a href="#section-1-5" class="pilcrow">¶</a></p>
-<p id="section-1-6">In this document, the term "byte" is used in its now customary sense
+<div id="conventions-used-in-this-document">
+<section id="section-1.1">
+        <h3 id="name-conventions-used-in-this-do">
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-conventions-used-in-this-do" class="section-name selfRef">Conventions Used in this Document</a>
+        </h3>
+<p id="section-1.1-1">In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
-abbreviated "KiB", for 1024 bytes <span>[<a href="#ISQ-13" class="cite xref">ISQ-13</a>]</span>.
-Powers of 10 are given as 10<sup>100</sup> where 100 is the exponent.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">In computing, the term "power" is often used for the concept of
+abbreviated "KiB", for 1024 bytes <span>[<a href="#ISQ-13" class="cite xref">ISQ-13</a>]</span>.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
+<p id="section-1.1-2">Superscript notation denotes exponentiation.
+For example, 10 raised to the 100th is notated: 10<sup>100</sup>,
+where 10 is the base and 100 is the exponent.
+In the plain-text rendition of this specification, superscript
+notation is not available and exponentiation therefore is rendered by
+the surrogate notation seen here in the plain-text rendition.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+<p id="section-1.1-3">In computing, the term "power" is often used for the concept of
 "computing power" or "processing power", as in CPU performance.
 In this document, the term stands
 for electrical power unless explicitly stated otherwise.  "Mains-powered"
 is used as a shorthand for
-being permanently connected to a stable electrical power grid.<a href="#section-1-7" class="pilcrow">¶</a></p>
+being permanently connected to a stable electrical power grid.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="core-terminology">
@@ -1307,7 +1320,7 @@ being permanently connected to a stable electrical power grid.<a href="#section-
 <p id="section-2-1">There are two important aspects to <em>scaling</em> within the Internet of Things:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-2.1">
-          <p id="section-2-2.1.1">scaling up Internet technologies to a large number <span>[<a href="#IoT-2025" class="cite xref">IoT-2025</a>]</span> of
+          <p id="section-2-2.1.1">scaling up Internet technologies to a large number of
 inexpensive nodes, while<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.2">
@@ -1388,19 +1401,23 @@ time ("processing power"),<a href="#section-2.1-8.3.1" class="pilcrow">¶</a></p
 (ability to set keys, update software, etc.).<a href="#section-2.1-8.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-2.1-9"><a href="#devclass" class="auto internal xref">Section 3</a> defines a number of interesting classes ("class-N") of
+<p id="section-2.1-9">Some of these constraints apply to the hardware of the device, others
+to all or part of a combination of hardware, firmware, and essential
+infrastructure (the "platform", e.g., in <a href="#class-Fx" class="auto internal xref">Section 3.1</a>) and its
+anticipated usage (e.g., in <a href="#class-Ix" class="auto internal xref">Section 5.2</a>).<a href="#section-2.1-9" class="pilcrow">¶</a></p>
+<p id="section-2.1-10"><a href="#devclass" class="auto internal xref">Section 3</a> defines a number of interesting classes ("class-N") of
 constrained nodes focusing on relevant combinations of
 the first two constraints.
 With respect to available power, <span>[<a href="#RFC6606" class="cite xref">RFC6606</a>]</span> distinguishes
 "power-affluent" nodes (mains-powered or regularly recharged) from
 "power-constrained nodes" that draw their power from primary batteries
 or by using energy harvesting; more detailed power terminology is
-given in <a href="#power" class="auto internal xref">Section 4</a>.<a href="#section-2.1-9" class="pilcrow">¶</a></p>
-<p id="section-2.1-10">The use of constrained nodes in networks often also leads to
+given in <a href="#power" class="auto internal xref">Section 4</a>.<a href="#section-2.1-10" class="pilcrow">¶</a></p>
+<p id="section-2.1-11">The use of constrained nodes in networks often also leads to
 constraints on the networks themselves.  However, there may also be
 constraints on networks that are largely independent of those of the
 nodes.  We therefore distinguish "constrained networks" from
-"constrained-node networks".<a href="#section-2.1-10" class="pilcrow">¶</a></p>
+"constrained-node networks".<a href="#section-2.1-11" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="constrained-networks">
@@ -1521,9 +1538,9 @@ a significant portion of constrained nodes.<a href="#section-2.3-1.2.1" class="p
 <p id="section-2.3-2">A constrained-node network always is a constrained network because of
 the network constraints stemming from the node constraints, but it may
 also have other constraints that already make it a constrained network.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
-<p id="section-2.3-3">The rest of this subsection introduces two additional terms that are
+<p id="section-2.3-3">The rest of this subsection introduces additional terms that are
 in active use in the area of constrained-node networks, without an
-intent to define them: LLN and (6)LoWPAN.<a href="#section-2.3-3" class="pilcrow">¶</a></p>
+intent to define them: LLN, (6)LoWPAN, and LPWAN.<a href="#section-2.3-3" class="pilcrow">¶</a></p>
 <div id="lln-low-power-lossy-network">
 <section id="section-2.3.1">
           <h4 id="name-lln">
@@ -1610,7 +1627,7 @@ terminology for different classes of constrained devices.<a href="#section-3-1" 
 devices based on their CPU capabilities:<a href="#section-3-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-3.1">
-          <p id="section-3-3.1.1">Microcontroller-class devices (sometimes called "M-class").
+          <p id="section-3-3.1.1">Microcontroller-class devices (e.g., called "M-Profile" by ARM).
 These often (but not always) include RAM and code storage on chip
 and would struggle to support more powerful general-purpose operating systems, e.g.,
 they do not have an MMU (memory management unit).  They use most of
@@ -1623,7 +1640,8 @@ elaborate sleep modes to achieve microwatt- or at least
 milliwatt-level sustained power usage (Ps, see below).<a href="#section-3-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-3.2">
-          <p id="section-3-3.2.1">General-purpose-class devices (sometimes called "A-class").  These usually
+          <p id="section-3-3.2.1">General-purpose-class devices (e.g., called "A-Profile" by ARM).
+These usually
 have RAM and Flash storage on separate chips (not always separate
 packages), and offer support for general-purpose operating systems
 such as Linux, such as an MMU.  Many of the pins on the CPU chip are
@@ -1635,8 +1653,8 @@ usually more on the watt side of sustained power usage (Ps).<a href="#section-3-
 </li>
       </ul>
 <p id="section-3-4">If the distinction between these groups needs to be made in this
-document, we distinguish group "M" (microcontroller) from group "J"
-(general purpose).<a href="#section-3-4" class="pilcrow">¶</a></p>
+document, we distinguish "M-group" (microcontroller) from "J-group"
+(general purpose) devices.<a href="#section-3-4" class="pilcrow">¶</a></p>
 <p id="section-3-5">In this document, the class designations in <a href="#devclasstbl" class="auto internal xref">Table 1</a> may be
 used as rough indications of device capabilities.  Note that the
 classes from 10 upwards are not really constrained devices in the
@@ -1770,7 +1788,7 @@ UDP <span>[<a href="#RFC7252" class="cite xref">RFC7252</a>]</span>) and partici
 conversations without the help of a gateway node.  In particular, they
 can provide support for the security functions required on a large
 network.  Therefore, they can be integrated as fully developed peers
-into an IP network, but they need to be parsimonious with state
+into an IP network, but they need to be frugal with state
 memory, code space, and often power expenditure for protocol and
 application usage.<a href="#section-3-9" class="pilcrow">¶</a></p>
 <p id="section-3-10">Class 2 devices are less constrained and fundamentally capable of
@@ -1812,7 +1830,7 @@ cases and the involvement of the devices in the application and the
 operational scenario need to be analyzed.  Use cases may combine
 constrained devices of multiple classes as well as more traditional
 Internet nodes.<a href="#section-3-12" class="pilcrow">¶</a></p>
-<div id="firmwaresoftware-upgradability">
+<div id="class-Fx">
 <section id="section-3.1">
         <h3 id="name-firmware-software-upgradabi">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-firmware-software-upgradabi" class="section-name selfRef">Firmware/Software upgradability</a>
@@ -2180,7 +2198,7 @@ mention of P1.<a href="#section-4.3-9" class="pilcrow">¶</a></p>
         <h3 id="name-strategies-of-keeping-time-">
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-strategies-of-keeping-time-" class="section-name selfRef">Strategies of Keeping Time over Power Events</a>
         </h3>
-<p id="section-4.4-1">Many applications for a device require it to keep some concept of time.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-1">Many applications require a device to keep some concept of time.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 <p id="section-4.4-2">Time-keeping can be relative to a previous event (last packet received),
 absolute on a device-specific scale (e.g., last reboot), or absolute
 on a world-wide scale ("wall-clock time").<a href="#section-4.4-2" class="pilcrow">¶</a></p>
@@ -2403,7 +2421,7 @@ packets over these technologies.<a href="#section-5.1-6" class="pilcrow">¶</a><
 requirement.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="class-of-internet-integration">
+<div id="class-Ix">
 <section id="section-5.2">
         <h3 id="name-class-of-internet-integrati">
 <a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-class-of-internet-integrati" class="section-name selfRef">Class of Internet Integration</a>
@@ -2508,8 +2526,8 @@ Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than the MSL
 <span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>.
 B0 technologies lead to a
-frame transmission time greater than the MSL for a frame size greater
-than 150 bytes.<a href="#section-5.3-6" class="pilcrow">¶</a></p>
+frame transmission time greater than the MSL for a frame size ≥ 150
+bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).<a href="#section-5.3-6" class="pilcrow">¶</a></p>
 <p id="section-5.3-7">B1 technologies offer transmission times which are lower than the MSL
 (for a frame size greater than 150 bytes).  However, transmission times
 for B1 technologies are still significant if a human expects a reaction
@@ -2581,11 +2599,6 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
 <dt id="I-D.ietf-lwig-tls-minimal">[I-D.ietf-lwig-tls-minimal]</dt>
       <dd>
 <span class="refAuthor">Kumar, S.</span>, <span class="refAuthor">Keoh, S. L.</span>, and <span class="refAuthor">H. Tschofenig</span>, <span class="refTitle">"A Hitchhiker's Guide to the (Datagram) Transport Layer Security Protocol for Smart Objects and Constrained Node Networks"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-lwig-tls-minimal-01</span>, <time datetime="2014-03-07" class="refDate">7 March 2014</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-lwig-tls-minimal-01">https://datatracker.ietf.org/doc/html/draft-ietf-lwig-tls-minimal-01</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="IoT-2025">[IoT-2025]</dt>
-      <dd>
-<span class="refAuthor">Rosen, M.</span>, <span class="refTitle">"Driving the Digital Agenda Requires Strategic Architecture"</span>, <time datetime="2016-11-16" class="refDate">16 November 2016</time>, <span>&lt;<a href="https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf">https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf</a>&gt;</span>. <span class="annotation">Slide 11</span>
-      </dd>
 <dd class="break"></dd>
 <dt id="ISQ-13">[ISQ-13]</dt>
       <dd>
