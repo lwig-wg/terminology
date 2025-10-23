@@ -390,12 +390,10 @@ intent to define them: LLN, (6)LoWPAN, and LPWAN.
 ### LLN {#lln-low-power-lossy-network}
 
 A related term that has been used to describe the focus of the IETF
-ROLL working group is
-"Low-Power and Lossy Network (LLN)".  The ROLL (Routing Over Low-Power and
-Lossy) terminology document {{RFC7102}} defines LLNs as follows:
+ROLL ( Routing Over Low-Power and Lossy) working group is
+"Low-Power and Lossy Network (LLN)".  The ROLL terminology document {{RFC7102}} defines LLNs as follows:
 
-
-
+{: quote}
 > LLN: Low-Power and Lossy Network.  Typically composed of many
 > embedded devices with limited power, memory, and processing
 > resources interconnected by a variety of links, such as IEEE
@@ -457,13 +455,13 @@ Despite the overwhelming variety of Internet-connected devices that
 can be envisioned, it may be worthwhile to have some succinct
 terminology for different classes of constrained devices.
 
-Before we get to that, let's first distinguish two big rough groups of
+The following distinguishes two big rough groups of
 devices based on their CPU capabilities:
 
 * Microcontroller-class devices (e.g., called "M-Profile" by ARM).
   These often (but not always) include RAM and code storage on chip
   and would struggle to support more powerful general-purpose operating systems, e.g.,
-  they do not have an MMU (memory management unit).  They use most of
+  they do not have an Memory Management Unit (MMU).  They use most of
   their pins for interfaces to application hardware such as digital
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
@@ -479,8 +477,7 @@ devices based on their CPU capabilities:
   such as Linux, such as an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
-  such as video controllers, these are often also called "Systems on a
-  Chip" (SOC).  While these chips also include sleep modes, they are
+  such as video controllers, these are often also called SOC.  While these chips also include sleep modes, they are
   usually more on the watt side of sustained power usage (Ps).
 
 If the distinction between these groups needs to be made in this
@@ -607,11 +604,11 @@ The below is a first attempt at classifying this.
 | F9   | app-level upgradability, no reboot required ("hitless")    |
 {: #upgtbl title='Levels of Software Update Capabilities'}
 
-## Isolation functionality
+## Isolation Functionality
 
-This section discusses the ability of the platform to
+This section discusses the ability of a platform to
 isolate different software components.
-The categories below are not mutually
+The categories listed in {{isoltbl}} are not mutually
 exclusive.
 <!-- are there relevant clusters? -->
 
@@ -623,12 +620,12 @@ exclusive.
 | Is8  | Secure enclave isolation                                  |
 {: #isoltbl title='Levels of Isolation Capabilities'}
 
-## Shielded secrets
+## Shielded Secrets
 
 <!-- are there relevant clusters? -->
 
 Some platforms can keep secrets shielded (usually in conjunction with
-secure enclave functionality).
+secure enclave functionality). Refer to {{shieldtbl}} for more details.
 
 | Name | Secret shielding functionality |
 | Sh0  | no secret shielding            |
@@ -652,7 +649,7 @@ microjoules.
 Instead of defining classes or clusters, we simply state, using
 the International System of Units (SI units), an approximate value for one
 or both of the quantities
-listed in {{scaletbl}}:
+listed in {{scaletbl}}.
 
 | Name | Definition                                                                         | SI Unit   |
 | Ps   | Sustainable average power available for the device over the time it is functioning | W (Watt)  |
@@ -871,14 +868,14 @@ found in {{Section 3.5 of -time-tag}}.
 
 # Classes of Networks
 
-## Classes of link layer MTU size
+## Classes of Link Layer MTU Size
 
 Link layer technologies used by constrained devices can be categorized
 on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
-We define the following classes of link layer MTU size:
+{{mtutbl}} lists the main classes of link layer MTU size.
 
 | Name | L2 MTU size (bytes) | 6LoWPAN Fragmentation applicable*? |
 |------+---------------------+------------------------------------|
@@ -918,7 +915,7 @@ scenarios, see also {{Section 2.2 of RFC7452}}).
 More general devices are prepared to
 communicate with other nodes in the Internet as well.
 
-We define the following classes of Internet technology level:
+{{internettbl}} defines the classes of Internet technology level.
 
 | Name | Internet technology                  |
 |------+--------------------------------------|
@@ -940,7 +937,7 @@ compatibility with existing protocols and mechanisms on the Internet,
 responsiveness to frame transmissions and need for header compression
 techniques.
 
-We define the following classes of PHY bit rate:
+{{phyratetbl}} lists the classes of PHY bit rate.
 
 | Name | PHY bit rate (bit/s)             | Comment                                                                                     |
 |------+----------------------------------+---------------------------------------------------------------------------------------------|
