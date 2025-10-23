@@ -1010,11 +1010,10 @@ The following changes have been made to the guidelines published in {{?RFC7228}}
 
 * Updated references
 * Added new terms such as "Capable Node"
-* Added a new subsection "LPWAN"
 * Added a classification of device groups
 * Updated Table 1 with more details about classes of constrained devices
 * Added some narrative text about Class 3 and 4 devices
-* Added new subsections "Firmware/Software Upgradability", "Isolation Functionality", "Shielded Secrets", and "Strategies of Keeping Time over Power Events"
+* Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Shielded Secrets", and "Strategies of Keeping Time over Power Events"
 * Added new section "Classes of Networks"
 
 {::include-all lists.md}
