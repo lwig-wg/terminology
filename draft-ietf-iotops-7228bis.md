@@ -71,14 +71,6 @@ informative:
   I-D.amsuess-t2trg-raytime: raytime
   I-D.gomez-tiptop-coap: coap-in-space
   RFC9581: time-tag
-  IoT-2025:
-    target: https://idc-cema.com/dwn/SF_177701/driving_the_digital_agenda_requires_strategic_architecture_rosen_idc.pdf
-    title: Driving the Digital Agenda Requires Strategic Architecture
-    author:
-    - name: Mike Rosen
-      org: IDC
-    date: 2016-11-16
-    annotation: Slide 11
   WEI:
     title: '6LoWPAN: the Wireless Embedded Internet'
     author:
@@ -130,7 +122,7 @@ The Internet Protocol Suite is increasingly used on small devices with
 severe constraints on power, memory, and processing resources, creating constrained-node
 networks.
 This document provides a number of basic terms that have
-been useful in the standardization work for constrained-node networks.
+been useful in research and standardization work for constrained-node networks.
 
 --- middle
 
@@ -163,26 +155,30 @@ and capabilities are becoming connected.  Mobile personal gadgets,
 building-automation devices, cellular phones, machine-to-machine (M2M)
 devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
-becomes a reality, built up out of uniquely identifiable and
-addressable objects (things).  Over the next decade, this could
-grow to large numbers of Internet-connected constrained
-devices ({{IoT-2025}} predicts that by, 2025, more than
-2500 devices will be connected to the Internet per second), greatly
-increasing the Internet's size and scope.
+became a reality, built up out of uniquely identifiable and
+addressable objects (things).
 
 The present document provides a number of basic terms that have
-been useful in the standardization work for constrained
+been useful in research and standardization work for constrained
 environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.
 
 The present document is a revision of {{RFC7228}}.
 
+## Conventions Used in this Document
+
 In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
 abbreviated "KiB", for 1024 bytes {{ISQ-13}}.
-Powers of 10 are given as 10<sup>100</sup> where 100 is the exponent.
+
+Superscript notation denotes exponentiation.
+For example, 10 raised to the 100th is notated: 10<sup>100</sup>,
+where 10 is the base and 100 is the exponent.
+In the plain-text rendition of this specification, superscript
+notation is not available and exponentiation therefore is rendered by
+the surrogate notation seen here in the plain-text rendition.
 
 In computing, the term "power" is often used for the concept of
 "computing power" or "processing power", as in CPU performance.
@@ -198,9 +194,7 @@ being permanently connected to a stable electrical power grid.
 
 There are two important aspects to *scaling* within the Internet of Things:
 
-
-
-* scaling up Internet technologies to a large number {{IoT-2025}} of
+* scaling up Internet technologies to a large number of
   inexpensive nodes, while
 
 * scaling down the characteristics of each of these nodes and of the
@@ -267,6 +261,10 @@ in combination, for example:
 * constraints on user interface and accessibility in deployment
   (ability to set keys, update software, etc.).
 
+Some of these constraints apply to the hardware of the device, others
+to all or part of a combination of hardware, firmware, and essential
+infrastructure (the "platform", e.g., in {{class-Fx}}) and its
+anticipated usage (e.g., in {{class-Ix}}).
 
 {{devclass}} defines a number of interesting classes ("class-N") of
 constrained nodes focusing on relevant combinations of
@@ -382,9 +380,9 @@ A constrained-node network always is a constrained network because of
 the network constraints stemming from the node constraints, but it may
 also have other constraints that already make it a constrained network.
 
-The rest of this subsection introduces two additional terms that are
+The rest of this subsection introduces additional terms that are
 in active use in the area of constrained-node networks, without an
-intent to define them: LLN and (6)LoWPAN.
+intent to define them: LLN, (6)LoWPAN, and LPWAN.
 
 ### LLN {#lln-low-power-lossy-network}
 
@@ -459,7 +457,7 @@ terminology for different classes of constrained devices.
 Before we get to that, let's first distinguish two big rough groups of
 devices based on their CPU capabilities:
 
-* Microcontroller-class devices (sometimes called "M-class").
+* Microcontroller-class devices (e.g., called "M-Profile" by ARM).
   These often (but not always) include RAM and code storage on chip
   and would struggle to support more powerful general-purpose operating systems, e.g.,
   they do not have an MMU (memory management unit).  They use most of
@@ -471,7 +469,8 @@ devices based on their CPU capabilities:
   elaborate sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (Ps, see below).
 
-* General-purpose-class devices (sometimes called "A-class").  These usually
+* General-purpose-class devices (e.g., called "A-Profile" by ARM).
+  These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
   such as Linux, such as an MMU.  Many of the pins on the CPU chip are
@@ -482,8 +481,8 @@ devices based on their CPU capabilities:
   usually more on the watt side of sustained power usage (Ps).
 
 If the distinction between these groups needs to be made in this
-document, we distinguish group "M" (microcontroller) from group "J"
-(general purpose).
+document, we distinguish "M-group" (microcontroller) from "J-group"
+(general purpose) devices.
 
 In this document, the class designations in {{devclasstbl}} may be
 used as rough indications of device capabilities.  Note that the
@@ -545,7 +544,7 @@ UDP {{RFC7252}}) and participate in meaningful
 conversations without the help of a gateway node.  In particular, they
 can provide support for the security functions required on a large
 network.  Therefore, they can be integrated as fully developed peers
-into an IP network, but they need to be parsimonious with state
+into an IP network, but they need to be frugal with state
 memory, code space, and often power expenditure for protocol and
 application usage.
 
@@ -592,7 +591,7 @@ operational scenario need to be analyzed.  Use cases may combine
 constrained devices of multiple classes as well as more traditional
 Internet nodes.
 
-## Firmware/Software upgradability
+## Firmware/Software upgradability {#class-Fx}
 
 Platforms may differ in their firmware or software upgradability.
 The below is a first attempt at classifying this.
@@ -782,7 +781,7 @@ mention of P1.
 
 ## Strategies of Keeping Time over Power Events
 
-Many applications for a device require it to keep some concept of time.
+Many applications require a device to keep some concept of time.
 
 Time-keeping can be relative to a previous event (last packet received),
 absolute on a device-specific scale (e.g., last reboot), or absolute
@@ -906,7 +905,7 @@ packets over these technologies.
 S3 technologies do not require fragmentation to support the IPv6 MTU
 requirement.
 
-## Class of Internet Integration
+## Class of Internet Integration {#class-Ix}
 
 The term "Internet of Things" is sometimes confusingly used for
 connected devices that are not actually employing Internet technology.
@@ -957,8 +956,8 @@ Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than the MSL
 {{-coap-in-space}}.
 B0 technologies lead to a
-frame transmission time greater than the MSL for a frame size greater
-than 150 bytes.
+frame transmission time greater than the MSL for a frame size ≥ 150
+bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
 B1 technologies offer transmission times which are lower than the MSL
 (for a frame size greater than 150 bytes).  However, transmission times
