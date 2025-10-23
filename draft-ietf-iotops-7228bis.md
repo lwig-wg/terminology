@@ -1004,8 +1004,6 @@ A wider view of security in constrained-node networks is provided in {{-IOT-SECU
 
 --- back
 
-{::include-all lists.md}
-
 # Changes Since RFC 7228
 
 The following changes have been made to the guidelines published in {{?RFC7228}}:
@@ -1018,6 +1016,8 @@ The following changes have been made to the guidelines published in {{?RFC7228}}
 * Added some narrative text about Class 3 and 4 devices.
 * Added new sub-sections "Firmware/Software Upgradability", "Isolation Functionality", "Shielded Secrets", and "Strategies of Keeping Time over Power Events"
 * Added new section "Classes of Networks"
+
+{::include-all lists.md}
 
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
