@@ -390,8 +390,9 @@ intent to define them: LLN, (6)LoWPAN, and LPWAN.
 ### LLN {#lln-low-power-lossy-network}
 
 A related term that has been used to describe the focus of the IETF
-ROLL ( Routing Over Low-Power and Lossy) working group is
-"Low-Power and Lossy Network (LLN)".  The ROLL terminology document {{RFC7102}} defines LLNs as follows:
+Routing Over Low power and Lossy networks (ROLL) working group is
+"Low-Power and Lossy Network (LLN)".
+The ROLL terminology document {{RFC7102}} defines LLNs as follows:
 
 {: quote}
 > LLN: Low-Power and Lossy Network.  Typically composed of many
@@ -404,9 +405,6 @@ ROLL ( Routing Over Low-Power and Lossy) working group is
 > connected home,
 > health care, environmental monitoring, urban sensor networks,
 > energy management, assets tracking, and refrigeration.
-
-
-
 
 Beyond that, LLNs often exhibit considerable loss at the
 physical layer, with significant variability of the delivery rate,
@@ -477,7 +475,8 @@ devices based on their CPU capabilities:
   such as Linux, such as an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
-  such as video controllers, these are often also called SOC.  While these chips also include sleep modes, they are
+  such as video controllers, these are often also called SOC.
+  While these chips also include sleep modes, they are
   usually more on the watt side of sustained power usage (Ps).
 
 If the distinction between these groups needs to be made in this
