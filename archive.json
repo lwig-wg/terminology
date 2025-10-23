@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-21T01:27:05.852268+00:00",
+  "timestamp": "2025-10-23T01:26:26.782940+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -57,5 +57,72 @@
       "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDOBMYTbM6vG2Ns",
+      "title": "Address review by Martine Sophie Lenders",
+      "url": "https://github.com/lwig-wg/terminology/pull/2",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-22T16:43:19Z",
+      "updatedAt": "2025-10-22T16:43:20Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "80cc3bc12c7a29376639e14e8981cca7463b065f",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "msl-review",
+      "headRefOid": "a413894e1a43f67ef3ac7ac71f7912cafc31afa6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOBMYTbM6vHVU8",
+      "title": "obsoletes 7228",
+      "url": "https://github.com/lwig-wg/terminology/pull/3",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-22T17:33:40Z",
+      "updatedAt": "2025-10-22T21:27:33Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "80cc3bc12c7a29376639e14e8981cca7463b065f",
+      "headRepository": "boucadair/terminology",
+      "headRefName": "patch-1",
+      "headRefOid": "221dfc38034c878a32d7a1125a2cb5f9cddb8399",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7IuYkZ",
+          "commit": {
+            "abbreviatedOid": "221dfc3"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-22T21:27:33Z",
+          "updatedAt": "2025-10-22T21:27:33Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
 }
