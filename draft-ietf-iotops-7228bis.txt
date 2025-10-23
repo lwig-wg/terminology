@@ -4,9 +4,9 @@
 
 IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                                  M. Ersue
-Expires: 26 April 2026                                                  
-                                                              A. Keranen
+Obsoletes: 7228 (if approved)                                   M. Ersue
+Intended status: Informational                                          
+Expires: 26 April 2026                                        A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
@@ -23,6 +23,8 @@ Abstract
    creating constrained-node networks.  This document provides a number
    of basic terms that have been useful in research and standardization
    work for constrained-node networks.
+
+   This document obsoletes RFC 7228.
 
 About This Document
 
@@ -48,8 +50,6 @@ Status of This Memo
    Task Force (IETF).  Note that other groups may also distribute
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
-
-
 
 
 
