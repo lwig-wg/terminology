@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-23T01:26:26.782940+00:00",
+  "timestamp": "2025-10-26T01:39:13.828051+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -37,6 +37,11 @@
       "name": "wontfix",
       "description": null,
       "color": "ffffff"
+    },
+    {
+      "name": "has-pr",
+      "description": "",
+      "color": "25229c"
     }
   ],
   "issues": [
@@ -49,10 +54,36 @@
       "author": "chrysn",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-pr"
+      ],
       "body": "Looking at DICE style bootloaders and reading 7228bis, I find the terminology around isolation and secret shielding a bit lacking. A distinction I'm coming to find relevant is whether the device can support security after compromise of \"privileged\" software.\r\n\r\nI'm putting \"privileged\" in quotes here because every platform supports secure enclaves and isolation if it considers regards its bare-metal software as part of the secure zone (and, for example runs a virtual machine), but the implication of \"supports virtualization\" is that the virtualized software can run at bare metal speed without a complex runtime, and (given it is relevant to real time systems) that the virtualized software can define its own handlers for hardware interrupts.\r\n\r\nThe trouble with the current classification is that I wouldn't know where to put systems that don't have any trust zone or other protected hardware crypto tools, maybe not even a proper MPU, but do support lockout of certain flash pages until the next reboot. Using the DICE architecture (or any similar scheme, roughly where the bootloader accesses a secret, hashes it together with some properties of the firmware, locks the flash page and wipes all RAM except for the hash before chainloading), this can provide security after a compromise of even \"privileged\" code (as long as the flash lockout holds), and that would count as Sh>0 and maybe even Is8, but is probably not what is meant by those terms (in particular because the secure enclave can not be updated and only runs in a very very limited context) -- yet if it is not Sh>0/Is-much, it is not clear how the user of the classification can distinguish whether post-compromise security can be achieved.",
       "createdAt": "2024-03-24T10:33:24Z",
-      "updatedAt": "2024-03-24T10:33:24Z",
+      "updatedAt": "2025-10-23T16:11:39Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I now mentioned this as \n\n| Is1  | Boot Lock or Flash Read Lock, until next reboot           |\n\nNot sure that this is all of issue #1 that we want to address.",
+          "createdAt": "2025-10-23T16:10:47Z",
+          "updatedAt": "2025-10-23T16:10:47Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOBMYTbM7TVC-G",
+      "title": "ARM Profiles",
+      "url": "https://github.com/lwig-wg/terminology/issues/7",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/lwig-wg/terminology/blob/83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed/draft-ietf-iotops-7228bis.md?plain=1#L463\n\nMaybe consider adding a pointer to ARM ref arch for A/M/R profiles cited in the text (e.g., https://developer.arm.com/documentation/DEN0130/0100/About-the-Arm-architecture or similar).",
+      "createdAt": "2025-10-23T16:24:00Z",
+      "updatedAt": "2025-10-23T16:24:00Z",
       "closedAt": null,
       "comments": []
     }
@@ -63,50 +94,108 @@
       "id": "PR_kwDOBMYTbM6vG2Ns",
       "title": "Address review by Martine Sophie Lenders",
       "url": "https://github.com/lwig-wg/terminology/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-22T16:43:19Z",
-      "updatedAt": "2025-10-22T16:43:20Z",
+      "updatedAt": "2025-10-23T12:21:49Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "80cc3bc12c7a29376639e14e8981cca7463b065f",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "msl-review",
       "headRefOid": "a413894e1a43f67ef3ac7ac71f7912cafc31afa6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-23T12:21:48Z",
+      "mergedAt": "2025-10-23T12:21:48Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "0eba9de0c39ecceafcab454f43ad371c1a48cf90"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7I062N",
+          "commit": {
+            "abbreviatedOid": "a413894"
+          },
+          "author": "miri64",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Mostly LGTM, only one comment.",
+          "createdAt": "2025-10-23T10:45:49Z",
+          "updatedAt": "2025-10-23T11:29:11Z",
+          "comments": [
+            {
+              "originalPosition": 59,
+              "body": "You are using Unicode [below](https://github.com/lwig-wg/terminology/blob/a413894e1a43f67ef3ac7ac71f7912cafc31afa6/draft-ietf-iotops-7228bis.md?plain=1#L959-L960) already. Why not use it here as well like this \"10\u00b9\u2070\u2070\"?",
+              "createdAt": "2025-10-23T10:45:49Z",
+              "updatedAt": "2025-10-23T11:29:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7I2Lb3",
+          "commit": {
+            "abbreviatedOid": "a413894"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-23T12:16:31Z",
+          "updatedAt": "2025-10-23T12:16:31Z",
+          "comments": [
+            {
+              "originalPosition": 59,
+              "body": "Good question.  \r\n\r\nThe manuscript is translated into a single XML form, which is then rendered in plain text, HTML, and PDF.\r\nSo there needs to be a common representation of the superscript in all three.\r\nRFCXML provides the <sup element, which shows the fallback given for plaintext rendering.\r\n\r\nIf we didn't want to use RFCXML <sup superscripts, we would have to check the characters in the superscript:\r\nOnly a limited set of characters have a superscript variant in Unicode.  \r\n\r\nWhile all characters used in a superscript in the current document happen to do, the characters \u00b9\u00b2\u00b3 come from the Latin-1 supplement (U+00Bx) while the characters \u2070\u2074\u2075\u2076\u2077\u2078\u2079\u207b come from Superscripts and Subscripts (U+207x).\r\nIn a number of fonts, the appearances of these two ranges inexplicably do not match.\r\nSo HTML and PDF would often look ugly to enable better plaintext looks.",
+              "createdAt": "2025-10-23T12:16:31Z",
+              "updatedAt": "2025-10-23T12:16:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7I2M4G",
+          "commit": {
+            "abbreviatedOid": "a413894"
+          },
+          "author": "miri64",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-23T12:18:15Z",
+          "updatedAt": "2025-10-23T12:18:15Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 3,
       "id": "PR_kwDOBMYTbM6vHVU8",
       "title": "obsoletes 7228",
       "url": "https://github.com/lwig-wg/terminology/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-22T17:33:40Z",
-      "updatedAt": "2025-10-22T21:27:33Z",
+      "updatedAt": "2025-10-23T12:22:11Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "80cc3bc12c7a29376639e14e8981cca7463b065f",
       "headRepository": "boucadair/terminology",
       "headRefName": "patch-1",
       "headRefOid": "221dfc38034c878a32d7a1125a2cb5f9cddb8399",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-23T12:22:11Z",
+      "mergedAt": "2025-10-23T12:22:11Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed"
+      },
       "comments": [],
       "reviews": [
         {
@@ -123,6 +212,112 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOBMYTbM6vQejd",
+      "title": "Summary of changes vs 7228",
+      "url": "https://github.com/lwig-wg/terminology/pull/4",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-23T12:41:17Z",
+      "updatedAt": "2025-10-23T16:10:33Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed",
+      "headRepository": "boucadair/terminology",
+      "headRefName": "patch-2",
+      "headRefOid": "ee63a8780fa86142e894326f7b97b43b0b767348",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7I6fRW",
+          "commit": {
+            "abbreviatedOid": "b972e81"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thank you, much needed",
+          "createdAt": "2025-10-23T15:53:46Z",
+          "updatedAt": "2025-10-23T15:53:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOBMYTbM6vQrL6",
+      "title": "some nits",
+      "url": "https://github.com/lwig-wg/terminology/pull/5",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-23T12:57:46Z",
+      "updatedAt": "2025-10-23T15:39:45Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed",
+      "headRepository": "boucadair/terminology",
+      "headRefName": "patch-3",
+      "headRefOid": "37d1ea41bc0e087461b95560cb425678a5464a9e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7I6KhJ",
+          "commit": {
+            "abbreviatedOid": "37d1ea4"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thank you!",
+          "createdAt": "2025-10-23T15:39:21Z",
+          "updatedAt": "2025-10-23T15:39:21Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOBMYTbM6vTfW1",
+      "title": "Mention boot-lock/flash-read-lock as Is1; close #1",
+      "url": "https://github.com/lwig-wg/terminology/pull/6",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-23T16:09:36Z",
+      "updatedAt": "2025-10-23T16:09:36Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "boot-lock",
+      "headRefOid": "97ac03a890e6fc227380f6ce5e75252c4b6f3d55",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
