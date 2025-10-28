@@ -1194,10 +1194,10 @@ been useful in research and standardization work for constrained-node networks.<
                 <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-firmware-software-upgradabi" class="internal xref">Firmware/Software upgradability</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
-                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-isolation-functionality" class="internal xref">Isolation functionality</a></p>
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-isolation-functionality" class="internal xref">Isolation Functionality</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-shielded-secrets" class="internal xref">Shielded secrets</a></p>
+                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-shielded-secrets" class="internal xref">Shielded Secrets</a></p>
 </li>
             </ul>
 </li>
@@ -1222,7 +1222,7 @@ been useful in research and standardization work for constrained-node networks.<
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-classes-of-networks" class="internal xref">Classes of Networks</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-classes-of-link-layer-mtu-s" class="internal xref">Classes of link layer MTU size</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-classes-of-link-layer-mtu-s" class="internal xref">Classes of Link Layer MTU Size</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
                 <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-class-of-internet-integrati" class="internal xref">Class of Internet Integration</a></p>
@@ -1555,12 +1555,11 @@ intent to define them: LLN, (6)LoWPAN, and LPWAN.<a href="#section-2.3-3" class=
 <a href="#section-2.3.1" class="section-number selfRef">2.3.1. </a><a href="#name-lln" class="section-name selfRef">LLN</a>
           </h4>
 <p id="section-2.3.1-1">A related term that has been used to describe the focus of the IETF
-ROLL working group is
-"Low-Power and Lossy Network (LLN)".  The ROLL (Routing Over Low-Power and
-Lossy) terminology document <span>[<a href="#RFC7102" class="cite xref">RFC7102</a>]</span> defines LLNs as follows:<a href="#section-2.3.1-1" class="pilcrow">¶</a></p>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-2.3.1-2.1">
-              <p id="section-2.3.1-2.1.1">LLN: Low-Power and Lossy Network.  Typically composed of many
+Routing Over Low power and Lossy networks (ROLL) working group is
+"Low-Power and Lossy Network (LLN)".
+The ROLL terminology document <span>[<a href="#RFC7102" class="cite xref">RFC7102</a>]</span> defines LLNs as follows:<a href="#section-2.3.1-1" class="pilcrow">¶</a></p>
+<blockquote id="section-2.3.1-2">
+            <p id="section-2.3.1-2.1">LLN: Low-Power and Lossy Network.  Typically composed of many
 embedded devices with limited power, memory, and processing
 resources interconnected by a variety of links, such as IEEE
 802.15.4 or low-power Wi-Fi.  There is a wide scope of application
@@ -1569,9 +1568,8 @@ automation (heating,
 ventilation, and air conditioning (HVAC), lighting, access control, fire),
 connected home,
 health care, environmental monitoring, urban sensor networks,
-energy management, assets tracking, and refrigeration.<a href="#section-2.3.1-2.1.1" class="pilcrow">¶</a></p>
-</li>
-          </ul>
+energy management, assets tracking, and refrigeration.<a href="#section-2.3.1-2.1" class="pilcrow">¶</a></p>
+</blockquote>
 <p id="section-2.3.1-3">Beyond that, LLNs often exhibit considerable loss at the
 physical layer, with significant variability of the delivery rate,
 and some short-term unreliability, coupled with some medium-term
@@ -1631,14 +1629,14 @@ provided by <span>[<a href="#RFC8376" class="cite xref">RFC8376</a>]</span>.<a h
 <p id="section-3-1">Despite the overwhelming variety of Internet-connected devices that
 can be envisioned, it may be worthwhile to have some succinct
 terminology for different classes of constrained devices.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">Before we get to that, let's first distinguish two big rough groups of
+<p id="section-3-2">The following distinguishes two big rough groups of
 devices based on their CPU capabilities:<a href="#section-3-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-3.1">
           <p id="section-3-3.1.1">Microcontroller-class devices (e.g., called "M-Profile" by ARM).
 These often (but not always) include RAM and code storage on chip
 and would struggle to support more powerful general-purpose operating systems, e.g.,
-they do not have an MMU (memory management unit).  They use most of
+they do not have an Memory Management Unit (MMU).  They use most of
 their pins for interfaces to application hardware such as digital
 in/out (the latter often Pulse Width Modulation (PWM)-controllable),
 ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
@@ -1655,8 +1653,8 @@ packages), and offer support for general-purpose operating systems
 such as Linux, such as an MMU.  Many of the pins on the CPU chip are
 dedicated to interfacing with RAM and other memory.  Some
 general-purpose-class devices integrate some application hardware
-such as video controllers, these are often also called "Systems on a
-Chip" (SOC).  While these chips also include sleep modes, they are
+such as video controllers, these are often also called SOC.
+While these chips also include sleep modes, they are
 usually more on the watt side of sustained power usage (Ps).<a href="#section-3-3.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
@@ -1886,11 +1884,11 @@ The below is a first attempt at classifying this.<a href="#section-3.1-1" class=
 <div id="isolation-functionality">
 <section id="section-3.2">
         <h3 id="name-isolation-functionality">
-<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-isolation-functionality" class="section-name selfRef">Isolation functionality</a>
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-isolation-functionality" class="section-name selfRef">Isolation Functionality</a>
         </h3>
-<p id="section-3.2-1">This section discusses the ability of the platform to
+<p id="section-3.2-1">This section discusses the ability of a platform to
 isolate different software components.
-The categories below are not mutually
+The categories listed in <a href="#isoltbl" class="auto internal xref">Table 3</a> are not mutually
 exclusive.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <span id="name-levels-of-isolation-capabil"></span><div id="isoltbl">
 <table class="center" id="table-3">
@@ -1933,10 +1931,10 @@ exclusive.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <div id="shielded-secrets">
 <section id="section-3.3">
         <h3 id="name-shielded-secrets">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-shielded-secrets" class="section-name selfRef">Shielded secrets</a>
+<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-shielded-secrets" class="section-name selfRef">Shielded Secrets</a>
         </h3>
 <p id="section-3.3-1">Some platforms can keep secrets shielded (usually in conjunction with
-secure enclave functionality).<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+secure enclave functionality). Refer to <a href="#shieldtbl" class="auto internal xref">Table 4</a> for more details.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 <span id="name-levels-of-secret-shielding-"></span><div id="shieldtbl">
 <table class="center" id="table-4">
           <caption>
@@ -1989,7 +1987,7 @@ microjoules.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.1-2">Instead of defining classes or clusters, we simply state, using
 the International System of Units (SI units), an approximate value for one
 or both of the quantities
-listed in <a href="#scaletbl" class="auto internal xref">Table 5</a>:<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+listed in <a href="#scaletbl" class="auto internal xref">Table 5</a>.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 <span id="name-quantities-relevant-to-powe"></span><div id="scaletbl">
 <table class="center" id="table-5">
           <caption>
@@ -2367,13 +2365,13 @@ found in <span><a href="https://rfc-editor.org/rfc/rfc9581#section-3.5" class="r
 <div id="classes-of-link-layer-mtu-size">
 <section id="section-5.1">
         <h3 id="name-classes-of-link-layer-mtu-s">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-classes-of-link-layer-mtu-s" class="section-name selfRef">Classes of link layer MTU size</a>
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-classes-of-link-layer-mtu-s" class="section-name selfRef">Classes of Link Layer MTU Size</a>
         </h3>
 <p id="section-5.1-1">Link layer technologies used by constrained devices can be categorized
 on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2">We define the following classes of link layer MTU size:<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
 <span id="name-classes-of-link-layer-mtu-si"></span><div id="mtutbl">
 <table class="center" id="table-10">
           <caption>
@@ -2441,7 +2439,7 @@ packets with a fixed communication partner ("device-to-cloud"
 scenarios, see also <span><a href="https://rfc-editor.org/rfc/rfc7452#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC7452" class="cite xref">RFC7452</a>]</span>).
 More general devices are prepared to
 communicate with other nodes in the Internet as well.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
-<p id="section-5.2-2">We define the following classes of Internet technology level:<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.2-2"><a href="#internettbl" class="auto internal xref">Table 11</a> defines the classes of Internet technology level.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
 <span id="name-classes-of-internet-technol"></span><div id="internettbl">
 <table class="center" id="table-11">
           <caption>
@@ -2485,7 +2483,7 @@ rate class of a technology has important implications with regard to
 compatibility with existing protocols and mechanisms on the Internet,
 responsiveness to frame transmissions and need for header compression
 techniques.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
-<p id="section-5.3-3">We define the following classes of PHY bit rate:<a href="#section-5.3-3" class="pilcrow">¶</a></p>
+<p id="section-5.3-3"><a href="#phyratetbl" class="auto internal xref">Table 12</a> lists the classes of PHY bit rate.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
 <span id="name-classes-of-physical-layer-bi"></span><div id="phyratetbl">
 <table class="center" id="table-12">
           <caption>

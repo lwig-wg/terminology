@@ -93,15 +93,15 @@ Table of Contents
        2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   9
    3.  Classes of Constrained Devices  . . . . . . . . . . . . . . .   9
      3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  13
-     3.2.  Isolation functionality . . . . . . . . . . . . . . . . .  14
-     3.3.  Shielded secrets  . . . . . . . . . . . . . . . . . . . .  14
+     3.2.  Isolation Functionality . . . . . . . . . . . . . . . . .  14
+     3.3.  Shielded Secrets  . . . . . . . . . . . . . . . . . . . .  14
    4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  15
      4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  15
      4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  16
      4.3.  Strategies for Using Power for Communication  . . . . . .  17
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  18
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  20
-     5.1.  Classes of link layer MTU size  . . . . . . . . . . . . .  21
+     5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
      5.2.  Class of Internet Integration . . . . . . . . . . . . . .  22
      5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  22
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  24
@@ -401,19 +401,19 @@ Internet-Draft               CNN Terminology                October 2025
 2.3.1.  LLN
 
    A related term that has been used to describe the focus of the IETF
-   ROLL working group is "Low-Power and Lossy Network (LLN)".  The ROLL
-   (Routing Over Low-Power and Lossy) terminology document [RFC7102]
-   defines LLNs as follows:
+   Routing Over Low power and Lossy networks (ROLL) working group is
+   "Low-Power and Lossy Network (LLN)".  The ROLL terminology document
+   [RFC7102] defines LLNs as follows:
 
-      LLN: Low-Power and Lossy Network.  Typically composed of many
-      embedded devices with limited power, memory, and processing
-      resources interconnected by a variety of links, such as IEEE
-      802.15.4 or low-power Wi-Fi.  There is a wide scope of application
-      areas for LLNs, including industrial monitoring, building
-      automation (heating, ventilation, and air conditioning (HVAC),
-      lighting, access control, fire), connected home, health care,
-      environmental monitoring, urban sensor networks, energy
-      management, assets tracking, and refrigeration.
+   |  LLN: Low-Power and Lossy Network.  Typically composed of many
+   |  embedded devices with limited power, memory, and processing
+   |  resources interconnected by a variety of links, such as IEEE
+   |  802.15.4 or low-power Wi-Fi.  There is a wide scope of application
+   |  areas for LLNs, including industrial monitoring, building
+   |  automation (heating, ventilation, and air conditioning (HVAC),
+   |  lighting, access control, fire), connected home, health care,
+   |  environmental monitoring, urban sensor networks, energy
+   |  management, assets tracking, and refrigeration.
 
    Beyond that, LLNs often exhibit considerable loss at the physical
    layer, with significant variability of the delivery rate, and some
@@ -468,14 +468,14 @@ Internet-Draft               CNN Terminology                October 2025
    can be envisioned, it may be worthwhile to have some succinct
    terminology for different classes of constrained devices.
 
-   Before we get to that, let's first distinguish two big rough groups
-   of devices based on their CPU capabilities:
+   The following distinguishes two big rough groups of devices based on
+   their CPU capabilities:
 
    *  Microcontroller-class devices (e.g., called "M-Profile" by ARM).
       These often (but not always) include RAM and code storage on chip
       and would struggle to support more powerful general-purpose
-      operating systems, e.g., they do not have an MMU (memory
-      management unit).  They use most of their pins for interfaces to
+      operating systems, e.g., they do not have an Memory Management
+      Unit (MMU).  They use most of their pins for interfaces to
       application hardware such as digital in/out (the latter often
       Pulse Width Modulation (PWM)-controllable), ADC/DACs (analog-to-
       digital and digital-to-analog converters), etc.  Where this
@@ -491,13 +491,13 @@ Internet-Draft               CNN Terminology                October 2025
       on the CPU chip are dedicated to interfacing with RAM and other
       memory.  Some general-purpose-class devices integrate some
       application hardware such as video controllers, these are often
-      also called "Systems on a Chip" (SOC).  While these chips also
-      include sleep modes, they are usually more on the watt side of
-      sustained power usage (Ps).
+      also called SOC.  While these chips also include sleep modes, they
+      are usually more on the watt side of sustained power usage (Ps).
 
    If the distinction between these groups needs to be made in this
    document, we distinguish "M-group" (microcontroller) from "J-group"
    (general purpose) devices.
+
 
 
 
@@ -748,11 +748,11 @@ Internet-Draft               CNN Terminology                October 2025
 
               Table 2: Levels of Software Update Capabilities
 
-3.2.  Isolation functionality
+3.2.  Isolation Functionality
 
-   This section discusses the ability of the platform to isolate
-   different software components.  The categories below are not mutually
-   exclusive.
+   This section discusses the ability of a platform to isolate different
+   software components.  The categories listed in Table 3 are not
+   mutually exclusive.
 
    +======+===========================================================+
    | Name | Isolation functionality                                   |
@@ -770,10 +770,10 @@ Internet-Draft               CNN Terminology                October 2025
 
                 Table 3: Levels of Isolation Capabilities
 
-3.3.  Shielded secrets
+3.3.  Shielded Secrets
 
    Some platforms can keep secrets shielded (usually in conjunction with
-   secure enclave functionality).
+   secure enclave functionality).  Refer to Table 4 for more details.
 
 
 
@@ -814,7 +814,7 @@ Internet-Draft               CNN Terminology                October 2025
 
    Instead of defining classes or clusters, we simply state, using the
    International System of Units (SI units), an approximate value for
-   one or both of the quantities listed in Table 5:
+   one or both of the quantities listed in Table 5.
 
       +======+============================================+=========+
       | Name | Definition                                 | SI Unit |
@@ -1122,14 +1122,14 @@ Bormann, et al.            Expires 1 May 2026                  [Page 20]
 Internet-Draft               CNN Terminology                October 2025
 
 
-5.1.  Classes of link layer MTU size
+5.1.  Classes of Link Layer MTU Size
 
    Link layer technologies used by constrained devices can be
    categorized on the basis of link layer MTU size.  Depending on this
    parameter, the fragmentation techniques needed (if any) to support
    the IPv6 MTU requirement may vary.
 
-   We define the following classes of link layer MTU size:
+   Table 10 lists the main classes of link layer MTU size.
 
     +======+=====================+====================================+
     | Name | L2 MTU size (bytes) | 6LoWPAN Fragmentation applicable*? |
@@ -1188,7 +1188,7 @@ Internet-Draft               CNN Terminology                October 2025
    devices are prepared to communicate with other nodes in the Internet
    as well.
 
-   We define the following classes of Internet technology level:
+   Table 11 defines the classes of Internet technology level.
 
               +======+======================================+
               | Name | Internet technology                  |
@@ -1214,7 +1214,7 @@ Internet-Draft               CNN Terminology                October 2025
    Internet, responsiveness to frame transmissions and need for header
    compression techniques.
 
-   We define the following classes of PHY bit rate:
+   Table 12 lists the classes of PHY bit rate.
 
 
 
