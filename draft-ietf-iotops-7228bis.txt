@@ -6,11 +6,11 @@ IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Obsoletes: 7228 (if approved)                                   M. Ersue
 Intended status: Informational                                          
-Expires: 26 April 2026                                        A. Keranen
+Expires: 1 May 2026                                           A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                         23 October 2025
+                                                         28 October 2025
 
 
                Terminology for Constrained-Node Networks
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 1]
+Bormann, et al.            Expires 1 May 2026                   [Page 1]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -63,7 +63,7 @@ Internet-Draft               CNN Terminology                October 2025
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 April 2026.
+   This Internet-Draft will expire on 1 May 2026.
 
 Copyright Notice
 
@@ -109,15 +109,16 @@ Table of Contents
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 2]
+Bormann, et al.            Expires 1 May 2026                   [Page 2]
 
 Internet-Draft               CNN Terminology                October 2025
 
 
    8.  Informative References  . . . . . . . . . . . . . . . . . . .  24
+   Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  28
    List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  28
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  28
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  28
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  29
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  29
 
 1.  Introduction
 
@@ -164,8 +165,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-
-Bormann, et al.           Expires 26 April 2026                 [Page 3]
+Bormann, et al.            Expires 1 May 2026                   [Page 3]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -221,7 +221,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 4]
+Bormann, et al.            Expires 1 May 2026                   [Page 4]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -277,7 +277,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 5]
+Bormann, et al.            Expires 1 May 2026                   [Page 5]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -333,7 +333,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 6]
+Bormann, et al.            Expires 1 May 2026                   [Page 6]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -389,7 +389,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 7]
+Bormann, et al.            Expires 1 May 2026                   [Page 7]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -445,7 +445,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 8]
+Bormann, et al.            Expires 1 May 2026                   [Page 8]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -501,7 +501,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                 [Page 9]
+Bormann, et al.            Expires 1 May 2026                   [Page 9]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -557,7 +557,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 10]
+Bormann, et al.            Expires 1 May 2026                  [Page 10]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -613,7 +613,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 11]
+Bormann, et al.            Expires 1 May 2026                  [Page 11]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -669,7 +669,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 12]
+Bormann, et al.            Expires 1 May 2026                  [Page 12]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -725,7 +725,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 13]
+Bormann, et al.            Expires 1 May 2026                  [Page 13]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -781,7 +781,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 14]
+Bormann, et al.            Expires 1 May 2026                  [Page 14]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -837,7 +837,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 15]
+Bormann, et al.            Expires 1 May 2026                  [Page 15]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -893,7 +893,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 16]
+Bormann, et al.            Expires 1 May 2026                  [Page 16]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -949,7 +949,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 17]
+Bormann, et al.            Expires 1 May 2026                  [Page 17]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1005,7 +1005,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 18]
+Bormann, et al.            Expires 1 May 2026                  [Page 18]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1061,7 +1061,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 19]
+Bormann, et al.            Expires 1 May 2026                  [Page 19]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1117,7 +1117,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 20]
+Bormann, et al.            Expires 1 May 2026                  [Page 20]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1173,7 +1173,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 21]
+Bormann, et al.            Expires 1 May 2026                  [Page 21]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1229,7 +1229,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 22]
+Bormann, et al.            Expires 1 May 2026                  [Page 22]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1285,7 +1285,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 23]
+Bormann, et al.            Expires 1 May 2026                  [Page 23]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1341,7 +1341,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 24]
+Bormann, et al.            Expires 1 May 2026                  [Page 24]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1397,7 +1397,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 25]
+Bormann, et al.            Expires 1 May 2026                  [Page 25]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1453,7 +1453,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 26]
+Bormann, et al.            Expires 1 May 2026                  [Page 26]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1509,7 +1509,7 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-Bormann, et al.           Expires 26 April 2026                [Page 27]
+Bormann, et al.            Expires 1 May 2026                  [Page 27]
 
 Internet-Draft               CNN Terminology                October 2025
 
@@ -1531,6 +1531,28 @@ Internet-Draft               CNN Terminology                October 2025
               DOI 10.1002/9780470686218, ISBN 9780470747995, 2009,
               <https://doi.org/10.1002/9780470686218>.
 
+Appendix A.  Changes Since RFC 7228
+
+   The following changes have been made to the guidelines published in
+   [RFC7228]:
+
+   *  Updated references
+
+   *  Added new terms such as "Capable Node"
+
+   *  Added a classification of device groups
+
+   *  Updated Table 1 with more details about classes of constrained
+      devices
+
+   *  Added some narrative text about Class 3 and 4 devices
+
+   *  Added new subsections "LPWAN", "Firmware/Software Upgradability",
+      "Isolation Functionality", "Shielded Secrets", and "Strategies of
+      Keeping Time over Power Events"
+
+   *  Added new section "Classes of Networks"
+
 List of Tables
 
    Table 1:   Classes of Constrained Devices (KiB = 1024 bytes)
@@ -1540,6 +1562,14 @@ List of Tables
    Table 5:   Quantities Relevant to Power and Energy
    Table 6:   Classes of Energy Limitation
    Table 7:   Strategies of Using Power for Communication
+
+
+
+Bormann, et al.            Expires 1 May 2026                  [Page 28]
+
+Internet-Draft               CNN Terminology                October 2025
+
+
    Table 8:   Strategies of Keeping Time over Power Events
    Table 9:   Permanency of Keeping Time
    Table 10:  Classes of Link Layer MTU Size
@@ -1559,15 +1589,6 @@ Authors' Addresses
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-Bormann, et al.           Expires 26 April 2026                [Page 28]
-
-Internet-Draft               CNN Terminology                October 2025
 
 
    Mehmet Ersue
@@ -1600,25 +1621,4 @@ Internet-Draft               CNN Terminology                October 2025
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.           Expires 26 April 2026                [Page 29]
+Bormann, et al.            Expires 1 May 2026                  [Page 29]
