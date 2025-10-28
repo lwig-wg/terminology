@@ -613,6 +613,7 @@ exclusive.
 
 | Name | Isolation functionality                                   |
 | Is0  | no isolation                                              |
+| Is1  | Boot Lock or Flash Read Lock, until next reboot           |
 | Is2  | MPU (memory protection unit), at least boundary registers |
 | Is5  | MMU with Linux-style kernel/user                          |
 | Is7  | Virtualization-style isolation                            |
