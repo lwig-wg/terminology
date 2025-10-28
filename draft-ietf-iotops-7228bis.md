@@ -116,6 +116,13 @@ informative:
     title: Warning about 4/32 devices
     date: false
     rc: OpenWRT wiki, last accessed 2021-12-01
+  ARM-ARCH:
+    title: ARM architecture profiles
+    target:  https://developer.arm.com/documentation/DEN0130/0100/About-the-Arm-architecture
+    author:
+      org: Arm
+    date: false
+# Doesn't use "A-Profile" verbatim: ARM architecture profiles, https://developer.arm.com/documentation/dui0471/m/key-features-of-arm-architecture-versions/arm-architecture-profiles
 
 --- abstract
 
@@ -456,7 +463,7 @@ terminology for different classes of constrained devices.
 The following distinguishes two big rough groups of
 devices based on their CPU capabilities:
 
-* Microcontroller-class devices (e.g., called "M-Profile" by ARM).
+* Microcontroller-class devices (e.g., called "M-Profile" in [ARM-ARCH]).
   These often (but not always) include RAM and code storage on chip
   and would struggle to support more powerful general-purpose operating systems, e.g.,
   they do not have an Memory Management Unit (MMU).  They use most of
@@ -468,7 +475,7 @@ devices based on their CPU capabilities:
   elaborate sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (Ps, see below).
 
-* General-purpose-class devices (e.g., called "A-Profile" by ARM).
+* General-purpose-class devices (e.g., called "A-Profile" in [ARM-ARCH]).
   These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
