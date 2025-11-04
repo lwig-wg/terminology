@@ -1413,9 +1413,9 @@ time ("processing power"),<a href="#section-2.1-8.3.1" class="pilcrow">¶</a></p
 to all or part of a combination of hardware, firmware, and essential
 infrastructure (the "platform", e.g., in <a href="#class-Fx" class="auto internal xref">Section 3.1</a>) and its
 anticipated usage (e.g., in <a href="#class-Ix" class="auto internal xref">Section 5.2</a>).<a href="#section-2.1-9" class="pilcrow">¶</a></p>
-<p id="section-2.1-10"><a href="#devclass" class="auto internal xref">Section 3</a> defines a number of interesting classes ("class-N") of
-constrained nodes focusing on relevant combinations of
-the first two constraints.
+<p id="section-2.1-10"><a href="#devclass" class="auto internal xref">Section 3</a> defines a number of interesting classes ("class-N" for a
+range of numbers N) of constrained nodes focusing on relevant
+combinations of the first two constraints.
 With respect to available power, <span>[<a href="#RFC6606" class="cite xref">RFC6606</a>]</span> distinguishes
 "power-affluent" nodes (mains-powered or regularly recharged) from
 "power-constrained nodes" that draw their power from primary batteries
@@ -1672,7 +1672,7 @@ a strong design constraint).<a href="#section-3-5" class="pilcrow">¶</a></p>
 <table class="center" id="table-1">
         <caption>
 <a href="#table-1" class="selfRef">Table 1</a>:
-<a href="#name-classes-of-constrained-devic" class="selfRef">Classes of Constrained Devices (KiB = 1024 bytes)</a>
+<a href="#name-classes-of-constrained-devic" class="selfRef">Classes of Constrained Devices (KiB/MiB/GiB = 2¹⁰/2²⁰/2³⁰ bytes)</a>
         </caption>
 <thead>
           <tr>
@@ -2499,6 +2499,7 @@ techniques.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
               <th class="text-left" rowspan="1" colspan="1">Name</th>
               <th class="text-left" rowspan="1" colspan="1">PHY bit rate (bit/s)</th>
               <th class="text-left" rowspan="1" colspan="1">Comment</th>
+              <th class="text-left" rowspan="1" colspan="1">Header compression</th>
             </tr>
           </thead>
           <tbody>
@@ -2506,24 +2507,28 @@ techniques.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
               <td class="text-left" rowspan="1" colspan="1">B0</td>
               <td class="text-left" rowspan="1" colspan="1">&lt; 10</td>
               <td class="text-left" rowspan="1" colspan="1">Transmission time of 150-byte frame &gt; MSL</td>
+              <td class="text-left" rowspan="1" colspan="1">indispensable as part of system architecture</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">B1</td>
               <td class="text-left" rowspan="1" colspan="1">10 – 10<sup>3</sup>
 </td>
               <td class="text-left" rowspan="1" colspan="1">Unresponsiveness if human expects reaction to sent frame (frame size &gt; 62.5 byte)</td>
+              <td class="text-left" rowspan="1" colspan="1">vital</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">B2</td>
               <td class="text-left" rowspan="1" colspan="1">10<sup>3</sup> – 10<sup>6</sup>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Responsiveness if human expects reaction to sent frame, but header compression still needed</td>
+              <td class="text-left" rowspan="1" colspan="1">Responsiveness if human expects reaction to sent frame</td>
+              <td class="text-left" rowspan="1" colspan="1">yields significant performance benefits</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">B3</td>
               <td class="text-left" rowspan="1" colspan="1">&gt; 10<sup>6</sup>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Header compression yields relatively low performance benefits</td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1">yields limited performance benefits</td>
             </tr>
           </tbody>
         </table>
@@ -2769,7 +2774,7 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
         <dt id="appendix-B-1.1">
 <a href="#devclasstbl" class="auto internal xref">Table 1</a>:</dt>
         <dd style="margin-left: 5.5em" id="appendix-B-1.2">
-          <p id="appendix-B-1.2.1"><a href="#devclasstbl" class="internal xref">Classes of Constrained Devices (KiB = 1024 bytes)</a><a href="#appendix-B-1.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-1.2.1"><a href="#devclasstbl" class="internal xref">Classes of Constrained Devices (KiB/MiB/GiB = 2¹⁰/2²⁰/2³⁰ bytes)</a><a href="#appendix-B-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-1.3">

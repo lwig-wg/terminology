@@ -271,9 +271,9 @@ Internet-Draft               CNN Terminology               November 2025
    infrastructure (the "platform", e.g., in Section 3.1) and its
    anticipated usage (e.g., in Section 5.2).
 
-   Section 3 defines a number of interesting classes ("class-N") of
-   constrained nodes focusing on relevant combinations of the first two
-   constraints.  With respect to available power, [RFC6606]
+   Section 3 defines a number of interesting classes ("class-N" for a
+   range of numbers N) of constrained nodes focusing on relevant
+   combinations of the first two constraints.  With respect to available
 
 
 
@@ -282,10 +282,10 @@ Bormann, et al.            Expires 8 May 2026                   [Page 5]
 Internet-Draft               CNN Terminology               November 2025
 
 
-   distinguishes "power-affluent" nodes (mains-powered or regularly
-   recharged) from "power-constrained nodes" that draw their power from
-   primary batteries or by using energy harvesting; more detailed power
-   terminology is given in Section 4.
+   power, [RFC6606] distinguishes "power-affluent" nodes (mains-powered
+   or regularly recharged) from "power-constrained nodes" that draw
+   their power from primary batteries or by using energy harvesting;
+   more detailed power terminology is given in Section 4.
 
    The use of constrained nodes in networks often also leads to
    constraints on the networks themselves.  However, there may also be
@@ -602,14 +602,14 @@ Internet-Draft               CNN Terminology               November 2025
    |       | C19     |                   |               |             |
    +-------+---------+-------------------+---------------+-------------+
 
-         Table 1: Classes of Constrained Devices (KiB = 1024 bytes)
+           Table 1: Classes of Constrained Devices (KiB/MiB/GiB =
+                             2¹⁰/2²⁰/2³⁰ bytes)
 
    As of the writing of this document, these characteristics correspond
    to distinguishable clusters of commercially available chips and
    design cores for constrained devices.  While it is expected that the
    boundaries of these classes will move over time, Moore's law tends to
    be less effective in the embedded space than in personal computing
-   devices: gains made available by increases in transistor count and
 
 
 
@@ -618,6 +618,7 @@ Bormann, et al.            Expires 8 May 2026                  [Page 11]
 Internet-Draft               CNN Terminology               November 2025
 
 
+   devices: gains made available by increases in transistor count and
    density are more likely to be invested in reductions of cost and
    power requirements than into continual increases in computing power.
    (This effect is less pronounced in the multi-chip J-group
@@ -665,7 +666,6 @@ Internet-Draft               CNN Terminology               November 2025
    Constrained devices with capabilities significantly beyond Class 2
    devices exist.  They are less demanding from a standards development
    point of view as they can largely use existing protocols unchanged.
-   The previous version of the present document therefore did not make
 
 
 
@@ -674,6 +674,7 @@ Bormann, et al.            Expires 8 May 2026                  [Page 12]
 Internet-Draft               CNN Terminology               November 2025
 
 
+   The previous version of the present document therefore did not make
    any attempt to define constrained classes beyond Class 2.  These
    devices, and to a certain extent even J-group devices, can still be
    constrained by a limited energy supply.  Class 3 and 4 devices are
@@ -706,7 +707,6 @@ Internet-Draft               CNN Terminology               November 2025
 
    Platforms may differ in their firmware or software upgradability.
    The below is a first attempt at classifying this.
-
 
 
 
@@ -1234,22 +1234,29 @@ Bormann, et al.            Expires 8 May 2026                  [Page 22]
 Internet-Draft               CNN Terminology               November 2025
 
 
-   +======+==============+============================================+
-   | Name | PHY bit rate | Comment                                    |
-   |      | (bit/s)      |                                            |
-   +======+==============+============================================+
-   | B0   | < 10         | Transmission time of 150-byte frame > MSL  |
-   +------+--------------+--------------------------------------------+
-   | B1   | 10 – 10^3    | Unresponsiveness if human expects reaction |
-   |      |              | to sent frame (frame size > 62.5 byte)     |
-   +------+--------------+--------------------------------------------+
-   | B2   | 10^3 – 10^6  | Responsiveness if human expects reaction   |
-   |      |              | to sent frame, but header compression      |
-   |      |              | still needed                               |
-   +------+--------------+--------------------------------------------+
-   | B3   | > 10^6       | Header compression yields relatively low   |
-   |      |              | performance benefits                       |
-   +------+--------------+--------------------------------------------+
+      +======+=========+========================+==================+
+      | Name | PHY bit | Comment                | Header           |
+      |      | rate    |                        | compression      |
+      |      | (bit/s) |                        |                  |
+      +======+=========+========================+==================+
+      | B0   | < 10    | Transmission time of   | indispensable as |
+      |      |         | 150-byte frame > MSL   | part of system   |
+      |      |         |                        | architecture     |
+      +------+---------+------------------------+------------------+
+      | B1   | 10 –    | Unresponsiveness if    | vital            |
+      |      | 10^3    | human expects reaction |                  |
+      |      |         | to sent frame (frame   |                  |
+      |      |         | size > 62.5 byte)      |                  |
+      +------+---------+------------------------+------------------+
+      | B2   | 10^3 –  | Responsiveness if      | yields           |
+      |      | 10^6    | human expects reaction | significant      |
+      |      |         | to sent frame          | performance      |
+      |      |         |                        | benefits         |
+      +------+---------+------------------------+------------------+
+      | B3   | > 10^6  |                        | yields limited   |
+      |      |         |                        | performance      |
+      |      |         |                        | benefits         |
+      +------+---------+------------------------+------------------+
 
                Table 12: Classes of Physical Layer Bitrate
 
@@ -1275,13 +1282,6 @@ Internet-Draft               CNN Terminology               November 2025
    B2 technologies do not incur responsiveness problems, but still
    benefit from using header compression techniques (e.g., [RFC6282]) to
    achieve performance improvements.
-
-
-
-
-
-
-
 
 
 
@@ -1560,8 +1560,8 @@ Appendix A.  Changes Since RFC 7228
 
 List of Tables
 
-   Table 1:   Classes of Constrained Devices (KiB = 1024 bytes)
-   Table 2:   Levels of Software Update Capabilities
+   Table 1:   Classes of Constrained Devices (KiB/MiB/GiB = 2¹⁰/2²⁰/2³⁰
+              bytes)
 
 
 
@@ -1570,6 +1570,7 @@ Bormann, et al.            Expires 8 May 2026                  [Page 28]
 Internet-Draft               CNN Terminology               November 2025
 
 
+   Table 2:   Levels of Software Update Capabilities
    Table 3:   Levels of Isolation Capabilities
    Table 4:   Levels of Secret Shielding Capabilities
    Table 5:   Quantities Relevant to Power and Energy
@@ -1617,7 +1618,6 @@ Authors' Addresses
    Spain
    Phone: +34-93-413-7206
    Email: carlesgo@entel.upc.edu
-
 
 
 
