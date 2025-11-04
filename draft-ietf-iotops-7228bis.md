@@ -276,9 +276,9 @@ to all or part of a combination of hardware, firmware, and essential
 infrastructure (the "platform", e.g., in {{class-Fx}}) and its
 anticipated usage (e.g., in {{class-Ix}}).
 
-{{devclass}} defines a number of interesting classes ("class-N") of
-constrained nodes focusing on relevant combinations of
-the first two constraints.
+{{devclass}} defines a number of interesting classes ("class-N" for a
+range of numbers N) of constrained nodes focusing on relevant
+combinations of the first two constraints.
 With respect to available power, {{RFC6606}} distinguishes
 "power-affluent" nodes (mains-powered or regularly recharged) from
 "power-constrained nodes" that draw their power from primary batteries
@@ -509,7 +509,7 @@ a strong design constraint).
 | J     | Class 16, C16 | 1..4 GiB              | (lots)                  | Smartphones     |
 | J     | Class 17, C17 | 4..32 GiB             | (lots)                  | Laptops         |
 | J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
-{: #devclasstbl title='Classes of Constrained Devices (KiB = 1024 bytes)' cols="l 20l l l l"}
+{: #devclasstbl title='Classes of Constrained Devices (KiB/MiB/GiB = 2¹⁰/2²⁰/2³⁰ bytes)' cols="l 20l l l l"}
 
 As of the writing of this document, these characteristics correspond
 to distinguishable clusters of commercially available chips and design
@@ -946,12 +946,11 @@ techniques.
 
 {{phyratetbl}} lists the classes of PHY bit rate.
 
-| Name | PHY bit rate (bit/s)             | Comment                                                                                     |
-|------+----------------------------------+---------------------------------------------------------------------------------------------|
-| B0   | < 10                             | Transmission time of 150-byte frame > MSL                                                   |
-| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte)           |
-| B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame, but header compression still needed |
-| B3   | > 10<sup>6</sup>                 | Header compression yields relatively low performance benefits                               |
+| Name | PHY bit rate (bit/s)            | Comment                                                                           | Header compression                           |
+| B0   | < 10                            | Transmission time of 150-byte frame > MSL                                         | indispensable as part of system architecture |
+| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte) | vital                                        |
+| B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame                            | yields significant performance benefits      |
+| B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits   |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
 (note: 'Bx' stands for 'Bit rate x')
@@ -1010,7 +1009,7 @@ A wider view of security in constrained-node networks is provided in {{-IOT-SECU
 
 # Changes Since RFC 7228
 
-The following changes have been made to the guidelines published in {{?RFC7228}}:
+The following changes have been made to the guidelines published in {{RFC7228}}:
 
 * Updated references
 * Added new terms such as "Capable Node"
