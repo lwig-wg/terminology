@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-02T01:41:12.495916+00:00",
+  "timestamp": "2025-11-04T01:37:01.211177+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -50,7 +50,7 @@
       "id": "I_kwDOBMYTbM6DYrl5",
       "title": "Secret shielding and isolation: Where do memory lockouts sit?",
       "url": "https://github.com/lwig-wg/terminology/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "chrysn",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -59,8 +59,8 @@
       ],
       "body": "Looking at DICE style bootloaders and reading 7228bis, I find the terminology around isolation and secret shielding a bit lacking. A distinction I'm coming to find relevant is whether the device can support security after compromise of \"privileged\" software.\r\n\r\nI'm putting \"privileged\" in quotes here because every platform supports secure enclaves and isolation if it considers regards its bare-metal software as part of the secure zone (and, for example runs a virtual machine), but the implication of \"supports virtualization\" is that the virtualized software can run at bare metal speed without a complex runtime, and (given it is relevant to real time systems) that the virtualized software can define its own handlers for hardware interrupts.\r\n\r\nThe trouble with the current classification is that I wouldn't know where to put systems that don't have any trust zone or other protected hardware crypto tools, maybe not even a proper MPU, but do support lockout of certain flash pages until the next reboot. Using the DICE architecture (or any similar scheme, roughly where the bootloader accesses a secret, hashes it together with some properties of the firmware, locks the flash page and wipes all RAM except for the hash before chainloading), this can provide security after a compromise of even \"privileged\" code (as long as the flash lockout holds), and that would count as Sh>0 and maybe even Is8, but is probably not what is meant by those terms (in particular because the secure enclave can not be updated and only runs in a very very limited context) -- yet if it is not Sh>0/Is-much, it is not clear how the user of the classification can distinguish whether post-compromise security can be achieved.",
       "createdAt": "2024-03-24T10:33:24Z",
-      "updatedAt": "2025-10-23T16:11:39Z",
-      "closedAt": null,
+      "updatedAt": "2025-11-04T01:05:02Z",
+      "closedAt": "2025-11-04T01:05:02Z",
       "comments": [
         {
           "author": "cabo",
@@ -68,6 +68,13 @@
           "body": "I now mentioned this as \n\n| Is1  | Boot Lock or Flash Read Lock, until next reboot           |\n\nNot sure that this is all of issue #1 that we want to address.",
           "createdAt": "2025-10-23T16:10:47Z",
           "updatedAt": "2025-10-23T16:10:47Z"
+        },
+        {
+          "author": "chrysn",
+          "authorAssociation": "NONE",
+          "body": "Thanks. #6 solves the pressing issue that the capability of working DICE style could not be expressed. As everything from there on is done in software, I think that change suffices for the things I'd like to express/model.",
+          "createdAt": "2025-11-04T00:13:13Z",
+          "updatedAt": "2025-11-04T00:13:13Z"
         }
       ]
     },
@@ -76,7 +83,7 @@
       "id": "I_kwDOBMYTbM7TVC-G",
       "title": "ARM Profiles",
       "url": "https://github.com/lwig-wg/terminology/issues/7",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -85,8 +92,8 @@
       ],
       "body": "https://github.com/lwig-wg/terminology/blob/83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed/draft-ietf-iotops-7228bis.md?plain=1#L463\n\nMaybe consider adding a pointer to ARM ref arch for A/M/R profiles cited in the text (e.g., https://developer.arm.com/documentation/DEN0130/0100/About-the-Arm-architecture or similar).",
       "createdAt": "2025-10-23T16:24:00Z",
-      "updatedAt": "2025-10-28T08:27:46Z",
-      "closedAt": null,
+      "updatedAt": "2025-11-04T01:06:41Z",
+      "closedAt": "2025-11-04T01:06:41Z",
       "comments": []
     }
   ],
@@ -304,24 +311,26 @@
       "id": "PR_kwDOBMYTbM6vTfW1",
       "title": "Mention boot-lock/flash-read-lock as Is1; close #1",
       "url": "https://github.com/lwig-wg/terminology/pull/6",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-23T16:09:36Z",
-      "updatedAt": "2025-10-23T16:09:36Z",
+      "updatedAt": "2025-11-04T01:05:01Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "boot-lock",
       "headRefOid": "97ac03a890e6fc227380f6ce5e75252c4b6f3d55",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-04T01:05:01Z",
+      "mergedAt": "2025-11-04T01:05:01Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "8ca43ee31e758f8b0d6242c1761e6ac67bdc9c65"
+      },
       "comments": [],
       "reviews": []
     },
@@ -330,24 +339,26 @@
       "id": "PR_kwDOBMYTbM6vu9rc",
       "title": "Add citation for ARM profile terms",
       "url": "https://github.com/lwig-wg/terminology/pull/8",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Close #7 ",
       "createdAt": "2025-10-26T10:29:00Z",
-      "updatedAt": "2025-10-28T08:28:05Z",
+      "updatedAt": "2025-11-04T01:06:40Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "83c5b6b4f6e1b446ccf00d9d1e35dc918d6811ed",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "arm-profile-ref",
       "headRefOid": "37255f58d1abfcdf78f18cd3da38c83eadf964f0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-04T01:06:40Z",
+      "mergedAt": "2025-11-04T01:06:40Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "47acb5301e687a477344663a6a8d2d565492d06e"
+      },
       "comments": [],
       "reviews": []
     }
