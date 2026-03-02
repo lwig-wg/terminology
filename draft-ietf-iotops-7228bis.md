@@ -884,12 +884,17 @@ requirement may vary.
 
 {{mtutbl}} lists the main classes of link layer MTU size.
 
-| Name | L2 MTU size (bytes) | 6LoWPAN Fragmentation applicable*? |
-|------+---------------------+------------------------------------|
-| S0   | 3 – 12              | need new kind of fragmentation     |
-| S1   | 13 – 127            | yes                                |
-| S2   | 128 – 1279          | yes                                |
-| S3   | >= 1280             | no fragmentation needed            |
+| Name | L2 MTU size (bytes) | typical MTU (minus epsilon)    | 6LoWPAN Fragmentation applicable*? |
+|------+---------------------+--------------------------------+------------------------------------|
+| S0   | 3 – 12              |                                | (often L2 segmentation)            |
+| S1   | 13 – 127            | 80                             | yes                                |
+| S2   | 128 – 1279          | 576 (9*64)                     | yes                                |
+| S3   | ≥ 1280              | 1280 (5*256)                   | no fragmentation needed            |
+| S4   | ≥ 1500              | 1500/1536 (3*512, Ethernet)    | no fragmentation needed            |
+| S5   | ≫ 1500, ..2304      | 2304 (9*256), 2032 (MS/TP)     | no fragmentation needed            |
+| S6   | ≫ 2304, ..9216      | 9216 (9*1024, Jumbo Ethernet)  | no fragmentation needed            |
+| S8   | ≫ 9216, ..65535     | 16384, 65535                   | no fragmentation needed            |
+| S9   | ≥ 65536             | (RFC 2675 Jumbograms, unusual) | no fragmentation needed            |
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
@@ -909,8 +914,9 @@ fragmentation is needed at the adaptation layer below IPv6.
 6LoWPAN fragmentation {{RFC4944}} can be used to carry 1280-byte IPv6
 packets over these technologies.
 
-S3 technologies do not require fragmentation to support the IPv6 MTU
-requirement.
+S3 or higher technologies do not require fragmentation to support the IPv6 MTU
+requirement; S5 and above often create islands of higher MTU in an
+otherwise Ethernet-inspired L2 network.
 
 ## Class of Internet Integration {#class-Ix}
 
