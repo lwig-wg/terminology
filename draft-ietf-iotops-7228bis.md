@@ -181,7 +181,8 @@ The present document is a revision of {{RFC7228}}.
 In this document, the term "byte" is used in its now customary sense
 as a synonym for "octet".  Where sizes of semiconductor memory are
 given, the prefix "kibi" (1024) is combined with "byte" to "kibibyte",
-abbreviated "KiB", for 1024 bytes {{ISQ-13}}.
+abbreviated "KiB", for 1024 bytes {{ISQ-13}} or 2<sup>10</sup> bytes.
+Similarly, MiB stands for 2<sup>20</sup> and GiB for 2<sup>30</sup> bytes.
 
 Superscript notation denotes exponentiation.
 For example, 10 raised to the 100th is notated: 10<sup>100</sup>,
@@ -503,13 +504,14 @@ a strong design constraint).
 | M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               | STM32F103CB     |
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               | STM32F103RC     |
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
-| M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | "Luxury"        |
+| M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | STM32F746/767   |
 | J     | Class 10, C10 | (16..)32..64..128 MiB | 4..8..16 MiB            | OpenWRT routers |
 | J     | Class 15, C15 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
 | J     | Class 16, C16 | 1..4 GiB              | (lots)                  | Smartphones     |
 | J     | Class 17, C17 | 4..32 GiB             | (lots)                  | Laptops         |
 | J     | Class 19, C19 | (lots)                | (lots)                  | Servers         |
-{: #devclasstbl title='Classes of Constrained Devices (KiB/MiB/GiB = 2¹⁰/2²⁰/2³⁰ bytes)' cols="l 20l l l l"}
+{: #devclasstbl title='Classes of Constrained (and More Capable) Devices'
+   cols="l 20l l l l"}
 
 As of the writing of this document, these characteristics correspond
 to distinguishable clusters of commercially available chips and design
@@ -524,7 +526,7 @@ architectures; e.g., class 10 usage for OpenWRT has started at 4/16
 MiB Flash/RAM, with an early lasting minimum at 4/32, to now requiring
 8/64 and recommending 16/128 for modern software releases {{W432}}.)
 
-Class 0 devices are very constrained sensor-like motes.  They are so
+Class 0 devices are very constrained, often tiny sensor nodes or tags.  They are so
 severely constrained in memory and processing capabilities that most
 likely they will not have the resources required to communicate
 directly with the Internet in a secure manner (rare heroic, narrowly
@@ -928,20 +930,23 @@ scenarios, see also {{Section 2.2 of RFC7452}}).
 More general devices are prepared to
 communicate with other nodes in the Internet as well.
 
-{{internettbl}} defines the classes of Internet technology level.
+{{internettbl}} defines the classes of Internet integration level.
 
-| Name | Internet technology                  |
-|------+--------------------------------------|
-| I0   | none (local interconnect only)       |
-| I1   | device-to-cloud only                 |
-| I9   | full Internet connectivity supported |
-{: #internettbl title='Classes of Internet Technology Level'}
+| Name | Internet technology                                                  |
+|------+----------------------------------------------------------------------|
+| I0   | none (local interconnect only)                                       |
+| I1   | device-to-cloud only                                                 |
+| I2   | device-to-cloud via a local (edge) gateway, mediated internet access |
+| I9   | full Internet connectivity supported                                 |
+{: #internettbl title='Classes of Internet Integration Level'}
 
 
 ## Classes of physical layer bit rate
 
+<!--
 \[This section could be expanded to also talk about
 burst rate vs. sustained rate; bits/s vs. messages/s, ...]
+ -->
 
 Physical layer technologies used by constrained devices can be
 categorized on the basis of physical layer (PHY) bit rate. The PHY bit
@@ -959,7 +964,7 @@ techniques.
 | B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits   |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
-(note: 'Bx' stands for 'Bit rate x')
+(note: 'Bx' stands for 'Bit rate class x')
 
 B0 technologies lead to very high transmission times, which may be close
 to or even greater than the Maximum Segment Lifetime (MSL) assumed on
@@ -1030,4 +1035,4 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
 
-TBD
+TBD — to be completed after review process concludes.
