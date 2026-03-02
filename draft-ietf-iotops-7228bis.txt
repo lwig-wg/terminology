@@ -102,7 +102,7 @@ Table of Contents
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  18
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  21
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
-     5.2.  Class of Internet Integration . . . . . . . . . . . . . .  22
+     5.2.  Classes of Internet Integration . . . . . . . . . . . . .  22
      5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  23
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  24
    7.  Security Considerations . . . . . . . . . . . . . . . . . . .  24
@@ -142,13 +142,13 @@ Internet-Draft               CNN Terminology                  March 2026
    resources and could support the interaction between the constrained
    devices and applications in more traditional networks.
 
-   Today, diverse sizes of constrained devices with different resources
-   and capabilities are becoming connected.  Mobile personal gadgets,
-   building-automation devices, cellular phones, machine-to-machine
-   (M2M) devices, and other devices benefit from interacting with other
-   "things" nearby or somewhere in the Internet.  With this, the
-   Internet of Things (IoT) became a reality, built up out of uniquely
-   identifiable and addressable objects (things).
+   Today, constrained devices with different resources and capabilities
+   are becoming connected.  Mobile personal gadgets, building-automation
+   devices, cellular phones, machine-to-machine (M2M) devices, and other
+   devices benefit from interacting with other "things" nearby or
+   somewhere in the Internet.  With this, the Internet of Things (IoT)
+   became a reality, built up out of uniquely identifiable and
+   addressable objects (things).
 
    The present document provides a number of basic terms that have been
    useful in research and standardization work for constrained
@@ -156,11 +156,11 @@ Internet-Draft               CNN Terminology                  March 2026
    but to make sure a few core terms are used consistently between
    different groups cooperating in this space.
 
-   The present document is a revision of [RFC7228].
-
-
-
-
+   The present document is a revision of [RFC7228], updated to the
+   situation a dozen years later, adding useful terminology, and with
+   new sections and subsections discussing classes of specific
+   characteristics.  See Appendix A for a slightly more detailed list of
+   changes.
 
 
 
@@ -200,7 +200,7 @@ Internet-Draft               CNN Terminology                  March 2026
       nodes, while
 
    *  scaling down the characteristics of each of these nodes and of the
-      networks being built out of them, to make this scaling up
+      networks being built out of them, to make this massive scaling up
       economically and physically viable.
 
    The need for scaling down the characteristics of nodes leads to
@@ -262,7 +262,8 @@ Internet-Draft               CNN Terminology                  March 2026
 
    *  constraints on the available power and/or total energy,
 
-   *  constraints on the security characteristics attainable, and
+   *  constraints on the security properties and guarantees attainable,
+      and
 
    *  constraints on user interface and accessibility in deployment
       (ability to set keys, update software, etc.).
@@ -271,7 +272,6 @@ Internet-Draft               CNN Terminology                  March 2026
    to all or part of a combination of hardware, firmware, and essential
    infrastructure (the "platform", e.g., in Section 3.1) and its
    anticipated usage (e.g., in Section 5.2).
-
 
 
 
@@ -429,7 +429,7 @@ Internet-Draft               CNN Terminology                  March 2026
    [RFC6551].  Not all LLNs comprise low-power nodes
    [I-D.hui-vasseur-roll-rpl-deployment].
 
-   LLNs typically are composed of constrained nodes; this leads to the
+   LLNs are typically composed of constrained nodes; this leads to the
    design of operation modes such as the "non-storing mode" defined by
    RPL (the IPv6 Routing Protocol for Low-Power and Lossy Networks
    [RFC6550]).  So, in the terminology of the present document, an LLN
@@ -485,12 +485,12 @@ Internet-Draft               CNN Terminology                  March 2026
    *  Microcontroller-class devices (e.g., called "M-Profile" in
       [ARM-ARCH]).  These often (but not always) include RAM and code
       storage on chip and would struggle to support more powerful
-      general-purpose operating systems, e.g., they do not have an
-      Memory Management Unit (MMU).  They use most of their pins for
-      interfaces to application hardware such as digital in/out (the
-      latter often Pulse Width Modulation (PWM)-controllable), ADC/DACs
-      (analog-to-digital and digital-to-analog converters), etc.  Where
-      this hardware is specialized for an application, we may talk about
+      general-purpose operating systems, e.g., they do not have a Memory
+      Management Unit (MMU).  They use most of their pins for interfaces
+      to application hardware such as digital in/out (the latter often
+      Pulse Width Modulation (PWM)-controllable), ADC/DACs (analog-to-
+      digital and digital-to-analog converters), etc.  Where this
+      hardware is specialized for an application, we may talk about
       "Systems on a Chip" (SoC).  These devices often implement
       elaborate sleep modes to achieve microwatt- or at least milliwatt-
       level sustained power usage (Ps, see Section 4.1).
@@ -510,7 +510,7 @@ Internet-Draft               CNN Terminology                  March 2026
       providing an MMU.  Many of the pins on the CPU chip are dedicated
       to interfacing with RAM and other memory.  Some general-purpose-
       class devices integrate some application hardware such as video
-      controllers, these are often also called SOC.  While these chips
+      controllers, these are often also called SoC.  While these chips
       also include sleep modes, they are usually more on the watt side
       of sustained power usage (Ps).
 
@@ -1041,8 +1041,8 @@ Internet-Draft               CNN Terminology                  March 2026
    during its entire life, or the wall-clock time may need to be reset
    after a battery change.  Even devices that have a battery lasting for
    their lifetime may not be set to wall-clock time at manufacture time,
-   possibly because the battery is only activated at installation time
-   where time sources may be questionable or because setting the clock
+   possibly because the battery is only activated at installation time,
+   when time sources may be questionable or because setting the clock
    during manufacture is deemed too much effort.
 
    Devices that keep a good approximation of wall-clock time during
@@ -1196,7 +1196,7 @@ Internet-Draft               CNN Terminology                  March 2026
    IPv6 MTU requirement; S5 and above often create islands of higher MTU
    in an otherwise Ethernet-inspired L2 network.
 
-5.2.  Class of Internet Integration
+5.2.  Classes of Internet Integration
 
    The term "Internet of Things" is sometimes confusingly used for
    connected devices that are not actually employing Internet
@@ -1243,7 +1243,8 @@ Internet-Draft               CNN Terminology                  March 2026
    Internet, responsiveness to frame transmissions and need for header
    compression techniques.
 
-   Table 12 lists the classes of PHY bit rate.
+   Table 12 lists the classes of PHY bit rate ('Bx' stands for 'Bit rate
+   class x').
 
       +======+=========+========================+==================+
       | Name | PHY bit | Comment                | Header           |
@@ -1271,8 +1272,6 @@ Internet-Draft               CNN Terminology                  March 2026
 
                Table 12: Classes of Physical Layer Bitrate
 
-   (note: 'Bx' stands for 'Bit rate class x')
-
    B0 technologies lead to very high transmission times, which may be
    close to or even greater than the Maximum Segment Lifetime (MSL)
    assumed on the Internet (Section 3.4.2 of RFC 9293 [STD7]).  Many
@@ -1281,6 +1280,7 @@ Internet-Draft               CNN Terminology                  March 2026
    B0 technologies lead to a frame transmission time greater than the
    MSL for a frame size ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s
    need ≥ 120 s = 2 min).
+
 
 
 

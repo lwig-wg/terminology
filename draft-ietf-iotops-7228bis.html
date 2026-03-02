@@ -1225,7 +1225,7 @@ been useful in research and standardization work for constrained-node networks.<
                 <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-classes-of-link-layer-mtu-s" class="internal xref">Classes of Link Layer MTU Size</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-class-of-internet-integrati" class="internal xref">Class of Internet Integration</a></p>
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-classes-of-internet-integra" class="internal xref">Classes of Internet Integration</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
                 <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-classes-of-physical-layer-b" class="internal xref">Classes of physical layer bit rate</a></p>
@@ -1282,8 +1282,9 @@ Other entities on the network, e.g., a base station or controlling
 server, might have more computational and communication resources and
 could support the interaction between the constrained devices and
 applications in more traditional networks.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Today, diverse sizes of constrained devices with different resources
-and capabilities are becoming connected.  Mobile personal gadgets,
+<p id="section-1-3">Today, constrained devices with different resources and capabilities
+are becoming connected.
+Mobile personal gadgets,
 building-automation devices, cellular phones, machine-to-machine (M2M)
 devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
@@ -1294,7 +1295,11 @@ been useful in research and standardization work for constrained
 environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">The present document is a revision of <span>[<a href="#RFC7228" class="cite xref">RFC7228</a>]</span>.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-5">The present document is a revision of <span>[<a href="#RFC7228" class="cite xref">RFC7228</a>]</span>, updated to the
+situation a dozen years later, adding useful terminology, and with new
+sections and subsections discussing classes of specific
+characteristics.
+See <a href="#changes" class="auto internal xref">Appendix A</a> for a slightly more detailed list of changes.<a href="#section-1-5" class="pilcrow">¶</a></p>
 <div id="conventions-used-in-this-document">
 <section id="section-1.1">
         <h3 id="name-conventions-used-in-this-do">
@@ -1334,7 +1339,7 @@ inexpensive nodes, while<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.2">
           <p id="section-2-2.2.1">scaling down the characteristics of each of these nodes and of the
-networks being built out of them, to make this scaling up economically
+networks being built out of them, to make this massive scaling up economically
 and physically viable.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
@@ -1403,7 +1408,7 @@ time ("processing power"),<a href="#section-2.1-8.3.1" class="pilcrow">¶</a></p
             <p id="section-2.1-8.4.1">constraints on the available power and/or total energy,<a href="#section-2.1-8.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-8.5">
-            <p id="section-2.1-8.5.1">constraints on the security characteristics attainable, and<a href="#section-2.1-8.5.1" class="pilcrow">¶</a></p>
+            <p id="section-2.1-8.5.1">constraints on the security properties and guarantees attainable, and<a href="#section-2.1-8.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-8.6">
             <p id="section-2.1-8.6.1">constraints on user interface and accessibility in deployment
@@ -1579,7 +1584,7 @@ and some short-term unreliability, coupled with some medium-term
 stability that makes it worthwhile to both (1) construct directed acyclic graphs
 that are medium-term stable for routing and (2) do measurements on the edges
 such as Expected Transmission Count (ETX) <span>[<a href="#RFC6551" class="cite xref">RFC6551</a>]</span>.  Not all LLNs comprise low-power nodes <span>[<a href="#I-D.hui-vasseur-roll-rpl-deployment" class="cite xref">I-D.hui-vasseur-roll-rpl-deployment</a>]</span>.<a href="#section-2.3.1-3" class="pilcrow">¶</a></p>
-<p id="section-2.3.1-4">LLNs typically are composed
+<p id="section-2.3.1-4">LLNs are typically composed
 of constrained nodes; this leads to the design of
 operation modes such as the "non-storing mode" defined by RPL (the
 IPv6 Routing Protocol for Low-Power and Lossy Networks <span>[<a href="#RFC6550" class="cite xref">RFC6550</a>]</span>).  So, in the
@@ -1639,7 +1644,7 @@ devices based on their CPU capabilities:<a href="#section-3-2" class="pilcrow">�
           <p id="section-3-3.1.1">Microcontroller-class devices (e.g., called "M-Profile" in <span>[<a href="#ARM-ARCH" class="cite xref">ARM-ARCH</a>]</span>).
 These often (but not always) include RAM and code storage on chip
 and would struggle to support more powerful general-purpose operating systems, e.g.,
-they do not have an Memory Management Unit (MMU).  They use most of
+they do not have a Memory Management Unit (MMU).  They use most of
 their pins for interfaces to application hardware such as digital
 in/out (the latter often Pulse Width Modulation (PWM)-controllable),
 ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
@@ -1656,7 +1661,7 @@ packages), and offer support for general-purpose operating systems
 such as Linux, such as by providing an MMU.  Many of the pins on the CPU chip are
 dedicated to interfacing with RAM and other memory.  Some
 general-purpose-class devices integrate some application hardware
-such as video controllers, these are often also called SOC.
+such as video controllers, these are often also called SoC.
 While these chips also include sleep modes, they are
 usually more on the watt side of sustained power usage (Ps).<a href="#section-3-3.2.1" class="pilcrow">¶</a></p>
 </li>
@@ -2249,8 +2254,8 @@ remains, which is the more fundamental characteristic to discuss.<a href="#secti
 during its entire life, or the wall-clock time may need to be reset
 after a battery change.  Even devices that have a battery lasting for
 their lifetime may not be set to wall-clock time at manufacture time,
-possibly because the battery is only activated at installation time
-where time sources may be questionable or because setting the clock
+possibly because the battery is only activated at installation time,
+when time sources may be questionable or because setting the clock
 during manufacture is deemed too much effort.<a href="#section-4.4-8" class="pilcrow">¶</a></p>
 <p id="section-4.4-9">Devices that keep a good approximation of wall-clock time during their
 life may be in a better position to securely validate external time
@@ -2472,8 +2477,8 @@ otherwise Ethernet-inspired L2 network.<a href="#section-5.1-7" class="pilcrow">
 </div>
 <div id="class-Ix">
 <section id="section-5.2">
-        <h3 id="name-class-of-internet-integrati">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-class-of-internet-integrati" class="section-name selfRef">Class of Internet Integration</a>
+        <h3 id="name-classes-of-internet-integra">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-classes-of-internet-integra" class="section-name selfRef">Classes of Internet Integration</a>
         </h3>
 <p id="section-5.2-1">The term "Internet of Things" is sometimes confusingly used for
 connected devices that are not actually employing Internet technology.
@@ -2483,11 +2488,11 @@ scenarios, see also <span><a href="https://rfc-editor.org/rfc/rfc7452#section-2.
 More general devices are prepared to
 communicate with other nodes in the Internet as well.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.2-2"><a href="#internettbl" class="auto internal xref">Table 11</a> defines the classes of Internet integration level.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
-<span id="name-classes-of-internet-integra"></span><div id="internettbl">
+<span id="name-classes-of-internet-integrat"></span><div id="internettbl">
 <table class="center" id="table-11">
           <caption>
 <a href="#table-11" class="selfRef">Table 11</a>:
-<a href="#name-classes-of-internet-integra" class="selfRef">Classes of Internet Integration Level</a>
+<a href="#name-classes-of-internet-integrat" class="selfRef">Classes of Internet Integration Level</a>
           </caption>
 <thead>
             <tr>
@@ -2528,7 +2533,7 @@ rate class of a technology has important implications with regard to
 compatibility with existing protocols and mechanisms on the Internet,
 responsiveness to frame transmissions and need for header compression
 techniques.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
-<p id="section-5.3-2"><a href="#phyratetbl" class="auto internal xref">Table 12</a> lists the classes of PHY bit rate.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.3-2"><a href="#phyratetbl" class="auto internal xref">Table 12</a> lists the classes of PHY bit rate ('Bx' stands for 'Bit rate class x').<a href="#section-5.3-2" class="pilcrow">¶</a></p>
 <span id="name-classes-of-physical-layer-bi"></span><div id="phyratetbl">
 <table class="center" id="table-12">
           <caption>
@@ -2574,8 +2579,7 @@ techniques.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
           </tbody>
         </table>
 </div>
-<p id="section-5.3-4">(note: 'Bx' stands for 'Bit rate class x')<a href="#section-5.3-4" class="pilcrow">¶</a></p>
-<p id="section-5.3-5">B0 technologies lead to very high transmission times, which may be close
+<p id="section-5.3-4">B0 technologies lead to very high transmission times, which may be close
 to or even greater than the Maximum Segment Lifetime (MSL) assumed on
 the Internet (Section <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4.2" class="relref">3.4.2</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>).
 Many Internet protocols and mechanisms will fail
@@ -2583,24 +2587,24 @@ when transmission times, and thus latencies, are greater than the MSL
 <span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>.
 B0 technologies lead to a
 frame transmission time greater than the MSL for a frame size ≥ 150
-bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).<a href="#section-5.3-5" class="pilcrow">¶</a></p>
-<p id="section-5.3-6">B1 technologies offer transmission times which are lower than the MSL
+bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).<a href="#section-5.3-4" class="pilcrow">¶</a></p>
+<p id="section-5.3-5">B1 technologies offer transmission times which are lower than the MSL
 (for a frame size greater than 150 bytes).  However, transmission times
 for B1 technologies are still significant if a human expects a reaction
 to the transmission of a frame.  With B1 technologies, the transmission
 time of a frame greater than 62.5 bytes exceeds 0.5 seconds, i.e., a
 threshold time beyond which any response or reaction to a frame
-transmission will appear not to be immediate <span>[<a href="#RFC5826" class="cite xref">RFC5826</a>]</span>.<a href="#section-5.3-6" class="pilcrow">¶</a></p>
-<p id="section-5.3-7">B2 technologies do not incur responsiveness problems, but still benefit
+transmission will appear not to be immediate <span>[<a href="#RFC5826" class="cite xref">RFC5826</a>]</span>.<a href="#section-5.3-5" class="pilcrow">¶</a></p>
+<p id="section-5.3-6">B2 technologies do not incur responsiveness problems, but still benefit
 from using header compression techniques (e.g., <span>[<a href="#RFC6282" class="cite xref">RFC6282</a>]</span>) to achieve
-performance improvements.<a href="#section-5.3-7" class="pilcrow">¶</a></p>
-<p id="section-5.3-8">Over B3 technologies, the relative performance benefits of header
+performance improvements.<a href="#section-5.3-6" class="pilcrow">¶</a></p>
+<p id="section-5.3-7">Over B3 technologies, the relative performance benefits of header
 compression are low. For example, in a duty-cycled technology offering
 B3 PHY bit rates, energy consumption decrease due to header compression
 may be comparable with the energy consumed while in a sleep interval. On
 the other hand, for B3 PHY bit rates, a human user will not be able to
 perceive whether header compression has been used or not in a frame
-transmission.<a href="#section-5.3-8" class="pilcrow">¶</a></p>
+transmission.<a href="#section-5.3-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2775,7 +2779,7 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
 </dl>
 </section>
 </div>
-<div id="changes-since-rfc-7228">
+<div id="changes">
 <section id="appendix-A">
       <h2 id="name-changes-since-rfc-7228">
 <a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-changes-since-rfc-7228" class="section-name selfRef">Changes Since RFC 7228</a>
