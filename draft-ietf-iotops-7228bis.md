@@ -512,7 +512,7 @@ a strong design constraint).
 | M     | Class 1, C1   | ~ 10 KiB              | ~ 100 KiB               | STM32F103CB     |
 | M     | Class 2, C2   | ~ 50 KiB              | ~ 250 KiB               | STM32F103RC     |
 | M     | Class 3, C3   | ~ 100 KiB             | ~ 500..1000 KiB         | STM32F103RG     |
-| M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | STM32F746/767   |
+| M     | Class 4, C4   | ~ 300..1000 KiB       | ~ 1000..2000 KiB        | STM32F745/767   |
 | J     | Class 10, C10 | (16..)32..64..128 MiB | 4..8..16 MiB            | OpenWRT routers |
 | J     | Class 15, C15 | 0.5..1 GiB            | (lots)                  | Raspberry PI    |
 | J     | Class 16, C16 | 1..4 GiB              | (lots)                  | Smartphones     |
