@@ -295,6 +295,9 @@ nodes.  We therefore distinguish "constrained networks" from
 
 ## Constrained Networks {#constrained-networks}
 
+({{network-classes}} defines some specific classes of networks; the
+present section continues with some higher-level observations.)
+
 We define "constrained network" in a similar way:
 
 
@@ -455,7 +458,7 @@ technologies {{RFC7668}} {{-dectule}} {{RFC7428}} {{RFC9159}}.
 An overview over Low-Power Wide Area Network (LPWAN) technologies is
 provided by {{?RFC8376}}.
 
-# Classes of Constrained Devices {#devclass}
+# Classes of Constrained (and More Capable) Devices {#devclass}
 
 Despite the overwhelming variety of Internet-connected devices that
 can be envisioned, it may be worthwhile to have some succinct
@@ -472,15 +475,15 @@ devices based on their CPU capabilities:
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
   Where this hardware is specialized for an application, we may talk
-  about "Systems on a Chip" (SOC).  These devices often implement
+  about "Systems on a Chip" (SoC).  These devices often implement
   elaborate sleep modes to achieve microwatt- or at least
-  milliwatt-level sustained power usage (Ps, see below).
+  milliwatt-level sustained power usage (Ps, see {{scaling-properties}}).
 
 * General-purpose-class devices (e.g., called "A-Profile" in [ARM-ARCH]).
   These usually
   have RAM and Flash storage on separate chips (not always separate
   packages), and offer support for general-purpose operating systems
-  such as Linux, such as an MMU.  Many of the pins on the CPU chip are
+  such as Linux, such as by providing an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
   such as video controllers, these are often also called SOC.
@@ -854,11 +857,11 @@ performed over the network can be used to improve the uncertainty
 exhibited by these basic device classes.
 
 
-| Name | Type                             | Uncertainty (roughly)       |
-| T0   | no concept of time               | infinite                    |
-| T1   | relative time while awake        | (usually high)              |
-| T2   | relative time                    | (usually high during sleep) |
-| T3   | relative time                    | 10<sup>-4</sup> or better              |
+| Name | Type                             | Uncertainty (roughly)                  |
+| T0   | no concept of time               | infinite                               |
+| T1   | relative time while awake        | (usually high)                         |
+| T2   | relative time even across sleeps | (usually high during sleep)            |
+| T3   | relative time even across sleeps | 10<sup>-4</sup> or better              |
 | T5   | absolute time (e.g., since boot) | 10<sup>-4</sup> or better              |
 | T7   | wall-clock time                  | 10<sup>-4</sup> or better              |
 | T8   | wall-clock time                  | 10<sup>-5</sup> or better              |
@@ -875,7 +878,7 @@ exhibited by these basic device classes.
 Further parameters that can be used to discuss clock quality can be
 found in {{Section 3.5 of -time-tag}}.
 
-# Classes of Networks
+# Classes of Networks {#network-classes}
 
 ## Classes of Link Layer MTU Size
 
@@ -886,7 +889,7 @@ requirement may vary.
 
 {{mtutbl}} lists the main classes of link layer MTU size.
 
-| Name | L2 MTU size (bytes) | typical MTU (minus epsilon)    | 6LoWPAN Fragmentation applicable*? |
+| Name | L2 MTU size (bytes) | example MTU (minus epsilon) | 6LoWPAN Fragmentation applicable*? |
 |------+---------------------+--------------------------------+------------------------------------|
 | S0   | 3 – 12              |                                | (often L2 segmentation)            |
 | S1   | 13 – 127            | 80                             | yes                                |
@@ -961,7 +964,7 @@ techniques.
 | B0   | < 10                            | Transmission time of 150-byte frame > MSL                                         | indispensable as part of system architecture |
 | B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte) | vital                                        |
 | B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame                            | yields significant performance benefits      |
-| B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits   |
+| B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits          |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
 (note: 'Bx' stands for 'Bit rate class x')
