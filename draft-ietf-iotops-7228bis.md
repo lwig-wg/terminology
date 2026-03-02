@@ -160,8 +160,9 @@ server, might have more computational and communication resources and
 could support the interaction between the constrained devices and
 applications in more traditional networks.
 
-Today, diverse sizes of constrained devices with different resources
-and capabilities are becoming connected.  Mobile personal gadgets,
+Today, constrained devices with different resources and capabilities
+are becoming connected.
+Mobile personal gadgets,
 building-automation devices, cellular phones, machine-to-machine (M2M)
 devices, and other devices benefit from interacting with other "things" nearby
 or somewhere in the Internet.  With this, the Internet of Things (IoT)
@@ -174,7 +175,11 @@ environments.  The intention is not to exhaustively cover the field
 but to make sure a few core terms are used consistently between
 different groups cooperating in this space.
 
-The present document is a revision of {{RFC7228}}.
+The present document is a revision of {{RFC7228}}, updated to the
+situation a dozen years later, adding useful terminology, and with new
+sections and subsections discussing classes of specific
+characteristics.
+See {{changes}} for a slightly more detailed list of changes.
 
 ## Conventions Used in this Document
 
@@ -209,7 +214,7 @@ There are two important aspects to *scaling* within the Internet of Things:
   inexpensive nodes, while
 
 * scaling down the characteristics of each of these nodes and of the
-  networks being built out of them, to make this scaling up economically
+  networks being built out of them, to make this massive scaling up economically
   and physically viable.
 
 
@@ -267,7 +272,7 @@ in combination, for example:
 
 * constraints on the available power and/or total energy,
 
-* constraints on the security characteristics attainable, and
+* constraints on the security properties and guarantees attainable, and
 
 * constraints on user interface and accessibility in deployment
   (ability to set keys, update software, etc.).
@@ -424,7 +429,7 @@ stability that makes it worthwhile to both (1) construct directed acyclic graphs
 that are medium-term stable for routing and (2) do measurements on the edges
 such as Expected Transmission Count (ETX) {{RFC6551}}.  Not all LLNs comprise low-power nodes {{-RPL-DEPLOYMENT}}.
 
-LLNs typically are composed
+LLNs are typically composed
 of constrained nodes; this leads to the design of
 operation modes such as the "non-storing mode" defined by RPL (the
 IPv6 Routing Protocol for Low-Power and Lossy Networks {{RFC6550}}).  So, in the
@@ -470,7 +475,7 @@ devices based on their CPU capabilities:
 * Microcontroller-class devices (e.g., called "M-Profile" in [ARM-ARCH]).
   These often (but not always) include RAM and code storage on chip
   and would struggle to support more powerful general-purpose operating systems, e.g.,
-  they do not have an Memory Management Unit (MMU).  They use most of
+  they do not have a Memory Management Unit (MMU).  They use most of
   their pins for interfaces to application hardware such as digital
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
@@ -486,7 +491,7 @@ devices based on their CPU capabilities:
   such as Linux, such as by providing an MMU.  Many of the pins on the CPU chip are
   dedicated to interfacing with RAM and other memory.  Some
   general-purpose-class devices integrate some application hardware
-  such as video controllers, these are often also called SOC.
+  such as video controllers, these are often also called SoC.
   While these chips also include sleep modes, they are
   usually more on the watt side of sustained power usage (Ps).
 
@@ -838,8 +843,8 @@ Battery solutions may allow the device to keep a wall-clock time
 during its entire life, or the wall-clock time may need to be reset
 after a battery change.  Even devices that have a battery lasting for
 their lifetime may not be set to wall-clock time at manufacture time,
-possibly because the battery is only activated at installation time
-where time sources may be questionable or because setting the clock
+possibly because the battery is only activated at installation time,
+when time sources may be questionable or because setting the clock
 during manufacture is deemed too much effort.
 
 Devices that keep a good approximation of wall-clock time during their
@@ -923,7 +928,7 @@ S3 or higher technologies do not require fragmentation to support the IPv6 MTU
 requirement; S5 and above often create islands of higher MTU in an
 otherwise Ethernet-inspired L2 network.
 
-## Class of Internet Integration {#class-Ix}
+## Classes of Internet Integration {#class-Ix}
 
 The term "Internet of Things" is sometimes confusingly used for
 connected devices that are not actually employing Internet technology.
@@ -958,7 +963,7 @@ compatibility with existing protocols and mechanisms on the Internet,
 responsiveness to frame transmissions and need for header compression
 techniques.
 
-{{phyratetbl}} lists the classes of PHY bit rate.
+{{phyratetbl}} lists the classes of PHY bit rate ('Bx' stands for 'Bit rate class x').
 
 | Name | PHY bit rate (bit/s)            | Comment                                                                           | Header compression                           |
 | B0   | < 10                            | Transmission time of 150-byte frame > MSL                                         | indispensable as part of system architecture |
@@ -967,7 +972,7 @@ techniques.
 | B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits          |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
-(note: 'Bx' stands for 'Bit rate class x')
+
 
 B0 technologies lead to very high transmission times, which may be close
 to or even greater than the Maximum Segment Lifetime (MSL) assumed on
@@ -1021,7 +1026,7 @@ A wider view of security in constrained-node networks is provided in {{-IOT-SECU
 
 --- back
 
-# Changes Since RFC 7228
+# Changes Since RFC 7228 {#changes}
 
 The following changes have been made to the guidelines published in {{RFC7228}}:
 
