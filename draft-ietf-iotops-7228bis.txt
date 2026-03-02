@@ -91,7 +91,7 @@ Table of Contents
        2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   8
        2.3.2.  LoWPAN, 6LoWPAN . . . . . . . . . . . . . . . . . . .   9
        2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   9
-   3.  Classes of Constrained Devices  . . . . . . . . . . . . . . .   9
+   3.  Classes of Constrained (and More Capable) Devices . . . . . .   9
      3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  13
      3.2.  Isolation Functionality . . . . . . . . . . . . . . . . .  14
      3.3.  Shielded Secrets  . . . . . . . . . . . . . . . . . . . .  14
@@ -100,7 +100,7 @@ Table of Contents
      4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  16
      4.3.  Strategies for Using Power for Communication  . . . . . .  17
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  18
-   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  20
+   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  21
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
      5.2.  Class of Internet Integration . . . . . . . . . . . . . .  22
      5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  23
@@ -298,6 +298,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 2.2.  Constrained Networks
 
+   (Section 5 defines some specific classes of networks; the present
+   section continues with some higher-level observations.)
+
    We define "constrained network" in a similar way:
 
    Constrained Network:  A network where some of the characteristics
@@ -328,15 +331,14 @@ Internet-Draft               CNN Terminology                  March 2026
    some of the nodes involved in the network exhibit these
    characteristics.
 
-   Again, there may be several reasons for this:
-
-
 
 
 Bormann, et al.         Expires 3 September 2026                [Page 6]
 
 Internet-Draft               CNN Terminology                  March 2026
 
+
+   Again, there may be several reasons for this:
 
    *  cost constraints on the network,
 
@@ -383,8 +385,6 @@ Internet-Draft               CNN Terminology                  March 2026
    Constrained-Node Network:  A network whose characteristics are
       influenced by being composed of a significant portion of
       constrained nodes.
-
-
 
 
 
@@ -473,7 +473,7 @@ Internet-Draft               CNN Terminology                  March 2026
    An overview over Low-Power Wide Area Network (LPWAN) technologies is
    provided by [RFC8376].
 
-3.  Classes of Constrained Devices
+3.  Classes of Constrained (and More Capable) Devices
 
    Despite the overwhelming variety of Internet-connected devices that
    can be envisioned, it may be worthwhile to have some succinct
@@ -491,9 +491,9 @@ Internet-Draft               CNN Terminology                  March 2026
       latter often Pulse Width Modulation (PWM)-controllable), ADC/DACs
       (analog-to-digital and digital-to-analog converters), etc.  Where
       this hardware is specialized for an application, we may talk about
-      "Systems on a Chip" (SOC).  These devices often implement
+      "Systems on a Chip" (SoC).  These devices often implement
       elaborate sleep modes to achieve microwatt- or at least milliwatt-
-      level sustained power usage (Ps, see below).
+      level sustained power usage (Ps, see Section 4.1).
 
    *  General-purpose-class devices (e.g., called "A-Profile" in
       [ARM-ARCH]).  These usually have RAM and Flash storage on separate
@@ -506,13 +506,13 @@ Bormann, et al.         Expires 3 September 2026                [Page 9]
 Internet-Draft               CNN Terminology                  March 2026
 
 
-      general-purpose operating systems such as Linux, such as an MMU.
-      Many of the pins on the CPU chip are dedicated to interfacing with
-      RAM and other memory.  Some general-purpose-class devices
-      integrate some application hardware such as video controllers,
-      these are often also called SOC.  While these chips also include
-      sleep modes, they are usually more on the watt side of sustained
-      power usage (Ps).
+      general-purpose operating systems such as Linux, such as by
+      providing an MMU.  Many of the pins on the CPU chip are dedicated
+      to interfacing with RAM and other memory.  Some general-purpose-
+      class devices integrate some application hardware such as video
+      controllers, these are often also called SOC.  While these chips
+      also include sleep modes, they are usually more on the watt side
+      of sustained power usage (Ps).
 
    If the distinction between these groups needs to be made in this
    document, we distinguish "M-group" (microcontroller) from "J-group"
@@ -1066,31 +1066,32 @@ Bormann, et al.         Expires 3 September 2026               [Page 19]
 Internet-Draft               CNN Terminology                  March 2026
 
 
-    +======+===========================+=============================+
-    | Name | Type                      | Uncertainty (roughly)       |
-    +======+===========================+=============================+
-    | T0   | no concept of time        | infinite                    |
-    +------+---------------------------+-----------------------------+
-    | T1   | relative time while awake | (usually high)              |
-    +------+---------------------------+-----------------------------+
-    | T2   | relative time             | (usually high during sleep) |
-    +------+---------------------------+-----------------------------+
-    | T3   | relative time             | 10^-4 or better             |
-    +------+---------------------------+-----------------------------+
-    | T5   | absolute time (e.g.,      | 10^-4 or better             |
-    |      | since boot)               |                             |
-    +------+---------------------------+-----------------------------+
-    | T7   | wall-clock time           | 10^-4 or better             |
-    +------+---------------------------+-----------------------------+
-    | T8   | wall-clock time           | 10^-5 or better             |
-    +------+---------------------------+-----------------------------+
-    | T9   | wall-clock time           | 10^-6 or better (TCXO)      |
-    +------+---------------------------+-----------------------------+
-    | T10  | wall-clock time           | 10^-7 or better (OCXO or    |
-    |      |                           | Rb)                         |
-    +------+---------------------------+-----------------------------+
+    +======+==================================+=======================+
+    | Name | Type                             | Uncertainty (roughly) |
+    +======+==================================+=======================+
+    | T0   | no concept of time               | infinite              |
+    +------+----------------------------------+-----------------------+
+    | T1   | relative time while awake        | (usually high)        |
+    +------+----------------------------------+-----------------------+
+    | T2   | relative time even across sleeps | (usually high during  |
+    |      |                                  | sleep)                |
+    +------+----------------------------------+-----------------------+
+    | T3   | relative time even across sleeps | 10^-4 or better       |
+    +------+----------------------------------+-----------------------+
+    | T5   | absolute time (e.g., since boot) | 10^-4 or better       |
+    +------+----------------------------------+-----------------------+
+    | T7   | wall-clock time                  | 10^-4 or better       |
+    +------+----------------------------------+-----------------------+
+    | T8   | wall-clock time                  | 10^-5 or better       |
+    +------+----------------------------------+-----------------------+
+    | T9   | wall-clock time                  | 10^-6 or better       |
+    |      |                                  | (TCXO)                |
+    +------+----------------------------------+-----------------------+
+    | T10  | wall-clock time                  | 10^-7 or better (OCXO |
+    |      |                                  | or Rb)                |
+    +------+----------------------------------+-----------------------+
 
-          Table 8: Strategies of Keeping Time over Power Events
+           Table 8: Strategies of Keeping Time over Power Events
 
       +======+====================================+=================+
       | Name | Permanency (from type T5 upwards): | Uncertainty     |
@@ -1110,7 +1111,6 @@ Internet-Draft               CNN Terminology                  March 2026
    Further parameters that can be used to discuss clock quality can be
    found in Section 3.5 of [RFC9581].
 
-5.  Classes of Networks
 
 
 
@@ -1122,6 +1122,8 @@ Bormann, et al.         Expires 3 September 2026               [Page 20]
 Internet-Draft               CNN Terminology                  March 2026
 
 
+5.  Classes of Networks
+
 5.1.  Classes of Link Layer MTU Size
 
    Link layer technologies used by constrained devices can be
@@ -1132,7 +1134,7 @@ Internet-Draft               CNN Terminology                  March 2026
    Table 10 lists the main classes of link layer MTU size.
 
    +======+=============+======================+=======================+
-   | Name | L2 MTU size | typical MTU          | 6LoWPAN Fragmentation |
+   | Name | L2 MTU size | example MTU          | 6LoWPAN Fragmentation |
    |      | (bytes)     | (minus epsilon)      | applicable*?          |
    +======+=============+======================+=======================+
    | S0   | 3 – 12      |                      | (often L2             |
@@ -1167,9 +1169,7 @@ Internet-Draft               CNN Terminology                  March 2026
    * if no link layer fragmentation is available (note: 'Sx' stands for
    'Size x')
 
-   S0 technologies require fragmentation to support the IPv6 MTU
-   requirement.  If no link layer fragmentation is available,
-   fragmentation is needed at the adaptation layer below IPv6.  However,
+
 
 
 
@@ -1178,6 +1178,9 @@ Bormann, et al.         Expires 3 September 2026               [Page 21]
 Internet-Draft               CNN Terminology                  March 2026
 
 
+   S0 technologies require fragmentation to support the IPv6 MTU
+   requirement.  If no link layer fragmentation is available,
+   fragmentation is needed at the adaptation layer below IPv6.  However,
    6LoWPAN fragmentation [RFC4944] cannot be used for these
    technologies, given the extremely reduced link layer MTU.  In this
    case, lightweight fragmentation formats need to be used (e.g.,
@@ -1221,9 +1224,6 @@ Internet-Draft               CNN Terminology                  March 2026
 
                  Table 11: Classes of Internet Integration
                                    Level
-
-
-
 
 
 
