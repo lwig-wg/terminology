@@ -893,18 +893,30 @@ fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
 {{mtutbl}} lists the main classes of link layer MTU size.
+Note that some of these classes have a span of about a (decimal) order of
+magnitude; this does not mean that there are no interesting
+transitions within these spans, just that these transitions are
+dependent on other parameters such as MAC (message authentication
+code) sizes the variations of which would split these classes into
+small, less universally relevant subclasses.
+The range S3..S7 is more finely divided here due to transitions
+resulting from the dominating link layer (15xx, 9216) and network layer
+protocol (1280) MTUs.
+In the table, "WiFi" is short for standard WiFi A-MSDU values,
+describing frame aggregation on the link layer.
 
-| Name | L2 MTU size (bytes) | example MTU (minus epsilon) | 6LoWPAN Fragmentation applicable*? |
-|------+---------------------+--------------------------------+------------------------------------|
-| S0   | 3 – 12              |                                | (often L2 segmentation)            |
-| S1   | 13 – 127            | 80                             | yes                                |
-| S2   | 128 – 1279          | 576 (9*64)                     | yes                                |
-| S3   | ≥ 1280              | 1280 (5*256)                   | no fragmentation needed            |
-| S4   | ≥ 1500              | 1500/1536 (3*512, Ethernet)    | no fragmentation needed            |
-| S5   | ≫ 1500, ..2304      | 2304 (9*256), 2032 (MS/TP)     | no fragmentation needed            |
-| S6   | ≫ 2304, ..9216      | 9216 (9*1024, Jumbo Ethernet)  | no fragmentation needed            |
-| S8   | ≫ 9216, ..65535     | 16384, 65535                   | no fragmentation needed            |
-| S9   | ≥ 65536             | (RFC 2675 Jumbograms, unusual) | no fragmentation needed            |
+| Name | L2 MTU size (bytes) | example MTU (minus epsilon)                | 6LoWPAN Fragmentation applicable*? |
+|------|---------------------|--------------------------------------------|------------------------------------|
+| S0   | 3 – 12              |                                            | (often L2 segmentation)            |
+| S1   | 13 – 127            | 80                                         | yes                                |
+| S2   | 128 – 1279          | 576 (9*64)                                 | yes                                |
+| S3   | ≥ 1280              | 1280 (5*256)                               | no fragmentation needed            |
+| S4   | ≥ 1500              | 1500/1536 (3*512, Ethernet)                | no fragmentation needed            |
+| S5   | ≫ 1500, ..2304      | 2304 (9*256), 2032 (MS/TP)                 | no fragmentation needed            |
+| S6   | ≫ 2304, ..4352      | 4352 (17*256), ~4200 (RoCE), 3839 (WiFi)   | no fragmentation needed            |
+| S7   | ≫ 4352, ..9216      | 9216 (9*1024, Jumbo Ethernet), 7935 (WiFi) | no fragmentation needed            |
+| S8   | ≫ 9216, ..65535     | 11454 (WiFi), ~16384, ~65535               | no fragmentation needed            |
+| S9   | ≥ 65536             | (RFC 2675 Jumbograms, unusual)             | no fragmentation needed            |
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
