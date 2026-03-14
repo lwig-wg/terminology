@@ -897,7 +897,7 @@ Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
 dependent on other parameters such as MAC (message authentication
-code) sizes the variations of which would split these classes into
+code) sizes, the variations of which would split these classes into
 small, less universally relevant subclasses.
 The range S10 to S14 is more finely divided here due to transitions
 resulting from the dominating link layer (15xx, 9216) and network layer
