@@ -893,22 +893,43 @@ fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
 {{mtutbl}} lists the main classes of link layer MTU size.
+Note that some of these classes have a span of about a (decimal) order of
+magnitude; this does not mean that there are no interesting
+transitions within these spans, just that these transitions are
+dependent on other parameters such as MAC (message authentication
+code) sizes, the variations of which would split these classes into
+small, less universally relevant subclasses.
+The range S10 to S14 is more finely divided here due to transitions
+resulting from the dominating link layer (15xx, 9216) and network layer
+protocol (1280) MTUs.
+In the table, "WiFi" is short for standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
+describing frame aggregation on the link layer.
+"CAN-FD" is Controller Area Network Flexible Data-Rate (ISO 11898-1),
+"LoRaWAN" can be expanded as Long Range Wide Area Network,
+"BLE" is Bluetooth Low Energy,
+and
+"RoCE" is RDMA over Converged Ethernet.
 
-| Name | L2 MTU size (bytes) | example MTU (minus epsilon) | 6LoWPAN Fragmentation applicable*? |
-|------+---------------------+--------------------------------+------------------------------------|
-| S0   | 3 – 12              |                                | (often L2 segmentation)            |
-| S1   | 13 – 127            | 80                             | yes                                |
-| S2   | 128 – 1279          | 576 (9*64)                     | yes                                |
-| S3   | ≥ 1280              | 1280 (5*256)                   | no fragmentation needed            |
-| S4   | ≥ 1500              | 1500/1536 (3*512, Ethernet)    | no fragmentation needed            |
-| S5   | ≫ 1500, ..2304      | 2304 (9*256), 2032 (MS/TP)     | no fragmentation needed            |
-| S6   | ≫ 2304, ..9216      | 9216 (9*1024, Jumbo Ethernet)  | no fragmentation needed            |
-| S8   | ≫ 9216, ..65535     | 16384, 65535                   | no fragmentation needed            |
-| S9   | ≥ 65536             | (RFC 2675 Jumbograms, unusual) | no fragmentation needed            |
+| Name | L2 MTU size (bytes) | example MTU (minus epsilon)                     | 6LoWPAN Fragmentation applicable*? |
+|------|---------------------|-------------------------------------------------|------------------------------------|
+| S0   | 3 – 12              |                                                 | (often L2 segmentation)            |
+| S1   | 13 – 127            | ~80 (IEEE 802.15.4 with security), ~64 (CAN-FD) | yes                                |
+| S2   | 128 – 255           | (S1/S2 variable: LoRaWAN), ~251 (BLE)           | yes                                |
+| S3   | 256 – 575           |                                                 | yes                                |
+| S4   | 576 – 1279          | 576 (9*64), 1006 (RFC 1055 SLIP)                | yes                                |
+| S10  | ≥ 1280              | 1280 (5*256)                                    | no fragmentation needed            |
+| S11  | ≥ 1500              | 1500/1536 (3*512, Ethernet)                     | no fragmentation needed            |
+| S12  | ≫ 1500, ..2304      | 2304 (9*256), 2032 (RFC 8163 MS/TP)             | no fragmentation needed            |
+| S13  | ≫ 2304, ..4352      | 4352 (17*256), ~4200 (RoCE), 3839 (WiFi)        | no fragmentation needed            |
+| S14  | ≫ 4352, ..9216      | 9216 (9*1024, Jumbo Ethernet), 7935 (WiFi)      | no fragmentation needed            |
+| S15  | ≫ 9216, ..65535     | 11454 (WiFi), ~16384, ~65535                    | no fragmentation needed            |
+| S19  | ≥ 65536             | (RFC 2675 Jumbograms, unusual)                  | no fragmentation needed            |
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
 (note: 'Sx' stands for 'Size x')
+
+<!-- CAN-FD: https://www.ietf.org/archive/id/draft-wachter-6lo-can-01.html -->
 
 S0 technologies require fragmentation to support the IPv6 MTU requirement.
 If no link layer fragmentation is available, fragmentation is needed at
@@ -917,15 +938,15 @@ cannot be used for these technologies, given the extremely reduced link
 layer MTU. In this case, lightweight fragmentation formats need to be used
 (e.g., {{-frag-new}}).
 
-S1 and S2 technologies require fragmentation at the subnetwork level to
+S1 to S4 technologies require fragmentation at the subnetwork level to
 support the IPv6 MTU requirement.
 If link layer fragmentation is unavailable or insufficient,
 fragmentation is needed at the adaptation layer below IPv6.
 6LoWPAN fragmentation {{RFC4944}} can be used to carry 1280-byte IPv6
 packets over these technologies.
 
-S3 or higher technologies do not require fragmentation to support the IPv6 MTU
-requirement; S5 and above often create islands of higher MTU in an
+S10 or higher technologies do not require fragmentation to support the IPv6 MTU
+requirement; S12 and above often create islands of higher MTU in an
 otherwise Ethernet-inspired L2 network.
 
 ## Classes of Internet Integration {#class-Ix}
