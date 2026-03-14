@@ -909,7 +909,7 @@ describing frame aggregation on the link layer.
 |------|---------------------|-------------------------------------------------|------------------------------------|
 | S0   | 3 – 12              |                                                 | (often L2 segmentation)            |
 | S1   | 13 – 127            | ~80 (IEEE 802.15.4 with security), ~64 (CAN-FD) | yes                                |
-| S2   | 128 – 255           | (S1/S2 variable: LoRa), ~251 (BLE)              | yes                                |
+| S2   | 128 – 255           | (S1/S2 variable: LoRaWAN), ~251 (BLE)           | yes                                |
 | S3   | 256 – 575           |                                                 | yes                                |
 | S4   | 576 – 1279          | 576 (9*64), 1006 (RFC 1055 SLIP)                | yes                                |
 | S10  | ≥ 1280              | 1280 (5*256)                                    | no fragmentation needed            |
