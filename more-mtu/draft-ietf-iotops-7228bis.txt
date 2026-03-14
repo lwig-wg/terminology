@@ -1142,10 +1142,10 @@ Internet-Draft               CNN Terminology                  March 2026
    dominating link layer (15xx, 9216) and network layer protocol (1280)
    MTUs.  In the table, "WiFi" is short for standard WiFi A-MSDU
    (Aggregate MAC Service Data Unit) values, describing frame
-   aggregation on the link layer.
-
-
-
+   aggregation on the link layer.  "CAN-FD" is Controller Area Network
+   Flexible Data-Rate (ISO 11898-1), "LoRaWAN" can be expanded as Long
+   Range Wide Area Network, "BLE" is Bluetooth Low Energy, and "RoCE" is
+   RDMA over Converged Ethernet.
 
 
 
@@ -1205,7 +1205,7 @@ Internet-Draft               CNN Terminology                  March 2026
     |      |             | Ethernet)          | needed                |
     +------+-------------+--------------------+-----------------------+
     | S12  | ≫ 1500,     | 2304 (9*256), 2032 | no fragmentation      |
-    |      | ..2304      | (MS/TP)            | needed                |
+    |      | ..2304      | (RFC 8163 MS/TP)   | needed                |
     +------+-------------+--------------------+-----------------------+
     | S13  | ≫ 2304,     | 4352 (17*256),     | no fragmentation      |
     |      | ..4352      | ~4200 (RoCE), 3839 | needed                |

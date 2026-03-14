@@ -2394,7 +2394,12 @@ The range S10 to S14 is more finely divided here due to transitions
 resulting from the dominating link layer (15xx, 9216) and network layer
 protocol (1280) MTUs.
 In the table, "WiFi" is short for standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
-describing frame aggregation on the link layer.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+describing frame aggregation on the link layer.
+"CAN-FD" is Controller Area Network Flexible Data-Rate (ISO 11898-1),
+"LoRaWAN" can be expanded as Long Range Wide Area Network,
+"BLE" is Bluetooth Low Energy,
+and
+"RoCE" is RDMA over Converged Ethernet.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
 <span id="name-classes-of-link-layer-mtu-si"></span><div id="mtutbl">
 <table class="center" id="table-10">
           <caption>
@@ -2455,7 +2460,7 @@ describing frame aggregation on the link layer.<a href="#section-5.1-2" class="p
             <tr>
               <td class="text-left" rowspan="1" colspan="1">S12</td>
               <td class="text-left" rowspan="1" colspan="1">≫ 1500, ..2304</td>
-              <td class="text-left" rowspan="1" colspan="1">2304 (9*256), 2032 (MS/TP)</td>
+              <td class="text-left" rowspan="1" colspan="1">2304 (9*256), 2032 (RFC 8163 MS/TP)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
