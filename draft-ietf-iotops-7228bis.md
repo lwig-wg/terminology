@@ -904,6 +904,11 @@ resulting from the dominating link layer (15xx, 9216) and network layer
 protocol (1280) MTUs.
 In the table, "WiFi" is short for standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
 describing frame aggregation on the link layer.
+"CAN-FD" is Controller Area Network Flexible Data-Rate (ISO 11898-1),
+"LoRaWAN" can be expanded as Long Range Wide Area Network,
+"BLE" is Bluetooth Low Energy,
+and
+"RoCE" is RDMA over Converged Ethernet.
 
 | Name | L2 MTU size (bytes) | example MTU (minus epsilon)                     | 6LoWPAN Fragmentation applicable*? |
 |------|---------------------|-------------------------------------------------|------------------------------------|
@@ -914,7 +919,7 @@ describing frame aggregation on the link layer.
 | S4   | 576 – 1279          | 576 (9*64), 1006 (RFC 1055 SLIP)                | yes                                |
 | S10  | ≥ 1280              | 1280 (5*256)                                    | no fragmentation needed            |
 | S11  | ≥ 1500              | 1500/1536 (3*512, Ethernet)                     | no fragmentation needed            |
-| S12  | ≫ 1500, ..2304      | 2304 (9*256), 2032 (MS/TP)                      | no fragmentation needed            |
+| S12  | ≫ 1500, ..2304      | 2304 (9*256), 2032 (RFC 8163 MS/TP)             | no fragmentation needed            |
 | S13  | ≫ 2304, ..4352      | 4352 (17*256), ~4200 (RoCE), 3839 (WiFi)        | no fragmentation needed            |
 | S14  | ≫ 4352, ..9216      | 9216 (9*1024, Jumbo Ethernet), 7935 (WiFi)      | no fragmentation needed            |
 | S15  | ≫ 9216, ..65535     | 11454 (WiFi), ~16384, ~65535                    | no fragmentation needed            |
