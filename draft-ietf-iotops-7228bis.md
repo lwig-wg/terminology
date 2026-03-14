@@ -902,7 +902,7 @@ small, less universally relevant subclasses.
 The range S10 to S14 is more finely divided here due to transitions
 resulting from the dominating link layer (15xx, 9216) and network layer
 protocol (1280) MTUs.
-In the table, "WiFi" is short for standard WiFi A-MSDU values,
+In the table, "WiFi" is short for standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
 describing frame aggregation on the link layer.
 
 | Name | L2 MTU size (bytes) | example MTU (minus epsilon)                     | 6LoWPAN Fragmentation applicable*? |
