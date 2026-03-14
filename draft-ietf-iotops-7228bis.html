@@ -1034,7 +1034,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann, et al.</td>
-<td class="center">Expires 3 September 2026</td>
+<td class="center">Expires 15 September 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1050,12 +1050,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc7228" class="eref">7228</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-03-02" class="published">2 March 2026</time>
+<time datetime="2026-03-14" class="published">14 March 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-09-03">3 September 2026</time></dd>
+<dd class="expires"><time datetime="2026-09-15">15 September 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1120,7 +1120,7 @@ been useful in research and standardization work for constrained-node networks.<
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 15 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2383,7 +2383,23 @@ found in <span><a href="https://rfc-editor.org/rfc/rfc9581#section-3.5" class="r
 on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size.
+Note that some of these classes have a span of about a (decimal) order of
+magnitude; this does not mean that there are no interesting
+transitions within these spans, just that these transitions are
+dependent on other parameters such as MAC (message authentication
+code) sizes, the variations of which would split these classes into
+small, less universally relevant subclasses.
+The range S10 to S14 is more finely divided here due to transitions
+resulting from the dominating link layer (15xx, 9216) and network layer
+protocol (1280) MTUs.
+In the table, "WiFi" is short for standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
+describing frame aggregation on the link layer.
+"CAN-FD" is Controller Area Network Flexible Data-Rate (ISO 11898-1),
+"LoRaWAN" can be expanded as Long Range Wide Area Network,
+"BLE" is Bluetooth Low Energy,
+and
+"RoCE" is RDMA over Converged Ethernet.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
 <span id="name-classes-of-link-layer-mtu-si"></span><div id="mtutbl">
 <table class="center" id="table-10">
           <caption>
@@ -2408,47 +2424,65 @@ requirement may vary.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">S1</td>
               <td class="text-left" rowspan="1" colspan="1">13 – 127</td>
-              <td class="text-left" rowspan="1" colspan="1">80</td>
+              <td class="text-left" rowspan="1" colspan="1">~80 (IEEE 802.15.4 with security), ~64 (CAN-FD)</td>
               <td class="text-left" rowspan="1" colspan="1">yes</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">S2</td>
-              <td class="text-left" rowspan="1" colspan="1">128 – 1279</td>
-              <td class="text-left" rowspan="1" colspan="1">576 (9*64)</td>
+              <td class="text-left" rowspan="1" colspan="1">128 – 255</td>
+              <td class="text-left" rowspan="1" colspan="1">(S1/S2 variable: LoRaWAN), ~251 (BLE)</td>
               <td class="text-left" rowspan="1" colspan="1">yes</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">S3</td>
+              <td class="text-left" rowspan="1" colspan="1">256 – 575</td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1">yes</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">S4</td>
+              <td class="text-left" rowspan="1" colspan="1">576 – 1279</td>
+              <td class="text-left" rowspan="1" colspan="1">576 (9*64), 1006 (RFC 1055 SLIP)</td>
+              <td class="text-left" rowspan="1" colspan="1">yes</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">S10</td>
               <td class="text-left" rowspan="1" colspan="1">≥ 1280</td>
               <td class="text-left" rowspan="1" colspan="1">1280 (5*256)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">S4</td>
+              <td class="text-left" rowspan="1" colspan="1">S11</td>
               <td class="text-left" rowspan="1" colspan="1">≥ 1500</td>
               <td class="text-left" rowspan="1" colspan="1">1500/1536 (3*512, Ethernet)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">S5</td>
+              <td class="text-left" rowspan="1" colspan="1">S12</td>
               <td class="text-left" rowspan="1" colspan="1">≫ 1500, ..2304</td>
-              <td class="text-left" rowspan="1" colspan="1">2304 (9*256), 2032 (MS/TP)</td>
+              <td class="text-left" rowspan="1" colspan="1">2304 (9*256), 2032 (RFC 8163 MS/TP)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">S6</td>
-              <td class="text-left" rowspan="1" colspan="1">≫ 2304, ..9216</td>
-              <td class="text-left" rowspan="1" colspan="1">9216 (9*1024, Jumbo Ethernet)</td>
+              <td class="text-left" rowspan="1" colspan="1">S13</td>
+              <td class="text-left" rowspan="1" colspan="1">≫ 2304, ..4352</td>
+              <td class="text-left" rowspan="1" colspan="1">4352 (17*256), ~4200 (RoCE), 3839 (WiFi)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">S8</td>
+              <td class="text-left" rowspan="1" colspan="1">S14</td>
+              <td class="text-left" rowspan="1" colspan="1">≫ 4352, ..9216</td>
+              <td class="text-left" rowspan="1" colspan="1">9216 (9*1024, Jumbo Ethernet), 7935 (WiFi)</td>
+              <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">S15</td>
               <td class="text-left" rowspan="1" colspan="1">≫ 9216, ..65535</td>
-              <td class="text-left" rowspan="1" colspan="1">16384, 65535</td>
+              <td class="text-left" rowspan="1" colspan="1">11454 (WiFi), ~16384, ~65535</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">S9</td>
+              <td class="text-left" rowspan="1" colspan="1">S19</td>
               <td class="text-left" rowspan="1" colspan="1">≥ 65536</td>
               <td class="text-left" rowspan="1" colspan="1">(RFC 2675 Jumbograms, unusual)</td>
               <td class="text-left" rowspan="1" colspan="1">no fragmentation needed</td>
@@ -2464,14 +2498,14 @@ the adaptation layer below IPv6. However, 6LoWPAN fragmentation <span>[<a href="
 cannot be used for these technologies, given the extremely reduced link
 layer MTU. In this case, lightweight fragmentation formats need to be used
 (e.g., <span>[<a href="#RFC8724" class="cite xref">RFC8724</a>]</span>).<a href="#section-5.1-5" class="pilcrow">¶</a></p>
-<p id="section-5.1-6">S1 and S2 technologies require fragmentation at the subnetwork level to
+<p id="section-5.1-6">S1 to S4 technologies require fragmentation at the subnetwork level to
 support the IPv6 MTU requirement.
 If link layer fragmentation is unavailable or insufficient,
 fragmentation is needed at the adaptation layer below IPv6.
 6LoWPAN fragmentation <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span> can be used to carry 1280-byte IPv6
 packets over these technologies.<a href="#section-5.1-6" class="pilcrow">¶</a></p>
-<p id="section-5.1-7">S3 or higher technologies do not require fragmentation to support the IPv6 MTU
-requirement; S5 and above often create islands of higher MTU in an
+<p id="section-5.1-7">S10 or higher technologies do not require fragmentation to support the IPv6 MTU
+requirement; S12 and above often create islands of higher MTU in an
 otherwise Ethernet-inspired L2 network.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
 </section>
 </div>

@@ -6,11 +6,11 @@ IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Obsoletes: 7228 (if approved)                                   M. Ersue
 Intended status: Informational                                          
-Expires: 3 September 2026                                     A. Keranen
+Expires: 15 September 2026                                    A. Keranen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                            2 March 2026
+                                                           14 March 2026
 
 
                Terminology for Constrained-Node Networks
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 1]
+Bormann, et al.         Expires 15 September 2026               [Page 1]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -63,7 +63,7 @@ Internet-Draft               CNN Terminology                  March 2026
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2026.
+   This Internet-Draft will expire on 15 September 2026.
 
 Copyright Notice
 
@@ -102,23 +102,23 @@ Table of Contents
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  18
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  21
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
-     5.2.  Classes of Internet Integration . . . . . . . . . . . . .  22
-     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  23
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  24
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  24
+     5.2.  Classes of Internet Integration . . . . . . . . . . . . .  23
+     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  24
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 2]
+Bormann, et al.         Expires 15 September 2026               [Page 2]
 
 Internet-Draft               CNN Terminology                  March 2026
 
 
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  24
-   Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  28
-   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  29
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  29
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  29
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .  26
+   Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  30
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  30
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  31
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  31
 
 1.  Introduction
 
@@ -165,7 +165,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 3]
+Bormann, et al.         Expires 15 September 2026               [Page 3]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -221,7 +221,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 4]
+Bormann, et al.         Expires 15 September 2026               [Page 4]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -277,7 +277,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 5]
+Bormann, et al.         Expires 15 September 2026               [Page 5]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -333,7 +333,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 6]
+Bormann, et al.         Expires 15 September 2026               [Page 6]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -389,7 +389,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 7]
+Bormann, et al.         Expires 15 September 2026               [Page 7]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -445,7 +445,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 8]
+Bormann, et al.         Expires 15 September 2026               [Page 8]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -501,7 +501,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026                [Page 9]
+Bormann, et al.         Expires 15 September 2026               [Page 9]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -557,7 +557,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 10]
+Bormann, et al.         Expires 15 September 2026              [Page 10]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -613,7 +613,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 11]
+Bormann, et al.         Expires 15 September 2026              [Page 11]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -669,7 +669,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 12]
+Bormann, et al.         Expires 15 September 2026              [Page 12]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -725,7 +725,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 13]
+Bormann, et al.         Expires 15 September 2026              [Page 13]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -781,7 +781,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 14]
+Bormann, et al.         Expires 15 September 2026              [Page 14]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -837,7 +837,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 15]
+Bormann, et al.         Expires 15 September 2026              [Page 15]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -893,7 +893,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 16]
+Bormann, et al.         Expires 15 September 2026              [Page 16]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -949,7 +949,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 17]
+Bormann, et al.         Expires 15 September 2026              [Page 17]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -1005,7 +1005,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 18]
+Bormann, et al.         Expires 15 September 2026              [Page 18]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -1061,7 +1061,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 19]
+Bormann, et al.         Expires 15 September 2026              [Page 19]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -1117,7 +1117,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 20]
+Bormann, et al.         Expires 15 September 2026              [Page 20]
 
 Internet-Draft               CNN Terminology                  March 2026
 
@@ -1131,52 +1131,111 @@ Internet-Draft               CNN Terminology                  March 2026
    parameter, the fragmentation techniques needed (if any) to support
    the IPv6 MTU requirement may vary.
 
-   Table 10 lists the main classes of link layer MTU size.
-
-   +======+=============+======================+=======================+
-   | Name | L2 MTU size | example MTU          | 6LoWPAN Fragmentation |
-   |      | (bytes)     | (minus epsilon)      | applicable*?          |
-   +======+=============+======================+=======================+
-   | S0   | 3 – 12      |                      | (often L2             |
-   |      |             |                      | segmentation)         |
-   +------+-------------+----------------------+-----------------------+
-   | S1   | 13 – 127    | 80                   | yes                   |
-   +------+-------------+----------------------+-----------------------+
-   | S2   | 128 – 1279  | 576 (9*64)           | yes                   |
-   +------+-------------+----------------------+-----------------------+
-   | S3   | ≥ 1280      | 1280 (5*256)         | no fragmentation      |
-   |      |             |                      | needed                |
-   +------+-------------+----------------------+-----------------------+
-   | S4   | ≥ 1500      | 1500/1536 (3*512,    | no fragmentation      |
-   |      |             | Ethernet)            | needed                |
-   +------+-------------+----------------------+-----------------------+
-   | S5   | ≫ 1500,     | 2304 (9*256),        | no fragmentation      |
-   |      | ..2304      | 2032 (MS/TP)         | needed                |
-   +------+-------------+----------------------+-----------------------+
-   | S6   | ≫ 2304,     | 9216 (9*1024,        | no fragmentation      |
-   |      | ..9216      | Jumbo Ethernet)      | needed                |
-   +------+-------------+----------------------+-----------------------+
-   | S8   | ≫ 9216,     | 16384, 65535         | no fragmentation      |
-   |      | ..65535     |                      | needed                |
-   +------+-------------+----------------------+-----------------------+
-   | S9   | ≥ 65536     | (RFC 2675            | no fragmentation      |
-   |      |             | Jumbograms,          | needed                |
-   |      |             | unusual)             |                       |
-   +------+-------------+----------------------+-----------------------+
-
-                  Table 10: Classes of Link Layer MTU Size
-
-   * if no link layer fragmentation is available (note: 'Sx' stands for
-   'Size x')
+   Table 10 lists the main classes of link layer MTU size.  Note that
+   some of these classes have a span of about a (decimal) order of
+   magnitude; this does not mean that there are no interesting
+   transitions within these spans, just that these transitions are
+   dependent on other parameters such as MAC (message authentication
+   code) sizes, the variations of which would split these classes into
+   small, less universally relevant subclasses.  The range S10 to S14 is
+   more finely divided here due to transitions resulting from the
+   dominating link layer (15xx, 9216) and network layer protocol (1280)
+   MTUs.  In the table, "WiFi" is short for standard WiFi A-MSDU
+   (Aggregate MAC Service Data Unit) values, describing frame
+   aggregation on the link layer.  "CAN-FD" is Controller Area Network
+   Flexible Data-Rate (ISO 11898-1), "LoRaWAN" can be expanded as Long
+   Range Wide Area Network, "BLE" is Bluetooth Low Energy, and "RoCE" is
+   RDMA over Converged Ethernet.
 
 
 
 
 
-Bormann, et al.         Expires 3 September 2026               [Page 21]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 21]
 
 Internet-Draft               CNN Terminology                  March 2026
 
+
+    +======+=============+====================+=======================+
+    | Name | L2 MTU size | example MTU (minus | 6LoWPAN Fragmentation |
+    |      | (bytes)     | epsilon)           | applicable*?          |
+    +======+=============+====================+=======================+
+    | S0   | 3 – 12      |                    | (often L2             |
+    |      |             |                    | segmentation)         |
+    +------+-------------+--------------------+-----------------------+
+    | S1   | 13 – 127    | ~80 (IEEE 802.15.4 | yes                   |
+    |      |             | with security),    |                       |
+    |      |             | ~64 (CAN-FD)       |                       |
+    +------+-------------+--------------------+-----------------------+
+    | S2   | 128 – 255   | (S1/S2 variable:   | yes                   |
+    |      |             | LoRaWAN), ~251     |                       |
+    |      |             | (BLE)              |                       |
+    +------+-------------+--------------------+-----------------------+
+    | S3   | 256 – 575   |                    | yes                   |
+    +------+-------------+--------------------+-----------------------+
+    | S4   | 576 – 1279  | 576 (9*64), 1006   | yes                   |
+    |      |             | (RFC 1055 SLIP)    |                       |
+    +------+-------------+--------------------+-----------------------+
+    | S10  | ≥ 1280      | 1280 (5*256)       | no fragmentation      |
+    |      |             |                    | needed                |
+    +------+-------------+--------------------+-----------------------+
+    | S11  | ≥ 1500      | 1500/1536 (3*512,  | no fragmentation      |
+    |      |             | Ethernet)          | needed                |
+    +------+-------------+--------------------+-----------------------+
+    | S12  | ≫ 1500,     | 2304 (9*256), 2032 | no fragmentation      |
+    |      | ..2304      | (RFC 8163 MS/TP)   | needed                |
+    +------+-------------+--------------------+-----------------------+
+    | S13  | ≫ 2304,     | 4352 (17*256),     | no fragmentation      |
+    |      | ..4352      | ~4200 (RoCE), 3839 | needed                |
+    |      |             | (WiFi)             |                       |
+    +------+-------------+--------------------+-----------------------+
+    | S14  | ≫ 4352,     | 9216 (9*1024,      | no fragmentation      |
+    |      | ..9216      | Jumbo Ethernet),   | needed                |
+    |      |             | 7935 (WiFi)        |                       |
+    +------+-------------+--------------------+-----------------------+
+    | S15  | ≫ 9216,     | 11454 (WiFi),      | no fragmentation      |
+    |      | ..65535     | ~16384, ~65535     | needed                |
+    +------+-------------+--------------------+-----------------------+
+    | S19  | ≥ 65536     | (RFC 2675          | no fragmentation      |
+    |      |             | Jumbograms,        | needed                |
+    |      |             | unusual)           |                       |
+    +------+-------------+--------------------+-----------------------+
+
+                  Table 10: Classes of Link Layer MTU Size
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 22]
+
+Internet-Draft               CNN Terminology                  March 2026
+
+
+   * if no link layer fragmentation is available (note: 'Sx' stands for
+   'Size x')
 
    S0 technologies require fragmentation to support the IPv6 MTU
    requirement.  If no link layer fragmentation is available,
@@ -1186,15 +1245,15 @@ Internet-Draft               CNN Terminology                  March 2026
    case, lightweight fragmentation formats need to be used (e.g.,
    [RFC8724]).
 
-   S1 and S2 technologies require fragmentation at the subnetwork level
+   S1 to S4 technologies require fragmentation at the subnetwork level
    to support the IPv6 MTU requirement.  If link layer fragmentation is
    unavailable or insufficient, fragmentation is needed at the
    adaptation layer below IPv6. 6LoWPAN fragmentation [RFC4944] can be
    used to carry 1280-byte IPv6 packets over these technologies.
 
-   S3 or higher technologies do not require fragmentation to support the
-   IPv6 MTU requirement; S5 and above often create islands of higher MTU
-   in an otherwise Ethernet-inspired L2 network.
+   S10 or higher technologies do not require fragmentation to support
+   the IPv6 MTU requirement; S12 and above often create islands of
+   higher MTU in an otherwise Ethernet-inspired L2 network.
 
 5.2.  Classes of Internet Integration
 
@@ -1207,6 +1266,29 @@ Internet-Draft               CNN Terminology                  March 2026
    as well.
 
    Table 11 defines the classes of Internet integration level.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 23]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
                +======+====================================+
                | Name | Internet technology                |
@@ -1225,15 +1307,6 @@ Internet-Draft               CNN Terminology                  March 2026
                  Table 11: Classes of Internet Integration
                                    Level
 
-
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 22]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
 5.3.  Classes of physical layer bit rate
 
    Physical layer technologies used by constrained devices can be
@@ -1245,6 +1318,33 @@ Internet-Draft               CNN Terminology                  March 2026
 
    Table 12 lists the classes of PHY bit rate ('Bx' stands for 'Bit rate
    class x').
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 24]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
       +======+=========+========================+==================+
       | Name | PHY bit | Comment                | Header           |
@@ -1281,15 +1381,6 @@ Internet-Draft               CNN Terminology                  March 2026
    MSL for a frame size ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s
    need ≥ 120 s = 2 min).
 
-
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 23]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    B1 technologies offer transmission times which are lower than the MSL
    (for a frame size greater than 150 bytes).  However, transmission
    times for B1 technologies are still significant if a human expects a
@@ -1301,6 +1392,15 @@ Internet-Draft               CNN Terminology                  March 2026
    B2 technologies do not incur responsiveness problems, but still
    benefit from using header compression techniques (e.g., [RFC6282]) to
    achieve performance improvements.
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 25]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
    Over B3 technologies, the relative performance benefits of header
    compression are low.  For example, in a duty-cycled technology
@@ -1339,19 +1439,24 @@ Internet-Draft               CNN Terminology                  March 2026
               DOI 10.1145/863955.863960, 2003,
               <https://doi.org/10.1145/863955.863960>.
 
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 24]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    [I-D.amsuess-t2trg-raytime]
               Amsüss, C., "Raytime: Validating token expiry on an
               unbounded local time interval", Work in Progress,
               Internet-Draft, draft-amsuess-t2trg-raytime-03, 19 October
               2024, <https://datatracker.ietf.org/doc/html/draft-
               amsuess-t2trg-raytime-03>.
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 26]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
    [I-D.gomez-tiptop-coap]
               Gomez, C. and S. Aguilar, "CoAP in Space", Work in
@@ -1395,17 +1500,19 @@ Internet-Draft               CNN Terminology                  March 2026
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
               <https://www.rfc-editor.org/rfc/rfc4944>.
 
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 25]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
               Routing Requirements in Low-Power and Lossy Networks",
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
               <https://www.rfc-editor.org/rfc/rfc5826>.
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 27]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
    [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
               "Network Time Protocol Version 4: Protocol and Algorithms
@@ -1450,19 +1557,18 @@ Internet-Draft               CNN Terminology                  March 2026
               DOI 10.17487/RFC7252, June 2014,
               <https://www.rfc-editor.org/rfc/rfc7252>.
 
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 26]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    [RFC7416]  Tsao, T., Alexander, R., Dohler, M., Daza, V., Lozano, A.,
               and M. Richardson, Ed., "A Security Threat Analysis for
               the Routing Protocol for Low-Power and Lossy Networks
               (RPLs)", RFC 7416, DOI 10.17487/RFC7416, January 2015,
               <https://www.rfc-editor.org/rfc/rfc7416>.
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 28]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
    [RFC7428]  Brandt, A. and J. Buron, "Transmission of IPv6 Packets
               over ITU-T G.9959 Networks", RFC 7428,
@@ -1505,20 +1611,20 @@ Internet-Draft               CNN Terminology                  March 2026
               DOI 10.17487/RFC8724, April 2020,
               <https://www.rfc-editor.org/rfc/rfc8724>.
 
-
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 27]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    [RFC9159]  Gomez, C., Darroudi, S.M., Savolainen, T., and M. Spoerk,
               "IPv6 Mesh over BLUETOOTH(R) Low Energy Using the Internet
               Protocol Support Profile (IPSP)", RFC 9159,
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
+
+
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 29]
+
+Internet-Draft               CNN Terminology                  March 2026
+
 
    [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
               Object Representation (CBOR) Tags for Time, Duration, and
@@ -1562,20 +1668,20 @@ Appendix A.  Changes Since RFC 7228
       "Isolation Functionality", "Shielded Secrets", and "Strategies of
       Keeping Time over Power Events"
 
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 28]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    *  Added new section "Classes of Networks"
 
 List of Tables
 
    Table 1:   Classes of Constrained (and More Capable) Devices
    Table 2:   Levels of Software Update Capabilities
+
+
+
+Bormann, et al.         Expires 15 September 2026              [Page 30]
+
+Internet-Draft               CNN Terminology                  March 2026
+
+
    Table 3:   Levels of Isolation Capabilities
    Table 4:   Levels of Secret Shielding Capabilities
    Table 5:   Quantities Relevant to Power and Energy
@@ -1616,16 +1722,6 @@ Authors' Addresses
    Email: ari.keranen@ericsson.com
 
 
-
-
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 29]
-
-Internet-Draft               CNN Terminology                  March 2026
-
-
    Carles Gomez
    Universitat Politecnica de Catalunya
    C/Esteve Terradas, 7
@@ -1637,44 +1733,4 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 3 September 2026               [Page 30]
+Bormann, et al.         Expires 15 September 2026              [Page 31]
