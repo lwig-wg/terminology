@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-12T02:08:39.072230+00:00",
+  "timestamp": "2026-03-15T02:29:31.365786+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -361,6 +361,102 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOBMYTbM7KbQrq",
+      "title": "More MTU discussion, splitting S6",
+      "url": "https://github.com/lwig-wg/terminology/pull/9",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "based on, but not fully taking on, feedback from Vadim Goncharov",
+      "createdAt": "2026-03-13T17:02:25Z",
+      "updatedAt": "2026-03-14T17:53:42Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "f5ed0cfa2331490ddefbceb5ffe3eea0c3942952",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "more-mtu",
+      "headRefOid": "113a7aafb9604ca000157b3c9b5b9f76b0898d4b",
+      "closedAt": "2026-03-14T17:53:42Z",
+      "mergedAt": "2026-03-14T17:53:42Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "5a594ce75c0576d7f7be5aede8bd50e98f54859d"
+      },
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "To have this document available during the IETF, I'm now merging this and publishing as -05.\r\nAnything else we should cover from the WGLC feedback?",
+          "createdAt": "2026-03-14T17:53:30Z",
+          "updatedAt": "2026-03-14T17:53:30Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7rVSTn",
+          "commit": {
+            "abbreviatedOid": "681de3b"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-14T05:54:22Z",
+          "updatedAt": "2026-03-14T06:05:51Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\ncode) sizes, the variations of which would split these classes into\n```\n\nThis sentence was a bit hard to parse. Maybe comma helps. \n",
+              "createdAt": "2026-03-14T05:54:22Z",
+              "updatedAt": "2026-03-14T06:05:51Z"
+            },
+            {
+              "originalPosition": 25,
+              "body": "Expand MSDU? And could expand here the other acronyms used in the table ",
+              "createdAt": "2026-03-14T05:56:06Z",
+              "updatedAt": "2026-03-14T06:05:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7rYfGu",
+          "commit": {
+            "abbreviatedOid": "ba3dc6d"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "Thanks for the updates! \nThe new content looks good to me.\nI would suggest s/LoRa/LoRaWAN, as LoRaWAN is more general: it includes LoRa, but also other PHYs like LR-FHSS (which is also \"s1/s2 variable\").",
+          "createdAt": "2026-03-14T17:10:35Z",
+          "updatedAt": "2026-03-14T17:10:35Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7rYjdw",
+          "commit": {
+            "abbreviatedOid": "681de3b"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-14T17:32:33Z",
+          "updatedAt": "2026-03-14T17:32:33Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "Actually, I was about to add references for each of these terms, but I thought a Web search is so much more useful for somebody who really wants to know...  I'm not sure we would have to decide, e.g., the best reference to MTU considerations for RoCE.",
+              "createdAt": "2026-03-14T17:32:33Z",
+              "updatedAt": "2026-03-14T17:32:33Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
