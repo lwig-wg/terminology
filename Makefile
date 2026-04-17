@@ -15,6 +15,8 @@ else
 endif
 endif
 
+prep: lists.md
+
 lists.md: draft-ietf-iotops-7228bis.xml
 	kramdown-rfc-extract-figures-tables -trfc $< >$@.new
 	if cmp $@.new $@; then rm -v $@.new; else mv -v $@.new $@; fi
