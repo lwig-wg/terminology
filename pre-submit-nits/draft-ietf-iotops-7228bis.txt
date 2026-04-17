@@ -6,11 +6,11 @@ IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Obsoletes: 7228 (if approved)                                   M. Ersue
 Intended status: Informational                                          
-Expires: 15 September 2026                                    A. Keranen
+Expires: 19 October 2026                                      A. Keränen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                           14 March 2026
+                                                           17 April 2026
 
 
                Terminology for Constrained-Node Networks
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 1]
+Bormann, et al.          Expires 19 October 2026                [Page 1]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Internet-Drafts are draft documents valid for a maximum of six months
@@ -63,7 +63,7 @@ Internet-Draft               CNN Terminology                  March 2026
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 September 2026.
+   This Internet-Draft will expire on 19 October 2026.
 
 Copyright Notice
 
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 2]
+Bormann, et al.          Expires 19 October 2026                [Page 2]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    8.  Informative References  . . . . . . . . . . . . . . . . . . .  26
@@ -165,9 +165,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 3]
+Bormann, et al.          Expires 19 October 2026                [Page 3]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
 1.1.  Conventions Used in this Document
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 4]
+Bormann, et al.          Expires 19 October 2026                [Page 4]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
       on state, code space, and processing cycles, making optimization
@@ -277,9 +277,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 5]
+Bormann, et al.          Expires 19 October 2026                [Page 5]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Section 3 defines a number of interesting classes ("class-N" for a
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 6]
+Bormann, et al.          Expires 19 October 2026                [Page 6]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Again, there may be several reasons for this:
@@ -372,7 +372,7 @@ Internet-Draft               CNN Terminology                  March 2026
          or
 
       *  exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-         assumed by TCP (Section 3.4.2 of RFC 9293 [STD7]).
+         assumed by TCP (Sections 3.4 and 4 of RFC 9293 [STD7]).
 
    All challenged networks are constrained networks in some sense, but
    not all constrained networks are challenged networks.  There is no
@@ -389,9 +389,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 7]
+Bormann, et al.          Expires 19 October 2026                [Page 7]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    A constrained-node network always is a constrained network because of
@@ -445,9 +445,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 8]
+Bormann, et al.          Expires 19 October 2026                [Page 8]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
 2.3.2.  LoWPAN, 6LoWPAN
@@ -501,9 +501,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026               [Page 9]
+Bormann, et al.          Expires 19 October 2026                [Page 9]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
       general-purpose operating systems such as Linux, such as by
@@ -516,7 +516,7 @@ Internet-Draft               CNN Terminology                  March 2026
 
    If the distinction between these groups needs to be made in this
    document, we distinguish "M-group" (microcontroller) from "J-group"
-   (general purpose) devices.
+   (general purpose, J as in "Jeep") devices.
 
    In this document, the class designations in Table 1 may be used as
    rough indications of device capabilities.  Note that the classes from
@@ -557,9 +557,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 10]
+Bormann, et al.          Expires 19 October 2026               [Page 10]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    +=======+=======+===================+===============+===============+
@@ -613,9 +613,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 11]
+Bormann, et al.          Expires 19 October 2026               [Page 11]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    boundaries of these classes will move over time, Moore's law tends to
@@ -669,9 +669,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 12]
+Bormann, et al.          Expires 19 October 2026               [Page 12]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Constrained devices with capabilities significantly beyond Class 2
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 13]
+Bormann, et al.          Expires 19 October 2026               [Page 13]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    +======+============================================================+
@@ -776,14 +776,14 @@ Internet-Draft               CNN Terminology                  March 2026
 
    Some platforms can keep secrets shielded (usually in conjunction with
    secure enclave functionality).  Refer to Table 4 for more details.
+   Note that Sh9 is aspirational language; no real hardware can achieve
+   this.
 
 
 
-
-
-Bormann, et al.         Expires 15 September 2026              [Page 14]
+Bormann, et al.          Expires 19 October 2026               [Page 14]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
                  +======+================================+
@@ -837,9 +837,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 15]
+Bormann, et al.          Expires 19 October 2026               [Page 15]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Some devices enter a "low-power" mode before the energy available in
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 16]
+Bormann, et al.          Expires 19 October 2026               [Page 16]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
 4.3.  Strategies for Using Power for Communication
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 17]
+Bormann, et al.          Expires 19 October 2026               [Page 17]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Table 7 provides a summary of the strategies described above.
@@ -1005,9 +1005,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 18]
+Bormann, et al.          Expires 19 October 2026               [Page 18]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    The actual accuracy of time may vary, with errors ranging from tens
@@ -1061,9 +1061,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 19]
+Bormann, et al.          Expires 19 October 2026               [Page 19]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
     +======+==================================+=======================+
@@ -1117,9 +1117,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 20]
+Bormann, et al.          Expires 19 October 2026               [Page 20]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
 5.  Classes of Networks
@@ -1173,9 +1173,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 21]
+Bormann, et al.          Expires 19 October 2026               [Page 21]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
     +======+=============+====================+=======================+
@@ -1229,9 +1229,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 22]
+Bormann, et al.          Expires 19 October 2026               [Page 22]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    * if no link layer fragmentation is available (note: 'Sx' stands for
@@ -1285,9 +1285,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 23]
+Bormann, et al.          Expires 19 October 2026               [Page 23]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
                +======+====================================+
@@ -1341,9 +1341,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 24]
+Bormann, et al.          Expires 19 October 2026               [Page 24]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
       +======+=========+========================+==================+
@@ -1374,12 +1374,12 @@ Internet-Draft               CNN Terminology                  March 2026
 
    B0 technologies lead to very high transmission times, which may be
    close to or even greater than the Maximum Segment Lifetime (MSL)
-   assumed on the Internet (Section 3.4.2 of RFC 9293 [STD7]).  Many
-   Internet protocols and mechanisms will fail when transmission times,
-   and thus latencies, are greater than the MSL [I-D.gomez-tiptop-coap].
-   B0 technologies lead to a frame transmission time greater than the
-   MSL for a frame size ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s
-   need ≥ 120 s = 2 min).
+   assumed on the Internet (Sections 3.4 and 4 of RFC 9293 [STD7]).
+   Many Internet protocols and mechanisms will fail when transmission
+   times, and thus latencies, are greater than the MSL
+   [I-D.gomez-tiptop-coap].  B0 technologies lead to a frame
+   transmission time greater than the MSL for a frame size ≥ 150 bytes
+   (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
    B1 technologies offer transmission times which are lower than the MSL
    (for a frame size greater than 150 bytes).  However, transmission
@@ -1397,9 +1397,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 25]
+Bormann, et al.          Expires 19 October 2026               [Page 25]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Over B3 technologies, the relative performance benefits of header
@@ -1424,7 +1424,7 @@ Internet-Draft               CNN Terminology                  March 2026
    of specific constraints on the security mechanisms employed.
    [RFC7416] provides a security threat analysis for the RPL routing
    protocol.  Implementation considerations for security protocols on
-   constrained nodes are discussed in [RFC7815] and
+   constrained nodes are discussed in [RFC7815] and in early work in
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
    constrained-node networks is provided in [RFC8576].
 
@@ -1453,9 +1453,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 26]
+Bormann, et al.          Expires 19 October 2026               [Page 26]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    [I-D.gomez-tiptop-coap]
@@ -1509,9 +1509,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 27]
+Bormann, et al.          Expires 19 October 2026               [Page 27]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
@@ -1565,9 +1565,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 28]
+Bormann, et al.          Expires 19 October 2026               [Page 28]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    [RFC7428]  Brandt, A. and J. Buron, "Transmission of IPv6 Packets
@@ -1621,9 +1621,9 @@ Internet-Draft               CNN Terminology                  March 2026
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 29]
+Bormann, et al.          Expires 19 October 2026               [Page 29]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
@@ -1677,9 +1677,9 @@ List of Tables
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 30]
+Bormann, et al.          Expires 19 October 2026               [Page 30]
 
-Internet-Draft               CNN Terminology                  March 2026
+Internet-Draft               CNN Terminology                  April 2026
 
 
    Table 3:   Levels of Isolation Capabilities
@@ -1714,7 +1714,7 @@ Authors' Addresses
    Email: mersue@gmail.com
 
 
-   Ari Keranen
+   Ari Keränen
    Ericsson
    Hirsalantie 11
    FI-02420 Jorvas
@@ -1733,4 +1733,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.         Expires 15 September 2026              [Page 31]
+Bormann, et al.          Expires 19 October 2026               [Page 31]
