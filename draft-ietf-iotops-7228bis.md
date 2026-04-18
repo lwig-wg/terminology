@@ -25,8 +25,7 @@ author:
   city: Munich
   country: Germany
   email: mersue@gmail.com
-- ins: A. Keranen
-  name: Ari Keranen
+- name: Ari Keränen
   org: Ericsson
   street: Hirsalantie 11
   city: Jorvas
@@ -375,7 +374,7 @@ Challenged Network:
   * exhibiting serious interruptions in end-to-end IP connectivity, or
 
   * exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-    assumed by TCP ({{Section 3.4.2 of RFC9293@STD7}}).
+    assumed by TCP ({{Sections 3.4 and 4 of RFC9293@STD7}}).
 
 
 
@@ -497,7 +496,7 @@ devices based on their CPU capabilities:
 
 If the distinction between these groups needs to be made in this
 document, we distinguish "M-group" (microcontroller) from "J-group"
-(general purpose) devices.
+(general purpose, J as in "Jeep") devices.
 
 In this document, the class designations in {{devclasstbl}} may be
 used as rough indications of device capabilities.  Note that the
@@ -643,6 +642,8 @@ exclusive.
 
 Some platforms can keep secrets shielded (usually in conjunction with
 secure enclave functionality). Refer to {{shieldtbl}} for more details.
+Note that Sh9 is aspirational language; no real hardware can achieve
+this.
 
 | Name | Secret shielding functionality |
 | Sh0  | no secret shielding            |
@@ -997,7 +998,7 @@ techniques.
 
 B0 technologies lead to very high transmission times, which may be close
 to or even greater than the Maximum Segment Lifetime (MSL) assumed on
-the Internet ({{Section 3.4.2 of RFC9293@STD7}}).
+the Internet ({{Sections 3.4 and 4 of RFC9293@STD7}}).
 Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than the MSL
 {{-coap-in-space}}.
@@ -1042,7 +1043,7 @@ context of specific protocols.  For instance, {{Section 11.6 of RFC7252}},
 constraints on the security mechanisms employed. {{-ROLL-SEC-THREATS}} provides a security
 threat analysis for the RPL routing protocol.
 Implementation considerations for security protocols on constrained
-nodes are discussed in {{-IKEV2-MINIMAL}} and {{-TLS-MINIMAL}}.
+nodes are discussed in {{-IKEV2-MINIMAL}} and in early work in {{-TLS-MINIMAL}}.
 A wider view of security in constrained-node networks is provided in {{-IOT-SECURITY}}.
 
 --- back
@@ -1065,3 +1066,9 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 {: numbered="no"}
 
 TBD — to be completed after review process concludes.
+
+{{{Marco Tiloca}}} helped the document through the IETF process as Document
+Shepherd.
+{{{Mohamed Boucadair}}} served as responsible area director in the IESG.
+
+Carles Gomez was supported in part by the Spanish Government MCIU/AEI/10.13039/501100011033/FEDER/UE through project PID2023-146378NBI00.
