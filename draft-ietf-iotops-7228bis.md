@@ -1066,3 +1066,9 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 {: numbered="no"}
 
 TBD — to be completed after review process concludes.
+
+{{{Marco Tiloca}}} helped the document through the IETF process as Document
+Shepherd.
+{{{Mohamed Boucadair}}} served as responsible area director in the IESG.
+
+Carles Gomez was supported in part by the Spanish Government MCIU/AEI/10.13039/501100011033/FEDER/UE through project PID2023-146378NBI00.
