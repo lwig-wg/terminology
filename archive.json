@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-16T02:42:07.601430+00:00",
+  "timestamp": "2026-04-19T02:43:40.981947+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -455,6 +455,61 @@
               "updatedAt": "2026-03-14T17:32:33Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOBMYTbM7TYiuX",
+      "title": "Pre IESG submission nits",
+      "url": "https://github.com/lwig-wg/terminology/pull/10",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-04-17T16:32:07Z",
+      "updatedAt": "2026-04-18T09:10:34Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "5a594ce75c0576d7f7be5aede8bd50e98f54859d",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "pre-submit-nits",
+      "headRefOid": "8fb02793b21fe080e60fd2b5607717a63d5045d9",
+      "closedAt": "2026-04-18T09:10:34Z",
+      "mergedAt": "2026-04-18T09:10:34Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM72YNYU",
+          "commit": {
+            "abbreviatedOid": "c830f41"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-18T04:35:10Z",
+          "updatedAt": "2026-04-18T04:35:10Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM72ZHDW",
+          "commit": {
+            "abbreviatedOid": "c830f41"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Thanks for the updates!\nBy the way, at some point, I would need the following text to be added in the Acknowledgments section: \n\"Carles Gomez was supported in part by the Spanish Government MCIU/AEI/10.13039/501100011033/FEDER/UE through project PID2023-146378NBI00.\"\nThanks!",
+          "createdAt": "2026-04-18T06:09:08Z",
+          "updatedAt": "2026-04-18T06:09:08Z",
+          "comments": []
         }
       ]
     }
