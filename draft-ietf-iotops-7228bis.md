@@ -249,7 +249,7 @@ weight, and other scaling factors.
 (An alternative term, when the properties as a network node are not in
 focus, is "constrained device".)
 
-"unconstrained node" cannot be used as an antonym, as engineering is
+"Unconstrained node" cannot be used as an antonym, as engineering is
 unable to produce nodes that are literally without constraints.
 To mark the other end of the constrainedness spectrum, the term
 Capable (as in "capable nodes") has become popular.
