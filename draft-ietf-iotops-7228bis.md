@@ -334,7 +334,7 @@ Constraints may include:
 * lack of (or severe constraints on) advanced services such as IP multicast.
 
 
-More generally, it is about constrained networks whenever at least
+More generally, the term "constrained networks" applies whenever at least
 some of the nodes involved in the network exhibit these
 characteristics.
 
