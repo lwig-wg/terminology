@@ -478,7 +478,7 @@ devices based on their CPU capabilities:
   their pins for interfaces to application hardware such as digital
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
-  "Systems on a Chip" (SoC) is used where this hardware is specialized for an application.  These devices often implement
+  The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
   elaborate sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (Ps, see {{scaling-properties}}).
 
