@@ -6,11 +6,11 @@ IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Obsoletes: 7228 (if approved)                                   M. Ersue
 Intended status: Informational                                          
-Expires: 20 October 2026                                      A. Keränen
+Expires: 25 October 2026                                      A. Keränen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                           18 April 2026
+                                                           23 April 2026
 
 
                Terminology for Constrained-Node Networks
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 1]
+Bormann, et al.          Expires 25 October 2026                [Page 1]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -63,7 +63,7 @@ Internet-Draft               CNN Terminology                  April 2026
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 October 2026.
+   This Internet-Draft will expire on 25 October 2026.
 
 Copyright Notice
 
@@ -103,20 +103,21 @@ Table of Contents
    5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  21
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
      5.2.  Classes of Internet Integration . . . . . . . . . . . . .  23
-     5.3.  Classes of physical layer bit rate  . . . . . . . . . . .  24
+     5.3.  Classes of Physical Layer Bit Rate  . . . . . . . . . . .  24
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
+   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  26
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 2]
+Bormann, et al.          Expires 25 October 2026                [Page 2]
 
 Internet-Draft               CNN Terminology                  April 2026
 
 
-   8.  Informative References  . . . . . . . . . . . . . . . . . . .  26
+   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  26
    Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  30
-   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  30
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  31
    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  31
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  31
 
@@ -164,8 +165,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-
-Bormann, et al.          Expires 20 October 2026                [Page 3]
+Bormann, et al.          Expires 25 October 2026                [Page 3]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -204,7 +204,7 @@ Internet-Draft               CNN Terminology                  April 2026
       economically and physically viable.
 
    The need for scaling down the characteristics of nodes leads to
-   "constrained nodes".
+   "constrained nodes" (Section 2.1).
 
 2.1.  Constrained Nodes
 
@@ -221,15 +221,15 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 4]
+Bormann, et al.          Expires 25 October 2026                [Page 4]
 
 Internet-Draft               CNN Terminology                  April 2026
 
 
       on state, code space, and processing cycles, making optimization
       of energy and network bandwidth usage a dominating consideration
-      in all design requirements.  Also, some layer-2 services such as
-      full connectivity and broadcast/multicast may be lacking.
+      in all design requirements.  Also, some Layer 2 (L2) services such
+      as full connectivity and broadcast/multicast may be lacking.
 
    While this is not a rigorous definition, it is grounded in the state
    of the art and clearly sets apart constrained nodes from server
@@ -241,10 +241,10 @@ Internet-Draft               CNN Terminology                  April 2026
    (An alternative term, when the properties as a network node are not
    in focus, is "constrained device".)
 
-   As an antonym, we cannot use "unconstrained node", as engineering is
+   "Unconstrained node" cannot be used as an antonym, as engineering is
    unable to produce nodes that are literally without constraints.  To
    mark the other end of the constrainedness spectrum, the term Capable
-   (as in "capable nodes") has recently become popular.
+   (as in "capable nodes") has become popular.
 
    Capable Node:  A node that is not subject to the constraints that
       would make it a "Constrained Node" for the purposes of the
@@ -277,7 +277,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 5]
+Bormann, et al.          Expires 25 October 2026                [Page 5]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -293,15 +293,15 @@ Internet-Draft               CNN Terminology                  April 2026
    The use of constrained nodes in networks often also leads to
    constraints on the networks themselves.  However, there may also be
    constraints on networks that are largely independent of those of the
-   nodes.  We therefore distinguish "constrained networks" from
-   "constrained-node networks".
+   nodes.  This document therefore distinguishes "constrained networks"
+   from "constrained-node networks".
 
 2.2.  Constrained Networks
 
-   (Section 5 defines some specific classes of networks; the present
-   section continues with some higher-level observations.)
+   Section 5 defines some specific classes of networks; the present
+   section continues with some higher-level observations.
 
-   We define "constrained network" in a similar way:
+   This document defines "constrained network" in a similar way:
 
    Constrained Network:  A network where some of the characteristics
       pretty much taken for granted with link layers in common use in
@@ -327,13 +327,13 @@ Internet-Draft               CNN Terminology                  April 2026
    *  lack of (or severe constraints on) advanced services such as IP
       multicast.
 
-   More generally, we speak of constrained networks whenever at least
-   some of the nodes involved in the network exhibit these
+   More generally, the term "constrained networks" applies whenever at
+   least some of the nodes involved in the network exhibit these
    characteristics.
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 6]
+Bormann, et al.          Expires 25 October 2026                [Page 6]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -389,7 +389,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 7]
+Bormann, et al.          Expires 25 October 2026                [Page 7]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -445,7 +445,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 8]
+Bormann, et al.          Expires 25 October 2026                [Page 8]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -489,11 +489,11 @@ Internet-Draft               CNN Terminology                  April 2026
       Management Unit (MMU).  They use most of their pins for interfaces
       to application hardware such as digital in/out (the latter often
       Pulse Width Modulation (PWM)-controllable), ADC/DACs (analog-to-
-      digital and digital-to-analog converters), etc.  Where this
-      hardware is specialized for an application, we may talk about
-      "Systems on a Chip" (SoC).  These devices often implement
-      elaborate sleep modes to achieve microwatt- or at least milliwatt-
-      level sustained power usage (Ps, see Section 4.1).
+      digital and digital-to-analog converters), etc.  The term "System
+      on a Chip" (SoC) can be used where this hardware is specialized
+      for an application.  These devices often implement elaborate sleep
+      modes to achieve microwatt- or at least milliwatt-level sustained
+      power usage (Ps, see Section 4.1).
 
    *  General-purpose-class devices (e.g., called "A-Profile" in
       [ARM-ARCH]).  These usually have RAM and Flash storage on separate
@@ -501,7 +501,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026                [Page 9]
+Bormann, et al.          Expires 25 October 2026                [Page 9]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -514,8 +514,8 @@ Internet-Draft               CNN Terminology                  April 2026
       also include sleep modes, they are usually more on the watt side
       of sustained power usage (Ps).
 
-   If the distinction between these groups needs to be made in this
-   document, we distinguish "M-group" (microcontroller) from "J-group"
+   If the distinction between these groups needs to be made, this
+   document distinguishes "M-group" (microcontroller) from "J-group"
    (general purpose, J as in "Jeep") devices.
 
    In this document, the class designations in Table 1 may be used as
@@ -557,7 +557,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 10]
+Bormann, et al.          Expires 25 October 2026               [Page 10]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -613,7 +613,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 11]
+Bormann, et al.          Expires 25 October 2026               [Page 11]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -669,7 +669,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 12]
+Bormann, et al.          Expires 25 October 2026               [Page 12]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -677,16 +677,17 @@ Internet-Draft               CNN Terminology                  April 2026
    Constrained devices with capabilities significantly beyond Class 2
    devices exist.  They are less demanding from a standards development
    point of view as they can largely use existing protocols unchanged.
-   The previous version of the present document therefore did not make
-   any attempt to define constrained classes beyond Class 2.  These
-   devices, and to a certain extent even J-group devices, can still be
-   constrained by a limited energy supply.  Class 3 and 4 devices are
-   less clearly defined than the lower classes; they are even less
-   constrained.  In particular Class 4 devices are powerful enough to
-   quite comfortably run, say, JavaScript interpreters, together with
-   elaborate network stacks.  Additional classes may need to be defined
-   based on protection capabilities, e.g., an MPU (memory protection
-   unit; true MMUs are typically only found in J-group devices).
+   The previous version of the present document [RFC7228] therefore did
+   not make any attempt to define constrained classes beyond Class 2.
+   These devices, and to a certain extent even J-group devices, can
+   still be constrained by a limited energy supply.  Class 3 and 4
+   devices are less clearly defined than the lower classes; they are
+   even less constrained.  In particular Class 4 devices are powerful
+   enough to quite comfortably run, say, JavaScript interpreters,
+   together with elaborate network stacks.  Additional classes may need
+   to be defined based on protection capabilities, e.g., an MPU (memory
+   protection unit; true MMUs are typically only found in J-group
+   devices).
 
    With respect to examining the capabilities of constrained nodes,
    particularly for Class 1 devices, it is important to understand what
@@ -709,7 +710,7 @@ Internet-Draft               CNN Terminology                  April 2026
 3.1.  Firmware/Software upgradability
 
    Platforms may differ in their firmware or software upgradability.
-   The below is a first attempt at classifying this.
+   Table 2 is a first attempt at classifying this.
 
 
 
@@ -724,8 +725,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-
-Bormann, et al.          Expires 20 October 2026               [Page 13]
+Bormann, et al.          Expires 25 October 2026               [Page 13]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -781,7 +781,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 14]
+Bormann, et al.          Expires 25 October 2026               [Page 14]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -812,9 +812,9 @@ Internet-Draft               CNN Terminology                  April 2026
    kilowatts to microwatts, from essentially unlimited to hundreds of
    microjoules.
 
-   Instead of defining classes or clusters, we simply state, using the
-   International System of Units (SI units), an approximate value for
-   one or both of the quantities listed in Table 5.
+   Instead of defining classes or clusters, a simple statement, using
+   the International System of Units (SI units), of an approximate value
+   for one or both of the quantities listed in Table 5 is used.
 
       +======+============================================+=========+
       | Name | Definition                                 | SI Unit |
@@ -837,7 +837,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 15]
+Bormann, et al.          Expires 25 October 2026               [Page 15]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -893,7 +893,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 16]
+Bormann, et al.          Expires 25 October 2026               [Page 16]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -949,7 +949,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 17]
+Bormann, et al.          Expires 25 October 2026               [Page 17]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1005,7 +1005,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 18]
+Bormann, et al.          Expires 25 October 2026               [Page 18]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1061,7 +1061,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 19]
+Bormann, et al.          Expires 25 October 2026               [Page 19]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1117,7 +1117,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 20]
+Bormann, et al.          Expires 25 October 2026               [Page 20]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1173,13 +1173,13 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 21]
+Bormann, et al.          Expires 25 October 2026               [Page 21]
 
 Internet-Draft               CNN Terminology                  April 2026
 
 
     +======+=============+====================+=======================+
-    | Name | L2 MTU size | example MTU (minus | 6LoWPAN Fragmentation |
+    | Name | L2 MTU Size | Example MTU (minus | 6LoWPAN Fragmentation |
     |      | (bytes)     | epsilon)           | applicable*?          |
     +======+=============+====================+=======================+
     | S0   | 3 – 12      |                    | (often L2             |
@@ -1229,7 +1229,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 22]
+Bormann, et al.          Expires 25 October 2026               [Page 22]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1253,7 +1253,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
    S10 or higher technologies do not require fragmentation to support
    the IPv6 MTU requirement; S12 and above often create islands of
-   higher MTU in an otherwise Ethernet-inspired L2 network.
+   higher MTU in an otherwise Ethernet-inspired Layer 2 network.
 
 5.2.  Classes of Internet Integration
 
@@ -1285,7 +1285,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 23]
+Bormann, et al.          Expires 25 October 2026               [Page 23]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1307,7 +1307,7 @@ Internet-Draft               CNN Terminology                  April 2026
                  Table 11: Classes of Internet Integration
                                    Level
 
-5.3.  Classes of physical layer bit rate
+5.3.  Classes of Physical Layer Bit Rate
 
    Physical layer technologies used by constrained devices can be
    categorized on the basis of physical layer (PHY) bit rate.  The PHY
@@ -1341,7 +1341,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 24]
+Bormann, et al.          Expires 25 October 2026               [Page 24]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1397,7 +1397,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 25]
+Bormann, et al.          Expires 25 October 2026               [Page 25]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1414,7 +1414,12 @@ Internet-Draft               CNN Terminology                  April 2026
 
    This document makes no requests to IANA.
 
-7.  Security Considerations
+7.  Operational Considerations
+
+   This document does not define any protocol, as such there are no new
+   operations or manageability requirements introduced by this document.
+
+8.  Security Considerations
 
    This document introduces common terminology that does not raise any
    new security issues.  Security considerations arising from the
@@ -1428,7 +1433,7 @@ Internet-Draft               CNN Terminology                  April 2026
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
    constrained-node networks is provided in [RFC8576].
 
-8.  Informative References
+9.  Informative References
 
    [ARM-ARCH] Arm, "ARM architecture profiles",
               <https://developer.arm.com/documentation/DEN0130/0100/
@@ -1448,12 +1453,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-
-
-
-
-
-Bormann, et al.          Expires 20 October 2026               [Page 26]
+Bormann, et al.          Expires 25 October 2026               [Page 26]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1509,7 +1509,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 27]
+Bormann, et al.          Expires 25 October 2026               [Page 27]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1565,7 +1565,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 28]
+Bormann, et al.          Expires 25 October 2026               [Page 28]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1621,7 +1621,7 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 29]
+Bormann, et al.          Expires 25 October 2026               [Page 29]
 
 Internet-Draft               CNN Terminology                  April 2026
 
@@ -1655,6 +1655,8 @@ Appendix A.  Changes Since RFC 7228
 
    *  Updated references
 
+   *  Added Superscript notations
+
    *  Added new terms such as "Capable Node"
 
    *  Added a classification of device groups
@@ -1670,18 +1672,20 @@ Appendix A.  Changes Since RFC 7228
 
    *  Added new section "Classes of Networks"
 
-List of Tables
-
-   Table 1:   Classes of Constrained (and More Capable) Devices
-   Table 2:   Levels of Software Update Capabilities
 
 
 
-Bormann, et al.          Expires 20 October 2026               [Page 30]
+
+
+Bormann, et al.          Expires 25 October 2026               [Page 30]
 
 Internet-Draft               CNN Terminology                  April 2026
 
 
+List of Tables
+
+   Table 1:   Classes of Constrained (and More Capable) Devices
+   Table 2:   Levels of Software Update Capabilities
    Table 3:   Levels of Isolation Capabilities
    Table 4:   Levels of Secret Shielding Capabilities
    Table 5:   Quantities Relevant to Power and Energy
@@ -1722,20 +1726,24 @@ Authors' Addresses
    Email: mersue@gmail.com
 
 
+
+
+
+
+
+
+
+Bormann, et al.          Expires 25 October 2026               [Page 31]
+
+Internet-Draft               CNN Terminology                  April 2026
+
+
    Ari Keränen
    Ericsson
    Hirsalantie 11
    FI-02420 Jorvas
    Finland
    Email: ari.keranen@ericsson.com
-
-
-
-
-
-Bormann, et al.          Expires 20 October 2026               [Page 31]
-
-Internet-Draft               CNN Terminology                  April 2026
 
 
    Carles Gomez
@@ -1781,12 +1789,4 @@ Internet-Draft               CNN Terminology                  April 2026
 
 
 
-
-
-
-
-
-
-
-
-Bormann, et al.          Expires 20 October 2026               [Page 32]
+Bormann, et al.          Expires 25 October 2026               [Page 32]
