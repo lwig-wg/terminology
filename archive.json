@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-21T02:38:20.107822+00:00",
+  "timestamp": "2026-04-23T02:40:37.235985+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -94,6 +94,22 @@
       "createdAt": "2025-10-23T16:24:00Z",
       "updatedAt": "2025-11-04T01:06:41Z",
       "closedAt": "2025-11-04T01:06:41Z",
+      "comments": []
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOBMYTbM8AAAABAMAgEQ",
+      "title": "Do we have a recent ref to cite than draft-hui-vasseur-roll-rpl-deployment?",
+      "url": "https://github.com/lwig-wg/terminology/issues/12",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This draft expired for a decade. Do we have a recent ref to cite?",
+      "createdAt": "2026-04-22T07:59:25Z",
+      "updatedAt": "2026-04-22T07:59:25Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -512,6 +528,111 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOBMYTbM7Ui-ns",
+      "title": "AD Review: very minor edits",
+      "url": "https://github.com/lwig-wg/terminology/pull/11",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "* update list of changes\r\n* avoid \"we\" constructs\r\n* add cross ref\r\n* add a new section to follow 3.2 of draft-ietf-opsawg-rfc5706bis\r\n* fix some few text that won't age well",
+      "createdAt": "2026-04-22T07:57:51Z",
+      "updatedAt": "2026-04-22T09:52:00Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b",
+      "headRepository": "boucadair/terminology",
+      "headRefName": "main",
+      "headRefOid": "18c10cb13246c16647a644c71129390c35a23639",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM73iZSg",
+          "commit": {
+            "abbreviatedOid": "1936ce8"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thank you, very actionable!",
+          "createdAt": "2026-04-22T08:04:41Z",
+          "updatedAt": "2026-04-22T08:11:18Z",
+          "comments": [
+            {
+              "originalPosition": 57,
+              "body": "```suggestion\nMore generally, the term \"constrained networks\" applies whenever at least\n```",
+              "createdAt": "2026-04-22T08:04:41Z",
+              "updatedAt": "2026-04-22T08:11:18Z"
+            },
+            {
+              "originalPosition": 67,
+              "body": "```suggestion\n  The term \"System on a Chip\" (SoC) can be used where this hardware is specialized for an application.  These devices often implement\n```",
+              "createdAt": "2026-04-22T08:09:01Z",
+              "updatedAt": "2026-04-22T08:11:18Z"
+            },
+            {
+              "originalPosition": 106,
+              "body": "(The RFC editor will smoothen the sentence...)",
+              "createdAt": "2026-04-22T08:10:26Z",
+              "updatedAt": "2026-04-22T08:11:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM73klMS",
+          "commit": {
+            "abbreviatedOid": "89186c6"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-22T09:26:27Z",
+          "updatedAt": "2026-04-22T09:28:05Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\n\"Unconstrained node\" cannot be used as an antonym, as engineering is\n```",
+              "createdAt": "2026-04-22T09:26:28Z",
+              "updatedAt": "2026-04-22T09:28:05Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOBMYTbM7Us9Y_",
+      "title": "Address issue #12",
+      "url": "https://github.com/lwig-wg/terminology/pull/13",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-04-22T17:00:19Z",
+      "updatedAt": "2026-04-22T17:00:28Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "issue-12",
+      "headRefOid": "32f336c6cc7ec1d2ba3e32bfc813b9ff48860cd0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
