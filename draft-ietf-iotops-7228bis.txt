@@ -427,7 +427,8 @@ Internet-Draft               CNN Terminology                  April 2026
    graphs that are medium-term stable for routing and (2) do
    measurements on the edges such as Expected Transmission Count (ETX)
    [RFC6551].  Not all LLNs comprise low-power nodes
-   [I-D.hui-vasseur-roll-rpl-deployment].
+   ([I-D.hui-vasseur-roll-rpl-deployment], definition of "field device"
+   in [RFC7102]).
 
    LLNs are typically composed of constrained nodes; this leads to the
    design of operation modes such as the "non-storing mode" defined by
@@ -435,7 +436,6 @@ Internet-Draft               CNN Terminology                  April 2026
    [RFC6550]).  So, in the terminology of the present document, an LLN
    is a constrained-node network with certain network characteristics,
    which include constraints on the network as well.
-
 
 
 
