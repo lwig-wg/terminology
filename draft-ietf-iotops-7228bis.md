@@ -218,7 +218,7 @@ There are two important aspects to *scaling* within the Internet of Things:
 
 
 The need for scaling down the characteristics of nodes leads to
-"constrained nodes".
+"constrained nodes" ({{constrained-nodes}}).
 
 ## Constrained Nodes {#constrained-nodes}
 
@@ -236,7 +236,7 @@ Constrained Node:
   hard upper bounds on state, code space, and processing cycles, making
   optimization of energy and network bandwidth usage a dominating
   consideration in all design
-  requirements.  Also, some layer-2 services such as full connectivity
+  requirements.  Also, some Layer 2 (L2) services such as full connectivity
   and broadcast/multicast may be lacking.
 
 While this is not a rigorous definition, it is
@@ -249,10 +249,10 @@ weight, and other scaling factors.
 (An alternative term, when the properties as a network node are not in
 focus, is "constrained device".)
 
-As an antonym, we cannot use "unconstrained node", as engineering is
+"Unconstrained node" cannot be used as an antonym, as engineering is
 unable to produce nodes that are literally without constraints.
 To mark the other end of the constrainedness spectrum, the term
-Capable (as in "capable nodes") has recently become popular.
+Capable (as in "capable nodes") has become popular.
 
 Capable Node:
 : A node that is not subject to the constraints that would make it a
@@ -293,16 +293,16 @@ given in {{power}}.
 The use of constrained nodes in networks often also leads to
 constraints on the networks themselves.  However, there may also be
 constraints on networks that are largely independent of those of the
-nodes.  We therefore distinguish "constrained networks" from
+nodes.  This document therefore distinguishes "constrained networks" from
 "constrained-node networks".
 
 
 ## Constrained Networks {#constrained-networks}
 
-({{network-classes}} defines some specific classes of networks; the
-present section continues with some higher-level observations.)
+{{network-classes}} defines some specific classes of networks; the
+present section continues with some higher-level observations.
 
-We define "constrained network" in a similar way:
+This document defines "constrained network" in a similar way:
 
 
 
@@ -334,7 +334,7 @@ Constraints may include:
 * lack of (or severe constraints on) advanced services such as IP multicast.
 
 
-More generally, we speak of constrained networks whenever at least
+More generally, the term "constrained networks" applies whenever at least
 some of the nodes involved in the network exhibit these
 characteristics.
 
@@ -478,8 +478,7 @@ devices based on their CPU capabilities:
   their pins for interfaces to application hardware such as digital
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
-  Where this hardware is specialized for an application, we may talk
-  about "Systems on a Chip" (SoC).  These devices often implement
+  The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
   elaborate sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (Ps, see {{scaling-properties}}).
 
@@ -494,8 +493,8 @@ devices based on their CPU capabilities:
   While these chips also include sleep modes, they are
   usually more on the watt side of sustained power usage (Ps).
 
-If the distinction between these groups needs to be made in this
-document, we distinguish "M-group" (microcontroller) from "J-group"
+If the distinction between these groups needs to be made,
+this document distinguishes "M-group" (microcontroller) from "J-group"
 (general purpose, J as in "Jeep") devices.
 
 In this document, the class designations in {{devclasstbl}} may be
@@ -575,7 +574,7 @@ might reduce development costs and increase the interoperability.
 Constrained devices with capabilities significantly beyond Class 2
 devices exist.  They are less demanding from a standards development
 point of view as they can largely use existing protocols unchanged.
-The previous version of the present document therefore did not make
+The previous version of the present document {{RFC7228}} therefore did not make
 any attempt to define constrained classes beyond Class 2.  These
 devices, and to a certain extent even J-group devices, can still be
 constrained by a limited energy supply.  Class 3 and 4 devices are
@@ -609,7 +608,7 @@ Internet nodes.
 ## Firmware/Software upgradability {#class-Fx}
 
 Platforms may differ in their firmware or software upgradability.
-The below is a first attempt at classifying this.
+{{upgtbl}} is a first attempt at classifying this.
 
 | Name | Firmware/Software upgradability                            |
 | F0   | no (discard for upgrade)                                   |
@@ -664,10 +663,10 @@ The power and/or energy available to a device may vastly differ, from
 kilowatts to microwatts, from essentially unlimited to hundreds of
 microjoules.
 
-Instead of defining classes or clusters, we simply state, using
-the International System of Units (SI units), an approximate value for one
+Instead of defining classes or clusters, a simple statement, using
+the International System of Units (SI units), of an approximate value for one
 or both of the quantities
-listed in {{scaletbl}}.
+listed in {{scaletbl}} is used.
 
 | Name | Definition                                                                         | SI Unit   |
 | Ps   | Sustainable average power available for the device over the time it is functioning | W (Watt)  |
@@ -911,7 +910,7 @@ describing frame aggregation on the link layer.
 and
 "RoCE" is RDMA over Converged Ethernet.
 
-| Name | L2 MTU size (bytes) | example MTU (minus epsilon)                     | 6LoWPAN Fragmentation applicable*? |
+| Name | L2 MTU Size (bytes) | Example MTU (minus epsilon)                     | 6LoWPAN Fragmentation applicable*? |
 |------|---------------------|-------------------------------------------------|------------------------------------|
 | S0   | 3 – 12              |                                                 | (often L2 segmentation)            |
 | S1   | 13 – 127            | ~80 (IEEE 802.15.4 with security), ~64 (CAN-FD) | yes                                |
@@ -948,7 +947,7 @@ packets over these technologies.
 
 S10 or higher technologies do not require fragmentation to support the IPv6 MTU
 requirement; S12 and above often create islands of higher MTU in an
-otherwise Ethernet-inspired L2 network.
+otherwise Ethernet-inspired Layer 2 network.
 
 ## Classes of Internet Integration {#class-Ix}
 
@@ -971,7 +970,7 @@ communicate with other nodes in the Internet as well.
 {: #internettbl title='Classes of Internet Integration Level'}
 
 
-## Classes of physical layer bit rate
+## Classes of Physical Layer Bit Rate
 
 <!--
 \[This section could be expanded to also talk about
@@ -1033,6 +1032,10 @@ transmission.
 
 This document makes no requests to IANA.
 
+# Operational Considerations
+
+This document does not define any protocol, as such there are no new operations or manageability requirements introduced by this document.
+
 # Security Considerations {#security-considerations}
 
 This document introduces common terminology that does not raise any
@@ -1053,6 +1056,7 @@ A wider view of security in constrained-node networks is provided in {{-IOT-SECU
 The following changes have been made to the guidelines published in {{RFC7228}}:
 
 * Updated references
+* Added Superscript notations
 * Added new terms such as "Capable Node"
 * Added a classification of device groups
 * Updated Table 1 with more details about classes of constrained devices
