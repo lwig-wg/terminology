@@ -428,7 +428,7 @@ stability that makes it worthwhile to both (1) construct directed acyclic graphs
 that are medium-term stable for routing and (2) do measurements on the edges
 such as Expected Transmission Count (ETX) {{RFC6551}}.
 Not all LLNs comprise low-power nodes ({{-RPL-DEPLOYMENT}},
-definition "field device" in {{RFC7102}}).
+definition of "field device" in {{RFC7102}}).
 
 LLNs are typically composed
 of constrained nodes; this leads to the design of
