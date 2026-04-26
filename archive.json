@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-23T02:40:37.235985+00:00",
+  "timestamp": "2026-04-26T02:46:46.943264+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -101,16 +101,31 @@
       "id": "I_kwDOBMYTbM8AAAABAMAgEQ",
       "title": "Do we have a recent ref to cite than draft-hui-vasseur-roll-rpl-deployment?",
       "url": "https://github.com/lwig-wg/terminology/issues/12",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This draft expired for a decade. Do we have a recent ref to cite?",
       "createdAt": "2026-04-22T07:59:25Z",
-      "updatedAt": "2026-04-22T07:59:25Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-04-23T13:00:43Z",
+      "closedAt": "2026-04-23T12:45:42Z",
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Added RFC7102 (the definition of \"field device\" there) in #13.\n(A friendly LLM told me the best reference making that point was RFC 7228 :-)",
+          "createdAt": "2026-04-23T12:45:42Z",
+          "updatedAt": "2026-04-23T12:45:42Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> (A friendly LLM told me the best reference making that point was RFC 7228 :-)\n\nExcellent! ha ha ha. \n\nThanks for adding 7120",
+          "createdAt": "2026-04-23T13:00:43Z",
+          "updatedAt": "2026-04-23T13:00:43Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -534,24 +549,26 @@
       "id": "PR_kwDOBMYTbM7Ui-ns",
       "title": "AD Review: very minor edits",
       "url": "https://github.com/lwig-wg/terminology/pull/11",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "* update list of changes\r\n* avoid \"we\" constructs\r\n* add cross ref\r\n* add a new section to follow 3.2 of draft-ietf-opsawg-rfc5706bis\r\n* fix some few text that won't age well",
       "createdAt": "2026-04-22T07:57:51Z",
-      "updatedAt": "2026-04-22T09:52:00Z",
+      "updatedAt": "2026-04-23T12:10:41Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b",
       "headRepository": "boucadair/terminology",
       "headRefName": "main",
       "headRefOid": "18c10cb13246c16647a644c71129390c35a23639",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-23T12:10:40Z",
+      "mergedAt": "2026-04-23T12:10:40Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "c068ee41925a8cbdbe1922c93c38e478b562a84f"
+      },
       "comments": [],
       "reviews": [
         {
@@ -605,6 +622,19 @@
               "updatedAt": "2026-04-22T09:28:05Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM74DM5Q",
+          "commit": {
+            "abbreviatedOid": "18c10cb"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-23T10:20:43Z",
+          "updatedAt": "2026-04-23T10:20:43Z",
+          "comments": []
         }
       ]
     },
@@ -613,26 +643,75 @@
       "id": "PR_kwDOBMYTbM7Us9Y_",
       "title": "Address issue #12",
       "url": "https://github.com/lwig-wg/terminology/pull/13",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-04-22T17:00:19Z",
-      "updatedAt": "2026-04-22T17:00:28Z",
+      "updatedAt": "2026-04-23T12:42:08Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "issue-12",
-      "headRefOid": "32f336c6cc7ec1d2ba3e32bfc813b9ff48860cd0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "821042abb2a6dda0ac33ac3a4bdf2ebdf23b4714",
+      "closedAt": "2026-04-23T12:42:08Z",
+      "mergedAt": "2026-04-23T12:42:08Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "ce05140be123f45cae34bd4d8831f57547686bae"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM738mKi",
+          "commit": {
+            "abbreviatedOid": "32f336c"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Makes sense to me!\nPerhaps s/definition \"field device\"/definition of \"field device\" ?\nThanks!",
+          "createdAt": "2026-04-23T05:23:28Z",
+          "updatedAt": "2026-04-23T05:23:28Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM738qLz",
+          "commit": {
+            "abbreviatedOid": "32f336c"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-23T05:26:30Z",
+          "updatedAt": "2026-04-23T05:26:30Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\ndefinition of \"field device\" in {{RFC7102}}).\n```",
+              "createdAt": "2026-04-23T05:26:30Z",
+              "updatedAt": "2026-04-23T05:26:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM74GWhq",
+          "commit": {
+            "abbreviatedOid": "821042a"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Looks good. I was also wondering if one or two words more after comma would be useful here for clarity, but RFCed can probably help here best.",
+          "createdAt": "2026-04-23T12:41:24Z",
+          "updatedAt": "2026-04-23T12:41:24Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
