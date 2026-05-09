@@ -377,7 +377,7 @@ Challenged Network:
   * exhibiting delay well beyond expectations that Transport or
     higher-level protocols may operate on, such as the Maximum Segment
     Lifetime (MSL) defined by TCP ({{Sections 3.4 and 4 of
-    RFC9293@STD7}}; see also {{bitrate}}).
+    RFC9293@STD7}}; see also {{phyrate}}).
 
 All challenged networks are constrained networks in some sense, but
 not all constrained networks are challenged networks.  There is no
@@ -973,7 +973,7 @@ communicate with other nodes in the Internet as well.
 {: #internettbl title='Classes of Internet Integration Level'}
 
 
-## Classes of Physical Layer Bit Rate {#bitrate}
+## Classes of Physical Layer Bit Rate {#phyrate}
 
 <!--
 \[This section could be expanded to also talk about
@@ -1006,7 +1006,8 @@ everywhere, but can serve as a yardstick for the present section.
 Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than such
 an assumed constant, often with a default value in the same order of magnitude as the
-TCP MSL, but possibly explicitly configurable {{-coap}} {{-coap-in-space}}.
+TCP MSL, but possibly explicitly configurable (compare MAX_LATENCY in
+{{Section 4.8.2 of -coap}}, see also {{-coap-in-space}}).
 For example, B0 technologies lead to a
 frame transmission time greater than the TCP MSL for a frame size ≥ 150
 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
