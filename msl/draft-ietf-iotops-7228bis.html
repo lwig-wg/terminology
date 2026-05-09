@@ -1528,7 +1528,7 @@ would today expect of the end-to-end IP model, e.g., by:<a href="#section-2.2.1-
                 <li class="normal" id="section-2.2.1-2.2.2.3">
                   <p id="section-2.2.1-2.2.2.3.1">exhibiting delay well beyond expectations that Transport or
 higher-level protocols may operate on, such as the Maximum Segment
-Lifetime (MSL) defined by TCP (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>; see also <a href="#bitrate" class="auto internal xref">Section 5.3</a>).<a href="#section-2.2.1-2.2.2.3.1" class="pilcrow">¶</a></p>
+Lifetime (MSL) defined by TCP (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>; see also <a href="#phyrate" class="auto internal xref">Section 5.3</a>).<a href="#section-2.2.1-2.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </dd>
@@ -2563,7 +2563,7 @@ communicate with other nodes in the Internet as well.<a href="#section-5.2-1" cl
 </div>
 </section>
 </div>
-<div id="bitrate">
+<div id="phyrate">
 <section id="section-5.3">
         <h3 id="name-classes-of-physical-layer-b">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-classes-of-physical-layer-b" class="section-name selfRef">Classes of Physical Layer Bit Rate</a>
@@ -2630,7 +2630,8 @@ everywhere, but can serve as a yardstick for the present section.
 Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than such
 an assumed constant, often with a default value in the same order of magnitude as the
-TCP MSL, but possibly explicitly configurable <span>[<a href="#RFC7252" class="cite xref">RFC7252</a>]</span> <span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>.
+TCP MSL, but possibly explicitly configurable (compare MAX_LATENCY in
+<span><a href="https://rfc-editor.org/rfc/rfc7252#section-4.8.2" class="relref">Section 4.8.2</a> of [<a href="#RFC7252" class="cite xref">RFC7252</a>]</span>, see also <span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>).
 For example, B0 technologies lead to a
 frame transmission time greater than the TCP MSL for a frame size ≥ 150
 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).<a href="#section-5.3-4" class="pilcrow">¶</a></p>

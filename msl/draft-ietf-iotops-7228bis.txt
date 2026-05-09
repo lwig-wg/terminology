@@ -1382,10 +1382,10 @@ Internet-Draft               CNN Terminology                    May 2026
    mechanisms will fail when transmission times, and thus latencies, are
    greater than such an assumed constant, often with a default value in
    the same order of magnitude as the TCP MSL, but possibly explicitly
-   configurable [RFC7252] [I-D.gomez-tiptop-coap].  For example, B0
-   technologies lead to a frame transmission time greater than the TCP
-   MSL for a frame size ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s
-   need ≥ 120 s = 2 min).
+   configurable (compare MAX_LATENCY in Section 4.8.2 of [RFC7252], see
+   also [I-D.gomez-tiptop-coap]).  For example, B0 technologies lead to
+   a frame transmission time greater than the TCP MSL for a frame size
+   ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
    B1 technologies offer transmission times which are lower than the TCP
    MSL (for a frame size greater than 150 bytes).  However, transmission
