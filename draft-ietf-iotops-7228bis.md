@@ -315,21 +315,21 @@ Constrained Network:
 
 Constraints may include:
 
-
-
-* low achievable bitrate/throughput (including limits on duty cycle),
+* low achievable bitrate/throughput, including limits on communication
+  duty cycle (for example, restrictions on transmit airtime or receive
+  availability; see also {{poweruse}});
 
 * high packet loss and high variability of packet loss (or,
-  conversely, delivery rate),
+  conversely, delivery rate);
 
-* highly asymmetric link characteristics,
+* highly asymmetric link characteristics;
 
 * severe penalties for using larger packets (e.g., high packet loss
-  due to link-layer fragmentation),
+  due to link-layer fragmentation);
 
 * limits on reachability over time (a substantial number of devices
   may power off at any point in time but periodically "wake up" and
-  can communicate for brief periods of time), and
+  can communicate for brief periods of time); and
 
 * lack of (or severe constraints on) advanced services such as IP multicast.
 
