@@ -1001,7 +1001,7 @@ may exceed the time scales assumed by many Internet transport
 protocols, middleboxes, and applications for retransmission, liveness
 detection, and state retention.
 For instance, TCP ({{Sections 3.4 and 4 of RFC9293@STD7}}) defines a
-Maximum Segment Lifetime (MSL), which may not faithfully implemented
+Maximum Segment Lifetime (MSL), which may not be faithfully implemented
 everywhere, but can serve as a yardstick for the present section.
 Many Internet protocols and mechanisms will fail
 when transmission times, and thus latencies, are greater than such
