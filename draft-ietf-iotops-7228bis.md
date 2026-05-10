@@ -550,9 +550,10 @@ signals and send on/off or basic health indications.
 Class 1 devices are quite constrained in code space and processing
 capabilities, such that they
 cannot easily talk to other Internet nodes employing a
-full protocol stack such as using HTTP, Transport Layer Security (TLS), and
-related security
-protocols and XML-based data representations.
+full protocol stack that has not been designed for parsimonious use of
+resources including code size, such as using original forms of HTTP,
+Transport Layer Security (TLS) and related security
+protocols, and XML-based data representations.
 However, they are capable enough to
 use a protocol stack specifically designed for
 constrained nodes (such as the Constrained Application Protocol (CoAP) over
