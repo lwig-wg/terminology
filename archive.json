@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-07T02:53:04.670481+00:00",
+  "timestamp": "2026-05-10T03:21:42.434890+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -156,6 +156,70 @@
       "body": "I have reviewed draft-ietf-iotops-7228bis-07, and overall I found the\ndocument clear, well structured, and very useful. I have a couple of minor\ncomments for consideration.\n\n*Comment on constraint facets (Section 2.1)*\n\nThe list of constraint facets is comprehensive and well structured.\nHowever, it may be worth considering whether a few additional dimensions\nshould be explicitly mentioned, given their relevance in current IoT\ndeployments:\n\n   - communication capability constraints (e.g., limits on protocol stack\n   support or session handling),\n   - persistent storage constraints (e.g., availability and endurance),\n   - availability constraints (e.g., intermittent connectivity due to duty\n   cycling), and\n   - firmware/software lifecycle constraints (e.g., ability to update or\n   patch devices).\n\nSome of these aspects are discussed in later sections, but briefly\nreflecting them here could make the overview of node constraints more\ncomplete and easier to apply.\n\n*Comment on constrained network characteristics (Section 2.2)*\n\nThe list of network constraints is clear and well structured. It might be\nworth considering whether a few additional aspects could be explicitly\nmentioned, as they are commonly observed in constrained network deployments:\n\n   - high latency and/or high variability in latency (jitter),\n   - constraints related to network scale or node density, and\n   - highly dynamic or frequently changing topology (e.g., due to\n   mobility).\n\nThese aspects may be implicitly covered by existing points, but calling\nthem out explicitly could improve clarity and completeness.\n\n*Conclusion*\n\nOverall, I believe this is a strong and useful document, and I support its\nprogression.\n\nBest regards,\nDhyanam HP",
       "createdAt": "2026-05-06T07:26:50Z",
       "updatedAt": "2026-05-06T07:26:50Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOBMYTbM8AAAABBggt7g",
+      "title": "Iotdir review (Jouni)",
+      "url": "https://github.com/lwig-wg/terminology/issues/16",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> Document: draft-ietf-iotops-7228bis\n> Title: Terminology for Constrained-Node Networks\n> Reviewer: Jouni Korhonen\n> Review result: Ready with Nits\n> \n> Having read the document I think it is about ready. There are few editorial nits listed that could be fixed, however, they are just for better clarity.\n> \n> 1) Line 425: What is 'Ps' or rather why it is used here?\n>    - I see there is acronym description in Section 4.1. but its placement still\n>    feels odd here.\n> 2) Line 436: 'Ps' again. A bit confusing since Ps in parenthesis do not refer to an expanded acronym.\n>    - \"..of sustained power usage (Ps).\"\n> 3) Line 710: I would provide some literature reference to \"Event-based harvesting\".. 4) Line 824: what is an RC oscillator? Reference or expand RC etc.\n",
+      "createdAt": "2026-05-07T04:25:03Z",
+      "updatedAt": "2026-05-09T11:07:28Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "(Touching this issue to revive it in the github list.)",
+          "createdAt": "2026-05-09T11:07:28Z",
+          "updatedAt": "2026-05-09T11:07:28Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOBMYTbM8AAAABBghDLg",
+      "title": "IETF LC Secdir review (Shawn Emery)",
+      "url": "https://github.com/lwig-wg/terminology/issues/17",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "No change needed, but consider adding Shawn to Ack section.\n\n> Document: draft-ietf-iotops-7228bis\n> Title: Terminology for Constrained-Node Networks\n> Reviewer: Shawn Emery\n> Review result: Ready\n> \n> I have reviewed this document as part of the security directorate's ongoing effort to review all IETF documents being processed by the IESG. These comments were written primarily for the benefit of the security area directors. Document editors and WG chairs should treat these comments just like any other last call comments.\n> \n> This informational draft discusses the terminology used in networks of constrained-devices that will elucidate further standardization work and research in this area.\n> \n> The security considerations section does exist and defers relevant security aspects to i) the general considerations of constrained-device (RFC7252) security mechanisms, ii) specific constrained-device protocol RFCs (e.g.,\n> RFC7416 for Routing Protocol for Low-Power and Lossy Networks (RLP)), iii) the implementation security considerations of security protocols on constrained devices (RFC7815), and iv) a high-level view of constrained-device security (RFC8576).  I agree with these assertions and appears to be comprehensive.\n> \n> General comments:\n> \n> None.\n> \n> Editorial comments:\n> \n> None.\n",
+      "createdAt": "2026-05-07T04:26:52Z",
+      "updatedAt": "2026-05-09T11:06:47Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "(Github suppresses this issue in its issue list; trying to revive it by touching it.)",
+          "createdAt": "2026-05-09T11:06:47Z",
+          "updatedAt": "2026-05-09T11:06:47Z"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOBMYTbM8AAAABBotfcQ",
+      "title": "IETF LC TSVART reveiw (Marcus)",
+      "url": "https://github.com/lwig-wg/terminology/issues/18",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Document: draft-ietf-iotops-7228bis\nTitle: Terminology for Constrained-Node Networks\nReviewer: Marcus Ihlar\nReview result: Ready with Nits\n\nThis document has been reviewed as part of the transport area review team's ongoing effort to review key IETF documents. These comments were written primarily for the transport area directors, but are copied to the document's authors and WG to allow them to address any issues raised and also to the IETF discussion list for information.\n\nWhen done at the time of IETF Last Call, the authors should consider this review as part of the last-call comments they receive. Please always CC [tsv-art@ietf.org](mailto:tsv-art@ietf.org) if you reply to or forward this review.\n\nThis is a useful terminology update to RFC 7228. Since it does not define or update any protocols, I do not see any major TSV issues. Some of the terminology and classifications are TSV-adjacent, though. I have a few comments and suggestions below, but nothing blocking in my view.\n\nSection 2.2\n\nThe term \u201cduty cycle\u201d is used here without further description. It is described later in Section 4.3. Since the term can mean slightly different things in different contexts, it could be useful to add a short explanation at first use, for example:\n\n\u201clow achievable bitrate/throughput, including limits on communication duty cycle (for example, restrictions on transmit airtime or receive availability)\u201d.\n\nSection 3\n\nThe description of Class 1 devices states that they cannot easily talk to other devices using HTTP/TLS but are capable of using dedicated stacks such as CoAP.\nThis is probably reasonable. However, many protocol implementations and profiles have evolved since RFC 7228, including compact TLS/DTLS implementations, CoAP profiles, CBOR-based encodings, and constrained-security mechanisms. The text now reads somewhat like a hard boundary between \u201cfull\u201d\nHTTP/TLS stacks and CoAP/UDP. Perhaps a bit more nuance could be useful here.\n\nSection 5.3\n\nAs mentioned in other reviews, MSL might not be the most appropriate marker for \u201cchallenged networks\u201d. I understand that it is useful to have a somewhat well-defined value to base definitions on, but tying definitions to a TCP-specific parameter might not be the most future-proof choice. For example, the TCP specification uses an MSL value of 2 minutes, whereas different major operating systems use significantly smaller values, such as 15 or 30 seconds.\nSo talking about an assumed MSL on the Internet might not really reflect what implementations assume today.\n\nPerhaps consider more transport-neutral terminology here, for instance something like:\n\n\u201cB0 technologies can lead to very high frame transmission times, which may be comparable to or exceed the time scales assumed by many Internet transport protocols, middleboxes, and applications for retransmission, liveness detection, and state retention.\u201d",
+      "createdAt": "2026-05-08T07:49:55Z",
+      "updatedAt": "2026-05-08T07:49:55Z",
       "closedAt": null,
       "comments": []
     }
@@ -744,6 +808,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 19,
+      "id": "PR_kwDOBMYTbM7Z1rHT",
+      "title": "Clarify the use of MSL to address MSL concerns in #16 and #18",
+      "url": "https://github.com/lwig-wg/terminology/pull/19",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-09T11:35:17Z",
+      "updatedAt": "2026-05-09T13:04:03Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "ce05140be123f45cae34bd4d8831f57547686bae",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "msl",
+      "headRefOid": "760bd0c48c5fcca617be2a02b7fef5fa5ffc8ed1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
