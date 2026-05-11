@@ -87,7 +87,7 @@ Table of Contents
      2.1.  Constrained Nodes . . . . . . . . . . . . . . . . . . . .   4
      2.2.  Constrained Networks  . . . . . . . . . . . . . . . . . .   6
        2.2.1.  Challenged Networks . . . . . . . . . . . . . . . . .   7
-     2.3.  Constrained-Node Networks . . . . . . . . . . . . . . . .   7
+     2.3.  Constrained-Node Networks . . . . . . . . . . . . . . . .   8
        2.3.1.  LLN . . . . . . . . . . . . . . . . . . . . . . . . .   8
        2.3.2.  LoWPAN, 6LoWPAN . . . . . . . . . . . . . . . . . . .   9
        2.3.3.  LPWAN . . . . . . . . . . . . . . . . . . . . . . . .   9
@@ -309,27 +309,27 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Constraints may include:
 
-   *  low achievable bitrate/throughput (including limits on duty
-      cycle),
+   *  low achievable bitrate/throughput, including limits on
+      communication duty cycle (for example, restrictions on transmit
+      airtime or receive availability; see also Section 4.3);
 
    *  high packet loss and high variability of packet loss (or,
-      conversely, delivery rate),
+      conversely, delivery rate);
 
-   *  highly asymmetric link characteristics,
+   *  highly asymmetric link characteristics;
 
    *  severe penalties for using larger packets (e.g., high packet loss
-      due to link-layer fragmentation),
+      due to link-layer fragmentation);
 
    *  limits on reachability over time (a substantial number of devices
       may power off at any point in time but periodically "wake up" and
-      can communicate for brief periods of time), and
+      can communicate for brief periods of time); and
 
    *  lack of (or severe constraints on) advanced services such as IP
       multicast.
 
-   More generally, the term "constrained networks" applies whenever at
-   least some of the nodes involved in the network exhibit these
-   characteristics.
+
+
 
 
 
@@ -337,6 +337,10 @@ Bormann, et al.         Expires 12 November 2026                [Page 6]
 
 Internet-Draft               CNN Terminology                    May 2026
 
+
+   More generally, the term "constrained networks" applies whenever at
+   least some of the nodes involved in the network exhibit these
+   characteristics.
 
    Again, there may be several reasons for this:
 
@@ -382,10 +386,6 @@ Internet-Draft               CNN Terminology                    May 2026
    Networking (DTN) has been designed to cope with challenged networks
    [RFC4838].
 
-2.3.  Constrained-Node Networks
-
-   Constrained-Node Network:  A network whose characteristics are
-
 
 
 
@@ -394,6 +394,9 @@ Bormann, et al.         Expires 12 November 2026                [Page 7]
 Internet-Draft               CNN Terminology                    May 2026
 
 
+2.3.  Constrained-Node Networks
+
+   Constrained-Node Network:  A network whose characteristics are
       influenced by being composed of a significant portion of
       constrained nodes.
 
@@ -439,9 +442,6 @@ Internet-Draft               CNN Terminology                    May 2026
    [RFC6550]).  So, in the terminology of the present document, an LLN
    is a constrained-node network with certain network characteristics,
    which include constraints on the network as well.
-
-
-
 
 
 
@@ -644,17 +644,19 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Class 1 devices are quite constrained in code space and processing
    capabilities, such that they cannot easily talk to other Internet
-   nodes employing a full protocol stack such as using HTTP, Transport
-   Layer Security (TLS), and related security protocols and XML-based
-   data representations.  However, they are capable enough to use a
-   protocol stack specifically designed for constrained nodes (such as
-   the Constrained Application Protocol (CoAP) over UDP [RFC7252]) and
-   participate in meaningful conversations without the help of a gateway
-   node.  In particular, they can provide support for the security
-   functions required on a large network.  Therefore, they can be
-   integrated as fully developed peers into an IP network, but they need
-   to be frugal with state memory, code space, and often power
-   expenditure for protocol and application usage.
+   nodes employing a full protocol stack that has not been designed for
+   parsimonious use of resources including code size, such as using
+   original forms of HTTP, Transport Layer Security (TLS) and related
+   security protocols, and XML-based data representations.  However,
+   they are capable enough to use a protocol stack specifically designed
+   for constrained nodes (such as the Constrained Application Protocol
+   (CoAP) over UDP [RFC7252]) and participate in meaningful
+   conversations without the help of a gateway node.  In particular,
+   they can provide support for the security functions required on a
+   large network.  Therefore, they can be integrated as fully developed
+   peers into an IP network, but they need to be frugal with state
+   memory, code space, and often power expenditure for protocol and
+   application usage.
 
    Class 2 devices are less constrained and fundamentally capable of
    supporting most of the same protocol stacks as used on notebooks or
@@ -664,8 +666,6 @@ Internet-Draft               CNN Terminology                    May 2026
    resources available to applications.  Thus, using the protocol stacks
    defined for more constrained devices on Class 2 devices might reduce
    development costs and increase the interoperability.
-
-
 
 
 

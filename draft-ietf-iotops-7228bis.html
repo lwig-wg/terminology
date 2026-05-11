@@ -1480,23 +1480,25 @@ not attainable.<a href="#section-2.2-3.2.1" class="pilcrow">¶</a></p>
 <p id="section-2.2-4">Constraints may include:<a href="#section-2.2-4" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-5.1">
-            <p id="section-2.2-5.1.1">low achievable bitrate/throughput (including limits on duty cycle),<a href="#section-2.2-5.1.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-5.1.1">low achievable bitrate/throughput, including limits on communication
+duty cycle (for example, restrictions on transmit airtime or receive
+availability; see also <a href="#poweruse" class="auto internal xref">Section 4.3</a>);<a href="#section-2.2-5.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.2">
             <p id="section-2.2-5.2.1">high packet loss and high variability of packet loss (or,
-conversely, delivery rate),<a href="#section-2.2-5.2.1" class="pilcrow">¶</a></p>
+conversely, delivery rate);<a href="#section-2.2-5.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.3">
-            <p id="section-2.2-5.3.1">highly asymmetric link characteristics,<a href="#section-2.2-5.3.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-5.3.1">highly asymmetric link characteristics;<a href="#section-2.2-5.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.4">
             <p id="section-2.2-5.4.1">severe penalties for using larger packets (e.g., high packet loss
-due to link-layer fragmentation),<a href="#section-2.2-5.4.1" class="pilcrow">¶</a></p>
+due to link-layer fragmentation);<a href="#section-2.2-5.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.5">
             <p id="section-2.2-5.5.1">limits on reachability over time (a substantial number of devices
 may power off at any point in time but periodically "wake up" and
-can communicate for brief periods of time), and<a href="#section-2.2-5.5.1" class="pilcrow">¶</a></p>
+can communicate for brief periods of time); and<a href="#section-2.2-5.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.6">
             <p id="section-2.2-5.6.1">lack of (or severe constraints on) advanced services such as IP multicast.<a href="#section-2.2-5.6.1" class="pilcrow">¶</a></p>
@@ -1819,9 +1821,10 @@ signals and send on/off or basic health indications.<a href="#section-3-8" class
 <p id="section-3-9">Class 1 devices are quite constrained in code space and processing
 capabilities, such that they
 cannot easily talk to other Internet nodes employing a
-full protocol stack such as using HTTP, Transport Layer Security (TLS), and
-related security
-protocols and XML-based data representations.
+full protocol stack that has not been designed for parsimonious use of
+resources including code size, such as using original forms of HTTP,
+Transport Layer Security (TLS) and related security
+protocols, and XML-based data representations.
 However, they are capable enough to
 use a protocol stack specifically designed for
 constrained nodes (such as the Constrained Application Protocol (CoAP) over
