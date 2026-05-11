@@ -104,8 +104,8 @@ Table of Contents
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
      5.2.  Classes of Internet Integration . . . . . . . . . . . . .  23
      5.3.  Classes of Physical Layer Bit Rate  . . . . . . . . . . .  24
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
-   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  26
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  25
+   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  25
 
 
 
@@ -114,11 +114,11 @@ Bormann, et al.         Expires 12 November 2026                [Page 2]
 Internet-Draft               CNN Terminology                    May 2026
 
 
-   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
-   9.  Informative References  . . . . . . . . . . . . . . . . . . .  26
+   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  25
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  25
    Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  30
-   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  31
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  31
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  30
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  30
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  31
 
 1.  Introduction
@@ -309,27 +309,27 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Constraints may include:
 
-   *  low achievable bitrate/throughput (including limits on duty
-      cycle),
+   *  low achievable bitrate/throughput, including limits on
+      communication duty cycle (for example, restrictions on transmit
+      airtime or receive availability; see also Section 4.3);
 
    *  high packet loss and high variability of packet loss (or,
-      conversely, delivery rate),
+      conversely, delivery rate);
 
-   *  highly asymmetric link characteristics,
+   *  highly asymmetric link characteristics;
 
    *  severe penalties for using larger packets (e.g., high packet loss
-      due to link-layer fragmentation),
+      due to link-layer fragmentation);
 
    *  limits on reachability over time (a substantial number of devices
       may power off at any point in time but periodically "wake up" and
-      can communicate for brief periods of time),
+      can communicate for brief periods of time);
 
    *  unusually high latency or variability of latency, possibly
-      exacerbated by the need for power-off periods or duty-cycling, and
+      exacerbated by the need for power-off periods or duty-cycling; and
 
    *  lack of (or severe constraints on) advanced services such as IP
       multicast.
-
 
 
 
@@ -375,16 +375,16 @@ Internet-Draft               CNN Terminology                    May 2026
       *  exhibiting serious interruptions in end-to-end IP connectivity,
          or
 
-      *  exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-         assumed by TCP (Sections 3.4 and 4 of RFC 9293 [STD7]).
+      *  exhibiting delay well beyond expectations that transport or
+         higher-level protocols may operate on, such as the Maximum
+         Segment Lifetime (MSL) defined by TCP (Sections 3.4 and 4 of
+         RFC 9293 [STD7]; see also Section 5.3).
 
    All challenged networks are constrained networks in some sense, but
    not all constrained networks are challenged networks.  There is no
    well-defined boundary between the two, though.  Delay-Tolerant
    Networking (DTN) has been designed to cope with challenged networks
    [RFC4838].
-
-
 
 
 
@@ -644,17 +644,19 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Class 1 devices are quite constrained in code space and processing
    capabilities, such that they cannot easily talk to other Internet
-   nodes employing a full protocol stack such as using HTTP, Transport
-   Layer Security (TLS), and related security protocols and XML-based
-   data representations.  However, they are capable enough to use a
-   protocol stack specifically designed for constrained nodes (such as
-   the Constrained Application Protocol (CoAP) over UDP [RFC7252]) and
-   participate in meaningful conversations without the help of a gateway
-   node.  In particular, they can provide support for the security
-   functions required on a large network.  Therefore, they can be
-   integrated as fully developed peers into an IP network, but they need
-   to be frugal with state memory, code space, and often power
-   expenditure for protocol and application usage.
+   nodes employing a full protocol stack that has not been designed for
+   parsimonious use of resources including code size, such as using
+   original forms of HTTP, Transport Layer Security (TLS) and related
+   security protocols, and XML-based data representations.  However,
+   they are capable enough to use a protocol stack specifically designed
+   for constrained nodes (such as the Constrained Application Protocol
+   (CoAP) over UDP [RFC7252]) and participate in meaningful
+   conversations without the help of a gateway node.  In particular,
+   they can provide support for the security functions required on a
+   large network.  Therefore, they can be integrated as fully developed
+   peers into an IP network, but they need to be frugal with state
+   memory, code space, and often power expenditure for protocol and
+   application usage.
 
    Class 2 devices are less constrained and fundamentally capable of
    supporting most of the same protocol stacks as used on notebooks or
@@ -664,8 +666,6 @@ Internet-Draft               CNN Terminology                    May 2026
    resources available to applications.  Thus, using the protocol stacks
    defined for more constrained devices on Class 2 devices might reduce
    development costs and increase the interoperability.
-
-
 
 
 
@@ -1131,21 +1131,21 @@ Internet-Draft               CNN Terminology                    May 2026
    parameter, the fragmentation techniques needed (if any) to support
    the IPv6 MTU requirement may vary.
 
-   Table 10 lists the main classes of link layer MTU size.  Note that
-   some of these classes have a span of about a (decimal) order of
-   magnitude; this does not mean that there are no interesting
-   transitions within these spans, just that these transitions are
-   dependent on other parameters such as MAC (message authentication
-   code) sizes, the variations of which would split these classes into
-   small, less universally relevant subclasses.  The range S10 to S14 is
-   more finely divided here due to transitions resulting from the
-   dominating link layer (15xx, 9216) and network layer protocol (1280)
-   MTUs.  In the table, "WiFi" is short for standard WiFi A-MSDU
-   (Aggregate MAC Service Data Unit) values, describing frame
-   aggregation on the link layer.  "CAN-FD" is Controller Area Network
-   Flexible Data-Rate (ISO 11898-1), "LoRaWAN" can be expanded as Long
-   Range Wide Area Network, "BLE" is Bluetooth Low Energy, and "RoCE" is
-   RDMA over Converged Ethernet.
+   Table 10 lists the main classes of link layer MTU size (using "Sx" as
+   an abbreviation for "Size x").  Note that some of these classes have
+   a span of about a (decimal) order of magnitude; this does not mean
+   that there are no interesting transitions within these spans, just
+   that these transitions are dependent on other parameters such as MAC
+   (message authentication code) sizes, the variations of which would
+   split these classes into small, less universally relevant subclasses.
+   The range S10 to S14 is more finely divided here due to transitions
+   resulting from the dominating link layer (15xx, 9216) and network
+   layer protocol (1280) MTUs.  In the table, "WiFi" is short for
+   standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
+   describing frame aggregation on the link layer.  "CAN-FD" is
+   Controller Area Network Flexible Data-Rate (ISO 11898-1), "LoRaWAN"
+   can be expanded as Long Range Wide Area Network, "BLE" is Bluetooth
+   Low Energy, and "RoCE" is RDMA over Converged Ethernet.
 
 
 
@@ -1225,7 +1225,7 @@ Internet-Draft               CNN Terminology                    May 2026
 
                   Table 10: Classes of Link Layer MTU Size
 
-
+   * if no link layer fragmentation is available
 
 
 
@@ -1233,9 +1233,6 @@ Bormann, et al.         Expires 12 November 2026               [Page 22]
 
 Internet-Draft               CNN Terminology                    May 2026
 
-
-   * if no link layer fragmentation is available (note: 'Sx' stands for
-   'Size x')
 
    S0 technologies require fragmentation to support the IPv6 MTU
    requirement.  If no link layer fragmentation is available,
@@ -1267,29 +1264,6 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Table 11 defines the classes of Internet integration level.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 23]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
                +======+====================================+
                | Name | Internet technology                |
                +======+====================================+
@@ -1307,6 +1281,15 @@ Internet-Draft               CNN Terminology                    May 2026
                  Table 11: Classes of Internet Integration
                                    Level
 
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 23]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
 5.3.  Classes of Physical Layer Bit Rate
 
    Physical layer technologies used by constrained devices can be
@@ -1319,25 +1302,42 @@ Internet-Draft               CNN Terminology                    May 2026
    Table 12 lists the classes of PHY bit rate ('Bx' stands for 'Bit rate
    class x').
 
+   +======+=========+==============================+==================+
+   | Name | PHY bit | Comment                      | Header           |
+   |      | rate    |                              | compression      |
+   |      | (bit/s) |                              |                  |
+   +======+=========+==============================+==================+
+   | B0   | < 10    | Transmission time of         | indispensable as |
+   |      |         | 150-byte frame > TCP MSL     | part of system   |
+   |      |         |                              | architecture     |
+   +------+---------+------------------------------+------------------+
+   | B1   | 10 –    | Unresponsiveness if human    | vital            |
+   |      | 10^3    | expects reaction to sent     |                  |
+   |      |         | frame (frame size ≥ 63 byte) |                  |
+   +------+---------+------------------------------+------------------+
+   | B2   | 10^3 –  | Responsiveness if human      | yields           |
+   |      | 10^6    | expects reaction to sent     | significant      |
+   |      |         | frame                        | performance      |
+   |      |         |                              | benefits         |
+   +------+---------+------------------------------+------------------+
+   | B3   | > 10^6  |                              | yields limited   |
+   |      |         |                              | performance      |
+   |      |         |                              | benefits         |
+   +------+---------+------------------------------+------------------+
 
+               Table 12: Classes of Physical Layer Bitrate
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   B0 technologies can lead to very high frame transmission times, which
+   may exceed the time scales assumed by many Internet transport
+   protocols, middleboxes, and applications for retransmission, liveness
+   detection, and state retention.  For instance, TCP (Sections 3.4 and
+   4 of RFC 9293 [STD7]) defines a Maximum Segment Lifetime (MSL), which
+   may not be faithfully implemented everywhere, but can serve as a
+   yardstick for the present section.  Many Internet protocols and
+   mechanisms will fail when transmission times, and thus latencies, are
+   greater than such an assumed constant, often with a default value in
+   the same order of magnitude as the TCP MSL, but possibly explicitly
+   configurable (compare MAX_LATENCY in Section 4.8.2 of [RFC7252], see
 
 
 
@@ -1346,43 +1346,12 @@ Bormann, et al.         Expires 12 November 2026               [Page 24]
 Internet-Draft               CNN Terminology                    May 2026
 
 
-      +======+=========+========================+==================+
-      | Name | PHY bit | Comment                | Header           |
-      |      | rate    |                        | compression      |
-      |      | (bit/s) |                        |                  |
-      +======+=========+========================+==================+
-      | B0   | < 10    | Transmission time of   | indispensable as |
-      |      |         | 150-byte frame > MSL   | part of system   |
-      |      |         |                        | architecture     |
-      +------+---------+------------------------+------------------+
-      | B1   | 10 –    | Unresponsiveness if    | vital            |
-      |      | 10^3    | human expects reaction |                  |
-      |      |         | to sent frame (frame   |                  |
-      |      |         | size > 62.5 byte)      |                  |
-      +------+---------+------------------------+------------------+
-      | B2   | 10^3 –  | Responsiveness if      | yields           |
-      |      | 10^6    | human expects reaction | significant      |
-      |      |         | to sent frame          | performance      |
-      |      |         |                        | benefits         |
-      +------+---------+------------------------+------------------+
-      | B3   | > 10^6  |                        | yields limited   |
-      |      |         |                        | performance      |
-      |      |         |                        | benefits         |
-      +------+---------+------------------------+------------------+
+   also [I-D.gomez-tiptop-coap]).  For example, B0 technologies lead to
+   a frame transmission time greater than the TCP MSL for a frame size
+   ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
-               Table 12: Classes of Physical Layer Bitrate
-
-   B0 technologies lead to very high transmission times, which may be
-   close to or even greater than the Maximum Segment Lifetime (MSL)
-   assumed on the Internet (Sections 3.4 and 4 of RFC 9293 [STD7]).
-   Many Internet protocols and mechanisms will fail when transmission
-   times, and thus latencies, are greater than the MSL
-   [I-D.gomez-tiptop-coap].  B0 technologies lead to a frame
-   transmission time greater than the MSL for a frame size ≥ 150 bytes
-   (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
-
-   B1 technologies offer transmission times which are lower than the MSL
-   (for a frame size greater than 150 bytes).  However, transmission
+   B1 technologies offer transmission times which are lower than the TCP
+   MSL (for a frame size greater than 150 bytes).  However, transmission
    times for B1 technologies are still significant if a human expects a
    reaction to the transmission of a frame.  With B1 technologies, the
    transmission time of a frame greater than 62.5 bytes exceeds 0.5
@@ -1390,17 +1359,8 @@ Internet-Draft               CNN Terminology                    May 2026
    to a frame transmission will appear not to be immediate [RFC5826].
 
    B2 technologies do not incur responsiveness problems, but still
-   benefit from using header compression techniques (e.g., [RFC6282]) to
-   achieve performance improvements.
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 25]
-
-Internet-Draft               CNN Terminology                    May 2026
-
+   benefit from using header compression techniques (such as [RFC6282]
+   or [I-D.ietf-6lo-schc-15dot4]) to achieve performance improvements.
 
    Over B3 technologies, the relative performance benefits of header
    compression are low.  For example, in a duty-cycled technology
@@ -1435,6 +1395,13 @@ Internet-Draft               CNN Terminology                    May 2026
 
 9.  Informative References
 
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 25]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [ARM-ARCH] Arm, "ARM architecture profiles",
               <https://developer.arm.com/documentation/DEN0130/0100/
               About-the-Arm-architecture>.
@@ -1451,13 +1418,6 @@ Internet-Draft               CNN Terminology                    May 2026
               2024, <https://datatracker.ietf.org/doc/html/draft-
               amsuess-t2trg-raytime-03>.
 
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 26]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
    [I-D.gomez-tiptop-coap]
               Gomez, C. and S. Aguilar, "CoAP in Space", Work in
               Progress, Internet-Draft, draft-gomez-tiptop-coap-00, 30
@@ -1472,6 +1432,13 @@ Internet-Draft               CNN Terminology                    May 2026
               <https://datatracker.ietf.org/doc/html/draft-hui-vasseur-
               roll-rpl-deployment-01>.
 
+   [I-D.ietf-6lo-schc-15dot4]
+              Gomez, C. and A. Minaburo, "Transmission of SCHC-
+              compressed packets over IEEE 802.15.4 networks", Work in
+              Progress, Internet-Draft, draft-ietf-6lo-schc-15dot4-12,
+              20 February 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-6lo-schc-15dot4-12>.
+
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S. L., and H. Tschofenig, "A Hitchhiker's
               Guide to the (Datagram) Transport Layer Security Protocol
@@ -1483,6 +1450,13 @@ Internet-Draft               CNN Terminology                    May 2026
    [ISQ-13]   International Electrotechnical Commission, "International
               Standard — Quantities and units — Part 13: Information
               science and technology", IEC 80000-13, March 2008.
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 26]
+
+Internet-Draft               CNN Terminology                    May 2026
+
 
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
@@ -1504,15 +1478,6 @@ Internet-Draft               CNN Terminology                    May 2026
               Routing Requirements in Low-Power and Lossy Networks",
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
               <https://www.rfc-editor.org/rfc/rfc5826>.
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 27]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
               "Network Time Protocol Version 4: Protocol and Algorithms
@@ -1536,6 +1501,18 @@ Internet-Draft               CNN Terminology                    May 2026
               in Low-Power and Lossy Networks", RFC 6551,
               DOI 10.17487/RFC6551, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6551>.
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 27]
+
+Internet-Draft               CNN Terminology                    May 2026
+
 
    [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
               Statement and Requirements for IPv6 over Low-Power
@@ -1563,13 +1540,6 @@ Internet-Draft               CNN Terminology                    May 2026
               (RPLs)", RFC 7416, DOI 10.17487/RFC7416, January 2015,
               <https://www.rfc-editor.org/rfc/rfc7416>.
 
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 28]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
    [RFC7428]  Brandt, A. and J. Buron, "Transmission of IPv6 Packets
               over ITU-T G.9959 Networks", RFC 7428,
               DOI 10.17487/RFC7428, February 2015,
@@ -1589,6 +1559,16 @@ Internet-Draft               CNN Terminology                    May 2026
               (IKEv2) Initiator Implementation", RFC 7815,
               DOI 10.17487/RFC7815, March 2016,
               <https://www.rfc-editor.org/rfc/rfc7815>.
+
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 28]
+
+Internet-Draft               CNN Terminology                    May 2026
+
 
    [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
               M., and D. Barthel, "Transmission of IPv6 Packets over
@@ -1617,15 +1597,6 @@ Internet-Draft               CNN Terminology                    May 2026
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
 
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 29]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
    [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
               Object Representation (CBOR) Tags for Time, Duration, and
               Period", RFC 9581, DOI 10.17487/RFC9581, August 2024,
@@ -1647,6 +1618,13 @@ Internet-Draft               CNN Terminology                    May 2026
               Internet", Wiley-Blackwell monograph,
               DOI 10.1002/9780470686218, ISBN 9780470747995, 2009,
               <https://doi.org/10.1002/9780470686218>.
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 29]
+
+Internet-Draft               CNN Terminology                    May 2026
+
 
 Appendix A.  Changes Since RFC 7228
 
@@ -1672,16 +1650,6 @@ Appendix A.  Changes Since RFC 7228
 
    *  Added new section "Classes of Networks"
 
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 30]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
 List of Tables
 
    Table 1:   Classes of Constrained (and More Capable) Devices
@@ -1705,6 +1673,15 @@ Acknowledgements
    Shepherd.  Mohamed Boucadair served as responsible area director in
    the IESG.
 
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 30]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    Carles Gomez was supported in part by the Spanish Government
    MCIU/AEI/10.13039/501100011033/FEDER/UE through project
    PID2023-146378NBI00.
@@ -1724,18 +1701,6 @@ Authors' Addresses
    Munich
    Germany
    Email: mersue@gmail.com
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 31]
-
-Internet-Draft               CNN Terminology                    May 2026
 
 
    Ari Keränen
@@ -1768,25 +1733,4 @@ Internet-Draft               CNN Terminology                    May 2026
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 32]
+Bormann, et al.         Expires 12 November 2026               [Page 31]

@@ -1480,27 +1480,29 @@ not attainable.<a href="#section-2.2-3.2.1" class="pilcrow">¶</a></p>
 <p id="section-2.2-4">Constraints may include:<a href="#section-2.2-4" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-5.1">
-            <p id="section-2.2-5.1.1">low achievable bitrate/throughput (including limits on duty cycle),<a href="#section-2.2-5.1.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-5.1.1">low achievable bitrate/throughput, including limits on communication
+duty cycle (for example, restrictions on transmit airtime or receive
+availability; see also <a href="#poweruse" class="auto internal xref">Section 4.3</a>);<a href="#section-2.2-5.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.2">
             <p id="section-2.2-5.2.1">high packet loss and high variability of packet loss (or,
-conversely, delivery rate),<a href="#section-2.2-5.2.1" class="pilcrow">¶</a></p>
+conversely, delivery rate);<a href="#section-2.2-5.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.3">
-            <p id="section-2.2-5.3.1">highly asymmetric link characteristics,<a href="#section-2.2-5.3.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-5.3.1">highly asymmetric link characteristics;<a href="#section-2.2-5.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.4">
             <p id="section-2.2-5.4.1">severe penalties for using larger packets (e.g., high packet loss
-due to link-layer fragmentation),<a href="#section-2.2-5.4.1" class="pilcrow">¶</a></p>
+due to link-layer fragmentation);<a href="#section-2.2-5.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.5">
             <p id="section-2.2-5.5.1">limits on reachability over time (a substantial number of devices
 may power off at any point in time but periodically "wake up" and
-can communicate for brief periods of time),<a href="#section-2.2-5.5.1" class="pilcrow">¶</a></p>
+can communicate for brief periods of time);<a href="#section-2.2-5.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.6">
             <p id="section-2.2-5.6.1">unusually high latency or variability of latency, possibly
-exacerbated by the need for power-off periods or duty-cycling, and<a href="#section-2.2-5.6.1" class="pilcrow">¶</a></p>
+exacerbated by the need for power-off periods or duty-cycling; and<a href="#section-2.2-5.6.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-5.7">
             <p id="section-2.2-5.7.1">lack of (or severe constraints on) advanced services such as IP multicast.<a href="#section-2.2-5.7.1" class="pilcrow">¶</a></p>
@@ -1552,8 +1554,9 @@ would today expect of the end-to-end IP model, e.g., by:<a href="#section-2.2.1-
                   <p id="section-2.2.1-2.2.2.2.1">exhibiting serious interruptions in end-to-end IP connectivity, or<a href="#section-2.2.1-2.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
                 <li class="normal" id="section-2.2.1-2.2.2.3">
-                  <p id="section-2.2.1-2.2.2.3.1">exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-assumed by TCP (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>).<a href="#section-2.2.1-2.2.2.3.1" class="pilcrow">¶</a></p>
+                  <p id="section-2.2.1-2.2.2.3.1">exhibiting delay well beyond expectations that transport or
+higher-level protocols may operate on, such as the Maximum Segment
+Lifetime (MSL) defined by TCP (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>; see also <a href="#phyrate" class="auto internal xref">Section 5.3</a>).<a href="#section-2.2.1-2.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </dd>
@@ -1822,9 +1825,10 @@ signals and send on/off or basic health indications.<a href="#section-3-8" class
 <p id="section-3-9">Class 1 devices are quite constrained in code space and processing
 capabilities, such that they
 cannot easily talk to other Internet nodes employing a
-full protocol stack such as using HTTP, Transport Layer Security (TLS), and
-related security
-protocols and XML-based data representations.
+full protocol stack that has not been designed for parsimonious use of
+resources including code size, such as using original forms of HTTP,
+Transport Layer Security (TLS) and related security
+protocols, and XML-based data representations.
 However, they are capable enough to
 use a protocol stack specifically designed for
 constrained nodes (such as the Constrained Application Protocol (CoAP) over
@@ -2415,7 +2419,8 @@ found in <span><a href="https://rfc-editor.org/rfc/rfc9581#section-3.5" class="r
 on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size.
+<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size (using "Sx" as
+an abbreviation for "Size x").
 Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
@@ -2522,8 +2527,7 @@ and
           </tbody>
         </table>
 </div>
-<p id="section-5.1-4">* if no link layer fragmentation is available
-(note: 'Sx' stands for 'Size x')<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<p id="section-5.1-4">* if no link layer fragmentation is available<a href="#section-5.1-4" class="pilcrow">¶</a></p>
 <p id="section-5.1-5">S0 technologies require fragmentation to support the IPv6 MTU requirement.
 If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span>
@@ -2588,7 +2592,7 @@ communicate with other nodes in the Internet as well.<a href="#section-5.2-1" cl
 </div>
 </section>
 </div>
-<div id="classes-of-physical-layer-bit-rate">
+<div id="phyrate">
 <section id="section-5.3">
         <h3 id="name-classes-of-physical-layer-b">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-classes-of-physical-layer-b" class="section-name selfRef">Classes of Physical Layer Bit Rate</a>
@@ -2618,14 +2622,14 @@ techniques.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">B0</td>
               <td class="text-left" rowspan="1" colspan="1">&lt; 10</td>
-              <td class="text-left" rowspan="1" colspan="1">Transmission time of 150-byte frame &gt; MSL</td>
+              <td class="text-left" rowspan="1" colspan="1">Transmission time of 150-byte frame &gt; TCP MSL</td>
               <td class="text-left" rowspan="1" colspan="1">indispensable as part of system architecture</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">B1</td>
               <td class="text-left" rowspan="1" colspan="1">10 – 10<sup>3</sup>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Unresponsiveness if human expects reaction to sent frame (frame size &gt; 62.5 byte)</td>
+              <td class="text-left" rowspan="1" colspan="1">Unresponsiveness if human expects reaction to sent frame (frame size ≥ 63 byte)</td>
               <td class="text-left" rowspan="1" colspan="1">vital</td>
             </tr>
             <tr>
@@ -2645,16 +2649,22 @@ techniques.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
           </tbody>
         </table>
 </div>
-<p id="section-5.3-4">B0 technologies lead to very high transmission times, which may be close
-to or even greater than the Maximum Segment Lifetime (MSL) assumed on
-the Internet (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>).
+<p id="section-5.3-4">B0 technologies can lead to very high frame transmission times, which
+may exceed the time scales assumed by many Internet transport
+protocols, middleboxes, and applications for retransmission, liveness
+detection, and state retention.
+For instance, TCP (Sections <a href="https://rfc-editor.org/rfc/rfc9293#section-3.4" class="relref">3.4</a> and <a href="https://rfc-editor.org/rfc/rfc9293#section-4" class="relref">4</a> of RFC 9293 <span>[<a href="#STD7" class="cite xref">STD7</a>]</span>) defines a
+Maximum Segment Lifetime (MSL), which may not be faithfully implemented
+everywhere, but can serve as a yardstick for the present section.
 Many Internet protocols and mechanisms will fail
-when transmission times, and thus latencies, are greater than the MSL
-<span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>.
-B0 technologies lead to a
-frame transmission time greater than the MSL for a frame size ≥ 150
+when transmission times, and thus latencies, are greater than such
+an assumed constant, often with a default value in the same order of magnitude as the
+TCP MSL, but possibly explicitly configurable (compare MAX_LATENCY in
+<span><a href="https://rfc-editor.org/rfc/rfc7252#section-4.8.2" class="relref">Section 4.8.2</a> of [<a href="#RFC7252" class="cite xref">RFC7252</a>]</span>, see also <span>[<a href="#I-D.gomez-tiptop-coap" class="cite xref">I-D.gomez-tiptop-coap</a>]</span>).
+For example, B0 technologies lead to a
+frame transmission time greater than the TCP MSL for a frame size ≥ 150
 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).<a href="#section-5.3-4" class="pilcrow">¶</a></p>
-<p id="section-5.3-5">B1 technologies offer transmission times which are lower than the MSL
+<p id="section-5.3-5">B1 technologies offer transmission times which are lower than the TCP MSL
 (for a frame size greater than 150 bytes).  However, transmission times
 for B1 technologies are still significant if a human expects a reaction
 to the transmission of a frame.  With B1 technologies, the transmission
@@ -2662,7 +2672,7 @@ time of a frame greater than 62.5 bytes exceeds 0.5 seconds, i.e., a
 threshold time beyond which any response or reaction to a frame
 transmission will appear not to be immediate <span>[<a href="#RFC5826" class="cite xref">RFC5826</a>]</span>.<a href="#section-5.3-5" class="pilcrow">¶</a></p>
 <p id="section-5.3-6">B2 technologies do not incur responsiveness problems, but still benefit
-from using header compression techniques (e.g., <span>[<a href="#RFC6282" class="cite xref">RFC6282</a>]</span>) to achieve
+from using header compression techniques (such as <span>[<a href="#RFC6282" class="cite xref">RFC6282</a>]</span> or <span>[<a href="#I-D.ietf-6lo-schc-15dot4" class="cite xref">I-D.ietf-6lo-schc-15dot4</a>]</span>) to achieve
 performance improvements.<a href="#section-5.3-6" class="pilcrow">¶</a></p>
 <p id="section-5.3-7">Over B3 technologies, the relative performance benefits of header
 compression are low. For example, in a duty-cycled technology offering
@@ -2733,6 +2743,10 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
 <dt id="I-D.hui-vasseur-roll-rpl-deployment">[I-D.hui-vasseur-roll-rpl-deployment]</dt>
       <dd>
 <span class="refAuthor">Vasseur, J.</span>, <span class="refAuthor">Hui, J.</span>, <span class="refAuthor">Dasgupta, S.</span>, and <span class="refAuthor">G. Yoon</span>, <span class="refTitle">"RPL deployment experience in large scale networks"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-hui-vasseur-roll-rpl-deployment-01</span>, <time datetime="2012-07-05" class="refDate">5 July 2012</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-hui-vasseur-roll-rpl-deployment-01">https://datatracker.ietf.org/doc/html/draft-hui-vasseur-roll-rpl-deployment-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-6lo-schc-15dot4">[I-D.ietf-6lo-schc-15dot4]</dt>
+      <dd>
+<span class="refAuthor">Gomez, C.</span> and <span class="refAuthor">A. Minaburo</span>, <span class="refTitle">"Transmission of SCHC-compressed packets over IEEE 802.15.4 networks"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-6lo-schc-15dot4-12</span>, <time datetime="2026-02-20" class="refDate">20 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-12">https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-12</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-lwig-tls-minimal">[I-D.ietf-lwig-tls-minimal]</dt>
       <dd>
