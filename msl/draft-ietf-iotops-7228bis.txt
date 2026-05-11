@@ -1403,7 +1403,7 @@ Internet-Draft               CNN Terminology                    May 2026
 
 
    B2 technologies do not incur responsiveness problems, but still
-   benefit from using header compression techniques (e.g., [RFC6282],
+   benefit from using header compression techniques (e.g., [RFC6282] or
    [I-D.ietf-6lo-schc-15dot4]) to achieve performance improvements.
 
    Over B3 technologies, the relative performance benefits of header
