@@ -896,7 +896,8 @@ on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
-{{mtutbl}} lists the main classes of link layer MTU size.
+{{mtutbl}} lists the main classes of link layer MTU size (using "Sx" as
+an abbreviation for "Size x").
 Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
@@ -931,7 +932,6 @@ and
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
-(note: 'Sx' stands for 'Size x')
 
 <!-- CAN-FD: https://www.ietf.org/archive/id/draft-wachter-6lo-can-01.html -->
 
@@ -992,7 +992,7 @@ techniques.
 
 | Name | PHY bit rate (bit/s)            | Comment                                                                           | Header compression                           |
 | B0   | < 10                            | Transmission time of 150-byte frame > TCP MSL                                     | indispensable as part of system architecture |
-| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte) | vital                                        |
+| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size ≥ 63 byte) | vital                                        |
 | B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame                            | yields significant performance benefits      |
 | B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits          |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
