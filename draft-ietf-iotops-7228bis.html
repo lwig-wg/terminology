@@ -2415,7 +2415,8 @@ found in <span><a href="https://rfc-editor.org/rfc/rfc9581#section-3.5" class="r
 on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size.
+<p id="section-5.1-2"><a href="#mtutbl" class="auto internal xref">Table 10</a> lists the main classes of link layer MTU size (using "Sx" as
+an abbreviation for "Size x").
 Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
@@ -2522,8 +2523,7 @@ and
           </tbody>
         </table>
 </div>
-<p id="section-5.1-4">* if no link layer fragmentation is available
-(note: 'Sx' stands for 'Size x')<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<p id="section-5.1-4">* if no link layer fragmentation is available<a href="#section-5.1-4" class="pilcrow">¶</a></p>
 <p id="section-5.1-5">S0 technologies require fragmentation to support the IPv6 MTU requirement.
 If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span>
@@ -2625,7 +2625,7 @@ techniques.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
               <td class="text-left" rowspan="1" colspan="1">B1</td>
               <td class="text-left" rowspan="1" colspan="1">10 – 10<sup>3</sup>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Unresponsiveness if human expects reaction to sent frame (frame size &gt; 62.5 byte)</td>
+              <td class="text-left" rowspan="1" colspan="1">Unresponsiveness if human expects reaction to sent frame (frame size ≥ 63 byte)</td>
               <td class="text-left" rowspan="1" colspan="1">vital</td>
             </tr>
             <tr>

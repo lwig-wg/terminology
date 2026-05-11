@@ -104,8 +104,8 @@ Table of Contents
      5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
      5.2.  Classes of Internet Integration . . . . . . . . . . . . .  23
      5.3.  Classes of Physical Layer Bit Rate  . . . . . . . . . . .  24
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
-   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  26
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  25
+   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  25
 
 
 
@@ -114,11 +114,11 @@ Bormann, et al.         Expires 12 November 2026                [Page 2]
 Internet-Draft               CNN Terminology                    May 2026
 
 
-   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
-   9.  Informative References  . . . . . . . . . . . . . . . . . . .  26
+   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  25
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  25
    Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  30
-   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  31
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  31
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  30
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  30
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  31
 
 1.  Introduction
@@ -1131,21 +1131,21 @@ Internet-Draft               CNN Terminology                    May 2026
    parameter, the fragmentation techniques needed (if any) to support
    the IPv6 MTU requirement may vary.
 
-   Table 10 lists the main classes of link layer MTU size.  Note that
-   some of these classes have a span of about a (decimal) order of
-   magnitude; this does not mean that there are no interesting
-   transitions within these spans, just that these transitions are
-   dependent on other parameters such as MAC (message authentication
-   code) sizes, the variations of which would split these classes into
-   small, less universally relevant subclasses.  The range S10 to S14 is
-   more finely divided here due to transitions resulting from the
-   dominating link layer (15xx, 9216) and network layer protocol (1280)
-   MTUs.  In the table, "WiFi" is short for standard WiFi A-MSDU
-   (Aggregate MAC Service Data Unit) values, describing frame
-   aggregation on the link layer.  "CAN-FD" is Controller Area Network
-   Flexible Data-Rate (ISO 11898-1), "LoRaWAN" can be expanded as Long
-   Range Wide Area Network, "BLE" is Bluetooth Low Energy, and "RoCE" is
-   RDMA over Converged Ethernet.
+   Table 10 lists the main classes of link layer MTU size (using "Sx" as
+   an abbreviation for "Size x").  Note that some of these classes have
+   a span of about a (decimal) order of magnitude; this does not mean
+   that there are no interesting transitions within these spans, just
+   that these transitions are dependent on other parameters such as MAC
+   (message authentication code) sizes, the variations of which would
+   split these classes into small, less universally relevant subclasses.
+   The range S10 to S14 is more finely divided here due to transitions
+   resulting from the dominating link layer (15xx, 9216) and network
+   layer protocol (1280) MTUs.  In the table, "WiFi" is short for
+   standard WiFi A-MSDU (Aggregate MAC Service Data Unit) values,
+   describing frame aggregation on the link layer.  "CAN-FD" is
+   Controller Area Network Flexible Data-Rate (ISO 11898-1), "LoRaWAN"
+   can be expanded as Long Range Wide Area Network, "BLE" is Bluetooth
+   Low Energy, and "RoCE" is RDMA over Converged Ethernet.
 
 
 
@@ -1225,7 +1225,7 @@ Internet-Draft               CNN Terminology                    May 2026
 
                   Table 10: Classes of Link Layer MTU Size
 
-
+   * if no link layer fragmentation is available
 
 
 
@@ -1233,9 +1233,6 @@ Bormann, et al.         Expires 12 November 2026               [Page 22]
 
 Internet-Draft               CNN Terminology                    May 2026
 
-
-   * if no link layer fragmentation is available (note: 'Sx' stands for
-   'Size x')
 
    S0 technologies require fragmentation to support the IPv6 MTU
    requirement.  If no link layer fragmentation is available,
@@ -1267,29 +1264,6 @@ Internet-Draft               CNN Terminology                    May 2026
 
    Table 11 defines the classes of Internet integration level.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 23]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
                +======+====================================+
                | Name | Internet technology                |
                +======+====================================+
@@ -1307,6 +1281,15 @@ Internet-Draft               CNN Terminology                    May 2026
                  Table 11: Classes of Internet Integration
                                    Level
 
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 23]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
 5.3.  Classes of Physical Layer Bit Rate
 
    Physical layer technologies used by constrained devices can be
@@ -1319,56 +1302,28 @@ Internet-Draft               CNN Terminology                    May 2026
    Table 12 lists the classes of PHY bit rate ('Bx' stands for 'Bit rate
    class x').
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 24]
-
-Internet-Draft               CNN Terminology                    May 2026
-
-
-      +======+=========+========================+==================+
-      | Name | PHY bit | Comment                | Header           |
-      |      | rate    |                        | compression      |
-      |      | (bit/s) |                        |                  |
-      +======+=========+========================+==================+
-      | B0   | < 10    | Transmission time of   | indispensable as |
-      |      |         | 150-byte frame > TCP   | part of system   |
-      |      |         | MSL                    | architecture     |
-      +------+---------+------------------------+------------------+
-      | B1   | 10 –    | Unresponsiveness if    | vital            |
-      |      | 10^3    | human expects reaction |                  |
-      |      |         | to sent frame (frame   |                  |
-      |      |         | size > 62.5 byte)      |                  |
-      +------+---------+------------------------+------------------+
-      | B2   | 10^3 –  | Responsiveness if      | yields           |
-      |      | 10^6    | human expects reaction | significant      |
-      |      |         | to sent frame          | performance      |
-      |      |         |                        | benefits         |
-      +------+---------+------------------------+------------------+
-      | B3   | > 10^6  |                        | yields limited   |
-      |      |         |                        | performance      |
-      |      |         |                        | benefits         |
-      +------+---------+------------------------+------------------+
+   +======+=========+==============================+==================+
+   | Name | PHY bit | Comment                      | Header           |
+   |      | rate    |                              | compression      |
+   |      | (bit/s) |                              |                  |
+   +======+=========+==============================+==================+
+   | B0   | < 10    | Transmission time of         | indispensable as |
+   |      |         | 150-byte frame > TCP MSL     | part of system   |
+   |      |         |                              | architecture     |
+   +------+---------+------------------------------+------------------+
+   | B1   | 10 –    | Unresponsiveness if human    | vital            |
+   |      | 10^3    | expects reaction to sent     |                  |
+   |      |         | frame (frame size ≥ 63 byte) |                  |
+   +------+---------+------------------------------+------------------+
+   | B2   | 10^3 –  | Responsiveness if human      | yields           |
+   |      | 10^6    | expects reaction to sent     | significant      |
+   |      |         | frame                        | performance      |
+   |      |         |                              | benefits         |
+   +------+---------+------------------------------+------------------+
+   | B3   | > 10^6  |                              | yields limited   |
+   |      |         |                              | performance      |
+   |      |         |                              | benefits         |
+   +------+---------+------------------------------+------------------+
 
                Table 12: Classes of Physical Layer Bitrate
 
@@ -1383,6 +1338,14 @@ Internet-Draft               CNN Terminology                    May 2026
    greater than such an assumed constant, often with a default value in
    the same order of magnitude as the TCP MSL, but possibly explicitly
    configurable (compare MAX_LATENCY in Section 4.8.2 of [RFC7252], see
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 24]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    also [I-D.gomez-tiptop-coap]).  For example, B0 technologies lead to
    a frame transmission time greater than the TCP MSL for a frame size
    ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
@@ -1394,13 +1357,6 @@ Internet-Draft               CNN Terminology                    May 2026
    transmission time of a frame greater than 62.5 bytes exceeds 0.5
    seconds, i.e., a threshold time beyond which any response or reaction
    to a frame transmission will appear not to be immediate [RFC5826].
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 25]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    B2 technologies do not incur responsiveness problems, but still
    benefit from using header compression techniques (such as [RFC6282]
@@ -1439,6 +1395,13 @@ Internet-Draft               CNN Terminology                    May 2026
 
 9.  Informative References
 
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 25]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [ARM-ARCH] Arm, "ARM architecture profiles",
               <https://developer.arm.com/documentation/DEN0130/0100/
               About-the-Arm-architecture>.
@@ -1447,16 +1410,6 @@ Internet-Draft               CNN Terminology                    May 2026
               Challenged Internets", SIGCOMM 2003,
               DOI 10.1145/863955.863960, 2003,
               <https://doi.org/10.1145/863955.863960>.
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 26]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [I-D.amsuess-t2trg-raytime]
               Amsüss, C., "Raytime: Validating token expiry on an
@@ -1498,21 +1451,17 @@ Internet-Draft               CNN Terminology                    May 2026
               Standard — Quantities and units — Part 13: Information
               science and technology", IEC 80000-13, March 2008.
 
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 26]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/rfc/rfc4838>.
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 27]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
@@ -1553,6 +1502,18 @@ Internet-Draft               CNN Terminology                    May 2026
               DOI 10.17487/RFC6551, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6551>.
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 27]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
               Statement and Requirements for IPv6 over Low-Power
               Wireless Personal Area Network (6LoWPAN) Routing",
@@ -1562,13 +1523,6 @@ Internet-Draft               CNN Terminology                    May 2026
    [RFC7102]  Vasseur, JP., "Terms Used in Routing for Low-Power and
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 28]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
@@ -1606,6 +1560,16 @@ Internet-Draft               CNN Terminology                    May 2026
               DOI 10.17487/RFC7815, March 2016,
               <https://www.rfc-editor.org/rfc/rfc7815>.
 
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 28]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
               M., and D. Barthel, "Transmission of IPv6 Packets over
               Digital Enhanced Cordless Telecommunications (DECT) Ultra
@@ -1615,16 +1579,6 @@ Internet-Draft               CNN Terminology                    May 2026
    [RFC8376]  Farrell, S., Ed., "Low-Power Wide Area Network (LPWAN)
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/rfc/rfc8376>.
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 29]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
               Things (IoT) Security: State of the Art and Challenges",
@@ -1665,6 +1619,13 @@ Internet-Draft               CNN Terminology                    May 2026
               DOI 10.1002/9780470686218, ISBN 9780470747995, 2009,
               <https://doi.org/10.1002/9780470686218>.
 
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 29]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
 Appendix A.  Changes Since RFC 7228
 
    The following changes have been made to the guidelines published in
@@ -1673,14 +1634,6 @@ Appendix A.  Changes Since RFC 7228
    *  Updated references
 
    *  Added Superscript notations
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 30]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    *  Added new terms such as "Capable Node"
 
@@ -1720,23 +1673,20 @@ Acknowledgements
    Shepherd.  Mohamed Boucadair served as responsible area director in
    the IESG.
 
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 30]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    Carles Gomez was supported in part by the Spanish Government
    MCIU/AEI/10.13039/501100011033/FEDER/UE through project
    PID2023-146378NBI00.
 
 Authors' Addresses
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 31]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    Carsten Bormann
    Universität Bremen TZI
@@ -1783,10 +1733,4 @@ Internet-Draft               CNN Terminology                    May 2026
 
 
 
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 32]
+Bormann, et al.         Expires 12 November 2026               [Page 31]
