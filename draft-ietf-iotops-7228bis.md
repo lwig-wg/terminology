@@ -894,7 +894,8 @@ on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
-{{mtutbl}} lists the main classes of link layer MTU size.
+{{mtutbl}} lists the main classes of link layer MTU size (using "Sx" as
+an abbreviation for "Size x").
 Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
@@ -929,7 +930,6 @@ and
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
-(note: 'Sx' stands for 'Size x')
 
 <!-- CAN-FD: https://www.ietf.org/archive/id/draft-wachter-6lo-can-01.html -->
 
