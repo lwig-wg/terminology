@@ -816,7 +816,8 @@ battery change, e.g., by using a backup battery or a supercapacitor to
 keep powering the real-time clock (RTC).
 
 The actual accuracy of time may vary, with errors ranging from tens of
-percent from on-chip RC oscillators (not useful for keeping absolute
+percent from on-chip RC (resistor/capacitor) oscillators (not useful
+for keeping absolute
 time, but still useful for, e.g., timing out some state) to
 approximately 10<sup>-4</sup> to 10<sup>-5</sup> ("watch crystal") of error.  More precise
 timing is available with temperature compensated crystal oscillators
