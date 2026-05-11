@@ -55,6 +55,7 @@ informative:
   RFC4944:
   RFC6282:
   RFC8724: frag-new
+  I-D.ietf-6lo-schc-15dot4: schc-6lo
   RFC7452:
   RFC6606:
   STD7: tcp #  RFC9293:
@@ -63,7 +64,7 @@ informative:
   RFC6551:
   RFC6550:
   RFC4919:
-  RFC7252:
+  RFC7252: coap
   RFC7668:
   RFC8105: dectule
   RFC7428:
@@ -315,24 +316,24 @@ Constrained Network:
 
 Constraints may include:
 
-
-
-* low achievable bitrate/throughput (including limits on duty cycle),
+* low achievable bitrate/throughput, including limits on communication
+  duty cycle (for example, restrictions on transmit airtime or receive
+  availability; see also {{poweruse}});
 
 * high packet loss and high variability of packet loss (or,
-  conversely, delivery rate),
+  conversely, delivery rate);
 
-* highly asymmetric link characteristics,
+* highly asymmetric link characteristics;
 
 * severe penalties for using larger packets (e.g., high packet loss
-  due to link-layer fragmentation),
+  due to link-layer fragmentation);
 
 * limits on reachability over time (a substantial number of devices
   may power off at any point in time but periodically "wake up" and
-  can communicate for brief periods of time),
+  can communicate for brief periods of time);
 
 * unusually high latency or variability of latency, possibly
-  exacerbated by the need for power-off periods or duty-cycling, and
+  exacerbated by the need for power-off periods or duty-cycling; and
 
 * lack of (or severe constraints on) advanced services such as IP multicast.
 
@@ -376,10 +377,10 @@ Challenged Network:
 
   * exhibiting serious interruptions in end-to-end IP connectivity, or
 
-  * exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-    assumed by TCP ({{Sections 3.4 and 4 of RFC9293@STD7}}).
-
-
+  * exhibiting delay well beyond expectations that transport or
+    higher-level protocols may operate on, such as the Maximum Segment
+    Lifetime (MSL) defined by TCP ({{Sections 3.4 and 4 of
+    RFC9293@STD7}}; see also {{phyrate}}).
 
 All challenged networks are constrained networks in some sense, but
 not all constrained networks are challenged networks.  There is no
@@ -553,9 +554,10 @@ signals and send on/off or basic health indications.
 Class 1 devices are quite constrained in code space and processing
 capabilities, such that they
 cannot easily talk to other Internet nodes employing a
-full protocol stack such as using HTTP, Transport Layer Security (TLS), and
-related security
-protocols and XML-based data representations.
+full protocol stack that has not been designed for parsimonious use of
+resources including code size, such as using original forms of HTTP,
+Transport Layer Security (TLS) and related security
+protocols, and XML-based data representations.
 However, they are capable enough to
 use a protocol stack specifically designed for
 constrained nodes (such as the Constrained Application Protocol (CoAP) over
@@ -897,7 +899,8 @@ on the basis of link layer MTU size. Depending on this parameter, the
 fragmentation techniques needed (if any) to support the IPv6 MTU
 requirement may vary.
 
-{{mtutbl}} lists the main classes of link layer MTU size.
+{{mtutbl}} lists the main classes of link layer MTU size (using "Sx" as
+an abbreviation for "Size x").
 Note that some of these classes have a span of about a (decimal) order of
 magnitude; this does not mean that there are no interesting
 transitions within these spans, just that these transitions are
@@ -932,7 +935,6 @@ and
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
-(note: 'Sx' stands for 'Size x')
 
 <!-- CAN-FD: https://www.ietf.org/archive/id/draft-wachter-6lo-can-01.html -->
 
@@ -975,7 +977,7 @@ communicate with other nodes in the Internet as well.
 {: #internettbl title='Classes of Internet Integration Level'}
 
 
-## Classes of Physical Layer Bit Rate
+## Classes of Physical Layer Bit Rate {#phyrate}
 
 <!--
 \[This section could be expanded to also talk about
@@ -992,25 +994,29 @@ techniques.
 {{phyratetbl}} lists the classes of PHY bit rate ('Bx' stands for 'Bit rate class x').
 
 | Name | PHY bit rate (bit/s)            | Comment                                                                           | Header compression                           |
-| B0   | < 10                            | Transmission time of 150-byte frame > MSL                                         | indispensable as part of system architecture |
-| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size > 62.5 byte) | vital                                        |
+| B0   | < 10                            | Transmission time of 150-byte frame > TCP MSL                                     | indispensable as part of system architecture |
+| B1   | 10 – 10<sup>3</sup>             | Unresponsiveness if human expects reaction to sent frame (frame size ≥ 63 byte) | vital                                        |
 | B2   | 10<sup>3</sup> – 10<sup>6</sup> | Responsiveness if human expects reaction to sent frame                            | yields significant performance benefits      |
 | B3   | > 10<sup>6</sup>                |                                                                                   | yields limited performance benefits          |
 {: #phyratetbl title='Classes of Physical Layer Bitrate'}
 
-
-
-B0 technologies lead to very high transmission times, which may be close
-to or even greater than the Maximum Segment Lifetime (MSL) assumed on
-the Internet ({{Sections 3.4 and 4 of RFC9293@STD7}}).
+B0 technologies can lead to very high frame transmission times, which
+may exceed the time scales assumed by many Internet transport
+protocols, middleboxes, and applications for retransmission, liveness
+detection, and state retention.
+For instance, TCP ({{Sections 3.4 and 4 of RFC9293@STD7}}) defines a
+Maximum Segment Lifetime (MSL), which may not be faithfully implemented
+everywhere, but can serve as a yardstick for the present section.
 Many Internet protocols and mechanisms will fail
-when transmission times, and thus latencies, are greater than the MSL
-{{-coap-in-space}}.
-B0 technologies lead to a
-frame transmission time greater than the MSL for a frame size ≥ 150
+when transmission times, and thus latencies, are greater than such
+an assumed constant, often with a default value in the same order of magnitude as the
+TCP MSL, but possibly explicitly configurable (compare MAX_LATENCY in
+{{Section 4.8.2 of -coap}}, see also {{-coap-in-space}}).
+For example, B0 technologies lead to a
+frame transmission time greater than the TCP MSL for a frame size ≥ 150
 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
-B1 technologies offer transmission times which are lower than the MSL
+B1 technologies offer transmission times which are lower than the TCP MSL
 (for a frame size greater than 150 bytes).  However, transmission times
 for B1 technologies are still significant if a human expects a reaction
 to the transmission of a frame.  With B1 technologies, the transmission
@@ -1019,7 +1025,7 @@ threshold time beyond which any response or reaction to a frame
 transmission will appear not to be immediate {{-home-aut-reqs}}.
 
 B2 technologies do not incur responsiveness problems, but still benefit
-from using header compression techniques (e.g., {{RFC6282}}) to achieve
+from using header compression techniques (such as {{RFC6282}} or {{-schc-6lo}}) to achieve
 performance improvements.
 
 Over B3 technologies, the relative performance benefits of header
