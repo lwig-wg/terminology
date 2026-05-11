@@ -7,6 +7,7 @@ This is the working area for the IETF [IOTOPS Working Group](https://datatracker
 * [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iotops-7228bis)
 * [Compare Editor's Copy to Working Group Draft](https://lwig-wg.github.io/terminology/#go.draft-ietf-iotops-7228bis.diff)
 
+[Access to all branches](https://lwig-wg.github.io/terminology/)
 
 ## Contributing
 
