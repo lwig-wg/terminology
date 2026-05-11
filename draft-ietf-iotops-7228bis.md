@@ -1021,7 +1021,7 @@ threshold time beyond which any response or reaction to a frame
 transmission will appear not to be immediate {{-home-aut-reqs}}.
 
 B2 technologies do not incur responsiveness problems, but still benefit
-from using header compression techniques (e.g., {{RFC6282}} or {{-schc-6lo}}) to achieve
+from using header compression techniques (such as {{RFC6282}} or {{-schc-6lo}}) to achieve
 performance improvements.
 
 Over B3 technologies, the relative performance benefits of header
