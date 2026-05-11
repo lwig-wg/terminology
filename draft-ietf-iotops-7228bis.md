@@ -713,7 +713,7 @@ of a problem with supercapacitors for energy storage).
 described above.
 
 | Name | Type of energy limitation                              | Example Power Source                               |
-| E0   | Event energy-limited                                   | Event-based harvesting                             |
+| E0   | Event energy-limited                                   | Event-based harvesting for self-powered sensing    |
 | E1   | Period energy-limited                                  | Battery that is periodically recharged or replaced |
 | E2   | Lifetime energy-limited                                | Non-replaceable primary battery                    |
 | E9   | No direct quantitative limitations to available energy | Mains-powered                                      |
