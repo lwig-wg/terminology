@@ -1,22 +1,22 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # Terminology for Constrained-Node Networks
 
-This is the working area for the IETF [IOTOPS Working Group](https://datatracker.ietf.org/wg/iotops/documents/) Internet-Draft, "Terminology for Constrained-Node Networks".
+This is the working area for the IETF [IOTOPS Working Group](https://datatracker.ietf.org/group/iotops/documents/) Internet-Draft, "Terminology for Constrained-Node Networks".
 
 * [Editor's Copy](https://lwig-wg.github.io/terminology/#go.draft-ietf-iotops-7228bis.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-iotops-7228bis)
 * [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iotops-7228bis)
 * [Compare Editor's Copy to Working Group Draft](https://lwig-wg.github.io/terminology/#go.draft-ietf-iotops-7228bis.diff)
 
-[Access to all branches](https://lwig-wg.github.io/terminology/)
 
 ## Contributing
 
 See the
 [guidelines for contributions](https://github.com/lwig-wg/terminology/blob/master/CONTRIBUTING.md).
 
-Contributions can be made by creating pull requests.
-The GitHub interface supports creating pull requests using the Edit (✏) button.
-
+The contributing file also has tips on how to make contributions, if you
+don't already know how to do that.
 
 ## Command Line Usage
 
