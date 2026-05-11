@@ -482,7 +482,7 @@ devices based on their CPU capabilities:
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
   The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
   elaborate sleep modes to achieve microwatt- or at least
-  milliwatt-level sustained power usage (Ps, see {{scaling-properties}}).
+  milliwatt-level sustained power usage (compare the related quantity Ps, see {{scaling-properties}}).
 
 * General-purpose-class devices (e.g., called "A-Profile" in [ARM-ARCH]).
   These usually
