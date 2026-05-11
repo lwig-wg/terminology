@@ -374,7 +374,7 @@ Challenged Network:
 
   * exhibiting serious interruptions in end-to-end IP connectivity, or
 
-  * exhibiting delay well beyond expectations that Transport or
+  * exhibiting delay well beyond expectations that transport or
     higher-level protocols may operate on, such as the Maximum Segment
     Lifetime (MSL) defined by TCP ({{Sections 3.4 and 4 of
     RFC9293@STD7}}; see also {{phyrate}}).
