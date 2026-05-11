@@ -371,8 +371,10 @@ Internet-Draft               CNN Terminology                    May 2026
       *  exhibiting serious interruptions in end-to-end IP connectivity,
          or
 
-      *  exhibiting delay well beyond the Maximum Segment Lifetime (MSL)
-         assumed by TCP (Sections 3.4 and 4 of RFC 9293 [STD7]).
+      *  exhibiting delay well beyond expectations that transport or
+         higher-level protocols may operate on, such as the Maximum
+         Segment Lifetime (MSL) defined by TCP (Sections 3.4 and 4 of
+         RFC 9293 [STD7]; see also Section 5.3).
 
    All challenged networks are constrained networks in some sense, but
    not all constrained networks are challenged networks.  There is no
@@ -383,8 +385,6 @@ Internet-Draft               CNN Terminology                    May 2026
 2.3.  Constrained-Node Networks
 
    Constrained-Node Network:  A network whose characteristics are
-      influenced by being composed of a significant portion of
-      constrained nodes.
 
 
 
@@ -393,6 +393,9 @@ Bormann, et al.         Expires 12 November 2026                [Page 7]
 
 Internet-Draft               CNN Terminology                    May 2026
 
+
+      influenced by being composed of a significant portion of
+      constrained nodes.
 
    A constrained-node network always is a constrained network because of
    the network constraints stemming from the node constraints, but it
@@ -436,9 +439,6 @@ Internet-Draft               CNN Terminology                    May 2026
    [RFC6550]).  So, in the terminology of the present document, an LLN
    is a constrained-node network with certain network characteristics,
    which include constraints on the network as well.
-
-
-
 
 
 
@@ -1352,8 +1352,8 @@ Internet-Draft               CNN Terminology                    May 2026
       |      | (bit/s) |                        |                  |
       +======+=========+========================+==================+
       | B0   | < 10    | Transmission time of   | indispensable as |
-      |      |         | 150-byte frame > MSL   | part of system   |
-      |      |         |                        | architecture     |
+      |      |         | 150-byte frame > TCP   | part of system   |
+      |      |         | MSL                    | architecture     |
       +------+---------+------------------------+------------------+
       | B1   | 10 –    | Unresponsiveness if    | vital            |
       |      | 10^3    | human expects reaction |                  |
@@ -1372,28 +1372,28 @@ Internet-Draft               CNN Terminology                    May 2026
 
                Table 12: Classes of Physical Layer Bitrate
 
-   B0 technologies lead to very high transmission times, which may be
-   close to or even greater than the Maximum Segment Lifetime (MSL)
-   assumed on the Internet (Sections 3.4 and 4 of RFC 9293 [STD7]).
-   Many Internet protocols and mechanisms will fail when transmission
-   times, and thus latencies, are greater than the MSL
-   [I-D.gomez-tiptop-coap].  B0 technologies lead to a frame
-   transmission time greater than the MSL for a frame size ≥ 150 bytes
-   (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
+   B0 technologies can lead to very high frame transmission times, which
+   may exceed the time scales assumed by many Internet transport
+   protocols, middleboxes, and applications for retransmission, liveness
+   detection, and state retention.  For instance, TCP (Sections 3.4 and
+   4 of RFC 9293 [STD7]) defines a Maximum Segment Lifetime (MSL), which
+   may not be faithfully implemented everywhere, but can serve as a
+   yardstick for the present section.  Many Internet protocols and
+   mechanisms will fail when transmission times, and thus latencies, are
+   greater than such an assumed constant, often with a default value in
+   the same order of magnitude as the TCP MSL, but possibly explicitly
+   configurable (compare MAX_LATENCY in Section 4.8.2 of [RFC7252], see
+   also [I-D.gomez-tiptop-coap]).  For example, B0 technologies lead to
+   a frame transmission time greater than the TCP MSL for a frame size
+   ≥ 150 bytes (= 1200 bits, which at ≤ 10 bit/s need ≥ 120 s = 2 min).
 
-   B1 technologies offer transmission times which are lower than the MSL
-   (for a frame size greater than 150 bytes).  However, transmission
+   B1 technologies offer transmission times which are lower than the TCP
+   MSL (for a frame size greater than 150 bytes).  However, transmission
    times for B1 technologies are still significant if a human expects a
    reaction to the transmission of a frame.  With B1 technologies, the
    transmission time of a frame greater than 62.5 bytes exceeds 0.5
    seconds, i.e., a threshold time beyond which any response or reaction
    to a frame transmission will appear not to be immediate [RFC5826].
-
-   B2 technologies do not incur responsiveness problems, but still
-   benefit from using header compression techniques (e.g., [RFC6282]) to
-   achieve performance improvements.
-
-
 
 
 
@@ -1401,6 +1401,10 @@ Bormann, et al.         Expires 12 November 2026               [Page 25]
 
 Internet-Draft               CNN Terminology                    May 2026
 
+
+   B2 technologies do not incur responsiveness problems, but still
+   benefit from using header compression techniques (such as [RFC6282]
+   or [I-D.ietf-6lo-schc-15dot4]) to achieve performance improvements.
 
    Over B3 technologies, the relative performance benefits of header
    compression are low.  For example, in a duty-cycled technology
@@ -1444,12 +1448,8 @@ Internet-Draft               CNN Terminology                    May 2026
               DOI 10.1145/863955.863960, 2003,
               <https://doi.org/10.1145/863955.863960>.
 
-   [I-D.amsuess-t2trg-raytime]
-              Amsüss, C., "Raytime: Validating token expiry on an
-              unbounded local time interval", Work in Progress,
-              Internet-Draft, draft-amsuess-t2trg-raytime-03, 19 October
-              2024, <https://datatracker.ietf.org/doc/html/draft-
-              amsuess-t2trg-raytime-03>.
+
+
 
 
 
@@ -1457,6 +1457,13 @@ Bormann, et al.         Expires 12 November 2026               [Page 26]
 
 Internet-Draft               CNN Terminology                    May 2026
 
+
+   [I-D.amsuess-t2trg-raytime]
+              Amsüss, C., "Raytime: Validating token expiry on an
+              unbounded local time interval", Work in Progress,
+              Internet-Draft, draft-amsuess-t2trg-raytime-03, 19 October
+              2024, <https://datatracker.ietf.org/doc/html/draft-
+              amsuess-t2trg-raytime-03>.
 
    [I-D.gomez-tiptop-coap]
               Gomez, C. and S. Aguilar, "CoAP in Space", Work in
@@ -1471,6 +1478,13 @@ Internet-Draft               CNN Terminology                    May 2026
               deployment-01, 5 July 2012,
               <https://datatracker.ietf.org/doc/html/draft-hui-vasseur-
               roll-rpl-deployment-01>.
+
+   [I-D.ietf-6lo-schc-15dot4]
+              Gomez, C. and A. Minaburo, "Transmission of SCHC-
+              compressed packets over IEEE 802.15.4 networks", Work in
+              Progress, Internet-Draft, draft-ietf-6lo-schc-15dot4-12,
+              20 February 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-6lo-schc-15dot4-12>.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S. L., and H. Tschofenig, "A Hitchhiker's
@@ -1489,6 +1503,17 @@ Internet-Draft               CNN Terminology                    May 2026
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/rfc/rfc4838>.
 
+
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 27]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
               Overview, Assumptions, Problem Statement, and Goals",
@@ -1504,15 +1529,6 @@ Internet-Draft               CNN Terminology                    May 2026
               Routing Requirements in Low-Power and Lossy Networks",
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
               <https://www.rfc-editor.org/rfc/rfc5826>.
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 27]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
               "Network Time Protocol Version 4: Protocol and Algorithms
@@ -1547,6 +1563,13 @@ Internet-Draft               CNN Terminology                    May 2026
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
 
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 28]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
               DOI 10.17487/RFC7228, May 2014,
@@ -1562,13 +1585,6 @@ Internet-Draft               CNN Terminology                    May 2026
               the Routing Protocol for Low-Power and Lossy Networks
               (RPLs)", RFC 7416, DOI 10.17487/RFC7416, January 2015,
               <https://www.rfc-editor.org/rfc/rfc7416>.
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 28]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC7428]  Brandt, A. and J. Buron, "Transmission of IPv6 Packets
               over ITU-T G.9959 Networks", RFC 7428,
@@ -1600,6 +1616,16 @@ Internet-Draft               CNN Terminology                    May 2026
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/rfc/rfc8376>.
 
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 29]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
               Things (IoT) Security: State of the Art and Challenges",
               RFC 8576, DOI 10.17487/RFC8576, April 2019,
@@ -1616,15 +1642,6 @@ Internet-Draft               CNN Terminology                    May 2026
               Protocol Support Profile (IPSP)", RFC 9159,
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 29]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
    [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
               Object Representation (CBOR) Tags for Time, Duration, and
@@ -1657,6 +1674,14 @@ Appendix A.  Changes Since RFC 7228
 
    *  Added Superscript notations
 
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 30]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    *  Added new terms such as "Capable Node"
 
    *  Added a classification of device groups
@@ -1671,16 +1696,6 @@ Appendix A.  Changes Since RFC 7228
       Keeping Time over Power Events"
 
    *  Added new section "Classes of Networks"
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 30]
-
-Internet-Draft               CNN Terminology                    May 2026
-
 
 List of Tables
 
@@ -1711,6 +1726,18 @@ Acknowledgements
 
 Authors' Addresses
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 12 November 2026               [Page 31]
+
+Internet-Draft               CNN Terminology                    May 2026
+
+
    Carsten Bormann
    Universität Bremen TZI
    Postfach 330440
@@ -1724,18 +1751,6 @@ Authors' Addresses
    Munich
    Germany
    Email: mersue@gmail.com
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 12 November 2026               [Page 31]
-
-Internet-Draft               CNN Terminology                    May 2026
 
 
    Ari Keränen
@@ -1753,21 +1768,6 @@ Internet-Draft               CNN Terminology                    May 2026
    Spain
    Phone: +34-93-413-7206
    Email: carlesgo@entel.upc.edu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
