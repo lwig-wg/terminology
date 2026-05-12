@@ -323,13 +323,13 @@ Internet-Draft               CNN Terminology                    May 2026
 
    *  limits on reachability over time (a substantial number of devices
       may power off at any point in time but periodically "wake up" and
-      can communicate for brief periods of time); and
+      can communicate for brief periods of time);
+
+   *  unusually high latency or variability of latency, possibly
+      exacerbated by the need for power-off periods or duty-cycling; and
 
    *  lack of (or severe constraints on) advanced services such as IP
       multicast.
-
-
-
 
 
 
