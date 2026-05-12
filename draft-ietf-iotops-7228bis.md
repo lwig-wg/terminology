@@ -483,7 +483,7 @@ devices based on their CPU capabilities:
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
   The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
   elaborate sleep modes to achieve microwatt- or at least
-  milliwatt-level sustained power usage (Ps, see {{scaling-properties}}).
+  milliwatt-level sustained power usage (compare the related quantity Ps, see {{scaling-properties}}).
 
 * General-purpose-class devices (e.g., called "A-Profile" in [ARM-ARCH]).
   These usually
@@ -715,7 +715,7 @@ of a problem with supercapacitors for energy storage).
 described above.
 
 | Name | Type of energy limitation                              | Example Power Source                               |
-| E0   | Event energy-limited                                   | Event-based harvesting                             |
+| E0   | Event energy-limited                                   | Event-based harvesting for self-powered sensing    |
 | E1   | Period energy-limited                                  | Battery that is periodically recharged or replaced |
 | E2   | Lifetime energy-limited                                | Non-replaceable primary battery                    |
 | E9   | No direct quantitative limitations to available energy | Mains-powered                                      |
@@ -818,7 +818,8 @@ battery change, e.g., by using a backup battery or a supercapacitor to
 keep powering the real-time clock (RTC).
 
 The actual accuracy of time may vary, with errors ranging from tens of
-percent from on-chip RC oscillators (not useful for keeping absolute
+percent from on-chip RC (resistor/capacitor) oscillators (not useful
+for keeping absolute
 time, but still useful for, e.g., timing out some state) to
 approximately 10<sup>-4</sup> to 10<sup>-5</sup> ("watch crystal") of error.  More precise
 timing is available with temperature compensated crystal oscillators
