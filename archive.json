@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-10T03:21:42.434890+00:00",
+  "timestamp": "2026-05-12T03:21:24.203492+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -132,15 +132,17 @@
       "id": "I_kwDOBMYTbM8AAAABBaMgSw",
       "title": "ARTART IETF Last Call review by Valery Smyslov",
       "url": "https://github.com/lwig-wg/terminology/issues/14",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-pr"
+      ],
       "body": "From Valery:\n\n> Nits:\n> 1. The purpose of the note below Table 10 (the text in parentheses: \"'Sx'\n> stands for 'Size x'\") is not clear to me. If it is concerned with the Name\n> column in this table, then it must be placed in some other place (preferrably\n> before the table with some explanatory words). And honestly in this case I see\n> no reason for this text, since the constration of name for all other tables is\n> not explained. If it is concerned with something else, then I wonder what it is\n> (I failed to find other \"S*\" words in the draft).\n> \n> 2. Section 5.3\n> I do not think that reference to MSL in the context of B0 networks is relevant.\n> MSL is only defined for TCP and I doubt if nodes connected to B0 network will\n> use TCP. In any case, MSL in TCP is only concerned with the chance for SN\n> repeat after host reboots. Referring to COAP's MAX_LATENCY value (discussed in\n> [I-D.gomez-tiptop-coap](https://datatracker.ietf.org/doc/draft-gomez-tiptop-coap/)) is more appropriate in this context, but its default\n> value is 100 (and not 120 as MSL).\n> \n> 3. Section 5.3\n> I also think that 62.5 bytes calculated here must be rounded to the full number\n> of bytes (I assume that all protocols operate on byte boundary and cannot send\n> say 62.3 bytes to remain \"responsive\" in B1 networks).",
       "createdAt": "2026-05-06T07:25:05Z",
-      "updatedAt": "2026-05-06T07:25:05Z",
-      "closedAt": null,
+      "updatedAt": "2026-05-11T22:00:08Z",
+      "closedAt": "2026-05-11T22:00:08Z",
       "comments": []
     },
     {
@@ -152,10 +154,12 @@
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-pr"
+      ],
       "body": "I have reviewed draft-ietf-iotops-7228bis-07, and overall I found the\ndocument clear, well structured, and very useful. I have a couple of minor\ncomments for consideration.\n\n*Comment on constraint facets (Section 2.1)*\n\nThe list of constraint facets is comprehensive and well structured.\nHowever, it may be worth considering whether a few additional dimensions\nshould be explicitly mentioned, given their relevance in current IoT\ndeployments:\n\n   - communication capability constraints (e.g., limits on protocol stack\n   support or session handling),\n   - persistent storage constraints (e.g., availability and endurance),\n   - availability constraints (e.g., intermittent connectivity due to duty\n   cycling), and\n   - firmware/software lifecycle constraints (e.g., ability to update or\n   patch devices).\n\nSome of these aspects are discussed in later sections, but briefly\nreflecting them here could make the overview of node constraints more\ncomplete and easier to apply.\n\n*Comment on constrained network characteristics (Section 2.2)*\n\nThe list of network constraints is clear and well structured. It might be\nworth considering whether a few additional aspects could be explicitly\nmentioned, as they are commonly observed in constrained network deployments:\n\n   - high latency and/or high variability in latency (jitter),\n   - constraints related to network scale or node density, and\n   - highly dynamic or frequently changing topology (e.g., due to\n   mobility).\n\nThese aspects may be implicitly covered by existing points, but calling\nthem out explicitly could improve clarity and completeness.\n\n*Conclusion*\n\nOverall, I believe this is a strong and useful document, and I support its\nprogression.\n\nBest regards,\nDhyanam HP",
       "createdAt": "2026-05-06T07:26:50Z",
-      "updatedAt": "2026-05-06T07:26:50Z",
+      "updatedAt": "2026-05-11T22:00:45Z",
       "closedAt": null,
       "comments": []
     },
@@ -168,10 +172,12 @@
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-pr"
+      ],
       "body": "> Document: draft-ietf-iotops-7228bis\n> Title: Terminology for Constrained-Node Networks\n> Reviewer: Jouni Korhonen\n> Review result: Ready with Nits\n> \n> Having read the document I think it is about ready. There are few editorial nits listed that could be fixed, however, they are just for better clarity.\n> \n> 1) Line 425: What is 'Ps' or rather why it is used here?\n>    - I see there is acronym description in Section 4.1. but its placement still\n>    feels odd here.\n> 2) Line 436: 'Ps' again. A bit confusing since Ps in parenthesis do not refer to an expanded acronym.\n>    - \"..of sustained power usage (Ps).\"\n> 3) Line 710: I would provide some literature reference to \"Event-based harvesting\".. 4) Line 824: what is an RC oscillator? Reference or expand RC etc.\n",
       "createdAt": "2026-05-07T04:25:03Z",
-      "updatedAt": "2026-05-09T11:07:28Z",
+      "updatedAt": "2026-05-11T06:51:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -188,15 +194,15 @@
       "id": "I_kwDOBMYTbM8AAAABBghDLg",
       "title": "IETF LC Secdir review (Shawn Emery)",
       "url": "https://github.com/lwig-wg/terminology/issues/17",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "No change needed, but consider adding Shawn to Ack section.\n\n> Document: draft-ietf-iotops-7228bis\n> Title: Terminology for Constrained-Node Networks\n> Reviewer: Shawn Emery\n> Review result: Ready\n> \n> I have reviewed this document as part of the security directorate's ongoing effort to review all IETF documents being processed by the IESG. These comments were written primarily for the benefit of the security area directors. Document editors and WG chairs should treat these comments just like any other last call comments.\n> \n> This informational draft discusses the terminology used in networks of constrained-devices that will elucidate further standardization work and research in this area.\n> \n> The security considerations section does exist and defers relevant security aspects to i) the general considerations of constrained-device (RFC7252) security mechanisms, ii) specific constrained-device protocol RFCs (e.g.,\n> RFC7416 for Routing Protocol for Low-Power and Lossy Networks (RLP)), iii) the implementation security considerations of security protocols on constrained devices (RFC7815), and iv) a high-level view of constrained-device security (RFC8576).  I agree with these assertions and appears to be comprehensive.\n> \n> General comments:\n> \n> None.\n> \n> Editorial comments:\n> \n> None.\n",
       "createdAt": "2026-05-07T04:26:52Z",
-      "updatedAt": "2026-05-09T11:06:47Z",
-      "closedAt": null,
+      "updatedAt": "2026-05-11T22:03:05Z",
+      "closedAt": "2026-05-11T22:03:05Z",
       "comments": [
         {
           "author": "cabo",
@@ -204,6 +210,13 @@
           "body": "(Github suppresses this issue in its issue list; trying to revive it by touching it.)",
           "createdAt": "2026-05-09T11:06:47Z",
           "updatedAt": "2026-05-09T11:06:47Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "We plan to do a comprehensive update of the Acknowledgements again near the end of IESG processing, so I'm closing this issue now.\nMay thanks to Shawn for the review!",
+          "createdAt": "2026-05-11T22:03:05Z",
+          "updatedAt": "2026-05-11T22:03:05Z"
         }
       ]
     },
@@ -212,15 +225,17 @@
       "id": "I_kwDOBMYTbM8AAAABBotfcQ",
       "title": "IETF LC TSVART reveiw (Marcus)",
       "url": "https://github.com/lwig-wg/terminology/issues/18",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-pr"
+      ],
       "body": "Document: draft-ietf-iotops-7228bis\nTitle: Terminology for Constrained-Node Networks\nReviewer: Marcus Ihlar\nReview result: Ready with Nits\n\nThis document has been reviewed as part of the transport area review team's ongoing effort to review key IETF documents. These comments were written primarily for the transport area directors, but are copied to the document's authors and WG to allow them to address any issues raised and also to the IETF discussion list for information.\n\nWhen done at the time of IETF Last Call, the authors should consider this review as part of the last-call comments they receive. Please always CC [tsv-art@ietf.org](mailto:tsv-art@ietf.org) if you reply to or forward this review.\n\nThis is a useful terminology update to RFC 7228. Since it does not define or update any protocols, I do not see any major TSV issues. Some of the terminology and classifications are TSV-adjacent, though. I have a few comments and suggestions below, but nothing blocking in my view.\n\nSection 2.2\n\nThe term \u201cduty cycle\u201d is used here without further description. It is described later in Section 4.3. Since the term can mean slightly different things in different contexts, it could be useful to add a short explanation at first use, for example:\n\n\u201clow achievable bitrate/throughput, including limits on communication duty cycle (for example, restrictions on transmit airtime or receive availability)\u201d.\n\nSection 3\n\nThe description of Class 1 devices states that they cannot easily talk to other devices using HTTP/TLS but are capable of using dedicated stacks such as CoAP.\nThis is probably reasonable. However, many protocol implementations and profiles have evolved since RFC 7228, including compact TLS/DTLS implementations, CoAP profiles, CBOR-based encodings, and constrained-security mechanisms. The text now reads somewhat like a hard boundary between \u201cfull\u201d\nHTTP/TLS stacks and CoAP/UDP. Perhaps a bit more nuance could be useful here.\n\nSection 5.3\n\nAs mentioned in other reviews, MSL might not be the most appropriate marker for \u201cchallenged networks\u201d. I understand that it is useful to have a somewhat well-defined value to base definitions on, but tying definitions to a TCP-specific parameter might not be the most future-proof choice. For example, the TCP specification uses an MSL value of 2 minutes, whereas different major operating systems use significantly smaller values, such as 15 or 30 seconds.\nSo talking about an assumed MSL on the Internet might not really reflect what implementations assume today.\n\nPerhaps consider more transport-neutral terminology here, for instance something like:\n\n\u201cB0 technologies can lead to very high frame transmission times, which may be comparable to or exceed the time scales assumed by many Internet transport protocols, middleboxes, and applications for retransmission, liveness detection, and state retention.\u201d",
       "createdAt": "2026-05-08T07:49:55Z",
-      "updatedAt": "2026-05-08T07:49:55Z",
-      "closedAt": null,
+      "updatedAt": "2026-05-11T21:57:06Z",
+      "closedAt": "2026-05-11T21:57:06Z",
       "comments": []
     }
   ],
@@ -597,7 +612,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-04-17T16:32:07Z",
-      "updatedAt": "2026-04-18T09:10:34Z",
+      "updatedAt": "2026-05-10T16:02:33Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "5a594ce75c0576d7f7be5aede8bd50e98f54859d",
@@ -746,7 +761,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-04-22T17:00:19Z",
-      "updatedAt": "2026-04-23T12:42:08Z",
+      "updatedAt": "2026-05-10T16:02:29Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "7bbcf084fc50414a4b6a8b725ca2ae844553f80b",
@@ -814,25 +829,411 @@
       "id": "PR_kwDOBMYTbM7Z1rHT",
       "title": "Clarify the use of MSL to address MSL concerns in #16 and #18",
       "url": "https://github.com/lwig-wg/terminology/pull/19",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-05-09T11:35:17Z",
-      "updatedAt": "2026-05-09T13:04:03Z",
+      "updatedAt": "2026-05-11T21:50:39Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "ce05140be123f45cae34bd4d8831f57547686bae",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "msl",
-      "headRefOid": "760bd0c48c5fcca617be2a02b7fef5fa5ffc8ed1",
+      "headRefOid": "9411a9f6b7c6ff61aa5e059e493cc45a1fa2baa8",
+      "closedAt": "2026-05-11T21:50:39Z",
+      "mergedAt": "2026-05-11T21:50:39Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "3d291f8133d9ef9bbed2f5f3e460742012105834"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM793DG3",
+          "commit": {
+            "abbreviatedOid": "760bd0c"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Thanks, Carsten. The proposed changes address nicely the related comments, in my opinion.\nOne nit: s/which may not faithfully implemented/which may not be faithfully implemented",
+          "createdAt": "2026-05-10T07:25:35Z",
+          "updatedAt": "2026-05-10T07:25:35Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-BlJE",
+          "commit": {
+            "abbreviatedOid": "3bada37"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "some few nits",
+          "createdAt": "2026-05-11T08:22:43Z",
+          "updatedAt": "2026-05-11T08:26:35Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "```suggestion\n  * exhibiting delay well beyond expectations that transport or\n```",
+              "createdAt": "2026-05-11T08:22:43Z",
+              "updatedAt": "2026-05-11T08:26:35Z"
+            },
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\nMSL, which may not be faithfully implemented\n```",
+              "createdAt": "2026-05-11T08:24:32Z",
+              "updatedAt": "2026-05-11T08:26:35Z"
+            },
+            {
+              "originalPosition": 62,
+              "body": "already introduced above",
+              "createdAt": "2026-05-11T08:24:49Z",
+              "updatedAt": "2026-05-11T08:26:35Z"
+            },
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\nFor instance, TCP ({{Sections 3.4 and 4 of RFC9293@STD7}}) defines\n```",
+              "createdAt": "2026-05-11T08:25:11Z",
+              "updatedAt": "2026-05-11T08:26:35Z"
+            },
+            {
+              "originalPosition": 87,
+              "body": "```suggestion\nfrom using header compression techniques (e.g., {{RFC6282}} and {{-schc-6lo}}) to achieve\n```",
+              "createdAt": "2026-05-11T08:26:18Z",
+              "updatedAt": "2026-05-11T08:26:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-DPwW",
+          "commit": {
+            "abbreviatedOid": "3bada37"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-11T09:27:13Z",
+          "updatedAt": "2026-05-11T09:27:13Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "While that is true, the first expansion is about a 1000 lines earlier.\r\nI think that sections like 5.3 benefit from standing alone, so they can be referenced to make a specific point.\r\n",
+              "createdAt": "2026-05-11T09:27:13Z",
+              "updatedAt": "2026-05-11T09:27:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-DRII",
+          "commit": {
+            "abbreviatedOid": "3bada37"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-11T09:28:01Z",
+          "updatedAt": "2026-05-11T09:28:01Z",
+          "comments": [
+            {
+              "originalPosition": 61,
+              "body": "(I think the \"a\" is fine if the previous change is not made; it is an invitation to think about what Maximum Segment Lifetime actually means.)",
+              "createdAt": "2026-05-11T09:28:01Z",
+              "updatedAt": "2026-05-11T09:28:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-Hygf",
+          "commit": {
+            "abbreviatedOid": "9411a9f"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T12:04:46Z",
+          "updatedAt": "2026-05-11T12:04:46Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-Mv-C",
+          "commit": {
+            "abbreviatedOid": "9411a9f"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-11T14:54:08Z",
+          "updatedAt": "2026-05-11T14:54:08Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "Feel free to ignore @cabo. ",
+              "createdAt": "2026-05-11T14:54:08Z",
+              "updatedAt": "2026-05-11T14:54:08Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "id": "PR_kwDOBMYTbM7Z_7-c",
+      "title": "Ietf lc tsvart review",
+      "url": "https://github.com/lwig-wg/terminology/pull/20",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Changes suggested in TSVART review by Marcus Ihlar.\r\n(See also PR #19 re usage of the term \u201cMSL\u201d.)\r\n",
+      "createdAt": "2026-05-10T13:44:49Z",
+      "updatedAt": "2026-05-11T21:57:05Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "ce05140be123f45cae34bd4d8831f57547686bae",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ietf-lc-tsvart-review",
+      "headRefOid": "f37d49bd31dcceaa0c32113fd743eda7e2b1429e",
+      "closedAt": "2026-05-11T21:57:05Z",
+      "mergedAt": "2026-05-11T21:57:05Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "1c397b76ab0360a9f41d6bb6d55186ac76204dff"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM79-Jog",
+          "commit": {
+            "abbreviatedOid": "f37d49b"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T05:27:22Z",
+          "updatedAt": "2026-05-11T05:27:22Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM79-KIh",
+          "commit": {
+            "abbreviatedOid": "f37d49b"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T05:28:04Z",
+          "updatedAt": "2026-05-11T05:28:04Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-H7FG",
+          "commit": {
+            "abbreviatedOid": "f37d49b"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T12:10:34Z",
+          "updatedAt": "2026-05-11T12:10:34Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "id": "PR_kwDOBMYTbM7aICbt",
+      "title": "Ietf lc iotdir review",
+      "url": "https://github.com/lwig-wg/terminology/pull/21",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-11T06:05:56Z",
+      "updatedAt": "2026-05-11T07:18:27Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "4a235d56412b41d5f55c673389e4ec257695658f",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ietf-lc-iotdir-review",
+      "headRefOid": "ad858b0dbd104e85b000fd840785f358a0b4ee10",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM79-x5G",
+          "commit": {
+            "abbreviatedOid": "ad00b9a"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "All the suggested updates look good to me. Many thanks, Carsten!",
+          "createdAt": "2026-05-11T06:13:44Z",
+          "updatedAt": "2026-05-11T06:13:44Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-AAiK",
+          "commit": {
+            "abbreviatedOid": "ad858b0"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T07:18:27Z",
+          "updatedAt": "2026-05-11T07:18:27Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "PR_kwDOBMYTbM7aINAf",
+      "title": "Ci cleanup 2",
+      "url": "https://github.com/lwig-wg/terminology/pull/22",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-11T06:17:08Z",
+      "updatedAt": "2026-05-11T06:17:29Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "ce05140be123f45cae34bd4d8831f57547686bae",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ci-cleanup-2",
+      "headRefOid": "7cc9357e897ec30ff838f31c3ddab69a6818d288",
+      "closedAt": "2026-05-11T06:17:29Z",
+      "mergedAt": "2026-05-11T06:17:29Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "d6565ba4548bcc25bccfbda24393d562f7f12e43"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 23,
+      "id": "PR_kwDOBMYTbM7aIVQ4",
+      "title": "Ci cleanup 3",
+      "url": "https://github.com/lwig-wg/terminology/pull/23",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-11T06:24:57Z",
+      "updatedAt": "2026-05-11T06:25:34Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "d6565ba4548bcc25bccfbda24393d562f7f12e43",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ci-cleanup-3",
+      "headRefOid": "bdacc73ce2d3209740e55c7b3a62e20f5f105b95",
+      "closedAt": "2026-05-11T06:25:34Z",
+      "mergedAt": "2026-05-11T06:25:34Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "4a235d56412b41d5f55c673389e4ec257695658f"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 24,
+      "id": "PR_kwDOBMYTbM7aSgmI",
+      "title": "Ietf lc artart review",
+      "url": "https://github.com/lwig-wg/terminology/pull/24",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-11T14:28:02Z",
+      "updatedAt": "2026-05-11T22:00:07Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "3d291f8133d9ef9bbed2f5f3e460742012105834",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ietf-lc-artart-review",
+      "headRefOid": "bc31c097d0b7b211f011b67830de8372be85da52",
+      "closedAt": "2026-05-11T22:00:07Z",
+      "mergedAt": "2026-05-11T22:00:06Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "1ec0231398c3c7b27d555e269462b0a14105c38c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7-NPNN",
+          "commit": {
+            "abbreviatedOid": "7f9c19c"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-11T15:09:53Z",
+          "updatedAt": "2026-05-11T15:09:53Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "id": "PR_kwDOBMYTbM7ab-7K",
+      "title": "IETF last-call review comments by Dhyanam HP",
+      "url": "https://github.com/lwig-wg/terminology/pull/25",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Close #15",
+      "createdAt": "2026-05-11T21:46:32Z",
+      "updatedAt": "2026-05-11T22:06:27Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "1ec0231398c3c7b27d555e269462b0a14105c38c",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "ietf-lc-review-dhyanam",
+      "headRefOid": "ee76396c3d772c94912e4a35221314db887a6093",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "See also <https://mailarchive.ietf.org/arch/msg/iotops/KcxlhrAPu4DQjpeZOG-621AbCnI>\r\n",
+          "createdAt": "2026-05-11T22:05:03Z",
+          "updatedAt": "2026-05-11T22:05:03Z"
+        }
+      ],
       "reviews": []
     }
   ]
