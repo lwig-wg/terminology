@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-12T03:21:24.203492+00:00",
+  "timestamp": "2026-05-14T03:29:15.058042+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -150,7 +150,7 @@
       "id": "I_kwDOBMYTbM8AAAABBaNIhw",
       "title": "Review from DHYANAM HP",
       "url": "https://github.com/lwig-wg/terminology/issues/15",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -159,8 +159,8 @@
       ],
       "body": "I have reviewed draft-ietf-iotops-7228bis-07, and overall I found the\ndocument clear, well structured, and very useful. I have a couple of minor\ncomments for consideration.\n\n*Comment on constraint facets (Section 2.1)*\n\nThe list of constraint facets is comprehensive and well structured.\nHowever, it may be worth considering whether a few additional dimensions\nshould be explicitly mentioned, given their relevance in current IoT\ndeployments:\n\n   - communication capability constraints (e.g., limits on protocol stack\n   support or session handling),\n   - persistent storage constraints (e.g., availability and endurance),\n   - availability constraints (e.g., intermittent connectivity due to duty\n   cycling), and\n   - firmware/software lifecycle constraints (e.g., ability to update or\n   patch devices).\n\nSome of these aspects are discussed in later sections, but briefly\nreflecting them here could make the overview of node constraints more\ncomplete and easier to apply.\n\n*Comment on constrained network characteristics (Section 2.2)*\n\nThe list of network constraints is clear and well structured. It might be\nworth considering whether a few additional aspects could be explicitly\nmentioned, as they are commonly observed in constrained network deployments:\n\n   - high latency and/or high variability in latency (jitter),\n   - constraints related to network scale or node density, and\n   - highly dynamic or frequently changing topology (e.g., due to\n   mobility).\n\nThese aspects may be implicitly covered by existing points, but calling\nthem out explicitly could improve clarity and completeness.\n\n*Conclusion*\n\nOverall, I believe this is a strong and useful document, and I support its\nprogression.\n\nBest regards,\nDhyanam HP",
       "createdAt": "2026-05-06T07:26:50Z",
-      "updatedAt": "2026-05-11T22:00:45Z",
-      "closedAt": null,
+      "updatedAt": "2026-05-12T08:41:12Z",
+      "closedAt": "2026-05-12T08:41:12Z",
       "comments": []
     },
     {
@@ -168,7 +168,7 @@
       "id": "I_kwDOBMYTbM8AAAABBggt7g",
       "title": "Iotdir review (Jouni)",
       "url": "https://github.com/lwig-wg/terminology/issues/16",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -177,8 +177,8 @@
       ],
       "body": "> Document: draft-ietf-iotops-7228bis\n> Title: Terminology for Constrained-Node Networks\n> Reviewer: Jouni Korhonen\n> Review result: Ready with Nits\n> \n> Having read the document I think it is about ready. There are few editorial nits listed that could be fixed, however, they are just for better clarity.\n> \n> 1) Line 425: What is 'Ps' or rather why it is used here?\n>    - I see there is acronym description in Section 4.1. but its placement still\n>    feels odd here.\n> 2) Line 436: 'Ps' again. A bit confusing since Ps in parenthesis do not refer to an expanded acronym.\n>    - \"..of sustained power usage (Ps).\"\n> 3) Line 710: I would provide some literature reference to \"Event-based harvesting\".. 4) Line 824: what is an RC oscillator? Reference or expand RC etc.\n",
       "createdAt": "2026-05-07T04:25:03Z",
-      "updatedAt": "2026-05-11T06:51:18Z",
-      "closedAt": null,
+      "updatedAt": "2026-05-12T05:57:48Z",
+      "closedAt": "2026-05-12T05:57:48Z",
       "comments": [
         {
           "author": "cabo",
@@ -1056,24 +1056,26 @@
       "id": "PR_kwDOBMYTbM7aICbt",
       "title": "Ietf lc iotdir review",
       "url": "https://github.com/lwig-wg/terminology/pull/21",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-05-11T06:05:56Z",
-      "updatedAt": "2026-05-11T07:18:27Z",
+      "updatedAt": "2026-05-12T05:57:47Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "4a235d56412b41d5f55c673389e4ec257695658f",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "ietf-lc-iotdir-review",
       "headRefOid": "ad858b0dbd104e85b000fd840785f358a0b4ee10",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-05-12T05:57:47Z",
+      "mergedAt": "2026-05-12T05:57:47Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "e5b29b3f68c437a579ad12b752824d6b3e6eff7e"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1207,24 +1209,26 @@
       "id": "PR_kwDOBMYTbM7ab-7K",
       "title": "IETF last-call review comments by Dhyanam HP",
       "url": "https://github.com/lwig-wg/terminology/pull/25",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Close #15",
       "createdAt": "2026-05-11T21:46:32Z",
-      "updatedAt": "2026-05-11T22:06:27Z",
+      "updatedAt": "2026-05-12T08:41:11Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
-      "baseRefOid": "1ec0231398c3c7b27d555e269462b0a14105c38c",
+      "baseRefOid": "e5b29b3f68c437a579ad12b752824d6b3e6eff7e",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "ietf-lc-review-dhyanam",
-      "headRefOid": "ee76396c3d772c94912e4a35221314db887a6093",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d8dde425105ccf013aa4c90e79db5cc042aafda0",
+      "closedAt": "2026-05-12T08:41:11Z",
+      "mergedAt": "2026-05-12T08:41:11Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "ea6ed3179cbd9987739609db2316dad852598b49"
+      },
       "comments": [
         {
           "author": "cabo",
@@ -1234,7 +1238,34 @@
           "updatedAt": "2026-05-11T22:05:03Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM7-ezQX",
+          "commit": {
+            "abbreviatedOid": "d8dde42"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-12T05:52:28Z",
+          "updatedAt": "2026-05-12T05:58:46Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOBMYTbM7-fqMh",
+          "commit": {
+            "abbreviatedOid": "d8dde42"
+          },
+          "author": "akeranen",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-05-12T06:36:08Z",
+          "updatedAt": "2026-05-12T06:36:08Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
