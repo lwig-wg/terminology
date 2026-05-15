@@ -148,7 +148,7 @@ dynamic topology.
 
 Constrained devices might be in charge of gathering information in
 diverse settings, including natural ecosystems, buildings, and
-factories, and sending the information to one or more server stations.
+factories, and of sending the information to one or more server stations.
 They might also act on information, by performing some
 physical action, including displaying it.
 Constrained devices may work under severe resource constraints such
