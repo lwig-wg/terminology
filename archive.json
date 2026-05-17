@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-14T03:29:15.058042+00:00",
+  "timestamp": "2026-05-17T03:29:52.196999+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -1266,6 +1266,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 26,
+      "id": "PR_kwDOBMYTbM7b45G5",
+      "title": "Collecting nits post-08",
+      "url": "https://github.com/lwig-wg/terminology/pull/26",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-15T11:09:49Z",
+      "updatedAt": "2026-05-15T11:10:25Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "ea6ed3179cbd9987739609db2316dad852598b49",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "collecting-post08-nits",
+      "headRefOid": "ce18cde82d43c4f2fcfdf37698354b1657d6b717",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
