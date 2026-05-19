@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-17T03:29:52.196999+00:00",
+  "timestamp": "2026-05-19T03:35:53.671031+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -1279,19 +1279,67 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-05-15T11:09:49Z",
-      "updatedAt": "2026-05-15T11:10:25Z",
+      "updatedAt": "2026-05-18T09:28:30Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "ea6ed3179cbd9987739609db2316dad852598b49",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "collecting-post08-nits",
-      "headRefOid": "ce18cde82d43c4f2fcfdf37698354b1657d6b717",
+      "headRefOid": "eb1b9b8cd3a08c26e95f8f851463093accae33a8",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 27,
+      "id": "PR_kwDOBMYTbM7ciIab",
+      "title": "nit",
+      "url": "https://github.com/lwig-wg/terminology/pull/27",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-18T06:36:34Z",
+      "updatedAt": "2026-05-18T10:22:52Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "ea6ed3179cbd9987739609db2316dad852598b49",
+      "headRepository": "boucadair/terminology",
+      "headRefName": "patch-4",
+      "headRefOid": "fdc69a6e4c32597a2aa0054975f2cf28e1ff3298",
+      "closedAt": "2026-05-18T10:22:51Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Now part of #26 ",
+          "createdAt": "2026-05-18T10:22:51Z",
+          "updatedAt": "2026-05-18T10:22:51Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM8AAAABANVAqw",
+          "commit": {
+            "abbreviatedOid": "fdc69a6"
+          },
+          "author": "cabo",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thanks!\nI'll absorb this into #26.",
+          "createdAt": "2026-05-18T09:31:32Z",
+          "updatedAt": "2026-05-18T09:31:32Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
