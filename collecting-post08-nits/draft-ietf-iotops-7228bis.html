@@ -1682,7 +1682,7 @@ their pins for interfaces to application hardware such as digital
 in/out (the latter often Pulse Width Modulation (PWM)-controllable),
 ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
 The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
-elaborate sleep modes to achieve microwatt- or at least
+complex sleep modes to achieve microwatt- or at least
 milliwatt-level sustained power usage (compare the related quantity Ps, see <a href="#scaling-properties" class="auto internal xref">Section 4.1</a>).<a href="#section-3-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-3.2">
@@ -1856,7 +1856,7 @@ constrained by a limited energy supply.  Class 3 and 4 devices are
 less clearly defined than the lower classes; they are even less
 constrained.  In particular Class 4 devices are powerful enough to
 quite comfortably run, say, JavaScript interpreters, together with
-elaborate network stacks.  Additional classes
+more sophisticated network stacks.  Additional classes
 may need to be defined based on protection capabilities, e.g., an MPU
 (memory protection unit; true MMUs are typically only found in J-group
 devices).<a href="#section-3-11" class="pilcrow">¶</a></p>
@@ -2158,7 +2158,7 @@ and the frequency with which a device needs to communicate.<a href="#section-4.3
 <span class="break"></span><dl class="dlParallel" id="section-4.3-4">
           <dt id="section-4.3-4.1">Always-on:</dt>
           <dd style="margin-left: 1.5em" id="section-4.3-4.2">
-            <p id="section-4.3-4.2.1">This strategy is most applicable if there is no reason for extreme
+            <p id="section-4.3-4.2.1">This strategy is most applicable if there is no reason for intricate
 measures for power saving.  The device can stay on in the usual manner
 all the time.  It may be useful to employ power-friendly hardware or
 limit the number of wireless transmissions, CPU speeds, and other
@@ -2175,8 +2175,9 @@ to the network as it is woken up.  The main optimization goal is to
 minimize the effort during the reattachment process and any
 resulting application communications.<a href="#section-4.3-4.4.1" class="pilcrow">¶</a></p>
 <p id="section-4.3-4.4.2">If the device sleeps for long periods of time and needs to
-communicate infrequently, the relative increase in energy expenditure
-during reattachment may be acceptable.<a href="#section-4.3-4.4.2" class="pilcrow">¶</a></p>
+communicate infrequently, the relative increase in energy
+expenditure during the fewer reattachment procedures may still fit
+within the application's power budget.<a href="#section-4.3-4.4.2" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-4.3-4.5">Low-power:</dt>
@@ -2541,10 +2542,10 @@ fragmentation is needed at the adaptation layer below IPv6.
 6LoWPAN fragmentation <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span> can be used to carry 1280-byte IPv6
 packets over these technologies.<a href="#section-5.1-6" class="pilcrow">¶</a></p>
 <p id="section-5.1-7">S10 or higher technologies do not require fragmentation to support the IPv6 MTU
-requirement; S12 and above often create islands of higher MTU in an
-otherwise Ethernet-inspired Layer 2 network, and S15 and above may
-need to consider enhanced mechanisms to provide integrity protection
-for larger sizes of packets.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
+requirement; S12 and above often create islands of higher MTU in a
+Layer 2 network that may employ Ethernet-inspired MTUs otherwise.
+S15 and above may need to consider mechanisms beyond, say, CRC-32(c) to
+provide error protection (and possibly also correction) for larger sizes of packets.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="class-Ix">
