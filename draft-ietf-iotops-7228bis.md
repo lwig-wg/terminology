@@ -485,7 +485,7 @@ devices based on their CPU capabilities:
   in/out (the latter often Pulse Width Modulation (PWM)-controllable),
   ADC/DACs (analog-to-digital and digital-to-analog converters), etc.
   The term "System on a Chip" (SoC) can be used where this hardware is specialized for an application.  These devices often implement
-  elaborate sleep modes to achieve microwatt- or at least
+  complex sleep modes to achieve microwatt- or at least
   milliwatt-level sustained power usage (compare the related quantity Ps, see {{scaling-properties}}).
 
 * General-purpose-class devices (e.g., called "A-Profile" in [ARM-ARCH]).
@@ -588,7 +588,7 @@ constrained by a limited energy supply.  Class 3 and 4 devices are
 less clearly defined than the lower classes; they are even less
 constrained.  In particular Class 4 devices are powerful enough to
 quite comfortably run, say, JavaScript interpreters, together with
-elaborate network stacks.  Additional classes
+more sophisticated network stacks.  Additional classes
 may need to be defined based on protection capabilities, e.g., an MPU
 (memory protection unit; true MMUs are typically only found in J-group
 devices).
@@ -743,7 +743,7 @@ and the frequency with which a device needs to communicate.
 The general strategies for power usage can be described as follows:
 
 Always-on:
-: This strategy is most applicable if there is no reason for extreme
+: This strategy is most applicable if there is no reason for intricate
   measures for power saving.  The device can stay on in the usual manner
   all the time.  It may be useful to employ power-friendly hardware or
   limit the number of wireless transmissions, CPU speeds, and other
@@ -759,8 +759,9 @@ Normally-off:
   resulting application communications.
 
   If the device sleeps for long periods of time and needs to
-  communicate infrequently, the relative increase in energy expenditure
-  during reattachment may be acceptable.
+  communicate infrequently, the relative increase in energy
+  expenditure during the fewer reattachment procedures may still fit
+  within the application's power budget.
 
 Low-power:
 : This strategy is most applicable to devices that need to operate on
@@ -932,7 +933,7 @@ and
 | S13  | ≫ 2304, ..4352      | 4352 (17*256), ~4200 (RoCE), 3839 (WiFi)        | no fragmentation needed            |
 | S14  | ≫ 4352, ..9216      | 9216 (9*1024, Jumbo Ethernet), 7935 (WiFi)      | no fragmentation needed            |
 | S15  | ≫ 9216, ..65535     | 11454 (WiFi), ~16384, ~65535                    | no fragmentation needed            |
-| S19  | ≥ 65536             | (RFC 2675 Jumbograms, unusual)                  | no fragmentation needed            |
+| S19  | ≥ 65536             | (not practically deployed) | no fragmentation needed            |
 {: #mtutbl title='Classes of Link Layer MTU Size'}
 
 \* if no link layer fragmentation is available
@@ -954,8 +955,10 @@ fragmentation is needed at the adaptation layer below IPv6.
 packets over these technologies.
 
 S10 or higher technologies do not require fragmentation to support the IPv6 MTU
-requirement; S12 and above often create islands of higher MTU in an
-otherwise Ethernet-inspired Layer 2 network.
+requirement; S12 and above often create islands of higher MTU in a
+Layer 2 network that may employ Ethernet-inspired MTUs otherwise.
+S15 and above may need to consider mechanisms beyond, say, CRC-32(c) to
+provide error protection (and possibly also correction) for larger sizes of packets.
 
 ## Classes of Internet Integration {#class-Ix}
 
