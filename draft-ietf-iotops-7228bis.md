@@ -71,6 +71,7 @@ informative:
   RFC9159: blemesh
   I-D.amsuess-t2trg-raytime: raytime
   I-D.gomez-tiptop-coap: coap-in-space
+  RFC9397: teep-arch
   RFC9581: time-tag
   WEI:
     title: '6LoWPAN: the Wireless Embedded Internet'
@@ -123,6 +124,7 @@ informative:
       org: Arm
     date: false
 # Doesn't use "A-Profile" verbatim: ARM architecture profiles, https://developer.arm.com/documentation/dui0471/m/key-features-of-arm-architecture-versions/arm-architecture-profiles
+  KEYMGMT: DOI.10.6028/NIST.SP.800-57pt1r5
 
 --- abstract
 
@@ -644,18 +646,29 @@ exclusive.
 
 ## Shielded Secrets
 
-<!-- are there relevant clusters? -->
-
-Some platforms can keep secrets shielded (usually in conjunction with
-secure enclave functionality). Refer to {{shieldtbl}} for more details.
-Note that Sh9 is aspirational language; no real hardware can achieve
-this.
+Some platforms employ hardware support to keep secrets shielded from
+potential attackers (usually in conjunction with secure enclave
+functionality).
+At the time of writing, there is significant ongoing innovation but no
+agreed common terminology for levels of secret shielding.
+{{shieldtbl}} therefore only provides a rough spectrum, starting from
+Sh0 for no special hardware provisions to maintain secrecy (while
+assuming that the usual software measures can be applied even to Sh0
+platforms {{KEYMGMT}}).
+Sh1 is a catch-all category that indicates that the platform does
+provide hardware support for secret shielding, so that it is no longer
+purely a software function to handle secrets such as roots of trust
+(but does not distinguish between specific device categories such as
+HSM, TPM, or even TEE functionality).
+Sh9 is aspirational language (for a "Cadillac" platform); no real
+hardware is identified by this level.
+It is left for further study to identify clusters on this spectrum.
 
 | Name | Secret shielding functionality |
 | Sh0  | no secret shielding            |
 | Sh1  | some secret shielding          |
-| Sh9  | perfect secret shielding       |
-{: #shieldtbl title='Levels of Secret Shielding Capabilities'}
+| Sh9  | comprehensive secret shielding |
+{: #shieldtbl title='Rough Levels of Secret Shielding Capabilities'}
 
 # Power Terminology {#power}
 
@@ -1063,6 +1076,7 @@ threat analysis for the RPL routing protocol.
 Implementation considerations for security protocols on constrained
 nodes are discussed in {{-IKEV2-MINIMAL}} and in early work in {{-TLS-MINIMAL}}.
 A wider view of security in constrained-node networks is provided in {{-IOT-SECURITY}}.
+{{-teep-arch}} discusses several architectures for secret shielding.
 
 --- back
 
