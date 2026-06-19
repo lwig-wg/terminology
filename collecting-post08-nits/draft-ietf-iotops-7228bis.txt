@@ -94,18 +94,18 @@ Table of Contents
    3.  Classes of Constrained (and More Capable) Devices . . . . . .   9
      3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  13
      3.2.  Isolation Functionality . . . . . . . . . . . . . . . . .  14
-     3.3.  Shielded Secrets  . . . . . . . . . . . . . . . . . . . .  14
+     3.3.  Shielded Secrets  . . . . . . . . . . . . . . . . . . . .  15
    4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  15
      4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  15
      4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  16
      4.3.  Strategies for Using Power for Communication  . . . . . .  17
      4.4.  Strategies of Keeping Time over Power Events  . . . . . .  19
-   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  21
-     5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  21
-     5.2.  Classes of Internet Integration . . . . . . . . . . . . .  23
-     5.3.  Classes of Physical Layer Bit Rate  . . . . . . . . . . .  24
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
-   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  26
+   5.  Classes of Networks . . . . . . . . . . . . . . . . . . . . .  22
+     5.1.  Classes of Link Layer MTU Size  . . . . . . . . . . . . .  22
+     5.2.  Classes of Internet Integration . . . . . . . . . . . . .  24
+     5.3.  Classes of Physical Layer Bit Rate  . . . . . . . . . . .  25
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  27
+   7.  Operational Considerations  . . . . . . . . . . . . . . . . .  27
 
 
 
@@ -114,12 +114,12 @@ Bormann, et al.         Expires 21 December 2026                [Page 2]
 Internet-Draft               CNN Terminology                   June 2026
 
 
-   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  26
-   9.  Informative References  . . . . . . . . . . . . . . . . . . .  26
-   Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  30
-   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  31
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  31
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  31
+   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  27
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  27
+   Appendix A.  Changes Since RFC 7228 . . . . . . . . . . . . . . .  32
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  32
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  32
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  33
 
 1.  Introduction
 
@@ -772,12 +772,12 @@ Internet-Draft               CNN Terminology                   June 2026
 
                 Table 3: Levels of Isolation Capabilities
 
-3.3.  Shielded Secrets
 
-   Some platforms can keep secrets shielded (usually in conjunction with
-   secure enclave functionality).  Refer to Table 4 for more details.
-   Note that Sh9 is aspirational language; no real hardware can achieve
-   this.
+
+
+
+
+
 
 
 
@@ -786,6 +786,24 @@ Bormann, et al.         Expires 21 December 2026               [Page 14]
 Internet-Draft               CNN Terminology                   June 2026
 
 
+3.3.  Shielded Secrets
+
+   Some platforms employ hardware support to keep secrets shielded from
+   potential attackers (usually in conjunction with secure enclave
+   functionality).  At the time of writing, there is significant ongoing
+   innovation but no agreed common terminology for levels of secret
+   shielding.  Table 4 therefore only provides a rough spectrum,
+   starting from Sh0 for no special hardware provisions to maintain
+   secrecy (while assuming that the usual software measures can be
+   applied even to Sh0 platforms [KEYMGMT]).  Sh1 is a catch-all
+   category that indicates that the platform does provide hardware
+   support for secret shielding, so that it is no longer purely a
+   software function to handle secrets such as roots of trust (but does
+   not distinguish between specific device categories such as HSM, TPM,
+   or even TEE functionality).  Sh9 is aspirational language (for a
+   "Cadillac" platform); no real hardware is identified by this level.
+   It is left for further study to identify clusters on this spectrum.
+
                  +======+================================+
                  | Name | Secret shielding functionality |
                  +======+================================+
@@ -793,11 +811,11 @@ Internet-Draft               CNN Terminology                   June 2026
                  +------+--------------------------------+
                  | Sh1  | some secret shielding          |
                  +------+--------------------------------+
-                 | Sh9  | perfect secret shielding       |
+                 | Sh9  | comprehensive secret shielding |
                  +------+--------------------------------+
 
-                    Table 4: Levels of Secret Shielding
-                                Capabilities
+                      Table 4: Rough Levels of Secret
+                           Shielding Capabilities
 
 4.  Power Terminology
 
@@ -816,6 +834,14 @@ Internet-Draft               CNN Terminology                   June 2026
    the International System of Units (SI units), of an approximate value
    for one or both of the quantities listed in Table 5 is used.
 
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 15]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
       +======+============================================+=========+
       | Name | Definition                                 | SI Unit |
       +======+============================================+=========+
@@ -831,16 +857,6 @@ Internet-Draft               CNN Terminology                   June 2026
    The value of Et may need to be interpreted in conjunction with an
    indication over which period of time the value is given; see
    Section 4.2.
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 15]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    Some devices enter a "low-power" mode before the energy available in
    a period is exhausted or even have multiple such steps on the way to
@@ -870,6 +886,18 @@ Internet-Draft               CNN Terminology                   June 2026
 
    Table 6 provides a summary of the classifications described above.
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 16]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
      +======+========================+==============================+
      | Name | Type of energy         | Example Power Source         |
      |      | limitation             |                              |
@@ -889,14 +917,6 @@ Internet-Draft               CNN Terminology                   June 2026
      +------+------------------------+------------------------------+
 
                   Table 6: Classes of Energy Limitation
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 16]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
 4.3.  Strategies for Using Power for Communication
 
@@ -923,6 +943,17 @@ Internet-Draft               CNN Terminology                   June 2026
       network all the time.
 
    Normally-off:  Under this strategy, the device sleeps such long
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 17]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
       periods at a time that once it wakes up, it makes sense for it to
       not pretend that it has been connected to the network during
       sleep: the device reattaches to the network as it is woken up.
@@ -935,25 +966,6 @@ Internet-Draft               CNN Terminology                   June 2026
       within the application's power budget.
 
    Low-power:  This strategy is most applicable to devices that need to
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 17]
-
-Internet-Draft               CNN Terminology                   June 2026
-
-
       operate on a very small amount of power but still need to be able
       to communicate on a relatively frequent basis.  This implies that
       extremely low-power solutions need to be used for the hardware,
@@ -987,6 +999,17 @@ Internet-Draft               CNN Terminology                   June 2026
    considerations can apply at the communications-interface level.  This
    document does not define terminology for the latter.
 
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 18]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    A term often used to describe power-saving approaches is "duty-
    cycling".  This describes all forms of periodically switching off
    some function, leaving it on only for a certain percentage of time
@@ -998,17 +1021,6 @@ Internet-Draft               CNN Terminology                   June 2026
    a Sleepy Node as a node that may sometimes go into a sleep mode (a
    low-power state to conserve power) and temporarily suspend protocol
    communication (P0); there is no explicit mention of P1.
-
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 18]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
 4.4.  Strategies of Keeping Time over Power Events
 
@@ -1042,6 +1054,18 @@ Internet-Draft               CNN Terminology                   June 2026
    wireless communication, this may also allow it to keep more precise
    time during the period.
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 19]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    The various time sources available on the device can be assisted by
    external time input, e.g., via the network using the NTP protocol
    [RFC5905].  Information from measuring the deviation between external
@@ -1058,14 +1082,6 @@ Internet-Draft               CNN Terminology                   June 2026
    during its entire life, or the wall-clock time may need to be reset
    after a battery change.  Even devices that have a battery lasting for
    their lifetime may not be set to wall-clock time at manufacture time,
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 19]
-
-Internet-Draft               CNN Terminology                   June 2026
-
-
    possibly because the battery is only activated at installation time,
    when time sources may be questionable or because setting the clock
    during manufacture is deemed too much effort.
@@ -1083,6 +1099,28 @@ Internet-Draft               CNN Terminology                   June 2026
    the two dimensions proposed in Table 8 and Table 9.  Corrections to
    the local time of a device performed over the network can be used to
    improve the uncertainty exhibited by these basic device classes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 20]
+
+Internet-Draft               CNN Terminology                   June 2026
+
 
     +======+==================================+=======================+
     | Name | Type                             | Uncertainty (roughly) |
@@ -1111,17 +1149,6 @@ Internet-Draft               CNN Terminology                   June 2026
 
            Table 8: Strategies of Keeping Time over Power Events
 
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 20]
-
-Internet-Draft               CNN Terminology                   June 2026
-
-
       +======+====================================+=================+
       | Name | Permanency (from type T5 upwards): | Uncertainty     |
       +======+====================================+=================+
@@ -1139,6 +1166,17 @@ Internet-Draft               CNN Terminology                   June 2026
 
    Further parameters that can be used to discuss clock quality can be
    found in Section 3.5 of [RFC9581].
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 21]
+
+Internet-Draft               CNN Terminology                   June 2026
+
 
 5.  Classes of Networks
 
@@ -1173,7 +1211,25 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.         Expires 21 December 2026               [Page 21]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 22]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1229,7 +1285,7 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.         Expires 21 December 2026               [Page 22]
+Bormann, et al.         Expires 21 December 2026               [Page 23]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1285,7 +1341,7 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.         Expires 21 December 2026               [Page 23]
+Bormann, et al.         Expires 21 December 2026               [Page 24]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1341,7 +1397,7 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.         Expires 21 December 2026               [Page 24]
+Bormann, et al.         Expires 21 December 2026               [Page 25]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1397,7 +1453,7 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.         Expires 21 December 2026               [Page 25]
+Bormann, et al.         Expires 21 December 2026               [Page 26]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1435,7 +1491,8 @@ Internet-Draft               CNN Terminology                   June 2026
    protocol.  Implementation considerations for security protocols on
    constrained nodes are discussed in [RFC7815] and in early work in
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
-   constrained-node networks is provided in [RFC8576].
+   constrained-node networks is provided in [RFC8576].  [RFC9397]
+   discusses several architectures for secret shielding.
 
 9.  Informative References
 
@@ -1452,8 +1509,7 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-
-Bormann, et al.         Expires 21 December 2026               [Page 26]
+Bormann, et al.         Expires 21 December 2026               [Page 27]
 
 Internet-Draft               CNN Terminology                   June 2026
 
@@ -1498,21 +1554,26 @@ Internet-Draft               CNN Terminology                   June 2026
               Standard — Quantities and units — Part 13: Information
               science and technology", IEC 80000-13, March 2008.
 
+   [KEYMGMT]  Barker, E., "Recommendation for key management:: part 1 -
+              general", National Institute of Standards and Technology,
+              DOI 10.6028/nist.sp.800-57pt1r5, May 2020,
+              <https://doi.org/10.6028/nist.sp.800-57pt1r5>.
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 28]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
               R., Scott, K., Fall, K., and H. Weiss, "Delay-Tolerant
               Networking Architecture", RFC 4838, DOI 10.17487/RFC4838,
               April 2007, <https://www.rfc-editor.org/rfc/rfc4838>.
-
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 27]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
               over Low-Power Wireless Personal Area Networks (6LoWPANs):
@@ -1553,6 +1614,18 @@ Internet-Draft               CNN Terminology                   June 2026
               DOI 10.17487/RFC6551, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6551>.
 
+
+
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 29]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
               Statement and Requirements for IPv6 over Low-Power
               Wireless Personal Area Network (6LoWPAN) Routing",
@@ -1562,13 +1635,6 @@ Internet-Draft               CNN Terminology                   June 2026
    [RFC7102]  Vasseur, JP., "Terms Used in Routing for Low-Power and
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 28]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    [RFC7228]  Bormann, C., Ersue, M., and A. Keranen, "Terminology for
               Constrained-Node Networks", RFC 7228,
@@ -1606,6 +1672,16 @@ Internet-Draft               CNN Terminology                   June 2026
               DOI 10.17487/RFC7815, March 2016,
               <https://www.rfc-editor.org/rfc/rfc7815>.
 
+
+
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 30]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
               M., and D. Barthel, "Transmission of IPv6 Packets over
               Digital Enhanced Cordless Telecommunications (DECT) Ultra
@@ -1615,16 +1691,6 @@ Internet-Draft               CNN Terminology                   June 2026
    [RFC8376]  Farrell, S., Ed., "Low-Power Wide Area Network (LPWAN)
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/rfc/rfc8376>.
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 29]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    [RFC8576]  Garcia-Morchon, O., Kumar, S., and M. Sethi, "Internet of
               Things (IoT) Security: State of the Art and Challenges",
@@ -1643,6 +1709,11 @@ Internet-Draft               CNN Terminology                   June 2026
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
 
+   [RFC9397]  Pei, M., Tschofenig, H., Thaler, D., and D. Wheeler,
+              "Trusted Execution Environment Provisioning (TEEP)
+              Architecture", RFC 9397, DOI 10.17487/RFC9397, July 2023,
+              <https://www.rfc-editor.org/rfc/rfc9397>.
+
    [RFC9581]  Bormann, C., Gamari, B., and H. Birkholz, "Concise Binary
               Object Representation (CBOR) Tags for Time, Duration, and
               Period", RFC 9581, DOI 10.17487/RFC9581, August 2024,
@@ -1660,6 +1731,13 @@ Internet-Draft               CNN Terminology                   June 2026
               2021-12-01,
               <https://openwrt.org/supported_devices/432_warning>.
 
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 31]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    [WEI]      Shelby, Z. and C. Bormann, "6LoWPAN: the Wireless Embedded
               Internet", Wiley-Blackwell monograph,
               DOI 10.1002/9780470686218, ISBN 9780470747995, 2009,
@@ -1673,14 +1751,6 @@ Appendix A.  Changes Since RFC 7228
    *  Updated references
 
    *  Added Superscript notations
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 30]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    *  Added new terms such as "Capable Node"
 
@@ -1702,7 +1772,7 @@ List of Tables
    Table 1:   Classes of Constrained (and More Capable) Devices
    Table 2:   Levels of Software Update Capabilities
    Table 3:   Levels of Isolation Capabilities
-   Table 4:   Levels of Secret Shielding Capabilities
+   Table 4:   Rough Levels of Secret Shielding Capabilities
    Table 5:   Quantities Relevant to Power and Energy
    Table 6:   Classes of Energy Limitation
    Table 7:   Strategies of Using Power for Communication
@@ -1716,6 +1786,14 @@ Acknowledgements
 
    TBD — to be completed after review process concludes.
 
+
+
+
+Bormann, et al.         Expires 21 December 2026               [Page 32]
+
+Internet-Draft               CNN Terminology                   June 2026
+
+
    Marco Tiloca helped the document through the IETF process as Document
    Shepherd.  Mohamed Boucadair served as responsible area director in
    the IESG.
@@ -1725,18 +1803,6 @@ Acknowledgements
    PID2023-146378NBI00.
 
 Authors' Addresses
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 31]
-
-Internet-Draft               CNN Terminology                   June 2026
-
 
    Carsten Bormann
    Universität Bremen TZI
@@ -1779,14 +1845,4 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-
-
-
-
-
-
-
-
-
-
-Bormann, et al.         Expires 21 December 2026               [Page 32]
+Bormann, et al.         Expires 21 December 2026               [Page 33]
