@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-19T03:35:53.671031+00:00",
+  "timestamp": "2026-06-21T04:15:09.176617+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -1279,19 +1279,33 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-05-15T11:09:49Z",
-      "updatedAt": "2026-05-18T09:28:30Z",
+      "updatedAt": "2026-06-20T18:11:38Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "ea6ed3179cbd9987739609db2316dad852598b49",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "collecting-post08-nits",
-      "headRefOid": "eb1b9b8cd3a08c26e95f8f851463093accae33a8",
+      "headRefOid": "3d2d0936d5e6812862ac37235662453ca6b77e2c",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM8AAAABDoSWLA",
+          "commit": {
+            "abbreviatedOid": "3d2d093"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "I believe the updates address nicely the points raised at this stage.\nMany thanks, Carsten!",
+          "createdAt": "2026-06-20T18:11:38Z",
+          "updatedAt": "2026-06-20T18:11:38Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 27,
