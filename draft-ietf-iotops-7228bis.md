@@ -644,13 +644,14 @@ exclusive.
 | Is8  | Secure enclave isolation                                  |
 {: #isoltbl title='Levels of Isolation Capabilities'}
 
-## Shielded Secrets
+## Secret Shielding
 
-Some platforms employ hardware support to keep secrets shielded from
-potential attackers (usually in conjunction with secure enclave
-functionality).
+Some platforms employ hardware support to establish additional
+protection from potential attackers for some specific secrets,
+strongly isolating them from most code (usually in conjunction with
+secure enclave functionality, see Is8 above).
 At the time of writing, there is significant ongoing innovation but no
-agreed common terminology for levels of secret shielding.
+agreed common terminology for levels of this "secret shielding".
 {{shieldtbl}} therefore only provides a rough spectrum, starting from
 Sh0 for no special hardware provisions to maintain secrecy (while
 assuming that the usual software measures can be applied even to Sh0
@@ -658,9 +659,8 @@ platforms {{KEYMGMT}}).
 Sh1 is a catch-all category that indicates that the platform does
 provide hardware support for secret shielding, so that it is no longer
 purely a software function to handle secrets such as roots of trust
-(but does not distinguish between specific device categories such as
-HSM, TPM, or even TEE functionality).
-Sh9 is aspirational language (for a "Cadillac" platform); no real
+(for example, providing HSM, TPM, or even TEE functionality).
+Sh9 is aspirational language (for a fully "deluxe" platform); no real
 hardware is identified by this level.
 It is left for further study to identify clusters on this spectrum.
 
@@ -1076,7 +1076,9 @@ threat analysis for the RPL routing protocol.
 Implementation considerations for security protocols on constrained
 nodes are discussed in {{-IKEV2-MINIMAL}} and in early work in {{-TLS-MINIMAL}}.
 A wider view of security in constrained-node networks is provided in {{-IOT-SECURITY}}.
-{{-teep-arch}} discusses several architectures for secret shielding.
+{{Section 9 of -teep-arch}} discusses Security Considerations for
+certain platforms that protect multiple execution environments from
+each other, a capability that can also be used for secret shielding.
 
 --- back
 
@@ -1090,7 +1092,7 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 * Added a classification of device groups
 * Updated Table 1 with more details about classes of constrained devices
 * Added some narrative text about Class 3 and 4 devices
-* Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Shielded Secrets", and "Strategies of Keeping Time over Power Events"
+* Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Secret Shielding", and "Strategies of Keeping Time over Power Events"
 * Added new section "Classes of Networks"
 
 {::include-all lists.md}
