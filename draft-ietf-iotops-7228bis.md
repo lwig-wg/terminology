@@ -206,8 +206,6 @@ is used as a shorthand for
 being permanently connected to a stable electrical power grid.
 
 
-<!-- Explain that most of this is based on clustering -->
-
 # Core Terminology {#core-terminology}
 
 There are two important aspects to *scaling* within the Internet of Things:
@@ -633,7 +631,6 @@ This section discusses the ability of a platform to
 isolate different software components.
 The categories listed in {{isoltbl}} are not mutually
 exclusive.
-<!-- are there relevant clusters? -->
 
 | Name | Isolation functionality                                   |
 | Is0  | no isolation                                              |
@@ -951,8 +948,6 @@ and
 
 \* if no link layer fragmentation is available
 
-<!-- CAN-FD: https://www.ietf.org/archive/id/draft-wachter-6lo-can-01.html -->
-
 S0 technologies require fragmentation to support the IPv6 MTU requirement.
 If no link layer fragmentation is available, fragmentation is needed at
 the adaptation layer below IPv6. However, 6LoWPAN fragmentation {{RFC4944}}
@@ -995,11 +990,6 @@ communicate with other nodes in the Internet as well.
 
 
 ## Classes of Physical Layer Bit Rate {#phyrate}
-
-<!--
-\[This section could be expanded to also talk about
-burst rate vs. sustained rate; bits/s vs. messages/s, ...]
- -->
 
 Physical layer technologies used by constrained devices can be
 categorized on the basis of physical layer (PHY) bit rate. The PHY bit
