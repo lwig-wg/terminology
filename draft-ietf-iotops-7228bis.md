@@ -1008,7 +1008,7 @@ compatibility with existing protocols and mechanisms on the Internet,
 responsiveness to frame transmissions and need for header compression
 techniques.
 
-{{phyratetbl}} lists the classes of PHY bit rate ('Bx' stands for 'Bit rate class x').
+{{phyratetbl}} lists the classes of PHY bit rate ("Bx" stands for "Bit rate class x").
 
 | Name | PHY bit rate (bit/s)            | Comment                                                                           | Header compression                           |
 | B0   | < 10                            | Transmission time of 150-byte frame > TCP MSL                                     | indispensable as part of system architecture |
