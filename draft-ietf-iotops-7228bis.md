@@ -1100,10 +1100,17 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
 
-TBD — to be completed after review process concludes.
-
-{{{Marco Tiloca}}} helped the document through the IETF process as Document
-Shepherd.
-{{{Mohamed Boucadair}}} served as responsible area director in the IESG.
+{{RFC7228}}, the 2014 version of this document, has been in wide use and
+has been the subject of many observations, which helped shape this
+updated document and for which the authors are grateful.
+Recently, {{{Vadim Goncharov}}} suggested some further detail, and
+{{{Martine Lenders}}} provided a detailed review.
+{{{Marco Tiloca}}} helped the document through the IETF process as
+Document Shepherd.
+{{{Mohamed Boucadair}}} served as responsible area director in the
+IESG and supplied several improvements.
+The IESG and directorate reviewers provided further reviews; in
+particular {{{Gorry Fairhurst}}} and {{{Deb Cooley}}} helped improve
+some sections.
 
 Carles Gomez was supported in part by the Spanish Government MCIU/AEI/10.13039/501100011033/FEDER/UE through project PID2023-146378NBI00.
