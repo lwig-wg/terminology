@@ -32,7 +32,7 @@ been useful in research and standardization work for constrained-node networks.
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.1
+    wcwidth 0.8.2
 -->
 <link href="draft-ietf-iotops-7228bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1051,11 +1051,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">CNN Terminology</td>
-<td class="right">June 2026</td>
+<td class="right">July 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann, et al.</td>
-<td class="center">Expires 1 January 2027</td>
+<td class="center">Expires 12 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1071,12 +1071,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc7228" class="eref">7228</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-30" class="published">30 June 2026</time>
+<time datetime="2026-07-11" class="published">11 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-01-01">1 January 2027</time></dd>
+<dd class="expires"><time datetime="2027-01-12">12 January 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1141,7 +1141,7 @@ been useful in research and standardization work for constrained-node networks.<
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 1 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 12 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1218,7 +1218,7 @@ been useful in research and standardization work for constrained-node networks.<
                 <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-isolation-functionality" class="internal xref">Isolation Functionality</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-shielded-secrets" class="internal xref">Shielded Secrets</a></p>
+                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-secret-shielding" class="internal xref">Secret Shielding</a></p>
 </li>
             </ul>
 </li>
@@ -1973,16 +1973,17 @@ exclusive.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 </div>
 </section>
 </div>
-<div id="shielded-secrets">
+<div id="secret-shielding">
 <section id="section-3.3">
-        <h3 id="name-shielded-secrets">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-shielded-secrets" class="section-name selfRef">Shielded Secrets</a>
+        <h3 id="name-secret-shielding">
+<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-secret-shielding" class="section-name selfRef">Secret Shielding</a>
         </h3>
-<p id="section-3.3-1">Some platforms employ hardware support to keep secrets shielded from
-potential attackers (usually in conjunction with secure enclave
-functionality).
+<p id="section-3.3-1">Some platforms employ hardware support to establish additional
+protection from potential attackers for some specific secrets,
+strongly isolating them from most code (usually in conjunction with
+secure enclave functionality, see Is8 above).
 At the time of writing, there is significant ongoing innovation but no
-agreed common terminology for levels of secret shielding.
+agreed common terminology for levels of this "secret shielding".
 <a href="#shieldtbl" class="auto internal xref">Table 4</a> therefore only provides a rough spectrum, starting from
 Sh0 for no special hardware provisions to maintain secrecy (while
 assuming that the usual software measures can be applied even to Sh0
@@ -1990,9 +1991,8 @@ platforms <span>[<a href="#KEYMGMT" class="cite xref">KEYMGMT</a>]</span>).
 Sh1 is a catch-all category that indicates that the platform does
 provide hardware support for secret shielding, so that it is no longer
 purely a software function to handle secrets such as roots of trust
-(but does not distinguish between specific device categories such as
-HSM, TPM, or even TEE functionality).
-Sh9 is aspirational language (for a "Cadillac" platform); no real
+(for example, providing HSM, TPM, or even TEE functionality).
+Sh9 is aspirational language (for a fully "deluxe" platform); no real
 hardware is identified by this level.
 It is left for further study to identify clusters on this spectrum.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 <span id="name-rough-levels-of-secret-shie"></span><div id="shieldtbl">
@@ -2732,7 +2732,9 @@ threat analysis for the RPL routing protocol.
 Implementation considerations for security protocols on constrained
 nodes are discussed in <span>[<a href="#RFC7815" class="cite xref">RFC7815</a>]</span> and in early work in <span>[<a href="#I-D.ietf-lwig-tls-minimal" class="cite xref">I-D.ietf-lwig-tls-minimal</a>]</span>.
 A wider view of security in constrained-node networks is provided in <span>[<a href="#RFC8576" class="cite xref">RFC8576</a>]</span>.
-<span>[<a href="#RFC9397" class="cite xref">RFC9397</a>]</span> discusses several architectures for secret shielding.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<span><a href="https://rfc-editor.org/rfc/rfc9397#section-9" class="relref">Section 9</a> of [<a href="#RFC9397" class="cite xref">RFC9397</a>]</span> discusses Security Considerations for
+certain platforms that protect multiple execution environments from
+each other, a capability that can also be used for secret shielding.<a href="#section-8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-informative-references">
@@ -2755,7 +2757,7 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
 <dd class="break"></dd>
 <dt id="I-D.gomez-tiptop-coap">[I-D.gomez-tiptop-coap]</dt>
       <dd>
-<span class="refAuthor">Gomez, C.</span> and <span class="refAuthor">S. Aguilar</span>, <span class="refTitle">"CoAP in Space"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-gomez-tiptop-coap-00</span>, <time datetime="2025-09-30" class="refDate">30 September 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-gomez-tiptop-coap-00">https://datatracker.ietf.org/doc/html/draft-gomez-tiptop-coap-00</a>&gt;</span>. </dd>
+<span class="refAuthor">Gomez, C.</span> and <span class="refAuthor">S. Aguilar</span>, <span class="refTitle">"CoAP in Space"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-gomez-tiptop-coap-01</span>, <time datetime="2026-07-04" class="refDate">4 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-gomez-tiptop-coap-01">https://datatracker.ietf.org/doc/html/draft-gomez-tiptop-coap-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.hui-vasseur-roll-rpl-deployment">[I-D.hui-vasseur-roll-rpl-deployment]</dt>
       <dd>
@@ -2763,7 +2765,7 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
 <dd class="break"></dd>
 <dt id="I-D.ietf-6lo-schc-15dot4">[I-D.ietf-6lo-schc-15dot4]</dt>
       <dd>
-<span class="refAuthor">Gomez, C.</span> and <span class="refAuthor">A. Minaburo</span>, <span class="refTitle">"Transmission of SCHC-compressed packets over IEEE 802.15.4 networks"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-6lo-schc-15dot4-12</span>, <time datetime="2026-02-20" class="refDate">20 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-12">https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-12</a>&gt;</span>. </dd>
+<span class="refAuthor">Gomez, C.</span> and <span class="refAuthor">A. Minaburo</span>, <span class="refTitle">"Transmission of SCHC-compressed packets over IEEE 802.15.4 networks"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-6lo-schc-15dot4-13</span>, <time datetime="2026-07-04" class="refDate">4 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-13">https://datatracker.ietf.org/doc/html/draft-ietf-6lo-schc-15dot4-13</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-lwig-tls-minimal">[I-D.ietf-lwig-tls-minimal]</dt>
       <dd>
@@ -2918,7 +2920,7 @@ A wider view of security in constrained-node networks is provided in <span>[<a h
           <p id="appendix-A-2.6.1">Added some narrative text about Class 3 and 4 devices<a href="#appendix-A-2.6.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.7">
-          <p id="appendix-A-2.7.1">Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Shielded Secrets", and "Strategies of Keeping Time over Power Events"<a href="#appendix-A-2.7.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.7.1">Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Secret Shielding", and "Strategies of Keeping Time over Power Events"<a href="#appendix-A-2.7.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.8">
           <p id="appendix-A-2.8.1">Added new section "Classes of Networks"<a href="#appendix-A-2.8.1" class="pilcrow">¶</a></p>

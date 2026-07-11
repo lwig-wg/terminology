@@ -6,11 +6,11 @@ IOTOPS Working Group                                          C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Obsoletes: 7228 (if approved)                                   M. Ersue
 Intended status: Informational                                          
-Expires: 1 January 2027                                       A. Keränen
+Expires: 12 January 2027                                      A. Keränen
                                                                 Ericsson
                                                                 C. Gomez
                                     Universitat Politecnica de Catalunya
-                                                            30 June 2026
+                                                            11 July 2026
 
 
                Terminology for Constrained-Node Networks
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 1]
+Bormann, et al.          Expires 12 January 2027                [Page 1]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    Internet-Drafts are draft documents valid for a maximum of six months
@@ -63,7 +63,7 @@ Internet-Draft               CNN Terminology                   June 2026
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 January 2027.
+   This Internet-Draft will expire on 12 January 2027.
 
 Copyright Notice
 
@@ -94,7 +94,7 @@ Table of Contents
    3.  Classes of Constrained (and More Capable) Devices . . . . . .   9
      3.1.  Firmware/Software upgradability . . . . . . . . . . . . .  13
      3.2.  Isolation Functionality . . . . . . . . . . . . . . . . .  14
-     3.3.  Shielded Secrets  . . . . . . . . . . . . . . . . . . . .  15
+     3.3.  Secret Shielding  . . . . . . . . . . . . . . . . . . . .  15
    4.  Power Terminology . . . . . . . . . . . . . . . . . . . . . .  15
      4.1.  Scaling Properties  . . . . . . . . . . . . . . . . . . .  15
      4.2.  Classes of Energy Limitation  . . . . . . . . . . . . . .  16
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 2]
+Bormann, et al.          Expires 12 January 2027                [Page 2]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    8.  Security Considerations . . . . . . . . . . . . . . . . . . .  27
@@ -165,9 +165,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 3]
+Bormann, et al.          Expires 12 January 2027                [Page 3]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
 1.1.  Conventions Used in this Document
@@ -221,9 +221,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 4]
+Bormann, et al.          Expires 12 January 2027                [Page 4]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
       on state, code space, and processing cycles, making optimization
@@ -277,9 +277,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 5]
+Bormann, et al.          Expires 12 January 2027                [Page 5]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    Section 3 defines a number of interesting classes ("class-N" for a
@@ -333,9 +333,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 6]
+Bormann, et al.          Expires 12 January 2027                [Page 6]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    More generally, the term "constrained networks" applies whenever at
@@ -389,9 +389,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 7]
+Bormann, et al.          Expires 12 January 2027                [Page 7]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
 2.3.  Constrained-Node Networks
@@ -445,9 +445,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 8]
+Bormann, et al.          Expires 12 January 2027                [Page 8]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
 2.3.2.  LoWPAN, 6LoWPAN
@@ -501,9 +501,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                 [Page 9]
+Bormann, et al.          Expires 12 January 2027                [Page 9]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
       general-purpose operating systems such as Linux, such as by
@@ -557,9 +557,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 10]
+Bormann, et al.          Expires 12 January 2027               [Page 10]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    +=======+=======+===================+===============+===============+
@@ -613,9 +613,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 11]
+Bormann, et al.          Expires 12 January 2027               [Page 11]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    boundaries of these classes will move over time, Moore's law tends to
@@ -669,9 +669,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 12]
+Bormann, et al.          Expires 12 January 2027               [Page 12]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    Constrained devices with capabilities significantly beyond Class 2
@@ -725,9 +725,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 13]
+Bormann, et al.          Expires 12 January 2027               [Page 13]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    +======+============================================================+
@@ -781,28 +781,29 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 14]
+Bormann, et al.          Expires 12 January 2027               [Page 14]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
-3.3.  Shielded Secrets
+3.3.  Secret Shielding
 
-   Some platforms employ hardware support to keep secrets shielded from
-   potential attackers (usually in conjunction with secure enclave
-   functionality).  At the time of writing, there is significant ongoing
-   innovation but no agreed common terminology for levels of secret
-   shielding.  Table 4 therefore only provides a rough spectrum,
-   starting from Sh0 for no special hardware provisions to maintain
-   secrecy (while assuming that the usual software measures can be
-   applied even to Sh0 platforms [KEYMGMT]).  Sh1 is a catch-all
-   category that indicates that the platform does provide hardware
-   support for secret shielding, so that it is no longer purely a
-   software function to handle secrets such as roots of trust (but does
-   not distinguish between specific device categories such as HSM, TPM,
-   or even TEE functionality).  Sh9 is aspirational language (for a
-   "Cadillac" platform); no real hardware is identified by this level.
-   It is left for further study to identify clusters on this spectrum.
+   Some platforms employ hardware support to establish additional
+   protection from potential attackers for some specific secrets,
+   strongly isolating them from most code (usually in conjunction with
+   secure enclave functionality, see Is8 above).  At the time of
+   writing, there is significant ongoing innovation but no agreed common
+   terminology for levels of this "secret shielding".  Table 4 therefore
+   only provides a rough spectrum, starting from Sh0 for no special
+   hardware provisions to maintain secrecy (while assuming that the
+   usual software measures can be applied even to Sh0 platforms
+   [KEYMGMT]).  Sh1 is a catch-all category that indicates that the
+   platform does provide hardware support for secret shielding, so that
+   it is no longer purely a software function to handle secrets such as
+   roots of trust (for example, providing HSM, TPM, or even TEE
+   functionality).  Sh9 is aspirational language (for a fully "deluxe"
+   platform); no real hardware is identified by this level.  It is left
+   for further study to identify clusters on this spectrum.
 
                  +======+================================+
                  | Name | Secret shielding functionality |
@@ -836,10 +837,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-
-Bormann, et al.          Expires 1 January 2027                [Page 15]
+Bormann, et al.          Expires 12 January 2027               [Page 15]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
       +======+============================================+=========+
@@ -893,9 +893,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 16]
+Bormann, et al.          Expires 12 January 2027               [Page 16]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
      +======+========================+==============================+
@@ -949,9 +949,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 17]
+Bormann, et al.          Expires 12 January 2027               [Page 17]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
       periods at a time that once it wakes up, it makes sense for it to
@@ -1005,9 +1005,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 18]
+Bormann, et al.          Expires 12 January 2027               [Page 18]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    A term often used to describe power-saving approaches is "duty-
@@ -1061,9 +1061,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 19]
+Bormann, et al.          Expires 12 January 2027               [Page 19]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    The various time sources available on the device can be assisted by
@@ -1117,9 +1117,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 20]
+Bormann, et al.          Expires 12 January 2027               [Page 20]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
     +======+==================================+=======================+
@@ -1173,9 +1173,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 21]
+Bormann, et al.          Expires 12 January 2027               [Page 21]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
 5.  Classes of Networks
@@ -1229,9 +1229,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 22]
+Bormann, et al.          Expires 12 January 2027               [Page 22]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
     +======+=============+====================+=======================+
@@ -1285,9 +1285,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 23]
+Bormann, et al.          Expires 12 January 2027               [Page 23]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    S0 technologies require fragmentation to support the IPv6 MTU
@@ -1341,9 +1341,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 24]
+Bormann, et al.          Expires 12 January 2027               [Page 24]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
                +======+====================================+
@@ -1397,9 +1397,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 25]
+Bormann, et al.          Expires 12 January 2027               [Page 25]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    +======+=========+===============================+==================+
@@ -1453,9 +1453,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 26]
+Bormann, et al.          Expires 12 January 2027               [Page 26]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    B2 technologies do not incur responsiveness problems, but still
@@ -1491,8 +1491,10 @@ Internet-Draft               CNN Terminology                   June 2026
    protocol.  Implementation considerations for security protocols on
    constrained nodes are discussed in [RFC7815] and in early work in
    [I-D.ietf-lwig-tls-minimal].  A wider view of security in
-   constrained-node networks is provided in [RFC8576].  [RFC9397]
-   discusses several architectures for secret shielding.
+   constrained-node networks is provided in [RFC8576].  Section 9 of
+   [RFC9397] discusses Security Considerations for certain platforms
+   that protect multiple execution environments from each other, a
+   capability that can also be used for secret shielding.
 
 9.  Informative References
 
@@ -1507,11 +1509,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-
-
-Bormann, et al.          Expires 1 January 2027                [Page 27]
+Bormann, et al.          Expires 12 January 2027               [Page 27]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    [I-D.amsuess-t2trg-raytime]
@@ -1523,9 +1523,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
    [I-D.gomez-tiptop-coap]
               Gomez, C. and S. Aguilar, "CoAP in Space", Work in
-              Progress, Internet-Draft, draft-gomez-tiptop-coap-00, 30
-              September 2025, <https://datatracker.ietf.org/doc/html/
-              draft-gomez-tiptop-coap-00>.
+              Progress, Internet-Draft, draft-gomez-tiptop-coap-01, 4
+              July 2026, <https://datatracker.ietf.org/doc/html/draft-
+              gomez-tiptop-coap-01>.
 
    [I-D.hui-vasseur-roll-rpl-deployment]
               Vasseur, J., Hui, J., Dasgupta, S., and G. Yoon, "RPL
@@ -1538,9 +1538,9 @@ Internet-Draft               CNN Terminology                   June 2026
    [I-D.ietf-6lo-schc-15dot4]
               Gomez, C. and A. Minaburo, "Transmission of SCHC-
               compressed packets over IEEE 802.15.4 networks", Work in
-              Progress, Internet-Draft, draft-ietf-6lo-schc-15dot4-12,
-              20 February 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-6lo-schc-15dot4-12>.
+              Progress, Internet-Draft, draft-ietf-6lo-schc-15dot4-13, 4
+              July 2026, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-6lo-schc-15dot4-13>.
 
    [I-D.ietf-lwig-tls-minimal]
               Kumar, S., Keoh, S. L., and H. Tschofenig, "A Hitchhiker's
@@ -1565,9 +1565,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 28]
+Bormann, et al.          Expires 12 January 2027               [Page 28]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    [RFC4838]  Cerf, V., Burleigh, S., Hooke, A., Torgerson, L., Durst,
@@ -1621,9 +1621,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 29]
+Bormann, et al.          Expires 12 January 2027               [Page 29]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
@@ -1677,9 +1677,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 30]
+Bormann, et al.          Expires 12 January 2027               [Page 30]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
@@ -1733,9 +1733,9 @@ Internet-Draft               CNN Terminology                   June 2026
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 31]
+Bormann, et al.          Expires 12 January 2027               [Page 31]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    [WEI]      Shelby, Z. and C. Bormann, "6LoWPAN: the Wireless Embedded
@@ -1762,7 +1762,7 @@ Appendix A.  Changes Since RFC 7228
    *  Added some narrative text about Class 3 and 4 devices
 
    *  Added new subsections "LPWAN", "Firmware/Software Upgradability",
-      "Isolation Functionality", "Shielded Secrets", and "Strategies of
+      "Isolation Functionality", "Secret Shielding", and "Strategies of
       Keeping Time over Power Events"
 
    *  Added new section "Classes of Networks"
@@ -1789,9 +1789,9 @@ Acknowledgements
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 32]
+Bormann, et al.          Expires 12 January 2027               [Page 32]
 
-Internet-Draft               CNN Terminology                   June 2026
+Internet-Draft               CNN Terminology                   July 2026
 
 
    Marco Tiloca helped the document through the IETF process as Document
@@ -1845,4 +1845,4 @@ Authors' Addresses
 
 
 
-Bormann, et al.          Expires 1 January 2027                [Page 33]
+Bormann, et al.          Expires 12 January 2027               [Page 33]
