@@ -1085,7 +1085,47 @@ The following changes have been made to the guidelines published in {{RFC7228}}:
 * Added new subsections "LPWAN", "Firmware/Software Upgradability", "Isolation Functionality", "Secret Shielding", and "Strategies of Keeping Time over Power Events"
 * Added new section "Classes of Networks"
 
-{::include-all lists.md}
+
+# List of Tables
+{:unnumbered}
+
+{:compact hangindent="11"}
+{{devclasstbl}}:
+: {{<<devclasstbl}}
+
+{{upgtbl}}:
+: {{<<upgtbl}}
+
+{{isoltbl}}:
+: {{<<isoltbl}}
+
+{{shieldtbl}}:
+: {{<<shieldtbl}}
+
+{{scaletbl}}:
+: {{<<scaletbl}}
+
+{{enclasstbl}}:
+: {{<<enclasstbl}}
+
+{{powclasstbl}}:
+: {{<<powclasstbl}}
+
+{{timeclasstbl}}:
+: {{<<timeclasstbl}}
+
+{{timepermanencytbl}}:
+: {{<<timepermanencytbl}}
+
+{{mtutbl}}:
+: {{<<mtutbl}}
+
+{{internettbl}}:
+: {{<<internettbl}}
+
+{{phyratetbl}}:
+: {{<<phyratetbl}}
+
 
 # Acknowledgements {#acknowledgements}
 {: numbered="no"}
