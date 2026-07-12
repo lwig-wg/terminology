@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-07T03:24:24.462005+00:00",
+  "timestamp": "2026-07-12T02:46:39.584326+00:00",
   "repo": "lwig-wg/terminology",
   "labels": [
     {
@@ -1375,24 +1375,26 @@
       "id": "PR_kwDOBMYTbM7uF5f6",
       "title": "Try to better address Deb Cooley's concerns about Secret Shielding",
       "url": "https://github.com/lwig-wg/terminology/pull/28",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-07-05T18:58:42Z",
-      "updatedAt": "2026-07-06T09:25:58Z",
+      "updatedAt": "2026-07-11T05:24:31Z",
       "baseRepository": "lwig-wg/terminology",
       "baseRefName": "main",
       "baseRefOid": "40fe265406d4247862ee74243d440086996084ca",
       "headRepository": "lwig-wg/terminology",
       "headRefName": "post-09",
       "headRefOid": "4016ec2e09833491ff219655bd91eb8dce22e638",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-07-11T05:24:31Z",
+      "mergedAt": "2026-07-11T05:24:31Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "73f2831ccaca8dc59456ac6b2824fa82deae14f2"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1419,6 +1421,46 @@
           "body": "",
           "createdAt": "2026-07-06T08:50:26Z",
           "updatedAt": "2026-07-06T08:50:26Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "id": "PR_kwDOBMYTbM7wdL3v",
+      "title": "Prepare intake",
+      "url": "https://github.com/lwig-wg/terminology/pull/29",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-07-11T05:50:10Z",
+      "updatedAt": "2026-07-11T05:53:32Z",
+      "baseRepository": "lwig-wg/terminology",
+      "baseRefName": "main",
+      "baseRefOid": "73f2831ccaca8dc59456ac6b2824fa82deae14f2",
+      "headRepository": "lwig-wg/terminology",
+      "headRefName": "prepare-intake",
+      "headRefOid": "a0ff03679fbb84b4d524ec79c1108646a99d37b5",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOBMYTbM8AAAABFsEUTA",
+          "commit": {
+            "abbreviatedOid": "a0ff036"
+          },
+          "author": "carlesgo",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-11T05:53:32Z",
+          "updatedAt": "2026-07-11T05:53:32Z",
           "comments": []
         }
       ]
